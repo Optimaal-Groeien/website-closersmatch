@@ -60,6 +60,34 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ================================================
+       LOGO STRIP
+  ================================================ -->
+  <section class="logos-strip">
+    <p class="logos-strip__label">Meer dan 50 succesvolle koppelingen tussen verkopers en klanten</p>
+    <div class="logos-track-wrap">
+      <div class="logos-track" aria-label="Klantlogo's">
+        <img src="/images/logos/logo-1.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-2.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-3.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-4.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-5.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-6.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-7.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-8.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <!-- Duplicaat voor naadloze loop -->
+        <img src="/images/logos/logo-1.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-2.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-3.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-4.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-5.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-6.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-7.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-8.webp" alt="" class="logo-img" aria-hidden="true" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
        PROBLEEMBRUG
   ================================================ -->
   <section class="section section--gray bridge">
@@ -532,6 +560,70 @@ import Layout from '../layouts/Layout.astro';
     .hero__actions .btn,
     .hero__actions .btn--outline-dark-mode { width: 100%; justify-content: center; }
     .hero__diagram-wrap { width: 80%; }
+  }
+
+  /* ====================================================
+     LOGO STRIP
+  ==================================================== */
+  .logos-strip {
+    background: #fff;
+    padding: 40px 0 56px;
+    border-top: 1px solid var(--color-gray-border);
+    overflow: hidden;
+  }
+
+  .logos-strip__label {
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--color-red);
+    letter-spacing: 0.02em;
+    margin-bottom: 32px;
+  }
+
+  .logos-track-wrap {
+    overflow: hidden;
+    position: relative;
+    /* fade edges */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  }
+
+  .logos-track {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    width: max-content;
+    animation: logoScroll 28s linear infinite;
+  }
+
+  .logos-track:hover {
+    animation-play-state: paused;
+  }
+
+  .logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: filter 0.3s, opacity 0.3s;
+    flex-shrink: 0;
+  }
+
+  .logo-img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  @keyframes logoScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @media (max-width: 560px) {
+    .logo-img { height: 28px; }
+    .logos-track { gap: 40px; }
   }
 
   /* ====================================================
