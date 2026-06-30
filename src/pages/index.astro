@@ -5,40 +5,57 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Dé plek voor high ticket sales" description="ClosersMatch koppelt bedrijven met gecertificeerde closers en appointment setters. Eigen opleiding, no cure no pay model, schaalbaar salesmodel.">
 
   <!-- ================================================
-       HERO — SPLIT SCREEN
+       HERO
   ================================================ -->
   <section class="hero">
-    <div class="hero__half hero__half--bedrijven">
+    <div class="container hero__inner">
+
+      <!-- LEFT: tekst -->
       <div class="hero__content">
-        <span class="label label--red">Voor Bedrijven</span>
-        <h1 class="hero__title">Stop leads<br />verliezen.<br /><span class="accent--red">Start closen.</span></h1>
-        <p class="hero__sub">
-          Warme leads die niet converteren? Wij koppelen jou aan gecertificeerde closers die verkopen — zonder vast salaris.
-        </p>
+        <p class="hero__eyebrow">Wereldwijd platform voor high ticket closing en appointment setting</p>
+
+        <h1 class="hero__title">
+          High Ticket Sales<br />uitbesteden.<br />
+          <span class="hero__title-red">No Cure No Pay.</span>
+        </h1>
+
+        <div class="hero__body">
+          <p>Gratis onboarding. Ervaren setters, closers en salesondersteuning. No Cure No Pay. Betaal alleen voor resultaat.</p>
+          <p>Sales uitbesteden aan professionals zonder personeel aan te nemen, recruiters in te schakelen of een duur intern sales team op te bouwen.</p>
+          <p>ClosersMatch combineert leadgeneratie, salesondersteuning, appointmentsetting, closers, AI en coaching in één commercieel groeisysteem.</p>
+        </div>
+
         <div class="hero__actions">
-          <a href="/voor-bedrijven" class="btn btn--red btn--lg">Bekijk het model →</a>
-          <a href="/no-cure-no-pay" class="btn btn--outline-white">Hoe werkt no cure no pay?</a>
+          <a href="/voor-bedrijven" class="btn btn--red btn--lg hero__cta-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            Ik zoek een setter of closer
+          </a>
+          <a href="/voor-closers" class="btn btn--outline-dark-mode hero__cta-secondary">
+            Ik ben een setter of closer →
+          </a>
         </div>
       </div>
-    </div>
 
-    <div class="hero__half hero__half--closers">
-      <div class="hero__content">
-        <span class="label label--white-sub">Voor Closers & APS</span>
-        <h1 class="hero__title hero__title--light">Word de closer<br />die bedrijven<br /><span class="accent--white">zoeken.</span></h1>
-        <p class="hero__sub hero__sub--light">
-          Remote werken, hoge commissies, eigen agenda. Wij leiden je op en koppelen je aan de juiste bedrijven.
-        </p>
-        <div class="hero__actions">
-          <a href="/voor-closers" class="btn btn--dark btn--lg">Start mijn training →</a>
-          <a href="/appointment-setter-worden" class="btn btn--outline-dark">Wat is een appointment setter?</a>
+      <!-- RIGHT: foto + diagram overlay -->
+      <div class="hero__visual">
+        <div class="hero__photo-wrap">
+          <img
+            src="/images/team-hero.png"
+            alt="ClosersMatch team van closers en appointment setters"
+            class="hero__photo"
+            loading="eager"
+          />
+          <div class="hero__diagram-wrap">
+            <img
+              src="/images/ecosysteem.png"
+              alt="ClosersMatch ecosysteem diagram"
+              class="hero__diagram"
+              loading="eager"
+            />
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="hero__divider" aria-hidden="true">
-      <div class="hero__divider-line"></div>
-      <div class="hero__divider-logo">CM</div>
     </div>
   </section>
 
@@ -374,146 +391,147 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   /* ====================================================
-     HERO SPLIT SCREEN
+     HERO
   ==================================================== */
   .hero {
-    position: relative;
-    display: flex;
-    min-height: 100vh;
-    overflow: hidden;
+    background: #fff;
+    padding: 100px 0 80px;
   }
 
-  .hero__half {
-    flex: 1;
-    display: flex;
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
     align-items: center;
-    padding: 120px 64px 80px;
-    position: relative;
-    transition: flex 0.4s ease;
   }
 
-  .hero__half:hover { flex: 1.08; }
-
-  .hero__half--bedrijven {
-    background: var(--color-black);
-  }
-
-  .hero__half--closers {
-    background: linear-gradient(135deg, #1a0f0f 0%, #2d1210 50%, #3a1614 100%);
-  }
-
-  /* Subtle texture overlay */
-  .hero__half--bedrijven::before,
-  .hero__half--closers::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 50%, rgba(221,52,46,0.08) 0%, transparent 60%);
-    pointer-events: none;
-  }
-
-  .hero__half--closers::before {
-    background: radial-gradient(ellipse at 70% 50%, rgba(221,52,46,0.15) 0%, transparent 60%);
-  }
-
-  .hero__content {
-    position: relative;
-    z-index: 1;
-    max-width: 520px;
+  .hero__eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gray-mid);
+    margin-bottom: 20px;
   }
 
   .hero__title {
-    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-size: clamp(2rem, 3.8vw, 3.2rem);
     font-weight: 900;
-    color: #fff;
+    color: var(--color-black);
     line-height: 1.1;
-    margin: 20px 0 24px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
+    margin-bottom: 28px;
   }
 
-  .accent--red { color: var(--color-red); }
-  .accent--white { color: rgba(255,255,255,0.9); }
+  .hero__title-red {
+    color: var(--color-red);
+  }
 
-  .hero__sub {
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.7);
-    line-height: 1.65;
-    max-width: 420px;
+  .hero__body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
     margin-bottom: 36px;
+  }
+
+  .hero__body p {
+    font-size: 1rem;
+    color: #4B5563;
+    line-height: 1.7;
   }
 
   .hero__actions {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
+    align-items: center;
   }
 
-  .label--red { color: var(--color-red); }
-  .label--white-sub { color: rgba(255,255,255,0.5); }
+  .hero__cta-primary {
+    box-shadow: 0 4px 20px rgba(221,52,46,0.3);
+  }
 
-  .btn--outline-dark {
+  .btn--outline-dark-mode {
     background: transparent;
-    color: rgba(255,255,255,0.75);
-    border: 2px solid rgba(255,255,255,0.25);
-  }
-
-  .btn--outline-dark:hover {
-    background: rgba(255,255,255,0.08);
-    border-color: rgba(255,255,255,0.5);
-    color: #fff;
-  }
-
-  /* Divider */
-  .hero__divider {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
+    color: var(--color-text);
+    border: 2px solid var(--color-gray-border);
+    font-weight: 600;
+    font-size: 0.97rem;
+    padding: 14px 22px;
+    border-radius: var(--radius);
+    transition: all 0.2s;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    z-index: 10;
-    pointer-events: none;
+    gap: 6px;
+    white-space: nowrap;
   }
 
-  .hero__divider-line {
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.15) 30%, rgba(255,255,255,0.15) 70%, transparent);
-    position: absolute;
+  .btn--outline-dark-mode:hover {
+    border-color: var(--color-text);
+    background: var(--color-gray-light);
   }
 
-  .hero__divider-logo {
-    width: 48px;
-    height: 48px;
-    background: var(--color-red);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 0.85rem;
-    color: #fff;
-    letter-spacing: 0.05em;
+  /* Visual right side */
+  .hero__visual {
     position: relative;
-    z-index: 1;
-    box-shadow: 0 0 0 6px rgba(221,52,46,0.2), 0 4px 20px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
   }
 
-  @media (max-width: 900px) {
-    .hero { flex-direction: column; min-height: auto; }
-    .hero__half { padding: 100px 32px 60px; }
-    .hero__half:hover { flex: 1; }
-    .hero__divider { display: none; }
+  .hero__photo-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .hero__photo {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    display: block;
+    object-fit: cover;
+  }
+
+  .hero__diagram-wrap {
+    position: absolute;
+    bottom: -40px;
+    right: -32px;
+    width: 52%;
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 12px;
+  }
+
+  .hero__diagram {
+    width: 100%;
+    border-radius: var(--radius);
+  }
+
+  @media (max-width: 1024px) {
+    .hero__inner { gap: 40px; }
+    .hero__diagram-wrap { width: 48%; right: -16px; }
+  }
+
+  @media (max-width: 768px) {
+    .hero { padding: 80px 0 60px; }
+    .hero__inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .hero__diagram-wrap {
+      position: static;
+      width: 60%;
+      margin: 16px auto 0;
+      box-shadow: var(--shadow);
+    }
   }
 
   @media (max-width: 560px) {
-    .hero__half { padding: 80px 20px 48px; }
-    .hero__title { font-size: 2.2rem; }
-    .hero__actions { flex-direction: column; }
-    .hero__actions .btn { width: 100%; justify-content: center; }
+    .hero__title { font-size: 2rem; }
+    .hero__actions { flex-direction: column; align-items: stretch; }
+    .hero__actions .btn,
+    .hero__actions .btn--outline-dark-mode { width: 100%; justify-content: center; }
+    .hero__diagram-wrap { width: 80%; }
   }
 
   /* ====================================================
