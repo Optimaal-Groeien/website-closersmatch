@@ -190,59 +190,62 @@ import Layout from '../layouts/Layout.astro';
   <!-- ================================================
        HOE HET WERKT — VOOR BEDRIJVEN
   ================================================ -->
-  <section class="section how-it-works">
-    <div class="container">
-      <div class="how-it-works__inner">
-        <div class="how-it-works__content">
-          <span class="label">Voor Bedrijven</span>
-          <h2 class="h2">Van intake tot close in 3 stappen</h2>
-          <p class="how-it-works__intro">
-            Geen langdurig recruitmenttraject. Geen vast salaris. Alleen closers die passen bij jouw aanbod.
-          </p>
+  <section class="section hiw">
+    <div class="container hiw__inner">
 
-          <div class="steps">
-            <div class="step">
-              <div class="step__num">01</div>
-              <div class="step__body">
-                <h3 class="step__title">Intake & Match</h3>
-                <p class="step__text">Je vult een intake in over je aanbod, doelgroep en dealgrootte. Wij matchen je binnen 5 werkdagen aan de juiste closer.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step__num">02</div>
-              <div class="step__body">
-                <h3 class="step__title">Onboarding & Start</h3>
-                <p class="step__text">De closer leert je aanbod kennen en begint met je eerste warme leads. Geen maanden inwerkperiode.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step__num">03</div>
-              <div class="step__body">
-                <h3 class="step__title">Schalen op resultaat</h3>
-                <p class="step__text">Werkt het? Dan schalen we op. Meer closers, meer APS, meer omzet — zonder vast personeelsbestand.</p>
-              </div>
-            </div>
-          </div>
-
-          <a href="/voor-bedrijven" class="btn btn--red btn--lg" style="margin-top: 8px;">Bekijk de aanpak →</a>
-        </div>
-
-        <div class="how-it-works__visual">
-          <div class="visual-card">
-            <div class="visual-card__badge">No Cure No Pay</div>
-            <blockquote class="visual-card__quote">
-              "Binnen 2 weken hadden we een closer die onze eerste pitch-call sloot voor €12.500. Dat had ons intern maanden gekost."
-            </blockquote>
-            <div class="visual-card__author">
-              <div class="visual-card__avatar">RB</div>
-              <div>
-                <strong>Ruben B.</strong>
-                <span>Founder, B2B SaaS</span>
-              </div>
-            </div>
+      <!-- Links: foto -->
+      <div class="hiw__photo-col">
+        <div class="hiw__photo-wrap">
+          <img
+            src="/images/closer-aan-het-werk.png"
+            alt="Closer aan het werk met laptop en telefoon"
+            class="hiw__photo"
+            loading="lazy"
+          />
+          <div class="hiw__photo-badge">
+            <span class="hiw__badge-num">No Cure</span>
+            <span class="hiw__badge-label">No Pay</span>
           </div>
         </div>
       </div>
+
+      <!-- Rechts: stappen -->
+      <div class="hiw__content">
+        <span class="label">Hoe het werkt</span>
+        <h2 class="h2 hiw__title">Drie stappen tot<br />je eerste deal.</h2>
+        <p class="hiw__intro">Geen langdurig recruitmenttraject. Geen vast salaris. Alleen de juiste professional die aansluit bij jouw aanbod.</p>
+
+        <div class="hiw__steps">
+
+          <div class="hiw__step">
+            <div class="hiw__step-num">01</div>
+            <div class="hiw__step-body">
+              <h3 class="hiw__step-title">Gratis inventarisatie aanvragen</h3>
+              <p class="hiw__step-text">Tijdens een online meeting ontdekken we je bedrijf, salesproces, doelgroep en behoeften. We analyseren waar de kansen liggen en bepalen samen de beste aanpak.</p>
+            </div>
+          </div>
+
+          <div class="hiw__step">
+            <div class="hiw__step-num">02</div>
+            <div class="hiw__step-body">
+              <h3 class="hiw__step-title">Matchen met de juiste closer of appointment setter</h3>
+              <p class="hiw__step-text">We koppelen jou aan de professional die past bij jouw branche, aanbod en salesstijl. Gerichte matching op basis van ervaring, specialisme en werkwijze — voor de beste resultaten.</p>
+            </div>
+          </div>
+
+          <div class="hiw__step">
+            <div class="hiw__step-num">03</div>
+            <div class="hiw__step-body">
+              <h3 class="hiw__step-title">De closer gaat aan de slag</h3>
+              <p class="hiw__step-text">Logboeken en CRM-systemen worden aangemaakt of gekoppeld. De closer belt, clost en rapporteert transparant terug. Jij ziet de deals binnenkomen — zonder het gedoe van een intern salesteam.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <a href="/voor-bedrijven" class="btn btn--red btn--lg hiw__cta">Gratis inventarisatie aanvragen →</a>
+      </div>
+
     </div>
   </section>
 
@@ -788,39 +791,107 @@ import Layout from '../layouts/Layout.astro';
   }
 
   /* ====================================================
-     HOW IT WORKS
+     HOW IT WORKS (HIW)
   ==================================================== */
-  .how-it-works__inner {
+  .hiw { background: #fff; }
+
+  .hiw__inner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.15fr;
     gap: 80px;
     align-items: center;
   }
 
-  .how-it-works__intro {
-    font-size: 1.05rem;
-    color: var(--color-gray-mid);
-    margin: 20px 0 36px;
-    line-height: 1.65;
+  /* Photo column */
+  .hiw__photo-col { display: flex; justify-content: center; }
+
+  .hiw__photo-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
   }
 
-  .steps { display: flex; flex-direction: column; gap: 28px; margin-bottom: 40px; }
+  .hiw__photo {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: var(--radius-lg);
+    display: block;
+  }
 
-  .step {
+  .hiw__photo-badge {
+    position: absolute;
+    bottom: 28px;
+    left: -20px;
+    background: var(--color-black);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 14px 20px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+  }
+
+  .hiw__badge-num {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-red);
+  }
+
+  .hiw__badge-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* Content column */
+  .hiw__title {
+    margin: 16px 0 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .hiw__intro {
+    font-size: 1rem;
+    color: var(--color-gray-mid);
+    line-height: 1.65;
+    margin-bottom: 40px;
+    max-width: 460px;
+  }
+
+  .hiw__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 40px;
+  }
+
+  .hiw__step {
     display: flex;
     gap: 20px;
     align-items: flex-start;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--color-gray-border);
   }
 
-  .step__num {
-    font-size: 0.8rem;
-    font-weight: 900;
-    color: var(--color-red);
-    letter-spacing: 0.05em;
-    background: rgba(221,52,46,0.08);
+  .hiw__step:first-child { padding-top: 0; }
+  .hiw__step:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .hiw__step-num {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: var(--radius);
+    background: var(--color-red);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -828,70 +899,33 @@ import Layout from '../layouts/Layout.astro';
     margin-top: 2px;
   }
 
-  .step__title {
+  .hiw__step-title {
     font-size: 1.05rem;
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    color: var(--color-black);
   }
 
-  .step__text {
+  .hiw__step-text {
     font-size: 0.95rem;
     color: var(--color-gray-mid);
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
-  .visual-card {
-    background: var(--color-black);
-    border-radius: var(--radius-lg);
-    padding: 40px;
-    position: relative;
+  .hiw__cta { display: inline-flex; }
+
+  @media (max-width: 960px) {
+    .hiw__inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .hiw__photo-wrap { max-width: 100%; }
+    .hiw__photo { height: 380px; }
+    .hiw__photo-badge { left: 16px; bottom: 16px; }
   }
 
-  .visual-card__badge {
-    display: inline-flex;
-    background: var(--color-red);
-    color: #fff;
-    font-size: 0.8rem;
-    font-weight: 700;
-    padding: 4px 14px;
-    border-radius: 20px;
-    margin-bottom: 28px;
-    letter-spacing: 0.05em;
-  }
-
-  .visual-card__quote {
-    font-size: 1.05rem;
-    color: rgba(255,255,255,0.85);
-    line-height: 1.7;
-    font-style: italic;
-    margin-bottom: 32px;
-  }
-
-  .visual-card__author {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .visual-card__avatar {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.7);
-    flex-shrink: 0;
-  }
-
-  .visual-card__author strong { display: block; color: #fff; font-size: 0.95rem; }
-  .visual-card__author span { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
-
-  @media (max-width: 900px) {
-    .how-it-works__inner { grid-template-columns: 1fr; gap: 48px; }
+  @media (max-width: 560px) {
+    .hiw__photo { height: 300px; }
   }
 
   /* ====================================================
