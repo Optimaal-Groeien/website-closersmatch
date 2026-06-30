@@ -1,17 +1,1065 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Dé plek voor high ticket sales" description="ClosersMatch koppelt bedrijven met gecertificeerde closers en appointment setters. Eigen opleiding, no cure no pay model, schaalbaar salesmodel.">
+
+  <!-- ================================================
+       HERO — SPLIT SCREEN
+  ================================================ -->
+  <section class="hero">
+    <div class="hero__half hero__half--bedrijven">
+      <div class="hero__content">
+        <span class="label label--red">Voor Bedrijven</span>
+        <h1 class="hero__title">Stop leads<br />verliezen.<br /><span class="accent--red">Start closen.</span></h1>
+        <p class="hero__sub">
+          Warme leads die niet converteren? Wij koppelen jou aan gecertificeerde closers die verkopen — zonder vast salaris.
+        </p>
+        <div class="hero__actions">
+          <a href="/voor-bedrijven" class="btn btn--red btn--lg">Bekijk het model →</a>
+          <a href="/no-cure-no-pay" class="btn btn--outline-white">Hoe werkt no cure no pay?</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__half hero__half--closers">
+      <div class="hero__content">
+        <span class="label label--white-sub">Voor Closers & APS</span>
+        <h1 class="hero__title hero__title--light">Word de closer<br />die bedrijven<br /><span class="accent--white">zoeken.</span></h1>
+        <p class="hero__sub hero__sub--light">
+          Remote werken, hoge commissies, eigen agenda. Wij leiden je op en koppelen je aan de juiste bedrijven.
+        </p>
+        <div class="hero__actions">
+          <a href="/voor-closers" class="btn btn--dark btn--lg">Start mijn training →</a>
+          <a href="/appointment-setter-worden" class="btn btn--outline-dark">Wat is een appointment setter?</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__divider" aria-hidden="true">
+      <div class="hero__divider-line"></div>
+      <div class="hero__divider-logo">CM</div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       PROBLEEMBRUG
+  ================================================ -->
+  <section class="section section--gray bridge">
+    <div class="container--narrow bridge__inner">
+      <p class="bridge__text">
+        Elke dag lopen er leads weg. Niet omdat het product niet goed is — maar omdat er niemand is om ze te closen. ClosersMatch lost dat op: voor bedrijven die willen groeien, en voor closers die willen verdienen.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       WAT IS CLOSERSMATCH — 3 PIJLERS
+  ================================================ -->
+  <section class="section pillars">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Wat is ClosersMatch</span>
+        <h2 class="h2 section-header__title">Geen recruitmentbureau.<br />Een resultaatgericht ecosysteem.</h2>
+        <p class="section-header__sub">
+          Wij zitten precies tussen vraag en aanbod in — en zorgen dat beide kanten winnen.
+        </p>
+      </div>
+
+      <div class="pillars__grid">
+        <div class="pillar">
+          <div class="pillar__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 4C9.373 4 4 9.373 4 16s5.373 12 12 12 12-5.373 12-12S22.627 4 16 4zm0 2a10 10 0 110 20A10 10 0 0116 6zm-3 5v2h6V11h-6zm0 4v2h6v-2h-6zm0 4v2h4v-2h-4z" fill="currentColor"/>
+              <circle cx="22" cy="10" r="4" fill="#DD342E"/>
+              <circle cx="10" cy="22" r="4" fill="#DD342E"/>
+              <line x1="14" y1="16" x2="18" y2="16" stroke="#DD342E" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="pillar__title">Matching</h3>
+          <p class="pillar__text">
+            Wij koppelen bedrijven aan closers en appointment setters die passen bij de branche, het product en de salesstijl. Geen database-roulette — gerichte matches.
+          </p>
+        </div>
+
+        <div class="pillar pillar--featured">
+          <div class="pillar__badge">Kern</div>
+          <div class="pillar__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="6" width="24" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 12h24" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 18l3 3 6-6" stroke="#DD342E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="pillar__title">Opleiding & Certificering</h3>
+          <p class="pillar__text">
+            Ons eigen trainingsprogramma leidt closers en APS op van nul tot certified. Zo weet elk bedrijf dat ze een gekwalificeerde professional krijgen.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <div class="pillar__icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 26V16l10-10 10 10v10H20v-6h-8v6H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M4 16l12-12 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="22" cy="22" r="5" fill="#DD342E"/>
+              <path d="M20 22l1.5 1.5L24 20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="pillar__title">Resultaat</h3>
+          <p class="pillar__text">
+            No cure no pay voor bedrijven: je betaalt alleen bij resultaat. Voor closers: inkomsten op basis van prestatie — eerlijk en schaalbaar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       SOCIAL PROOF STRIP
+  ================================================ -->
+  <section class="stats-strip">
+    <div class="container stats-strip__inner">
+      <div class="stat">
+        <span class="stat__number">87+</span>
+        <span class="stat__label">Gecertificeerde Closers</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat__number">€2.4M+</span>
+        <span class="stat__label">Gegenereerde Omzet</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat__number">40+</span>
+        <span class="stat__label">Actieve Bedrijfspartners</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat__number">68%</span>
+        <span class="stat__label">Gemiddelde Conversie-uplift</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       HOE HET WERKT — VOOR BEDRIJVEN
+  ================================================ -->
+  <section class="section how-it-works">
+    <div class="container">
+      <div class="how-it-works__inner">
+        <div class="how-it-works__content">
+          <span class="label">Voor Bedrijven</span>
+          <h2 class="h2">Van intake tot close in 3 stappen</h2>
+          <p class="how-it-works__intro">
+            Geen langdurig recruitmenttraject. Geen vast salaris. Alleen closers die passen bij jouw aanbod.
+          </p>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step__num">01</div>
+              <div class="step__body">
+                <h3 class="step__title">Intake & Match</h3>
+                <p class="step__text">Je vult een intake in over je aanbod, doelgroep en dealgrootte. Wij matchen je binnen 5 werkdagen aan de juiste closer.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">02</div>
+              <div class="step__body">
+                <h3 class="step__title">Onboarding & Start</h3>
+                <p class="step__text">De closer leert je aanbod kennen en begint met je eerste warme leads. Geen maanden inwerkperiode.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">03</div>
+              <div class="step__body">
+                <h3 class="step__title">Schalen op resultaat</h3>
+                <p class="step__text">Werkt het? Dan schalen we op. Meer closers, meer APS, meer omzet — zonder vast personeelsbestand.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="/voor-bedrijven" class="btn btn--red btn--lg" style="margin-top: 8px;">Bekijk de aanpak →</a>
+        </div>
+
+        <div class="how-it-works__visual">
+          <div class="visual-card">
+            <div class="visual-card__badge">No Cure No Pay</div>
+            <blockquote class="visual-card__quote">
+              "Binnen 2 weken hadden we een closer die onze eerste pitch-call sloot voor €12.500. Dat had ons intern maanden gekost."
+            </blockquote>
+            <div class="visual-card__author">
+              <div class="visual-card__avatar">RB</div>
+              <div>
+                <strong>Ruben B.</strong>
+                <span>Founder, B2B SaaS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       VOOR CLOSERS — PREVIEW
+  ================================================ -->
+  <section class="section section--dark closer-preview">
+    <div class="container">
+      <div class="closer-preview__inner">
+        <div class="closer-preview__visual">
+          <div class="closer-cards">
+            <div class="closer-card">
+              <div class="closer-card__header">
+                <div class="closer-card__avatar">SK</div>
+                <div>
+                  <strong>Stefan K.</strong>
+                  <span class="closer-card__role">High Ticket Closer</span>
+                </div>
+                <span class="closer-card__badge">Gecertificeerd</span>
+              </div>
+              <div class="closer-card__stats">
+                <div class="closer-card__stat">
+                  <span class="closer-card__stat-num">€8.200</span>
+                  <span class="closer-card__stat-label">Omzet deze maand</span>
+                </div>
+                <div class="closer-card__stat">
+                  <span class="closer-card__stat-num">74%</span>
+                  <span class="closer-card__stat-label">Close rate</span>
+                </div>
+              </div>
+            </div>
+            <div class="closer-card closer-card--offset">
+              <div class="closer-card__header">
+                <div class="closer-card__avatar closer-card__avatar--red">NM</div>
+                <div>
+                  <strong>Nadia M.</strong>
+                  <span class="closer-card__role">Appointment Setter</span>
+                </div>
+                <span class="closer-card__badge">In training</span>
+              </div>
+              <div class="closer-card__stats">
+                <div class="closer-card__stat">
+                  <span class="closer-card__stat-num">31</span>
+                  <span class="closer-card__stat-label">Afspraken gepland</span>
+                </div>
+                <div class="closer-card__stat">
+                  <span class="closer-card__stat-num">Week 4</span>
+                  <span class="closer-card__stat-label">Van de training</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="closer-preview__content">
+          <span class="label label--white">Voor Closers & Appointment Setters</span>
+          <h2 class="h2" style="color: #fff; margin-top: 16px;">Geen 9-tot-5.<br />Wel topprestaties<br /><span style="color: var(--color-red);">belonen.</span></h2>
+          <p class="closer-preview__text">
+            Remote werken, commissiestructuur die loont, en een netwerk van bedrijven die jou actief zoeken. Of je nu net begint of al ervaren bent — wij bieden het platform en de opleiding.
+          </p>
+
+          <ul class="closer-perks">
+            <li class="closer-perk">
+              <svg class="perk-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#DD342E" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#DD342E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Volledig remote — werk van overal
+            </li>
+            <li class="closer-perk">
+              <svg class="perk-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#DD342E" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#DD342E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Gemiddeld €3.000–€12.000 per maand
+            </li>
+            <li class="closer-perk">
+              <svg class="perk-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#DD342E" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#DD342E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Certificering inclusief in training
+            </li>
+            <li class="closer-perk">
+              <svg class="perk-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#DD342E" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#DD342E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Direct geplaatst na certificering
+            </li>
+          </ul>
+
+          <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px;">
+            <a href="/voor-closers" class="btn btn--red btn--lg">Start mijn training →</a>
+            <a href="/appointment-setter-worden" class="btn btn--outline-white">Meer over APS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       TESTIMONIALS
+  ================================================ -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Resultaten</span>
+        <h2 class="h2 section-header__title">Wat anderen zeggen</h2>
+      </div>
+
+      <div class="testimonials__grid">
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <blockquote class="testimonial__quote">
+            "We hadden 40+ warme leads liggen die niet geclost werden. ClosersMatch zorgde binnen een week voor een gecertificeerde closer die ons conversiepercentage van 18% naar 61% bracht."
+          </blockquote>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">JV</div>
+            <div>
+              <strong>Jeroen V.</strong>
+              <span>CEO, Online Coaching Bedrijf</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial testimonial--featured">
+          <div class="testimonial__stars">★★★★★</div>
+          <blockquote class="testimonial__quote">
+            "Ik had nul saleservaring. Na de training van ClosersMatch sloot ik mijn eerste deal van €7.500 in week 3. Nu verdien ik consistent meer dan in mijn oude baan."
+          </blockquote>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar testimonial__avatar--red">LK</div>
+            <div>
+              <strong>Lisa K.</strong>
+              <span>High Ticket Closer, gecertificeerd 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <blockquote class="testimonial__quote">
+            "Als machinebouwer dachten we dat high ticket sales niet voor ons was. De closer die ClosersMatch koppelde kende onze industrie en sloot onze grootste deal ooit."
+          </blockquote>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">MH</div>
+            <div>
+              <strong>Mark H.</strong>
+              <span>Directeur, Machinebouwbedrijf B2B</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials__cta">
+        <a href="/cases" class="btn btn--outline-red">Bekijk alle cases →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       TWEE-PAD CTA SECTIE (AFSLUITER)
+  ================================================ -->
+  <section class="final-cta">
+    <div class="final-cta__half final-cta__half--bedrijven">
+      <div class="final-cta__content">
+        <h2 class="final-cta__title">Klaar om te stoppen met leads verliezen?</h2>
+        <p class="final-cta__sub">Plan een gratis intake-gesprek. Wij kijken of en hoe wij kunnen helpen — zonder verplichtingen.</p>
+        <a href="/contact" class="btn btn--red btn--lg">Gesprek plannen →</a>
+        <p class="final-cta__note">No cure no pay · Geen vast salaris · Match binnen 5 dagen</p>
+      </div>
+    </div>
+
+    <div class="final-cta__half final-cta__half--closers">
+      <div class="final-cta__content">
+        <h2 class="final-cta__title">Wil jij in high ticket sales werken?</h2>
+        <p class="final-cta__sub">Meld je aan voor het trainingsprogramma en start je pad als gecertificeerde closer of appointment setter.</p>
+        <a href="/voor-closers" class="btn btn--dark btn--lg">Start mijn training →</a>
+        <p class="final-cta__note">Training · Certificering · Directe plaatsing</p>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ====================================================
+     HERO SPLIT SCREEN
+  ==================================================== */
+  .hero {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .hero__half {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 120px 64px 80px;
+    position: relative;
+    transition: flex 0.4s ease;
+  }
+
+  .hero__half:hover { flex: 1.08; }
+
+  .hero__half--bedrijven {
+    background: var(--color-black);
+  }
+
+  .hero__half--closers {
+    background: linear-gradient(135deg, #1a0f0f 0%, #2d1210 50%, #3a1614 100%);
+  }
+
+  /* Subtle texture overlay */
+  .hero__half--bedrijven::before,
+  .hero__half--closers::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(221,52,46,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero__half--closers::before {
+    background: radial-gradient(ellipse at 70% 50%, rgba(221,52,46,0.15) 0%, transparent 60%);
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+  }
+
+  .hero__title {
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    margin: 20px 0 24px;
+    letter-spacing: -0.02em;
+  }
+
+  .accent--red { color: var(--color-red); }
+  .accent--white { color: rgba(255,255,255,0.9); }
+
+  .hero__sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.65;
+    max-width: 420px;
+    margin-bottom: 36px;
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .label--red { color: var(--color-red); }
+  .label--white-sub { color: rgba(255,255,255,0.5); }
+
+  .btn--outline-dark {
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    border: 2px solid rgba(255,255,255,0.25);
+  }
+
+  .btn--outline-dark:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.5);
+    color: #fff;
+  }
+
+  /* Divider */
+  .hero__divider {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .hero__divider-line {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.15) 30%, rgba(255,255,255,0.15) 70%, transparent);
+    position: absolute;
+  }
+
+  .hero__divider-logo {
+    width: 48px;
+    height: 48px;
+    background: var(--color-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.85rem;
+    color: #fff;
+    letter-spacing: 0.05em;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 6px rgba(221,52,46,0.2), 0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  @media (max-width: 900px) {
+    .hero { flex-direction: column; min-height: auto; }
+    .hero__half { padding: 100px 32px 60px; }
+    .hero__half:hover { flex: 1; }
+    .hero__divider { display: none; }
+  }
+
+  @media (max-width: 560px) {
+    .hero__half { padding: 80px 20px 48px; }
+    .hero__title { font-size: 2.2rem; }
+    .hero__actions { flex-direction: column; }
+    .hero__actions .btn { width: 100%; justify-content: center; }
+  }
+
+  /* ====================================================
+     BRIDGE
+  ==================================================== */
+  .bridge__inner { text-align: center; }
+
+  .bridge__text {
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
+    line-height: 1.75;
+    color: var(--color-text);
+    font-weight: 400;
+  }
+
+  /* ====================================================
+     PILLARS
+  ==================================================== */
+  .section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 64px;
+  }
+
+  .section-header__title {
+    margin-top: 16px;
+    margin-bottom: 20px;
+  }
+
+  .section-header__sub {
+    font-size: 1.05rem;
+    color: var(--color-gray-mid);
+    line-height: 1.65;
+  }
+
+  .pillars__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .pillar {
+    padding: 40px 36px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-gray-border);
+    position: relative;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .pillar:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .pillar--featured {
+    background: var(--color-black);
+    border-color: var(--color-black);
+    color: #fff;
+  }
+
+  .pillar--featured .pillar__text { color: rgba(255,255,255,0.7); }
+
+  .pillar__badge {
+    position: absolute;
+    top: -12px;
+    left: 36px;
+    background: var(--color-red);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .pillar__icon {
+    width: 56px;
+    height: 56px;
+    background: var(--color-gray-light);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: var(--color-text);
+  }
+
+  .pillar--featured .pillar__icon {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+  }
+
+  .pillar__title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+
+  .pillar__text {
+    font-size: 0.97rem;
+    color: var(--color-gray-mid);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 768px) {
+    .pillars__grid { grid-template-columns: 1fr; }
+  }
+
+  /* ====================================================
+     STATS STRIP
+  ==================================================== */
+  .stats-strip {
+    background: var(--color-red);
+    padding: 48px 0;
+  }
+
+  .stats-strip__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .stat__number {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .stat__label {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+    text-align: center;
+    max-width: 140px;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 64px;
+    background: rgba(255,255,255,0.25);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .stats-strip__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .stat-divider { display: none; }
+  }
+
+  /* ====================================================
+     HOW IT WORKS
+  ==================================================== */
+  .how-it-works__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .how-it-works__intro {
+    font-size: 1.05rem;
+    color: var(--color-gray-mid);
+    margin: 20px 0 36px;
+    line-height: 1.65;
+  }
+
+  .steps { display: flex; flex-direction: column; gap: 28px; margin-bottom: 40px; }
+
+  .step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .step__num {
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: var(--color-red);
+    letter-spacing: 0.05em;
+    background: rgba(221,52,46,0.08);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .step__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .step__text {
+    font-size: 0.95rem;
+    color: var(--color-gray-mid);
+    line-height: 1.6;
+  }
+
+  .visual-card {
+    background: var(--color-black);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    position: relative;
+  }
+
+  .visual-card__badge {
+    display: inline-flex;
+    background: var(--color-red);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 28px;
+    letter-spacing: 0.05em;
+  }
+
+  .visual-card__quote {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 32px;
+  }
+
+  .visual-card__author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .visual-card__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+    flex-shrink: 0;
+  }
+
+  .visual-card__author strong { display: block; color: #fff; font-size: 0.95rem; }
+  .visual-card__author span { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+
+  @media (max-width: 900px) {
+    .how-it-works__inner { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  /* ====================================================
+     CLOSER PREVIEW (DARK SECTION)
+  ==================================================== */
+  .closer-preview__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .closer-preview__text {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    margin: 20px 0 28px;
+  }
+
+  .closer-perks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  .closer-perk {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.97rem;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .perk-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .closer-cards {
+    position: relative;
+    height: 380px;
+  }
+
+  .closer-card {
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    position: absolute;
+    width: 320px;
+  }
+
+  .closer-card:first-child { top: 0; left: 0; z-index: 2; }
+
+  .closer-card--offset {
+    top: 120px;
+    left: 80px;
+    z-index: 1;
+    background: rgba(221,52,46,0.06);
+    border-color: rgba(221,52,46,0.2);
+  }
+
+  .closer-card__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .closer-card__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.6);
+    flex-shrink: 0;
+  }
+
+  .closer-card__avatar--red {
+    background: rgba(221,52,46,0.2);
+    color: #DD342E;
+  }
+
+  .closer-card__header strong { color: #fff; font-size: 0.95rem; display: block; }
+
+  .closer-card__role {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    display: block;
+  }
+
+  .closer-card__badge {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(221,52,46,0.15);
+    color: var(--color-red);
+    flex-shrink: 0;
+  }
+
+  .closer-card__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 20px;
+  }
+
+  .closer-card__stat-num {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .closer-card__stat-label {
+    display: block;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 3px;
+  }
+
+  @media (max-width: 900px) {
+    .closer-preview__inner { grid-template-columns: 1fr; gap: 48px; }
+    .closer-cards { height: auto; position: static; display: flex; flex-direction: column; gap: 16px; }
+    .closer-card { position: static; width: 100%; }
+  }
+
+  /* ====================================================
+     TESTIMONIALS
+  ==================================================== */
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .testimonial {
+    padding: 36px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-gray-border);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .testimonial:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+  }
+
+  .testimonial--featured {
+    background: var(--color-gray-light);
+    border-color: transparent;
+  }
+
+  .testimonial__stars {
+    color: var(--color-red);
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .testimonial__quote {
+    font-size: 0.97rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    font-style: italic;
+    flex: 1;
+  }
+
+  .testimonial__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .testimonial__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-gray-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-gray-mid);
+    flex-shrink: 0;
+  }
+
+  .testimonial__avatar--red {
+    background: rgba(221,52,46,0.1);
+    color: var(--color-red);
+  }
+
+  .testimonial__author strong { display: block; font-size: 0.95rem; }
+  .testimonial__author span { font-size: 0.82rem; color: var(--color-gray-mid); display: block; }
+
+  .testimonials__cta { text-align: center; margin-top: 48px; }
+
+  @media (max-width: 900px) {
+    .testimonials__grid { grid-template-columns: 1fr; }
+  }
+
+  /* ====================================================
+     FINAL CTA SPLIT
+  ==================================================== */
+  .final-cta {
+    display: flex;
+    min-height: 480px;
+  }
+
+  .final-cta__half {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 64px;
+  }
+
+  .final-cta__half--bedrijven {
+    background: var(--color-black);
+  }
+
+  .final-cta__half--closers {
+    background: var(--color-red);
+  }
+
+  .final-cta__content {
+    max-width: 480px;
+    text-align: center;
+  }
+
+  .final-cta__title {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+    line-height: 1.25;
+  }
+
+  .final-cta__sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.65;
+    margin-bottom: 32px;
+  }
+
+  .final-cta__note {
+    margin-top: 16px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.03em;
+  }
+
+  .final-cta__half--closers .btn--dark {
+    background: var(--color-black);
+    border-color: var(--color-black);
+  }
+
+  @media (max-width: 768px) {
+    .final-cta { flex-direction: column; }
+    .final-cta__half { padding: 64px 32px; }
+  }
+
+  @media (max-width: 560px) {
+    .final-cta__half { padding: 48px 20px; }
+    .final-cta__half .btn { width: 100%; justify-content: center; }
+  }
+</style>

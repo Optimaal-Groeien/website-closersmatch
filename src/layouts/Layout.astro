@@ -1,0 +1,303 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. Wij koppelen bedrijven met gecertificeerde closers en appointment setters.' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>{title} | ClosersMatch</title>
+  </head>
+  <body>
+    <header class="site-header" id="site-header">
+      <div class="container nav-inner">
+        <a href="/" class="logo" aria-label="ClosersMatch homepage">
+          <span class="logo__text">Closers<span class="logo__accent">Match</span></span>
+        </a>
+
+        <nav class="nav-links" aria-label="Hoofdnavigatie">
+          <a href="/voor-bedrijven" class="nav-link">Voor Bedrijven</a>
+          <a href="/voor-closers" class="nav-link">Voor Closers</a>
+          <a href="/cases" class="nav-link">Cases</a>
+          <a href="/over-ons" class="nav-link">Over Ons</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="/contact" class="btn btn--red">Gesprek Plannen →</a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Menu openen" id="nav-toggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="nav-mobile" id="nav-mobile">
+        <a href="/voor-bedrijven" class="nav-mobile-link">Voor Bedrijven</a>
+        <a href="/voor-closers" class="nav-mobile-link">Voor Closers</a>
+        <a href="/cases" class="nav-mobile-link">Cases</a>
+        <a href="/over-ons" class="nav-mobile-link">Over Ons</a>
+        <a href="/contact" class="btn btn--red" style="margin-top: 8px;">Gesprek Plannen →</a>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo__text logo__text--light">Closers<span class="logo__accent">Match</span></span>
+          </a>
+          <p class="footer-tagline">Dé plek voor high ticket sales — voor bedrijven en closers.</p>
+        </div>
+
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Voor Bedrijven</h4>
+          <a href="/voor-bedrijven">Hoe het werkt</a>
+          <a href="/no-cure-no-pay">No Cure No Pay</a>
+          <a href="/cases">Cases & Resultaten</a>
+          <a href="/contact">Intake starten</a>
+        </div>
+
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Voor Closers</h4>
+          <a href="/voor-closers">Closer worden</a>
+          <a href="/appointment-setter-worden">Appointment Setter worden</a>
+          <a href="/over-ons">Over ClosersMatch</a>
+        </div>
+
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Contact</h4>
+          <a href="/contact">Contact opnemen</a>
+          <a href="https://linkedin.com/company/closersmatch" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/closersmatch" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>&copy; {new Date().getFullYear()} ClosersMatch. Alle rechten voorbehouden.</p>
+          <div class="footer-legal">
+            <a href="/privacybeleid">Privacybeleid</a>
+            <a href="/algemene-voorwaarden">Algemene Voorwaarden</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  const header = document.getElementById('site-header');
+  const toggle = document.getElementById('nav-toggle');
+  const mobileNav = document.getElementById('nav-mobile');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+
+  toggle?.addEventListener('click', () => {
+    mobileNav?.classList.toggle('open');
+    toggle.classList.toggle('active');
+  });
+</script>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
+
+<style>
+  /* ——— Header ——— */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 20px 0;
+    transition: background 0.3s, box-shadow 0.3s, padding 0.3s;
+  }
+
+  .site-header.scrolled {
+    background: var(--color-black);
+    box-shadow: 0 2px 24px rgba(0,0,0,0.2);
+    padding: 12px 0;
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .logo { display: flex; align-items: center; }
+
+  .logo__text {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -0.02em;
+  }
+
+  .logo__text--light {
+    color: var(--color-gray-mid);
+  }
+
+  .logo__accent { color: var(--color-red); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    margin-left: auto;
+  }
+
+  .nav-link {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover { color: #fff; }
+
+  .nav-actions { display: flex; align-items: center; gap: 12px; }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: auto;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.25s;
+  }
+
+  .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .nav-toggle.active span:nth-child(2) { opacity: 0; }
+  .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 24px 24px;
+    background: var(--color-black);
+  }
+
+  .nav-mobile.open { display: flex; }
+
+  .nav-mobile-link {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  @media (max-width: 900px) {
+    .nav-links, .nav-actions { display: none; }
+    .nav-toggle { display: flex; }
+  }
+
+  /* ——— Footer ——— */
+  .site-footer {
+    background: var(--color-black);
+    color: rgba(255,255,255,0.65);
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding: 72px 24px 48px;
+  }
+
+  .footer-brand { display: flex; flex-direction: column; gap: 16px; }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 280px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .footer-links-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-heading {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 4px;
+  }
+
+  .footer-links-group a {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.65);
+    transition: color 0.2s;
+  }
+
+  .footer-links-group a:hover { color: #fff; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .footer-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .footer-legal { display: flex; gap: 24px; }
+  .footer-legal a { color: rgba(255,255,255,0.35); transition: color 0.2s; }
+  .footer-legal a:hover { color: rgba(255,255,255,0.7); }
+
+  @media (max-width: 900px) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 560px) {
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-bottom-inner { flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
