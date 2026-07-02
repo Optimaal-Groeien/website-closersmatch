@@ -23,7 +23,7 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
     <header class="site-header" id="site-header">
       <div class="container nav-inner">
         <a href="/" class="logo" aria-label="ClosersMatch homepage">
-          <span class="logo__text">Closers<span class="logo__accent">Match</span></span>
+          <img src="/images/logo-original.png" alt="ClosersMatch" class="logo__img logo__img--nav" />
         </a>
 
         <nav class="nav-links" aria-label="Hoofdnavigatie">
@@ -59,7 +59,7 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
       <div class="container footer-inner">
         <div class="footer-brand">
           <a href="/" class="logo">
-            <span class="logo__text logo__text--light">Closers<span class="logo__accent">Match</span></span>
+            <img src="/images/logo-white.png" alt="ClosersMatch" class="logo__img logo__img--footer" />
           </a>
           <p class="footer-tagline">Dé plek voor high ticket sales — voor bedrijven en closers.</p>
         </div>
@@ -150,18 +150,22 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
 
   .logo { display: flex; align-items: center; }
 
-  .logo__text {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: var(--color-black);
-    letter-spacing: -0.02em;
+  .logo__img {
+    height: 44px;
+    width: auto;
+    display: block;
   }
 
-  .logo__text--light {
-    color: var(--color-gray-mid);
+  /* Black background in PNG disappears on white via multiply */
+  .logo__img--nav {
+    mix-blend-mode: multiply;
   }
 
-  .logo__accent { color: var(--color-red); }
+  /* White logo on dark footer: black bg blends into dark footer */
+  .logo__img--footer {
+    mix-blend-mode: screen;
+    height: 40px;
+  }
 
   .nav-links {
     display: flex;
