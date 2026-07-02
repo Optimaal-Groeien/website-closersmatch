@@ -1,0 +1,12 @@
+/* Webfont: Roystorie-BlackItalic */@font-face {
+    font-family: 'RoystorieBlack';
+    src: url('Roystorie-BlackItalic.eot'); /* IE9 Compat Modes */
+    src: url('Roystorie-BlackItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Roystorie-BlackItalic.woff') format('woff'), /* Modern Browsers */
+         url('Roystorie-BlackItalic.woff2') format('woff2'), /* Modern Browsers */
+         url('Roystorie-BlackItalic.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,3 +1,13 @@
+/* ——— Roystorie Display Font ——— */
+@font-face {
+  font-family: 'Roystorie';
+  src: url('/fonts/Roystorie-BlackItalic.woff2') format('woff2'),
+       url('/fonts/Roystorie-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --color-red: #DD342E;
   --color-red-dark: #B82924;
@@ -9,6 +19,7 @@
   --color-gray-border: #E5E7EB;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Roystorie', 'Inter', system-ui, sans-serif;
   --radius: 6px;
   --radius-lg: 12px;
   --shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -160,6 +171,12 @@ img {
 h1, h2, h3, h4 {
   line-height: 1.15;
   font-weight: 800;
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
 }
 
 .h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
