@@ -1,0 +1,6 @@
+name = "website-closersmatch"
+compatibility_date = "2026-07-02"
+compatibility_flags = ["global_fetch_strictly_public"]
+
+[assets]
+directory = "./dist"
