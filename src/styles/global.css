@@ -1,10 +1,17 @@
-/* ——— Roystorie Display Font ——— */
+/* ——— Garet Fonts ——— */
 @font-face {
-  font-family: 'Roystorie';
-  src: url('/fonts/Roystorie-BlackItalic.woff2') format('woff2'),
-       url('/fonts/Roystorie-BlackItalic.woff') format('woff');
+  font-family: 'Garet';
+  src: url('/fonts/Garet-Heavy.ttf') format('truetype');
   font-weight: 900;
-  font-style: italic;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garet';
+  src: url('/fonts/Garet-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -19,7 +26,7 @@
   --color-gray-border: #E5E7EB;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Roystorie', 'Inter', system-ui, sans-serif;
+  --font-display: 'Garet', 'Inter', system-ui, sans-serif;
   --radius: 6px;
   --radius-lg: 12px;
   --shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -173,10 +180,10 @@ h1, h2, h3, h4 {
   font-weight: 800;
 }
 
-h1, .h1 {
+h1, h2, h3, .h1, .h2, .h3 {
   font-family: var(--font-display);
   font-weight: 900;
-  font-style: italic;
+  font-style: normal;
 }
 
 .h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
