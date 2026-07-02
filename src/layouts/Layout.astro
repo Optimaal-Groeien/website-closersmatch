@@ -183,6 +183,8 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
   .header-inner {
     display: flex;
     align-items: stretch;
+    position: relative;
+    overflow: visible;
   }
 
   /* ——— Rode logo kolom: volledige hoogte ——— */
@@ -191,12 +193,27 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
     align-items: center;
     justify-content: center;
     background: var(--color-red);
-    /* Ruimte links + extra rechts voor de diagonaal */
-    padding: 0 80px 0 32px;
+    width: 240px;
     flex-shrink: 0;
     text-decoration: none;
-    /* Diagonale rechterrand van boven naar onder */
-    clip-path: polygon(0 0, 100% 0, calc(100% - 48px) 100%, 0 100%);
+    position: relative;
+    z-index: 2;
+    /* Geen clip-path — de diagonaal wordt gemaakt via ::after */
+  }
+
+  /* Driehoek die de diagonaal vormt over het grijze vlak */
+  .header-logo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;          /* Begint direct rechts van het rode blok */
+    width: 56px;
+    height: 106px;       /* topbar (40px) + navbar (66px) */
+    background: var(--color-red);
+    /* Driehoek: van top-links naar bottom-rechts */
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    pointer-events: none;
+    z-index: 2;
   }
 
   .header-logo__img {
@@ -211,6 +228,8 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
     flex: 1;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
   }
 
   /* Bovenste dunne balk: socials + contact */
@@ -297,7 +316,8 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
     display: flex;
     align-items: center;
     height: 66px;
-    padding: 0 28px;
+    /* Extra links padding zodat nav-items starten na de diagonaal (240+56=296px) */
+    padding: 0 28px 0 64px;
     max-width: 1200px;
     margin: 0 auto;
   }
