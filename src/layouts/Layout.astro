@@ -207,7 +207,7 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
     top: 0;
     left: 100%;
     width: 72px;
-    height: 142px;       /* topbar (52px) + navbar (86px) + 4px buffer */
+    height: 100%;        /* Altijd exact de volledige hoogte van het rode blok */
     background: var(--color-red);
     clip-path: polygon(0 0, 0 100%, 100% 100%);
     pointer-events: none;
@@ -232,8 +232,8 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
 
   /* Bovenste dunne balk: socials + contact */
   .header-topbar {
-    background: #fff;
-    border-bottom: 1px solid #f0f0f0;
+    background: #efefef;
+    /* Geen border — dit veroorzaakte een zichtbare lijn door de diagonaal */
   }
 
   .header-topbar__inner {
