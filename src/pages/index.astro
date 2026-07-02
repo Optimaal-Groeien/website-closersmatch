@@ -79,6 +79,7 @@ import Layout from '../layouts/Layout.astro';
             Niemand is eigenaar van het geheel.<br />
             Precies daar lekt omzet weg.
           </p>
+          <a href="/contact" class="btn btn--red btn--lg ecosystem__cta" style="margin-top: 32px; display: inline-flex;">Ontdek hoe het werkt →</a>
         </div>
 
         <!-- RECHTS: statement + 5 stappen -->
@@ -145,10 +146,6 @@ import Layout from '../layouts/Layout.astro';
 
       </div>
 
-      <!-- CTA — gecentreerd onderaan -->
-      <div class="ecosystem__cta-wrap">
-        <a href="/contact" class="btn btn--red btn--lg ecosystem__cta">Ontdek hoe het werkt →</a>
-      </div>
 
     </div>
   </section>
@@ -791,25 +788,14 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.5;
   }
 
-  /* CTA gecentreerd */
-  .ecosystem__cta-wrap {
-    text-align: center;
-    padding-top: 8px;
-  }
-
-  .ecosystem__cta {
-    min-width: 340px;
-    justify-content: center;
-  }
-
   @media (max-width: 960px) {
     .ecosystem__top {
       grid-template-columns: 1fr;
       gap: 40px;
     }
     .ecosystem__cta {
-      min-width: 0;
       width: 100%;
+      justify-content: center;
     }
   }
 
