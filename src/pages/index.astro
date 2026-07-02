@@ -63,93 +63,90 @@ import Layout from '../layouts/Layout.astro';
        ECOSYSTEEM — SECTIE 2
   ================================================ -->
   <section class="section ecosystem">
-    <div class="container ecosystem__inner">
+    <div class="container">
 
-      <!-- LINKS: afbeelding -->
-      <div class="ecosystem__visual">
-        <div class="ecosystem__img-wrap">
-          <img
-            src="/images/ecosysteem-sectie.png"
-            alt="Het commercieel ecosysteem van ClosersMatch — van leadgeneratie tot closing"
-            class="ecosystem__img"
-            loading="lazy"
-          />
+      <!-- BOVENSTE RIJ: links titel/intro, rechts "anders" + stappen -->
+      <div class="ecosystem__top">
+
+        <!-- LINKS: label, titel, probleembeschrijving -->
+        <div class="ecosystem__left">
+          <span class="label">Het commercieel ecosysteem</span>
+          <h2 class="h2 ecosystem__title">Van eerste contact<br />tot gesloten deal.</h2>
+          <p class="ecosystem__subkop">Niet één schakel. Het complete commercieel ecosysteem.</p>
+          <p class="ecosystem__body">
+            De meeste bedrijven lappen vijf losse oplossingen aan elkaar.<br />
+            Een setter hier. Een closer daar. Een CRM ergens anders.<br />
+            Niemand is eigenaar van het geheel.<br />
+            Precies daar lekt omzet weg.
+          </p>
         </div>
+
+        <!-- RECHTS: statement + 5 stappen -->
+        <div class="ecosystem__right">
+          <div class="ecosystem__statement">
+            <p class="ecosystem__statement-lead">ClosersMatch is anders.</p>
+            <p>Vijf elementen. Één systeem. Eén verantwoordelijke.<br />Dat is het commercieel ecosysteem van ClosersMatch.</p>
+          </div>
+
+          <div class="ecosystem__steps">
+
+            <div class="ecosystem__step">
+              <div class="ecosystem__step-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.06 1.24 2 2 0 012 .06h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+              </div>
+              <div class="ecosystem__step-body">
+                <h3 class="ecosystem__step-title">Kwalificeren</h3>
+                <p class="ecosystem__step-text">Setters screenen leads. Alleen serieuze kopers komen in jouw agenda.</p>
+              </div>
+            </div>
+
+            <div class="ecosystem__step">
+              <div class="ecosystem__step-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </div>
+              <div class="ecosystem__step-body">
+                <h3 class="ecosystem__step-title">Closen</h3>
+                <p class="ecosystem__step-text">Gecertificeerde closers voeren het gesprek. De deal wordt gesloten.</p>
+              </div>
+            </div>
+
+            <div class="ecosystem__step">
+              <div class="ecosystem__step-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </div>
+              <div class="ecosystem__step-body">
+                <h3 class="ecosystem__step-title">Structureren</h3>
+                <p class="ecosystem__step-text">Bewezen salesproces, scripts en CRM-inrichting — klaar voor gebruik.</p>
+              </div>
+            </div>
+
+            <div class="ecosystem__step">
+              <div class="ecosystem__step-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div class="ecosystem__step-body">
+                <h3 class="ecosystem__step-title">Monitoren</h3>
+                <p class="ecosystem__step-text">Volledig inzicht in pipeline, calls en resultaten via het platform.</p>
+              </div>
+            </div>
+
+            <div class="ecosystem__step">
+              <div class="ecosystem__step-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="ecosystem__step-body">
+                <h3 class="ecosystem__step-title">Optimaliseren</h3>
+                <p class="ecosystem__step-text">Doorlopende coaching. Elke closer wordt beter. Elke week.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
-      <!-- RECHTS: tekst -->
-      <div class="ecosystem__content">
-        <span class="label">Het commercieel ecosysteem</span>
-        <h2 class="h2 ecosystem__title">Van eerste contact<br />tot gesloten deal.</h2>
-        <p class="ecosystem__subkop">Niet één schakel. Het complete commercieel ecosysteem.</p>
-
-        <p class="ecosystem__body">
-          De meeste bedrijven lappen vijf losse oplossingen aan elkaar.<br />
-          Een setter hier. Een closer daar. Een CRM ergens anders.<br />
-          Niemand is eigenaar van het geheel.<br />
-          Precies daar lekt omzet weg.<br /><br />
-          <strong>ClosersMatch is anders.</strong>
-        </p>
-
-        <div class="ecosystem__steps">
-
-          <div class="ecosystem__step">
-            <div class="ecosystem__step-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.06 1.24 2 2 0 012 .06h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
-            </div>
-            <div class="ecosystem__step-body">
-              <h3 class="ecosystem__step-title">Kwalificeren</h3>
-              <p class="ecosystem__step-text">Setters screenen leads. Alleen serieuze kopers komen in jouw agenda.</p>
-            </div>
-          </div>
-
-          <div class="ecosystem__step">
-            <div class="ecosystem__step-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-            </div>
-            <div class="ecosystem__step-body">
-              <h3 class="ecosystem__step-title">Closen</h3>
-              <p class="ecosystem__step-text">Gecertificeerde closers voeren het gesprek. De deal wordt gesloten.</p>
-            </div>
-          </div>
-
-          <div class="ecosystem__step">
-            <div class="ecosystem__step-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            </div>
-            <div class="ecosystem__step-body">
-              <h3 class="ecosystem__step-title">Structureren</h3>
-              <p class="ecosystem__step-text">Bewezen salesproces, scripts en CRM-inrichting — klaar voor gebruik.</p>
-            </div>
-          </div>
-
-          <div class="ecosystem__step">
-            <div class="ecosystem__step-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            </div>
-            <div class="ecosystem__step-body">
-              <h3 class="ecosystem__step-title">Monitoren</h3>
-              <p class="ecosystem__step-text">Volledig inzicht in pipeline, calls en resultaten via het platform.</p>
-            </div>
-          </div>
-
-          <div class="ecosystem__step">
-            <div class="ecosystem__step-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="ecosystem__step-body">
-              <h3 class="ecosystem__step-title">Optimaliseren</h3>
-              <p class="ecosystem__step-text">Doorlopende coaching. Elke closer wordt beter. Elke week.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="ecosystem__statement">
-          <p>Vijf elementen. Één systeem. Eén verantwoordelijke.</p>
-          <p>Dat is het commercieel ecosysteem van ClosersMatch.</p>
-        </div>
-
+      <!-- CTA — gecentreerd onderaan -->
+      <div class="ecosystem__cta-wrap">
         <a href="/contact" class="btn btn--red btn--lg ecosystem__cta">Ontdek hoe het werkt →</a>
       </div>
 
@@ -688,25 +685,16 @@ import Layout from '../layouts/Layout.astro';
     background: #F9FAFB;
   }
 
-  .ecosystem__inner {
+  /* Bovenste 2-koloms rij */
+  .ecosystem__top {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
+    grid-template-columns: 1fr 1.15fr;
     gap: 72px;
-    align-items: center;
+    align-items: start;
+    margin-bottom: 48px;
   }
 
-  .ecosystem__img-wrap {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-  }
-
-  .ecosystem__img {
-    width: 100%;
-    display: block;
-    border-radius: var(--radius-lg);
-  }
-
+  /* LINKS */
   .ecosystem__title {
     margin-top: 16px;
     margin-bottom: 10px;
@@ -714,7 +702,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .ecosystem__subkop {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--color-red);
     margin-bottom: 20px;
@@ -723,20 +711,37 @@ import Layout from '../layouts/Layout.astro';
   .ecosystem__body {
     font-size: 1rem;
     color: var(--color-gray-mid);
-    line-height: 1.75;
-    margin-bottom: 32px;
+    line-height: 1.8;
+    margin: 0;
   }
 
-  .ecosystem__body strong {
-    color: var(--color-black);
-    font-weight: 700;
+  /* RECHTS */
+  .ecosystem__statement {
+    background: var(--color-black);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin-bottom: 16px;
+  }
+
+  .ecosystem__statement-lead {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .ecosystem__statement p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
   }
 
   .ecosystem__steps {
     display: flex;
     flex-direction: column;
     gap: 0;
-    margin-bottom: 32px;
     border: 1px solid var(--color-gray-border);
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -746,8 +751,8 @@ import Layout from '../layouts/Layout.astro';
   .ecosystem__step {
     display: flex;
     align-items: flex-start;
-    gap: 16px;
-    padding: 16px 20px;
+    gap: 14px;
+    padding: 14px 18px;
     border-bottom: 1px solid var(--color-gray-border);
     transition: background 0.2s;
   }
@@ -761,8 +766,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .ecosystem__step-icon {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     background: rgba(221, 52, 46, 0.08);
     border-radius: var(--radius);
     display: flex;
@@ -770,48 +775,41 @@ import Layout from '../layouts/Layout.astro';
     justify-content: center;
     color: var(--color-red);
     flex-shrink: 0;
-    margin-top: 2px;
+    margin-top: 1px;
   }
 
   .ecosystem__step-title {
-    font-size: 0.97rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--color-black);
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 
   .ecosystem__step-text {
-    font-size: 0.88rem;
+    font-size: 0.87rem;
     color: var(--color-gray-mid);
-    line-height: 1.55;
+    line-height: 1.5;
   }
 
-  .ecosystem__statement {
-    background: var(--color-black);
-    color: #fff;
-    border-radius: var(--radius);
-    padding: 20px 24px;
-    margin-bottom: 28px;
+  /* CTA gecentreerd */
+  .ecosystem__cta-wrap {
+    text-align: center;
+    padding-top: 8px;
   }
 
-  .ecosystem__statement p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.85);
-  }
-
-  .ecosystem__statement p:first-child {
-    color: #fff;
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 4px;
+  .ecosystem__cta {
+    min-width: 340px;
+    justify-content: center;
   }
 
   @media (max-width: 960px) {
-    .ecosystem__inner {
+    .ecosystem__top {
       grid-template-columns: 1fr;
-      gap: 48px;
+      gap: 40px;
+    }
+    .ecosystem__cta {
+      min-width: 0;
+      width: 100%;
     }
   }
 
