@@ -60,7 +60,35 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ================================================
-       ECOSYSTEEM — SECTIE 2
+       LOGO STRIP — SECTIE 2
+  ================================================ -->
+  <section class="logos-strip">
+    <h2 class="logos-strip__label">Meer dan 50 succesvolle koppelingen tussen closers en bedrijven</h2>
+    <div class="logos-track-wrap">
+      <div class="logos-track" aria-label="Klantlogo's">
+        <img src="/images/logos/logo-1.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-2.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-3.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-4.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-5.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-6.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-7.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <img src="/images/logos/logo-8.webp" alt="Klant ClosersMatch" class="logo-img" />
+        <!-- Duplicaat voor naadloze loop -->
+        <img src="/images/logos/logo-1.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-2.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-3.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-4.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-5.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-6.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-7.webp" alt="" class="logo-img" aria-hidden="true" />
+        <img src="/images/logos/logo-8.webp" alt="" class="logo-img" aria-hidden="true" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       ECOSYSTEEM — SECTIE 3
   ================================================ -->
   <section class="section ecosystem">
     <div class="container">
@@ -236,34 +264,6 @@ import Layout from '../layouts/Layout.astro';
         <a href="/closers" class="btn btn--red btn--lg">Bekijk alle CM Certified closers →</a>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ================================================
-       LOGO STRIP
-  ================================================ -->
-  <section class="logos-strip">
-    <p class="logos-strip__label">Meer dan 50 succesvolle koppelingen tussen closers en bedrijven</p>
-    <div class="logos-track-wrap">
-      <div class="logos-track" aria-label="Klantlogo's">
-        <img src="/images/logos/logo-1.webp" alt="Klant ClosersMatch" class="logo-img" />
-        <img src="/images/logos/logo-2.webp" alt="Klant ClosersMatch" class="logo-img" />
-        <img src="/images/logos/logo-3.webp" alt="Klant ClosersMatch" class="logo-img" />
-        <img src="/images/logos/logo-4.webp" alt="Klant ClosersMatch" class="logo-img" />
-        <img src="/images/logos/logo-5.webp" alt="Klant ClosersMatch" class="logo-img" />
-        <img src="/images/logos/logo-6.webp" alt="Klant ClosersMatch" class="logo-img" />
-        <img src="/images/logos/logo-7.webp" alt="Klant ClosersMatch" class="logo-img" />
-        <img src="/images/logos/logo-8.webp" alt="Klant ClosersMatch" class="logo-img" />
-        <!-- Duplicaat voor naadloze loop -->
-        <img src="/images/logos/logo-1.webp" alt="" class="logo-img" aria-hidden="true" />
-        <img src="/images/logos/logo-2.webp" alt="" class="logo-img" aria-hidden="true" />
-        <img src="/images/logos/logo-3.webp" alt="" class="logo-img" aria-hidden="true" />
-        <img src="/images/logos/logo-4.webp" alt="" class="logo-img" aria-hidden="true" />
-        <img src="/images/logos/logo-5.webp" alt="" class="logo-img" aria-hidden="true" />
-        <img src="/images/logos/logo-6.webp" alt="" class="logo-img" aria-hidden="true" />
-        <img src="/images/logos/logo-7.webp" alt="" class="logo-img" aria-hidden="true" />
-        <img src="/images/logos/logo-8.webp" alt="" class="logo-img" aria-hidden="true" />
-      </div>
     </div>
   </section>
 
@@ -1035,18 +1035,19 @@ import Layout from '../layouts/Layout.astro';
   ==================================================== */
   .logos-strip {
     background: #fff;
-    padding: 40px 0 56px;
-    border-top: 1px solid var(--color-gray-border);
+    padding: 48px 0 56px;
     overflow: hidden;
   }
 
   .logos-strip__label {
     text-align: center;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--color-red);
-    letter-spacing: 0.02em;
-    margin-bottom: 32px;
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+    font-weight: 800;
+    color: var(--color-black);
+    letter-spacing: -0.01em;
+    margin-bottom: 36px;
+    padding: 0 24px;
+    font-family: var(--font-display);
   }
 
   .logos-track-wrap {
@@ -1073,15 +1074,9 @@ import Layout from '../layouts/Layout.astro';
     height: 40px;
     width: auto;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: filter 0.3s, opacity 0.3s;
-    flex-shrink: 0;
-  }
-
-  .logo-img:hover {
     filter: grayscale(0%);
     opacity: 1;
+    flex-shrink: 0;
   }
 
   @keyframes logoScroll {
