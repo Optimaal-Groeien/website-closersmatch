@@ -582,27 +582,39 @@ import Layout from '../layouts/Layout.astro';
           Bij ClosersMatch zoek je niet naar opdrachten. Je wordt gematcht aan bedrijven met warme leads die klaar zijn om gesloten te worden. Jij richt je op sluiten. Wij regelen de rest.
         </p>
 
-        <!-- Blok 1 -->
-        <div class="voor-closers__block">
-          <div class="voor-closers__block-header">
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L10 14.3l-4.8 2.6.9-5.4L2.2 7.7l5.4-.8L10 2z" stroke="#DD342E" stroke-width="1.5" stroke-linejoin="round"/></svg>
-            <span class="voor-closers__block-tag">CM Certified</span>
-          </div>
-          <h3 class="voor-closers__block-title">Word écht goed in sales.</h3>
-          <p class="voor-closers__block-text">De meeste closers leren het vak op de harde manier. Trial and error, zonder structuur, zonder goede feedback.</p>
-          <p class="voor-closers__block-text">De CM Certified training werkt anders. Intensieve rollenspellen. Echte salesscenario's. Directe feedback van ervaren closers. Je leert hoe je elk gesprek stuurt, bezwaren wegneemt en de deal sluit — ook de moeilijke.</p>
-          <p class="voor-closers__block-emphasis">Het resultaat is simpel: je sluit meer. Je verdient meer.</p>
-        </div>
+        <!-- Voordelen -->
+        <div class="voor-closers__voordelen">
 
-        <!-- Blok 2 -->
-        <div class="voor-closers__block">
-          <div class="voor-closers__block-header">
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#DD342E" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="#DD342E" stroke-width="1.5" stroke-linecap="round"/></svg>
-            <span class="voor-closers__block-tag">Setter als instap</span>
+          <div class="voor-closers__voordeel">
+            <div class="voor-closers__voordeel-icon">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#DD342E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 class="voor-closers__voordeel-title">Opdrachten die bij je passen</h3>
+              <p class="voor-closers__voordeel-text">Matching op branche, salesstijl en dealgrootte. Geen koude acquisitie, geen onzekere maanden. Jij wordt gekoppeld aan bedrijven waar jouw aanpak werkt — en waar de leads al klaar liggen.</p>
+            </div>
           </div>
-          <h3 class="voor-closers__block-title">Nog niet veel saleservaring?</h3>
-          <p class="voor-closers__block-text">Begin als appointment setter. Je leert hoe je leads kwalificeert, gesprekken opent en prospects warm houdt voor het closinggesprek. Echte praktijkervaring, elke dag, bij echte bedrijven.</p>
-          <p class="voor-closers__block-text">Wanneer je er klaar voor bent, is de stap naar closer een logische volgende stap. Niet verplicht. Wel mogelijk.</p>
+
+          <div class="voor-closers__voordeel">
+            <div class="voor-closers__voordeel-icon">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#DD342E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 class="voor-closers__voordeel-title">Word écht goed in sales</h3>
+              <p class="voor-closers__voordeel-text">De CM Certified training is geen certificaat om aan de muur te hangen. Je leert hoe je elk gesprek stuurt, bezwaren wegneemt en de deal sluit — ook de moeilijke. Intensieve rollenspellen, echte scenario's, directe feedback. Na de training sluit je meer. En verdien je meer.</p>
+            </div>
+          </div>
+
+          <div class="voor-closers__voordeel">
+            <div class="voor-closers__voordeel-icon">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#DD342E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 class="voor-closers__voordeel-title">Nog niet veel saleservaring?</h3>
+              <p class="voor-closers__voordeel-text">Begin als appointment setter. Je leert hoe je leads kwalificeert, gesprekken opent en prospects warm houdt. Echte praktijkervaring bij echte bedrijven, elke dag. Wanneer je er klaar voor bent, is de stap naar closer een logische volgende stap. Niet verplicht. Wel mogelijk.</p>
+            </div>
+          </div>
+
         </div>
 
         <!-- Statement -->
@@ -611,7 +623,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- CTAs -->
         <div class="voor-closers__actions">
           <a href="/voor-closers" class="btn btn--red btn--lg">Aanmelden als closer →</a>
-          <a href="/appointment-setter-worden" class="voor-closers__link">Starten als appointment setter →</a>
+          <a href="/appointment-setter-worden" class="btn btn--outline-white">Starten als appointment setter →</a>
         </div>
       </div>
 
@@ -1148,7 +1160,7 @@ import Layout from '../layouts/Layout.astro';
      NO CURE NO PAY
   ==================================================== */
   .ncnp {
-    background: var(--color-black);
+    background: #1C1F26;
     padding: 100px 0;
   }
 
@@ -1556,7 +1568,7 @@ import Layout from '../layouts/Layout.astro';
      VOOR CLOSERS & SETTERS
   ==================================================== */
   .voor-closers {
-    background: #111;
+    background: #1C1F26;
     padding: 100px 0;
   }
 
@@ -1581,49 +1593,49 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 40px;
   }
 
-  .voor-closers__block {
-    padding: 24px 28px;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: var(--radius-lg);
-    margin-bottom: 16px;
-    background: rgba(255,255,255,0.03);
+  .voor-closers__voordelen {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 28px;
   }
 
-  .voor-closers__block-header {
+  .voor-closers__voordeel {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .voor-closers__voordeel:last-child {
+    border-bottom: none;
+  }
+
+  .voor-closers__voordeel-icon {
+    width: 28px;
+    height: 28px;
+    background: rgba(221,52,46,0.12);
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
   }
 
-  .voor-closers__block-tag {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--color-red);
-  }
-
-  .voor-closers__block-title {
-    font-size: 1.1rem;
+  .voor-closers__voordeel-title {
+    font-size: 1rem;
     font-weight: 800;
     color: #fff;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-family: var(--font-display);
   }
 
-  .voor-closers__block-text {
+  .voor-closers__voordeel-text {
     font-size: 0.9rem;
     color: rgba(255,255,255,0.5);
     line-height: 1.7;
-    margin-bottom: 8px;
-  }
-
-  .voor-closers__block-emphasis {
-    font-size: 0.92rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.8);
-    margin-top: 10px;
   }
 
   .voor-closers__statement {
