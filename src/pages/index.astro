@@ -525,62 +525,70 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ================================================
-       TESTIMONIALS
+       KLANTRESULTATEN — SOCIAL PROOF
   ================================================ -->
-  <section class="section testimonials">
+  <section class="section results">
     <div class="container">
-      <div class="section-header">
-        <span class="label">Resultaten</span>
-        <h2 class="h2 section-header__title">Wat anderen zeggen</h2>
+
+      <div class="results__header">
+        <span class="label">Klantresultaten</span>
+        <h2 class="h2 results__title">Dit zijn geen prognoses.<br />Dit zijn resultaten.</h2>
+        <p class="results__sub">Drie bedrijven. Drie branches. Allemaal resultaat vanaf week één.</p>
       </div>
 
-      <div class="testimonials__grid">
-        <div class="testimonial">
-          <div class="testimonial__stars">★★★★★</div>
-          <blockquote class="testimonial__quote">
-            "We hadden 40+ warme leads liggen die niet geclost werden. ClosersMatch zorgde binnen een week voor een gecertificeerde closer die ons conversiepercentage van 18% naar 61% bracht."
-          </blockquote>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">JV</div>
-            <div>
-              <strong>Jeroen V.</strong>
-              <span>CEO, Online Coaching Bedrijf</span>
+      <div class="results__grid">
+
+        <!-- DetachPro -->
+        <div class="result-card">
+          <div class="result-card__top">
+            <div class="result-card__logo-wrap">
+              <img src="/images/clients/detachpro.png" alt="DetachPro" class="result-card__logo" />
             </div>
+            <p class="result-card__desc">Verbindt technische professionals met bedrijven.</p>
           </div>
+          <div class="result-card__result">
+            <span class="result-card__arrow">→</span>
+            <span class="result-card__highlight">€50.000 deal gesloten in week één</span>
+          </div>
+          <p class="result-card__note">Geen inwerkperiode. Direct commercieel resultaat.</p>
         </div>
 
-        <div class="testimonial testimonial--featured">
-          <div class="testimonial__stars">★★★★★</div>
-          <blockquote class="testimonial__quote">
-            "Ik had nul saleservaring. Na de training van ClosersMatch sloot ik mijn eerste deal van €7.500 in week 3. Nu verdien ik consistent meer dan in mijn oude baan."
-          </blockquote>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar testimonial__avatar--red">LK</div>
-            <div>
-              <strong>Lisa K.</strong>
-              <span>High Ticket Closer, gecertificeerd 2024</span>
+        <!-- Van de Bilt Energy -->
+        <div class="result-card result-card--featured">
+          <div class="result-card__top">
+            <div class="result-card__logo-wrap result-card__logo-wrap--dark">
+              <img src="/images/clients/van-de-bilt-energy.png" alt="Van de Bilt Energy" class="result-card__logo" />
             </div>
+            <p class="result-card__desc">Leverancier van thuisbatterijsystemen en duurzame energieoplossingen.</p>
           </div>
+          <div class="result-card__result">
+            <span class="result-card__arrow">→</span>
+            <span class="result-card__highlight">Twee systemen verkocht in week één</span>
+          </div>
+          <p class="result-card__note">Van lead naar gesloten deal. Snelle conversie, bewezen propositie.</p>
         </div>
 
-        <div class="testimonial">
-          <div class="testimonial__stars">★★★★★</div>
-          <blockquote class="testimonial__quote">
-            "Als machinebouwer dachten we dat high ticket sales niet voor ons was. De closer die ClosersMatch koppelde kende onze industrie en sloot onze grootste deal ooit."
-          </blockquote>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">MH</div>
-            <div>
-              <strong>Mark H.</strong>
-              <span>Directeur, Machinebouwbedrijf B2B</span>
+        <!-- Leadstars -->
+        <div class="result-card">
+          <div class="result-card__top">
+            <div class="result-card__logo-wrap result-card__logo-wrap--dark">
+              <img src="/images/clients/leadstars.png" alt="Leadstars" class="result-card__logo" />
             </div>
+            <p class="result-card__desc">Helpt bedrijven structureel groeien via zichtbaarheid, leads en deals.</p>
           </div>
+          <div class="result-card__result">
+            <span class="result-card__arrow">→</span>
+            <span class="result-card__highlight">€20.000+ per maand aan nieuwe deals</span>
+          </div>
+          <p class="result-card__note">Consistente deal flow. Schaalbaar en meetbaar.</p>
         </div>
+
       </div>
 
-      <div class="testimonials__cta">
-        <a href="/cases" class="btn btn--outline-red">Bekijk alle cases →</a>
+      <div class="results__cta">
+        <a href="/contact" class="btn btn--red btn--lg">Plan jouw succes nu →</a>
       </div>
+
     </div>
   </section>
 
@@ -1521,80 +1529,131 @@ import Layout from '../layouts/Layout.astro';
   }
 
   /* ====================================================
-     TESTIMONIALS
+     KLANTRESULTATEN
   ==================================================== */
-  .testimonials__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+  .results {
+    background: #F9FAFB;
   }
 
-  .testimonial {
-    padding: 36px;
+  .results__header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 56px;
+  }
+
+  .results__title {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .results__sub {
+    font-size: 1.05rem;
+    color: var(--color-gray-mid);
+    line-height: 1.65;
+  }
+
+  .results__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .result-card {
+    background: #fff;
     border-radius: var(--radius-lg);
     border: 1px solid var(--color-gray-border);
+    padding: 32px 28px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     transition: transform 0.25s, box-shadow 0.25s;
   }
 
-  .testimonial:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
+  .result-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
   }
 
-  .testimonial--featured {
+  .result-card--featured {
+    border-color: var(--color-red);
+    box-shadow: 0 0 0 1px var(--color-red);
+  }
+
+  .result-card__top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .result-card__logo-wrap {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
     background: var(--color-gray-light);
-    border-color: transparent;
+    border-radius: var(--radius);
+    width: fit-content;
   }
 
-  .testimonial__stars {
-    color: var(--color-red);
-    font-size: 1rem;
-    letter-spacing: 2px;
+  .result-card__logo-wrap--dark {
+    background: #111;
   }
 
-  .testimonial__quote {
-    font-size: 0.97rem;
-    line-height: 1.7;
-    color: var(--color-text);
-    font-style: italic;
-    flex: 1;
+  .result-card__logo {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    max-width: 160px;
   }
 
-  .testimonial__author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .testimonial__avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--color-gray-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    font-weight: 700;
+  .result-card__desc {
+    font-size: 0.92rem;
     color: var(--color-gray-mid);
-    flex-shrink: 0;
+    line-height: 1.6;
   }
 
-  .testimonial__avatar--red {
-    background: rgba(221,52,46,0.1);
+  .result-card__result {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 18px;
+    background: rgba(221, 52, 46, 0.05);
+    border-left: 3px solid var(--color-red);
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+
+  .result-card__arrow {
     color: var(--color-red);
+    font-weight: 900;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
   }
 
-  .testimonial__author strong { display: block; font-size: 0.95rem; }
-  .testimonial__author span { font-size: 0.82rem; color: var(--color-gray-mid); display: block; }
+  .result-card__highlight {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-black);
+    line-height: 1.35;
+    font-family: var(--font-display);
+  }
 
-  .testimonials__cta { text-align: center; margin-top: 48px; }
+  .result-card__note {
+    font-size: 0.88rem;
+    color: var(--color-gray-mid);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .results__cta {
+    text-align: center;
+  }
 
   @media (max-width: 900px) {
-    .testimonials__grid { grid-template-columns: 1fr; }
+    .results__grid { grid-template-columns: 1fr; }
   }
 
   /* ====================================================
