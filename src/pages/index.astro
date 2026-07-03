@@ -1166,7 +1166,7 @@ import Layout from '../layouts/Layout.astro';
      NO CURE NO PAY
   ==================================================== */
   .ncnp {
-    background: #1C1F26;
+    background: #fff;
     padding: 100px 0;
   }
 
@@ -1179,15 +1179,15 @@ import Layout from '../layouts/Layout.astro';
 
   /* LINKS */
   .label--ghost {
-    background: rgba(255,255,255,0.08);
-    color: rgba(255,255,255,0.55);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.05);
+    color: var(--color-gray-mid);
+    border: 1px solid var(--color-gray-border);
   }
 
   .ncnp__title {
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #fff;
+    color: var(--color-black);
     letter-spacing: -0.025em;
     line-height: 1.1;
   }
@@ -1199,14 +1199,14 @@ import Layout from '../layouts/Layout.astro';
   .ncnp__subkop {
     font-size: 1rem;
     font-weight: 600;
-    color: rgba(255,255,255,0.6);
+    color: var(--color-gray-mid);
     margin-bottom: 20px;
     line-height: 1.6;
   }
 
   .ncnp__body {
     font-size: 0.97rem;
-    color: rgba(255,255,255,0.5);
+    color: var(--color-gray-mid);
     line-height: 1.8;
   }
 
@@ -1216,7 +1216,7 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.3);
+    color: var(--color-gray-mid);
     margin-bottom: 32px;
   }
 
@@ -1232,7 +1232,7 @@ import Layout from '../layouts/Layout.astro';
     gap: 24px;
     align-items: flex-start;
     padding: 28px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid var(--color-gray-border);
   }
 
   .ncnp__step:first-child { padding-top: 0; }
@@ -1251,7 +1251,7 @@ import Layout from '../layouts/Layout.astro';
   .ncnp__step-title {
     font-size: 1.4rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--color-black);
     margin-bottom: 10px;
     font-family: var(--font-display);
     letter-spacing: -0.02em;
@@ -1259,7 +1259,7 @@ import Layout from '../layouts/Layout.astro';
 
   .ncnp__step-text {
     font-size: 0.92rem;
-    color: rgba(255,255,255,0.5);
+    color: var(--color-gray-mid);
     line-height: 1.7;
   }
 
@@ -1272,7 +1272,7 @@ import Layout from '../layouts/Layout.astro';
 
   .ncnp__cta-note {
     font-size: 0.82rem;
-    color: rgba(255,255,255,0.3);
+    color: var(--color-gray-mid);
     margin: 0;
     padding-left: 2px;
   }
@@ -1574,7 +1574,7 @@ import Layout from '../layouts/Layout.astro';
      VOOR CLOSERS & SETTERS
   ==================================================== */
   .voor-closers {
-    background: #1C1F26;
+    background: #F9FAFB;
     padding: 100px 0;
   }
 
@@ -1586,7 +1586,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .voor-closers__title {
-    color: #fff;
+    color: var(--color-black);
     margin-top: 20px;
     margin-bottom: 20px;
     letter-spacing: -0.025em;
@@ -1594,7 +1594,7 @@ import Layout from '../layouts/Layout.astro';
 
   .voor-closers__body {
     font-size: 1rem;
-    color: rgba(255,255,255,0.55);
+    color: var(--color-gray-mid);
     line-height: 1.75;
     margin-bottom: 40px;
   }
@@ -1611,7 +1611,7 @@ import Layout from '../layouts/Layout.astro';
     gap: 16px;
     align-items: flex-start;
     padding: 20px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid var(--color-gray-border);
   }
 
   .voor-closers__voordeel:last-child {
@@ -1621,7 +1621,7 @@ import Layout from '../layouts/Layout.astro';
   .voor-closers__voordeel-icon {
     width: 28px;
     height: 28px;
-    background: rgba(221,52,46,0.12);
+    background: rgba(221,52,46,0.10);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1633,25 +1633,25 @@ import Layout from '../layouts/Layout.astro';
   .voor-closers__voordeel-title {
     font-size: 1rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--color-black);
     margin-bottom: 8px;
     font-family: var(--font-display);
   }
 
   .voor-closers__voordeel-text {
     font-size: 0.9rem;
-    color: rgba(255,255,255,0.5);
+    color: var(--color-gray-mid);
     line-height: 1.7;
   }
 
   .voor-closers__statement {
     font-size: 1rem;
     font-weight: 700;
-    color: rgba(255,255,255,0.7);
+    color: var(--color-black);
     border-left: 3px solid var(--color-red);
     padding: 10px 16px;
     margin: 24px 0 32px;
-    background: rgba(221,52,46,0.06);
+    background: rgba(221,52,46,0.05);
     border-radius: 0 var(--radius) var(--radius) 0;
   }
 
@@ -1662,18 +1662,6 @@ import Layout from '../layouts/Layout.astro';
     align-items: flex-start;
   }
 
-  .voor-closers__link {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: rgba(255,255,255,0.55);
-    text-decoration: none;
-    transition: color 0.2s;
-    padding-left: 2px;
-  }
-
-  .voor-closers__link:hover {
-    color: #fff;
-  }
 
   /* Rechts: afbeelding */
   .voor-closers__visual {
