@@ -406,6 +406,68 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ================================================
+       NO CURE NO PAY — BETALINGSMODEL
+  ================================================ -->
+  <section class="ncnp">
+    <div class="container ncnp__inner">
+
+      <!-- LINKS: titel + intro -->
+      <div class="ncnp__left">
+        <span class="label label--ghost">Betalingsmodel</span>
+        <h2 class="h2 ncnp__title">
+          Je betaalt alleen<br />als wij leveren.<br />
+          <span class="ncnp__title-red">No Cure No Pay.</span>
+        </h2>
+        <p class="ncnp__subkop">Geen vast salaris. Geen wervingskosten. Geen langdurig contract.</p>
+        <p class="ncnp__body">
+          No cure no pay is niet alleen een betalingsmodel. Het is een belofte.
+          Als wij niet presteren, betaal je niets.<br /><br />
+          Ons belang is altijd gelijk aan het jouwe.
+        </p>
+      </div>
+
+      <!-- RECHTS: genummerde stappen -->
+      <div class="ncnp__right">
+        <p class="ncnp__steps-label">Hoe het model werkt</p>
+
+        <div class="ncnp__steps">
+
+          <div class="ncnp__step">
+            <span class="ncnp__num">01</span>
+            <div class="ncnp__step-body">
+              <h3 class="ncnp__step-title">Appointmentsetter</h3>
+              <p class="ncnp__step-text">Je betaalt per gekwalificeerde afspraak die in jouw agenda wordt gezet. Alleen leads met echte koopintentie komen door. Geen afspraak, geen kosten.</p>
+            </div>
+          </div>
+
+          <div class="ncnp__step">
+            <span class="ncnp__num">02</span>
+            <div class="ncnp__step-body">
+              <h3 class="ncnp__step-title">Closer</h3>
+              <p class="ncnp__step-text">Je betaalt uitsluitend wanneer een deal daadwerkelijk wordt gesloten. De closer voert het gesprek, brengt behoeften in kaart en sluit. Geen resultaat, geen kosten.</p>
+            </div>
+          </div>
+
+          <div class="ncnp__step">
+            <span class="ncnp__num">03</span>
+            <div class="ncnp__step-body">
+              <h3 class="ncnp__step-title">Combinatie</h3>
+              <p class="ncnp__step-text">Volledige salesuitbesteding waarbij ClosersMatch het complete traject beheert. Van eerste contact en kwalificatie tot het sluiten van de deal. Eén systeem, één verantwoordelijke.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="ncnp__cta-wrap">
+          <a href="/contact" class="btn btn--red btn--lg">Plan nu je gratis intake →</a>
+          <p class="ncnp__cta-note">zonder verplichtingen</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
        PROBLEEMBRUG
   ================================================ -->
   <section class="section section--gray bridge">
@@ -1104,6 +1166,128 @@ import Layout from '../layouts/Layout.astro';
   @media (max-width: 560px) {
     .logo-img { height: 28px; }
     .logos-track { gap: 40px; }
+  }
+
+  /* ====================================================
+     NO CURE NO PAY
+  ==================================================== */
+  .ncnp {
+    background: var(--color-black);
+    padding: 100px 0;
+  }
+
+  .ncnp__inner {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* LINKS */
+  .label--ghost {
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.55);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .ncnp__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+
+  .ncnp__title-red {
+    color: var(--color-red);
+  }
+
+  .ncnp__subkop {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .ncnp__body {
+    font-size: 0.97rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.8;
+  }
+
+  /* RECHTS */
+  .ncnp__steps-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 32px;
+  }
+
+  .ncnp__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 40px;
+  }
+
+  .ncnp__step {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .ncnp__step:first-child { padding-top: 0; }
+  .ncnp__step:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .ncnp__num {
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: var(--color-red);
+    flex-shrink: 0;
+    margin-top: 6px;
+    min-width: 24px;
+  }
+
+  .ncnp__step-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  .ncnp__step-text {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+  }
+
+  .ncnp__cta-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ncnp__cta-note {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.3);
+    margin: 0;
+    padding-left: 2px;
+  }
+
+  @media (max-width: 900px) {
+    .ncnp__inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
   }
 
   /* ====================================================
