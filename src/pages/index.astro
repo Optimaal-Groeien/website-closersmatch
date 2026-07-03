@@ -643,25 +643,31 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ================================================
-       TWEE-PAD CTA SECTIE (AFSLUITER)
+       AFSLUITENDE CTA
   ================================================ -->
-  <section class="final-cta">
-    <div class="final-cta__half final-cta__half--bedrijven">
-      <div class="final-cta__content">
-        <h2 class="final-cta__title">Klaar om te stoppen met leads verliezen?</h2>
-        <p class="final-cta__sub">Plan een gratis intake-gesprek. Wij kijken of en hoe wij kunnen helpen — zonder verplichtingen.</p>
-        <a href="/contact" class="btn btn--red btn--lg">Gesprek plannen →</a>
-        <p class="final-cta__note">No cure no pay · Geen vast salaris · Match binnen 5 dagen</p>
-      </div>
-    </div>
+  <section class="closing-cta">
+    <div class="closing-cta__inner">
 
-    <div class="final-cta__half final-cta__half--closers">
-      <div class="final-cta__content">
-        <h2 class="final-cta__title">Wil jij in high ticket sales werken?</h2>
-        <p class="final-cta__sub">Meld je aan voor het trainingsprogramma en start je pad als gecertificeerde closer of appointment setter.</p>
-        <a href="/voor-closers" class="btn btn--dark btn--lg">Start mijn training →</a>
-        <p class="final-cta__note">Training · Certificering · Directe plaatsing</p>
-      </div>
+      <h2 class="closing-cta__title">
+        Omzet bouw je.<br />Je hoopt er niet op.
+      </h2>
+
+      <p class="closing-cta__body">
+        Elk bedrijf heeft financiële infrastructuur.<br />
+        Een boekhoudsysteem. Een controller. Een sluitend proces rond geld.<br /><br />
+        Bijna geen enkel bedrijf heeft hetzelfde voor omzet.<br />
+        Dat is waarom groei onvoorspelbaar blijft.<br /><br />
+        <strong>ClosersMatch bouwt dat systeem voor je — op no cure no pay.</strong>
+      </p>
+
+      <a href="/contact" class="btn btn--red btn--xl closing-cta__btn">Plan je gratis intake →</a>
+
+      <p class="closing-cta__sub">
+        Geen verplichtingen. Geen kosten vooraf. Wel een helder beeld van wat mogelijk is voor jouw bedrijf.
+      </p>
+
+      <p class="closing-cta__brand">ClosersMatch. <span>The Revenue Ecosystem.</span></p>
+
     </div>
   </section>
 
@@ -1852,68 +1858,79 @@ import Layout from '../layouts/Layout.astro';
   }
 
   /* ====================================================
-     FINAL CTA SPLIT
+     AFSLUITENDE CTA
   ==================================================== */
-  .final-cta {
-    display: flex;
-    min-height: 480px;
-  }
-
-  .final-cta__half {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 64px;
-  }
-
-  .final-cta__half--bedrijven {
-    background: var(--color-black);
-  }
-
-  .final-cta__half--closers {
-    background: var(--color-red);
-  }
-
-  .final-cta__content {
-    max-width: 480px;
+  .closing-cta {
+    background: #F9FAFB;
+    padding: 120px 24px 100px;
     text-align: center;
   }
 
-  .final-cta__title {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: 800;
-    color: #fff;
-    margin-bottom: 16px;
-    line-height: 1.25;
+  .closing-cta__inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
   }
 
-  .final-cta__sub {
-    font-size: 1rem;
-    color: rgba(255,255,255,0.7);
+  .closing-cta__title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--color-black);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 36px;
+    font-family: var(--font-display);
+  }
+
+  .closing-cta__body {
+    font-size: 1.1rem;
+    color: var(--color-gray-mid);
+    line-height: 1.8;
+    margin-bottom: 48px;
+    max-width: 600px;
+  }
+
+  .closing-cta__body strong {
+    color: var(--color-black);
+    font-weight: 700;
+  }
+
+  .btn--xl {
+    padding: 18px 40px;
+    font-size: 1.05rem;
+    border-radius: 999px;
+  }
+
+  .closing-cta__btn {
+    margin-bottom: 20px;
+    box-shadow: 0 6px 28px rgba(221,52,46,0.3);
+  }
+
+  .closing-cta__sub {
+    font-size: 0.9rem;
+    color: var(--color-gray-mid);
     line-height: 1.65;
-    margin-bottom: 32px;
+    max-width: 480px;
+    margin-bottom: 56px;
   }
 
-  .final-cta__note {
-    margin-top: 16px;
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.45);
-    letter-spacing: 0.03em;
+  .closing-cta__brand {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-gray-mid);
   }
 
-  .final-cta__half--closers .btn--dark {
-    background: var(--color-black);
-    border-color: var(--color-black);
-  }
-
-  @media (max-width: 768px) {
-    .final-cta { flex-direction: column; }
-    .final-cta__half { padding: 64px 32px; }
+  .closing-cta__brand span {
+    color: var(--color-red);
   }
 
   @media (max-width: 560px) {
-    .final-cta__half { padding: 48px 20px; }
-    .final-cta__half .btn { width: 100%; justify-content: center; }
+    .closing-cta__title { font-size: 2.2rem; }
+    .closing-cta__btn { width: 100%; justify-content: center; }
   }
 </style>
