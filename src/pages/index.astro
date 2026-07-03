@@ -268,6 +268,99 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ================================================
+       HOE HET WERKT — NIEUW (4 STAPPEN)
+  ================================================ -->
+  <section class="section process">
+    <div class="container">
+
+      <div class="process__header">
+        <span class="label">Hoe het werkt</span>
+        <h2 class="h2 process__title">Van eerste gesprek<br />tot gesloten deal.</h2>
+      </div>
+
+      <div class="process__grid">
+
+        <!-- Stap 1 -->
+        <div class="process__card">
+          <div class="process__card-visual process__card-visual--1">
+            <div class="process__step-num">01</div>
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="10" width="36" height="28" rx="4" stroke="white" stroke-width="2.5"/>
+              <path d="M6 18h36" stroke="white" stroke-width="2.5"/>
+              <circle cx="14" cy="14" r="2" fill="white"/>
+              <circle cx="21" cy="14" r="2" fill="white"/>
+              <path d="M16 28h16M16 34h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="process__card-body">
+            <h3 class="process__card-title">Intake</h3>
+            <p class="process__card-text">We leren je bedrijf, product en doelgroep kennen. Samen bepalen we welk profiel closer of setter het beste past — op branche, salesstijl en dealgrootte.</p>
+          </div>
+        </div>
+
+        <!-- Stap 2 -->
+        <div class="process__card">
+          <div class="process__card-visual process__card-visual--2">
+            <div class="process__step-num">02</div>
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="24" r="7" stroke="white" stroke-width="2.5"/>
+              <circle cx="34" cy="24" r="7" stroke="white" stroke-width="2.5"/>
+              <path d="M21 24h6" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M25 21l3 3-3 3" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="process__card-body">
+            <h3 class="process__card-title">Matching</h3>
+            <p class="process__card-text">Binnen 48 uur koppelen we je aan CM Certified closers en setters uit ons netwerk. Geen stapels cv's. Geen sollicitatiegesprekken. Wij filteren.</p>
+          </div>
+        </div>
+
+        <!-- Stap 3 -->
+        <div class="process__card">
+          <div class="process__card-visual process__card-visual--3">
+            <div class="process__step-num">03</div>
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="16" r="7" stroke="white" stroke-width="2.5"/>
+              <path d="M10 40c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M30 28l3 3 6-6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="process__card-body">
+            <h3 class="process__card-title">Onboarding</h3>
+            <p class="process__card-text">De closers worden ingewerkt op jouw product, markt en klant. Gratis. Dat is onderdeel van het ecosysteem, niet een extra dienst.</p>
+          </div>
+        </div>
+
+        <!-- Stap 4 -->
+        <div class="process__card">
+          <div class="process__card-visual process__card-visual--4">
+            <div class="process__step-num">04</div>
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 32l8-10 8 6 8-12 8 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="38" cy="14" r="5" fill="white" fill-opacity="0.2" stroke="white" stroke-width="2"/>
+              <path d="M36 14l1.5 1.5L40 12" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="process__card-body">
+            <h3 class="process__card-title">Resultaat</h3>
+            <p class="process__card-text">Het systeem gaat live. Leads worden gekwalificeerd. Gesprekken worden gevoerd. Deals worden gesloten. Jij betaalt alleen bij resultaat.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="process__statement">
+        <p>Geen langdurige contracten. Geen personeelsrisico.<br />Alleen een systeem dat werkt — of niet kost.</p>
+      </div>
+
+      <div class="process__cta">
+        <a href="/contact" class="btn btn--red btn--lg">Plan je gratis intake →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
        PROBLEEMBRUG
   ================================================ -->
   <section class="section section--gray bridge">
@@ -367,67 +460,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- ================================================
-       HOE HET WERKT — VOOR BEDRIJVEN
-  ================================================ -->
-  <section class="section hiw">
-    <div class="container hiw__inner">
-
-      <!-- Links: foto -->
-      <div class="hiw__photo-col">
-        <div class="hiw__photo-wrap">
-          <img
-            src="/images/closer-aan-het-werk.png"
-            alt="Closer aan het werk met laptop en telefoon"
-            class="hiw__photo"
-            loading="lazy"
-          />
-          <div class="hiw__photo-badge">
-            <span class="hiw__badge-num">No Cure</span>
-            <span class="hiw__badge-label">No Pay</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Rechts: stappen -->
-      <div class="hiw__content">
-        <span class="label">Hoe het werkt</span>
-        <h2 class="h2 hiw__title">Drie stappen tot<br />je eerste deal.</h2>
-        <p class="hiw__intro">Geen langdurig recruitmenttraject. Geen vast salaris. Alleen de juiste professional die aansluit bij jouw aanbod.</p>
-
-        <div class="hiw__steps">
-
-          <div class="hiw__step">
-            <div class="hiw__step-num">01</div>
-            <div class="hiw__step-body">
-              <h3 class="hiw__step-title">Gratis inventarisatie aanvragen</h3>
-              <p class="hiw__step-text">Tijdens een online meeting ontdekken we je bedrijf, salesproces, doelgroep en behoeften. We analyseren waar de kansen liggen en bepalen samen de beste aanpak.</p>
-            </div>
-          </div>
-
-          <div class="hiw__step">
-            <div class="hiw__step-num">02</div>
-            <div class="hiw__step-body">
-              <h3 class="hiw__step-title">Matchen met de juiste closer of appointment setter</h3>
-              <p class="hiw__step-text">We koppelen jou aan de professional die past bij jouw branche, aanbod en salesstijl. Gerichte matching op basis van ervaring, specialisme en werkwijze — voor de beste resultaten.</p>
-            </div>
-          </div>
-
-          <div class="hiw__step">
-            <div class="hiw__step-num">03</div>
-            <div class="hiw__step-body">
-              <h3 class="hiw__step-title">De closer gaat aan de slag</h3>
-              <p class="hiw__step-text">Logboeken en CRM-systemen worden aangemaakt of gekoppeld. De closer belt, clost en rapporteert transparant terug. Jij ziet de deals binnenkomen — zonder het gedoe van een intern salesteam.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <a href="/voor-bedrijven" class="btn btn--red btn--lg hiw__cta">Gratis inventarisatie aanvragen →</a>
-      </div>
-
-    </div>
-  </section>
 
   <!-- ================================================
        VOOR CLOSERS — PREVIEW
@@ -1251,141 +1283,116 @@ import Layout from '../layouts/Layout.astro';
   }
 
   /* ====================================================
-     HOW IT WORKS (HIW)
+     PROCESS (HOE HET WERKT) — 4 STAPPEN
   ==================================================== */
-  .hiw { background: #fff; }
-
-  .hiw__inner {
-    display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: 80px;
-    align-items: center;
+  .process {
+    background: #F9FAFB;
   }
 
-  /* Photo column */
-  .hiw__photo-col { display: flex; justify-content: center; }
-
-  .hiw__photo-wrap {
-    position: relative;
-    width: 100%;
-    max-width: 420px;
+  .process__header {
+    text-align: center;
+    margin-bottom: 56px;
   }
 
-  .hiw__photo {
-    width: 100%;
-    height: 520px;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: var(--radius-lg);
-    display: block;
-  }
-
-  .hiw__photo-badge {
-    position: absolute;
-    bottom: 28px;
-    left: -20px;
-    background: var(--color-black);
-    color: #fff;
-    border-radius: var(--radius);
-    padding: 14px 20px;
-    box-shadow: var(--shadow-lg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1.2;
-  }
-
-  .hiw__badge-num {
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--color-red);
-  }
-
-  .hiw__badge-label {
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
-  }
-
-  /* Content column */
-  .hiw__title {
-    margin: 16px 0 16px;
+  .process__title {
+    margin-top: 16px;
     letter-spacing: -0.02em;
   }
 
-  .hiw__intro {
-    font-size: 1rem;
-    color: var(--color-gray-mid);
-    line-height: 1.65;
-    margin-bottom: 40px;
-    max-width: 460px;
-  }
-
-  .hiw__steps {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-bottom: 40px;
-  }
-
-  .hiw__step {
-    display: flex;
+  .process__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    align-items: flex-start;
-    padding: 24px 0;
-    border-bottom: 1px solid var(--color-gray-border);
+    margin-bottom: 48px;
   }
 
-  .hiw__step:first-child { padding-top: 0; }
-  .hiw__step:last-child { border-bottom: none; padding-bottom: 0; }
+  .process__card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-gray-border);
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
 
-  .hiw__step-num {
-    width: 40px;
-    height: 40px;
-    border-radius: var(--radius);
-    background: var(--color-red);
-    color: #fff;
-    font-size: 0.8rem;
-    font-weight: 900;
-    letter-spacing: 0.05em;
+  .process__card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .process__card-visual {
+    position: relative;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    margin-top: 2px;
   }
 
-  .hiw__step-title {
+  .process__card-visual--1 { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+  .process__card-visual--2 { background: linear-gradient(135deg, #DD342E 0%, #b52420 100%); }
+  .process__card-visual--3 { background: linear-gradient(135deg, #0f3460 0%, #16213e 100%); }
+  .process__card-visual--4 { background: linear-gradient(135deg, #1a1a2e 0%, #DD342E 100%); }
+
+  .process__step-num {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  .process__card-body {
+    padding: 22px 22px 26px;
+  }
+
+  .process__card-title {
     font-size: 1.05rem;
-    font-weight: 700;
-    margin-bottom: 8px;
+    font-weight: 800;
     color: var(--color-black);
+    margin-bottom: 10px;
+    font-family: var(--font-display);
   }
 
-  .hiw__step-text {
-    font-size: 0.95rem;
+  .process__card-text {
+    font-size: 0.9rem;
     color: var(--color-gray-mid);
     line-height: 1.65;
   }
 
-  .hiw__cta { display: inline-flex; }
+  .process__statement {
+    text-align: center;
+    background: var(--color-black);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    margin-bottom: 36px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .process__statement p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+  }
+
+  .process__cta {
+    text-align: center;
+  }
 
   @media (max-width: 960px) {
-    .hiw__inner {
-      grid-template-columns: 1fr;
-      gap: 48px;
+    .process__grid {
+      grid-template-columns: repeat(2, 1fr);
     }
-    .hiw__photo-wrap { max-width: 100%; }
-    .hiw__photo { height: 380px; }
-    .hiw__photo-badge { left: 16px; bottom: 16px; }
   }
 
   @media (max-width: 560px) {
-    .hiw__photo { height: 300px; }
+    .process__grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* ====================================================
