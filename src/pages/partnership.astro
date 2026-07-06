@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Partnership — ClosersMatch" description="Marketingbureau, consultant of agency? Werk samen met ClosersMatch. Jij brengt de klanten, wij sluiten de deals. Samen zetten we campagnes om in omzet.">
+<Layout title="Partnership — ClosersMatch" description="Bied je klanten meer, zonder extra werk of capaciteit. Word partner van ClosersMatch en verdien mee op elke deal die wordt gesloten.">
 
   <!-- ================================================
        HERO
@@ -12,16 +12,16 @@ import Layout from '../layouts/Layout.astro';
       <div class="pn-hero__content">
         <span class="label label--red">Partnership</span>
         <h1 class="pn-hero__title">
-          Jij brengt de klanten.<br />
-          <span class="pn-hero__title-red">Wij sluiten de deals.</span>
+          Bied je klanten meer.<br />
+          <span class="pn-hero__title-red">Zonder er zelf meer voor te doen.</span>
         </h1>
         <p class="pn-hero__subtitle">
-          Marketingbureaus, consultants en agencies genereren leads en campagnes. Maar niet elk bureau heeft de salescapaciteit om die kansen ook te verzilveren. ClosersMatch levert de sales execution, jij levert de klanten. Samen zetten we campagnes om in omzet.
+          Als marketingbureau, consultant of agency wil je meer voor je klanten kunnen betekenen. Via ClosersMatch voeg je professionele sales execution toe aan je dienstverlening, zonder zelf closers te werven, trainen of aan te sturen. Jij breidt je aanbod uit. Wij leveren de uitvoering. En op elke gerealiseerde deal verdien je mee.
         </p>
         <div class="pn-hero__trust-pills">
-          <span class="trust-pill">✓ Revenue share model</span>
-          <span class="trust-pill">✓ Geen extra personeel nodig</span>
-          <span class="trust-pill">✓ Volledig flexibel</span>
+          <span class="trust-pill">✓ Meer waarde voor je klanten</span>
+          <span class="trust-pill">✓ Geen extra werk of capaciteit</span>
+          <span class="trust-pill">✓ Verdien mee op resultaat</span>
         </div>
         <div class="pn-hero__actions">
           <a href="/contact" class="btn btn--red btn--lg">Word partner →</a>
@@ -30,20 +30,35 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="pn-hero__visual">
         <div class="pn-hero__statement-card">
-          <p class="pn-hero__statement-line">
-            <span class="pn-hero__statement-label">Jij</span>
-            brengt de klanten of leadgeneratie.
-          </p>
+          <div class="pn-benefit">
+            <div class="pn-benefit__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <strong>Breder aanbod</strong>
+              <span>Je biedt je klanten een compleet salestraject aan, naast jouw eigen dienstverlening.</span>
+            </div>
+          </div>
           <div class="pn-hero__statement-divider"></div>
-          <p class="pn-hero__statement-line">
-            <span class="pn-hero__statement-label">ClosersMatch</span>
-            brengt de sales execution.
-          </p>
+          <div class="pn-benefit">
+            <div class="pn-benefit__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <strong>Geen extra werk</strong>
+              <span>Wij screenen, trainen en leveren de closers en setters. Jij hoeft niets op te schalen.</span>
+            </div>
+          </div>
           <div class="pn-hero__statement-divider"></div>
-          <p class="pn-hero__statement-line pn-hero__statement-line--result">
-            <span class="pn-hero__statement-label pn-hero__statement-label--red">Samen</span>
-            zetten we campagnes om in omzet.
-          </p>
+          <div class="pn-benefit pn-benefit--result">
+            <div class="pn-benefit__icon pn-benefit__icon--red">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <div>
+              <strong>Je verdient mee</strong>
+              <span>Op elke deal die wordt gesloten ontvang je een terugkerend aandeel in de omzet.</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -301,32 +316,52 @@ import Layout from '../layouts/Layout.astro';
   .pn-hero__statement-card {
     background: var(--color-black);
     border-radius: var(--radius-lg);
-    padding: 40px 36px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
   }
 
-  .pn-hero__statement-line {
-    font-size: 1.05rem;
-    color: rgba(255,255,255,0.8);
-    line-height: 1.6;
-    padding: 12px 0;
+  .pn-benefit {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 18px 0;
   }
 
-  .pn-hero__statement-line--result {
-    color: #fff;
-    font-weight: 700;
+  .pn-benefit__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius);
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.6);
+    flex-shrink: 0;
   }
 
-  .pn-hero__statement-label {
+  .pn-benefit__icon--red {
+    background: rgba(221,52,46,0.2);
+    color: var(--color-red);
+  }
+
+  .pn-benefit strong {
     display: block;
-    font-size: 0.74rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
-    margin-bottom: 6px;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+    font-family: var(--font-display);
   }
 
-  .pn-hero__statement-label--red { color: var(--color-red); }
+  .pn-benefit span {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.55;
+  }
+
+  .pn-benefit--result strong { color: var(--color-red); }
 
   .pn-hero__statement-divider {
     height: 1px;
