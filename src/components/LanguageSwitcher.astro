@@ -12,55 +12,211 @@ const t = getTranslations(locale);
 const routeKey = getRouteKeyFromPathname(currentPath);
 const nlPath = routeKey ? (locale === 'nl' ? currentPath : getAlternatePath(routeKey, 'en')) : '/nl';
 const enPath = routeKey ? (locale === 'en' ? currentPath : getAlternatePath(routeKey, 'nl')) : '/en';
+
+const languages = [
+  { code: 'nl' as const, path: nlPath, label: 'Nederlands', title: 'Nederlands' },
+  { code: 'en' as const, path: enPath, label: 'English', title: 'English' },
+];
 ---
 
-<div class="lang-switcher" role="navigation" aria-label={t.langSwitcher.label}>
-  <a
-    href={nlPath}
-    class:list={['lang-switcher__btn', { 'lang-switcher__btn--active': locale === 'nl' }]}
-    hreflang="nl"
-    lang="nl"
-  >{t.langSwitcher.nl}</a>
-  <span class="lang-switcher__sep" aria-hidden="true">|</span>
-  <a
-    href={enPath}
-    class:list={['lang-switcher__btn', { 'lang-switcher__btn--active': locale === 'en' }]}
-    hreflang="en"
-    lang="en"
-  >{t.langSwitcher.en}</a>
+<div class="lang-switcher" data-lang-switcher>
+  <button
+    type="button"
+    class="lang-switcher__toggle"
+    aria-label={t.langSwitcher.label}
+    aria-expanded="false"
+    aria-haspopup="true"
+    data-lang-toggle
+  >
+    <span class="lang-switcher__current" aria-hidden="true">
+      {locale === 'nl' ? (
+        <svg class="lang-switcher__flag" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nederlands">
+          <rect width="24" height="5.33" fill="#AE1C28" />
+          <rect y="5.33" width="24" height="5.34" fill="#FFFFFF" />
+          <rect y="10.67" width="24" height="5.33" fill="#21468B" />
+        </svg>
+      ) : (
+        <svg class="lang-switcher__flag" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="English">
+          <rect width="24" height="16" fill="#012169" />
+          <path d="M0 0 L24 16 M24 0 L0 16" stroke="#FFFFFF" stroke-width="2.4" />
+          <path d="M0 0 L24 16 M24 0 L0 16" stroke="#C8102E" stroke-width="1.2" />
+          <path d="M12 0 V16 M0 8 H24" stroke="#FFFFFF" stroke-width="3.2" />
+          <path d="M12 0 V16 M0 8 H24" stroke="#C8102E" stroke-width="1.6" />
+        </svg>
+      )}
+    </span>
+    <span class="lang-switcher__chevron" aria-hidden="true">▾</span>
+  </button>
+
+  <div class="lang-switcher__menu" role="menu" hidden data-lang-menu>
+    {languages.map((lang) => (
+      <a
+        href={lang.path}
+        class:list={['lang-switcher__option', { 'lang-switcher__option--active': locale === lang.code }]}
+        role="menuitem"
+        hreflang={lang.code}
+        lang={lang.code}
+        aria-label={lang.label}
+        title={lang.title}
+        aria-current={locale === lang.code ? 'page' : undefined}
+      >
+        {lang.code === 'nl' ? (
+          <svg class="lang-switcher__flag" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="5.33" fill="#AE1C28" />
+            <rect y="5.33" width="24" height="5.34" fill="#FFFFFF" />
+            <rect y="10.67" width="24" height="5.33" fill="#21468B" />
+          </svg>
+        ) : (
+          <svg class="lang-switcher__flag" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="16" fill="#012169" />
+            <path d="M0 0 L24 16 M24 0 L0 16" stroke="#FFFFFF" stroke-width="2.4" />
+            <path d="M0 0 L24 16 M24 0 L0 16" stroke="#C8102E" stroke-width="1.2" />
+            <path d="M12 0 V16 M0 8 H24" stroke="#FFFFFF" stroke-width="3.2" />
+            <path d="M12 0 V16 M0 8 H24" stroke="#C8102E" stroke-width="1.6" />
+          </svg>
+        )}
+      </a>
+    ))}
+  </div>
 </div>
+
+<script>
+  document.querySelectorAll('[data-lang-switcher]').forEach((root) => {
+    const toggle = root.querySelector('[data-lang-toggle]');
+    const menu = root.querySelector('[data-lang-menu]');
+
+    const close = () => {
+      menu?.setAttribute('hidden', '');
+      toggle?.setAttribute('aria-expanded', 'false');
+      root.classList.remove('open');
+    };
+
+    toggle?.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = root.classList.contains('open');
+      document.querySelectorAll('[data-lang-switcher].open').forEach((other) => {
+        if (other !== root) {
+          other.classList.remove('open');
+          other.querySelector('[data-lang-menu]')?.setAttribute('hidden', '');
+          other.querySelector('[data-lang-toggle]')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+      if (isOpen) {
+        close();
+      } else {
+        menu?.removeAttribute('hidden');
+        toggle?.setAttribute('aria-expanded', 'true');
+        root.classList.add('open');
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!root.contains(event.target as Node)) close();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') close();
+    });
+  });
+</script>
 
 <style>
   .lang-switcher {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    position: relative;
     margin-right: 4px;
   }
 
-  .lang-switcher__btn {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #888;
-    text-decoration: none;
+  .lang-switcher__toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     padding: 4px 6px;
-    border-radius: 4px;
-    transition: color 0.2s, background 0.2s;
-    letter-spacing: 0.04em;
+    border: 1px solid var(--color-gray-border, #e5e5e5);
+    border-radius: 999px;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
 
-  .lang-switcher__btn:hover {
-    color: var(--color-red);
+  .lang-switcher__toggle:hover,
+  .lang-switcher.open .lang-switcher__toggle {
+    border-color: rgba(221, 52, 46, 0.35);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   }
 
-  .lang-switcher__btn--active {
-    color: var(--color-red);
+  .lang-switcher__current {
+    display: flex;
+    align-items: center;
+  }
+
+  .lang-switcher__flag {
+    width: 22px;
+    height: 15px;
+    border-radius: 2px;
+    display: block;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+  }
+
+  .lang-switcher__chevron {
+    font-size: 0.65rem;
+    color: #888;
+    line-height: 1;
+    transition: transform 0.2s;
+  }
+
+  .lang-switcher.open .lang-switcher__chevron {
+    transform: rotate(180deg);
+  }
+
+  .lang-switcher__menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    display: flex;
+    gap: 6px;
+    background: #fff;
+    border: 1px solid var(--color-gray-border, #e5e5e5);
+    border-radius: var(--radius-lg, 10px);
+    box-shadow: var(--shadow-lg, 0 8px 32px rgba(0, 0, 0, 0.12));
+    padding: 8px;
+    z-index: 220;
+  }
+
+  .lang-switcher__menu[hidden] {
+    display: none;
+  }
+
+  .lang-switcher__option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.15s;
+  }
+
+  .lang-switcher__option:hover {
+    background: var(--color-gray-light, #f5f5f5);
+    transform: scale(1.05);
+  }
+
+  .lang-switcher__option--active {
     background: rgba(221, 52, 46, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(221, 52, 46, 0.25);
   }
 
-  .lang-switcher__sep {
-    color: #ccc;
-    font-size: 0.75rem;
-    user-select: none;
+  @media (max-width: 900px) {
+    .nav-mobile .lang-switcher {
+      margin: 8px 0 4px;
+    }
+
+    .nav-mobile .lang-switcher__menu {
+      position: static;
+      margin-top: 8px;
+      box-shadow: none;
+      border: 1px solid var(--color-gray-border);
+    }
   }
 </style>

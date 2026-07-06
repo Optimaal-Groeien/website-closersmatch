@@ -40,8 +40,6 @@
     "terms": "Terms & Conditions"
   },
   "langSwitcher": {
-    "label": "Language",
-    "nl": "NL",
-    "en": "EN"
+    "label": "Choose language"
   }
 }
