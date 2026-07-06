@@ -1,5 +1,5 @@
 import type { Locale, RouteKey } from './config';
-import { routes, defaultLocale } from './config';
+import { routes, defaultLocale, locales } from './config';
 import nl from './ui/nl.json';
 import en from './ui/en.json';
 
@@ -20,15 +20,18 @@ export function getAlternatePath(routeKey: RouteKey, fromLocale: Locale): string
 }
 
 export function getRouteKeyFromPathname(pathname: string): RouteKey {
-  const parts = pathname.replace(/^\//, '').split('/');
+  const normalized = pathname.replace(/\/+$/, '') || '/';
+  const parts = normalized.replace(/^\//, '').split('/').filter(Boolean);
   const locale = parts[0] as Locale;
   const slug = parts.slice(1).join('/');
 
-  if (!locale || !['nl', 'en'].includes(locale)) return 'home';
+  if (!locale || !locales.includes(locale)) return 'home';
+  if (!slug) return 'home';
 
   for (const [key, slugs] of Object.entries(routes)) {
     if (slugs[locale] === slug) return key as RouteKey;
   }
+
   return 'home';
 }
 

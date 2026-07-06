@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '../i18n/config';
-import { getTranslations, getRouteKeyFromPathname, getAlternatePath } from '../i18n/utils';
+import { getTranslations, getRouteKeyFromPathname, getLocalizedPath } from '../i18n/utils';
 
 interface Props {
   locale: Locale;
@@ -10,8 +10,8 @@ interface Props {
 const { locale, currentPath } = Astro.props;
 const t = getTranslations(locale);
 const routeKey = getRouteKeyFromPathname(currentPath);
-const nlPath = routeKey ? (locale === 'nl' ? currentPath : getAlternatePath(routeKey, 'en')) : '/nl';
-const enPath = routeKey ? (locale === 'en' ? currentPath : getAlternatePath(routeKey, 'nl')) : '/en';
+const nlPath = getLocalizedPath(routeKey, 'nl');
+const enPath = getLocalizedPath(routeKey, 'en');
 
 const languages = [
   { code: 'nl' as const, path: nlPath, label: 'Nederlands', title: 'Nederlands' },
