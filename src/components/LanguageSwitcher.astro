@@ -1,0 +1,66 @@
+---
+import type { Locale } from '../i18n/config';
+import { getTranslations, getRouteKeyFromPathname, getAlternatePath } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+const t = getTranslations(locale);
+const routeKey = getRouteKeyFromPathname(currentPath);
+const nlPath = routeKey ? (locale === 'nl' ? currentPath : getAlternatePath(routeKey, 'en')) : '/nl';
+const enPath = routeKey ? (locale === 'en' ? currentPath : getAlternatePath(routeKey, 'nl')) : '/en';
+---
+
+<div class="lang-switcher" role="navigation" aria-label={t.langSwitcher.label}>
+  <a
+    href={nlPath}
+    class:list={['lang-switcher__btn', { 'lang-switcher__btn--active': locale === 'nl' }]}
+    hreflang="nl"
+    lang="nl"
+  >{t.langSwitcher.nl}</a>
+  <span class="lang-switcher__sep" aria-hidden="true">|</span>
+  <a
+    href={enPath}
+    class:list={['lang-switcher__btn', { 'lang-switcher__btn--active': locale === 'en' }]}
+    hreflang="en"
+    lang="en"
+  >{t.langSwitcher.en}</a>
+</div>
+
+<style>
+  .lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 4px;
+  }
+
+  .lang-switcher__btn {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #888;
+    text-decoration: none;
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: color 0.2s, background 0.2s;
+    letter-spacing: 0.04em;
+  }
+
+  .lang-switcher__btn:hover {
+    color: var(--color-red);
+  }
+
+  .lang-switcher__btn--active {
+    color: var(--color-red);
+    background: rgba(221, 52, 46, 0.08);
+  }
+
+  .lang-switcher__sep {
+    color: #ccc;
+    font-size: 0.75rem;
+    user-select: none;
+  }
+</style>

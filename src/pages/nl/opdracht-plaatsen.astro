@@ -1,0 +1,618 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout locale="nl" title="Opdracht plaatsen — ClosersMatch" description="Plaats je opdracht bij ClosersMatch en ontvang binnen 48 uur een match met een gecertificeerde closer of appointment setter. Gratis, vrijblijvend en op no cure no pay basis.">
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="op-hero">
+    <div class="container op-hero__inner">
+      <span class="label label--red">Opdracht plaatsen</span>
+      <h1 class="op-hero__title">Plaats je opdracht.<br /><span class="op-hero__title-red">Wij vinden de match.</span></h1>
+      <p class="op-hero__body">
+        Vertel ons wat je zoekt — een closer, een appointment setter of een compleet salestraject. Wij screenen, matchen en leveren binnen 48 uur een gecertificeerde professional die past bij jouw markt en doelgroep.
+      </p>
+      <div class="op-hero__pills">
+        <span class="trust-pill">Ô£ô Gratis &amp; vrijblijvend</span>
+        <span class="trust-pill">Ô£ô Match binnen 48 uur</span>
+        <span class="trust-pill">Ô£ô No cure no pay</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       3 STAPPEN MINI-UITLEG
+  ================================================ -->
+  <section class="section op-steps">
+    <div class="container op-steps__grid">
+      <div class="op-step">
+        <div class="op-step__num">01</div>
+        <h3 class="op-step__title">Opdracht plaatsen</h3>
+        <p class="op-step__text">Vul het formulier hieronder in met je opdracht, doelgroep en doelstellingen.</p>
+      </div>
+      <div class="op-step">
+        <div class="op-step__num">02</div>
+        <h3 class="op-step__title">Wij screenen &amp; matchen</h3>
+        <p class="op-step__text">Binnen 48 uur koppelen we je aan gecertificeerde closers of setters die aansluiten bij jouw opdracht.</p>
+      </div>
+      <div class="op-step">
+        <div class="op-step__num">03</div>
+        <h3 class="op-step__title">Direct starten</h3>
+        <p class="op-step__text">Gratis onboarding, geen wervingskosten. Je betaalt pas als er resultaat wordt geleverd.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       MAIN CONTENT — form + info
+  ================================================ -->
+  <section class="section op-main">
+    <div class="container op-main__grid">
+
+      <!-- LEFT: Opdracht form -->
+      <div class="op-col op-col--form">
+        <span class="label">Jouw opdracht</span>
+        <h2 class="h2 op-form__title">Vertel ons wat je nodig hebt.</h2>
+        <p class="op-form__intro">Hoe specifieker, hoe beter de match. Alle velden met een * zijn verplicht.</p>
+
+        <form class="op-form" name="opdracht" method="POST" action="#" novalidate>
+          <div class="op-form__row op-form__row--2col">
+            <div class="op-form__group">
+              <label class="op-form__label" for="op-naam">Naam *</label>
+              <input class="op-form__input" type="text" id="op-naam" name="naam" placeholder="Jan Jansen" required />
+            </div>
+            <div class="op-form__group">
+              <label class="op-form__label" for="op-bedrijf">Bedrijfsnaam *</label>
+              <input class="op-form__input" type="text" id="op-bedrijf" name="bedrijf" placeholder="Jouw bedrijf" required />
+            </div>
+          </div>
+
+          <div class="op-form__row op-form__row--2col">
+            <div class="op-form__group">
+              <label class="op-form__label" for="op-email">E-mailadres *</label>
+              <input class="op-form__input" type="email" id="op-email" name="email" placeholder="jan@bedrijf.nl" required />
+            </div>
+            <div class="op-form__group">
+              <label class="op-form__label" for="op-telefoon">Telefoonnummer *</label>
+              <input class="op-form__input" type="tel" id="op-telefoon" name="telefoon" placeholder="+31 6 ..." required />
+            </div>
+          </div>
+
+          <div class="op-form__row">
+            <div class="op-form__group">
+              <label class="op-form__label" for="op-type">Waar zoek je naar? *</label>
+              <select class="op-form__input op-form__select" id="op-type" name="type" required>
+                <option value="" disabled selected>Selecteer een optie</option>
+                <option value="closer">Een closer</option>
+                <option value="setter">Een appointment setter</option>
+                <option value="combinatie">Combinatie closer + setter</option>
+                <option value="volledig-uitbesteed">Volledig uitbesteed salestraject</option>
+                <option value="weet-nog-niet">Weet ik nog niet — advies gewenst</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="op-form__row op-form__row--2col">
+            <div class="op-form__group">
+              <label class="op-form__label" for="op-branche">Branche</label>
+              <input class="op-form__input" type="text" id="op-branche" name="branche" placeholder="Bijv. SaaS, coaching, energie" />
+            </div>
+            <div class="op-form__group">
+              <label class="op-form__label" for="op-dealgrootte">Gemiddelde dealgrootte</label>
+              <input class="op-form__input" type="text" id="op-dealgrootte" name="dealgrootte" placeholder="Bijv. €2.500 - €10.000" />
+            </div>
+          </div>
+
+          <div class="op-form__row">
+            <div class="op-form__group">
+              <label class="op-form__label" for="op-startdatum">Gewenste startdatum</label>
+              <select class="op-form__input op-form__select" id="op-startdatum" name="startdatum">
+                <option value="" disabled selected>Selecteer een optie</option>
+                <option value="zo-snel-mogelijk">Zo snel mogelijk</option>
+                <option value="binnen-2-weken">Binnen 2 weken</option>
+                <option value="binnen-een-maand">Binnen een maand</option>
+                <option value="ori├½nterend">Ik ori├½nteer me nog</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="op-form__row">
+            <div class="op-form__group">
+              <label class="op-form__label" for="op-toelichting">Toelichting op je opdracht *</label>
+              <textarea class="op-form__input op-form__textarea" id="op-toelichting" name="toelichting" rows="5" placeholder="Vertel kort over je product/dienst, doelgroep en wat je zoekt in een closer of setter..." required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--red btn--lg op-form__submit">Plaats je opdracht →</button>
+          <p class="op-form__note">Geen kosten vooraf. Je hoort binnen 48 uur van ons.</p>
+        </form>
+      </div>
+
+      <!-- RIGHT: Wat je krijgt -->
+      <div class="op-col op-col--info">
+        <div class="op-info-card">
+          <span class="op-info-card__label">Wat je krijgt</span>
+          <ul class="op-info-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Match binnen 48 uur na plaatsing
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Gecertificeerde, gescreende professionals
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Gratis onboarding inbegrepen
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              No cure no pay — betalen bij resultaat
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Volledig inzicht via CRM &amp; rapportages
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Geen verplichtingen, geen langdurig contract
+            </li>
+          </ul>
+        </div>
+
+        <div class="op-alt-card">
+          <p class="op-alt-card__text">Liever eerst even sparren voordat je een opdracht plaatst?</p>
+          <a href="/nl/contact" class="btn btn--outline-dark-mode op-alt-card__btn">Plan een gratis intake →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       FAQ
+  ================================================ -->
+  <section class="section op-faq">
+    <div class="container">
+      <div class="op-faq__header">
+        <span class="label">Veelgestelde vragen</span>
+        <h2 class="h2 op-faq__title">Alles wat je wilt weten voordat je plaatst.</h2>
+      </div>
+      <div class="op-faq__grid">
+        <div class="op-faq__item">
+          <h4 class="op-faq__q">Kost het iets om een opdracht te plaatsen?</h4>
+          <p class="op-faq__a">Nee. Plaatsen, screenen en matchen is volledig gratis. Je betaalt pas zodra er een afspraak of deal wordt gerealiseerd.</p>
+        </div>
+        <div class="op-faq__item">
+          <h4 class="op-faq__q">Hoe snel krijg ik een match?</h4>
+          <p class="op-faq__a">Gemiddeld binnen 48 uur na het plaatsen van je opdracht.</p>
+        </div>
+        <div class="op-faq__item">
+          <h4 class="op-faq__q">Kan ik meerdere opdrachten plaatsen?</h4>
+          <p class="op-faq__a">Zeker. Of je nu op zoek bent naar één closer of een volledig salesteam — we schalen mee met jouw behoefte.</p>
+        </div>
+        <div class="op-faq__item">
+          <h4 class="op-faq__q">Wat als de match niet aansluit?</h4>
+          <p class="op-faq__a">Dan zoeken we opnieuw. Geen extra kosten, geen gedoe — we zorgen dat de match klopt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CLOSING CTA
+  ================================================ -->
+  <section class="op-closing">
+    <div class="op-closing__inner">
+      <h2 class="op-closing__title">Klaar om je opdracht te plaatsen?</h2>
+      <p class="op-closing__body">Geen wervingskosten. Geen vast salaris. Alleen resultaat.</p>
+      <a href="#" class="btn btn--red btn--lg op-closing__btn" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Plaats je opdracht →</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ====================================================
+     HERO
+  ==================================================== */
+  .op-hero {
+    background: #fff;
+    padding: 162px 0 64px;
+    text-align: center;
+  }
+
+  .op-hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .op-hero__inner .label--red {
+    background: rgba(221,52,46,0.1);
+    color: var(--color-red);
+    border: 1px solid rgba(221,52,46,0.25);
+  }
+
+  .op-hero__title {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 900;
+    color: var(--color-black);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    margin: 20px 0 20px;
+    font-family: var(--font-display);
+  }
+
+  .op-hero__title-red { color: var(--color-red); }
+
+  .op-hero__body {
+    font-size: 1.05rem;
+    color: #4B5563;
+    line-height: 1.75;
+    max-width: 620px;
+    margin-bottom: 28px;
+  }
+
+  .op-hero__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .trust-pill {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--color-black);
+    background: var(--color-gray-light);
+    border-radius: 999px;
+    padding: 5px 14px;
+    letter-spacing: 0.01em;
+  }
+
+  @media (max-width: 560px) {
+    .op-hero { padding: 120px 0 48px; }
+  }
+
+  /* ====================================================
+     3 STAPPEN
+  ==================================================== */
+  .op-steps { background: #fff; padding-top: 0; }
+
+  .op-steps__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .op-step {
+    padding: 24px;
+    background: #F9FAFB;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-gray-border);
+  }
+
+  .op-step__num {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--color-red);
+    font-family: var(--font-display);
+    margin-bottom: 10px;
+  }
+
+  .op-step__title {
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: var(--color-black);
+    margin-bottom: 8px;
+    font-family: var(--font-display);
+  }
+
+  .op-step__text {
+    font-size: 0.87rem;
+    color: var(--color-gray-mid);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 700px) {
+    .op-steps__grid { grid-template-columns: 1fr; }
+  }
+
+  /* ====================================================
+     MAIN TWO-COLUMN
+  ==================================================== */
+  .op-main { background: #fff; }
+
+  .op-main__grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  @media (max-width: 960px) {
+    .op-main__grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  .op-form__title {
+    margin: 16px 0 10px;
+    letter-spacing: -0.02em;
+  }
+
+  .op-form__intro {
+    font-size: 0.92rem;
+    color: var(--color-gray-mid);
+    margin-bottom: 28px;
+  }
+
+  .op-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: #F9FAFB;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+  }
+
+  .op-form__row {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .op-form__row--2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  @media (max-width: 480px) {
+    .op-form__row--2col { grid-template-columns: 1fr; }
+  }
+
+  .op-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .op-form__label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--color-black);
+  }
+
+  .op-form__input {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 0.93rem;
+    font-family: var(--font-sans);
+    color: var(--color-black);
+    background: #fff;
+    border: 1.5px solid var(--color-gray-border);
+    border-radius: var(--radius);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+  }
+
+  .op-form__input::placeholder { color: #aaa; }
+
+  .op-form__input:focus {
+    border-color: var(--color-red);
+    box-shadow: 0 0 0 3px rgba(221,52,46,0.12);
+  }
+
+  .op-form__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  .op-form__textarea {
+    resize: vertical;
+    min-height: 110px;
+    line-height: 1.6;
+  }
+
+  .op-form__submit {
+    align-self: flex-start;
+    margin-top: 4px;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(221,52,46,0.25);
+  }
+
+  .op-form__note {
+    font-size: 0.82rem;
+    color: var(--color-gray-mid);
+    margin-top: -6px;
+  }
+
+  /* Right column */
+  .op-col--info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .op-info-card {
+    background: var(--color-black);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+  }
+
+  .op-info-card__label {
+    display: block;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 20px;
+  }
+
+  .op-info-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .op-info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .op-info-list li svg {
+    color: var(--color-red);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .op-alt-card {
+    background: #F9FAFB;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .op-alt-card__text {
+    font-size: 0.92rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .op-alt-card__btn { width: 100%; justify-content: center; }
+
+  /* btn--outline-dark-mode (shared pattern) */
+  .btn--outline-dark-mode {
+    background: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-gray-border);
+    font-weight: 600;
+    font-size: 0.93rem;
+    padding: 13px 20px;
+    border-radius: var(--radius);
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .btn--outline-dark-mode:hover {
+    border-color: var(--color-text);
+    background: #fff;
+  }
+
+  /* ====================================================
+     FAQ
+  ==================================================== */
+  .op-faq { background: #F9FAFB; }
+
+  .op-faq__header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 48px;
+  }
+
+  .op-faq__title {
+    margin-top: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .op-faq__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .op-faq__item {
+    background: #fff;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    padding: 24px 26px;
+  }
+
+  .op-faq__q {
+    font-size: 0.97rem;
+    font-weight: 800;
+    color: var(--color-black);
+    font-family: var(--font-display);
+    margin-bottom: 10px;
+    line-height: 1.35;
+  }
+
+  .op-faq__a {
+    font-size: 0.88rem;
+    color: var(--color-gray-mid);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 700px) {
+    .op-faq__grid { grid-template-columns: 1fr; }
+  }
+
+  /* ====================================================
+     CLOSING CTA
+  ==================================================== */
+  .op-closing {
+    background: var(--color-black);
+    padding: 90px 24px 80px;
+    text-align: center;
+  }
+
+  .op-closing__inner {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .op-closing__title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-family: var(--font-display);
+    margin: 0;
+  }
+
+  .op-closing__body {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.55);
+    margin: 0;
+  }
+
+  .op-closing__btn {
+    border-radius: 999px;
+    box-shadow: 0 6px 28px rgba(221,52,46,0.35);
+    margin-top: 8px;
+  }
+
+  @media (max-width: 560px) {
+    .op-closing__btn { width: 100%; justify-content: center; }
+  }
+</style>

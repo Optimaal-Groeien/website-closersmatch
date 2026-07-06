@@ -1,0 +1,554 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout locale="en" title="Contact — ClosersMatch" description="Plan je gratis intake bij ClosersMatch. Vul het formulier in of plan direct een afspraak met Brian, onze Sales Manager. Reactie binnen 48 uur.">
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="ct-hero">
+    <div class="container ct-hero__inner">
+      <span class="label label--red">Contact</span>
+      <h1 class="ct-hero__title">Plan je gratis intake.<br /><span class="ct-hero__title-red">Zonder verplichtingen.</span></h1>
+      <p class="ct-hero__body">
+        Vul het formulier in of plan direct een afspraak in de agenda van Brian, onze Sales Manager. Je krijgt binnen 48 uur een reactie — en een helder beeld van wat ClosersMatch voor jouw bedrijf kan betekenen.
+      </p>
+      <div class="ct-hero__pills">
+        <span class="trust-pill">Ô£ô Gratis intake</span>
+        <span class="trust-pill">Ô£ô Geen verplichtingen</span>
+        <span class="trust-pill">Ô£ô Reactie binnen 48 uur</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       MAIN CONTENT — two columns
+  ================================================ -->
+  <section class="section ct-main">
+    <div class="container ct-main__grid">
+
+      <!-- LEFT: HubSpot embed -->
+      <div class="ct-col ct-col--embed">
+        <span class="label">Direct een afspraak inplannen</span>
+        <h3 class="h3 ct-embed__title">Kies een moment dat jou uitkomt.</h3>
+        <p class="ct-embed__body">Plan direct in de agenda van Brian. Het gesprek duurt 30ÔÇô45 minuten en is volledig gratis.</p>
+        <div class="ct-embed__wrapper">
+          <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/bbandel?embed=true"></div>
+          <script is:inline src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact info + form -->
+      <div class="ct-col ct-col--form">
+
+        <!-- Contact info dark card -->
+        <div class="ct-info-card">
+          <div class="ct-info-card__person">
+            <div class="ct-info-card__avatar">B</div>
+            <div>
+              <strong class="ct-info-card__name">Brian</strong>
+              <span class="ct-info-card__role">Sales Manager</span>
+            </div>
+          </div>
+          <div class="ct-info-card__divider"></div>
+          <ul class="ct-info-list">
+            <li class="ct-info-item">
+              <span class="ct-info-item__icon">­ƒô×</span>
+              <a href="tel:+31634835912" class="ct-info-item__link">+31 6 3483 5912</a>
+            </li>
+            <li class="ct-info-item">
+              <span class="ct-info-item__icon">Ô£ë´©Å</span>
+              <a href="mailto:info@closersmatch.nl" class="ct-info-item__link">info@closersmatch.nl</a>
+            </li>
+            <li class="ct-info-item">
+              <span class="ct-info-item__icon">­ƒôì</span>
+              <span class="ct-info-item__text">Boeierstraat 9, 8102 HS Raalte</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact form -->
+        <form class="ct-form" name="contact" method="POST" action="#" novalidate>
+          <div class="ct-form__row ct-form__row--2col">
+            <div class="ct-form__group">
+              <label class="ct-form__label" for="voornaam">Voornaam</label>
+              <input class="ct-form__input" type="text" id="voornaam" name="voornaam" placeholder="Jan" required />
+            </div>
+            <div class="ct-form__group">
+              <label class="ct-form__label" for="achternaam">Achternaam</label>
+              <input class="ct-form__input" type="text" id="achternaam" name="achternaam" placeholder="Jansen" required />
+            </div>
+          </div>
+          <div class="ct-form__row ct-form__row--2col">
+            <div class="ct-form__group">
+              <label class="ct-form__label" for="email">E-mailadres</label>
+              <input class="ct-form__input" type="email" id="email" name="email" placeholder="jan@bedrijf.nl" required />
+            </div>
+            <div class="ct-form__group">
+              <label class="ct-form__label" for="telefoon">Telefoonnummer</label>
+              <input class="ct-form__input" type="tel" id="telefoon" name="telefoon" placeholder="+31 6 ..." />
+            </div>
+          </div>
+          <div class="ct-form__row">
+            <div class="ct-form__group">
+              <label class="ct-form__label" for="bedrijf">Bedrijf <span class="ct-form__optional">(optioneel)</span></label>
+              <input class="ct-form__input" type="text" id="bedrijf" name="bedrijf" placeholder="Jouw bedrijfsnaam" />
+            </div>
+          </div>
+          <div class="ct-form__row">
+            <div class="ct-form__group">
+              <label class="ct-form__label" for="ik-ben">Ik ben</label>
+              <select class="ct-form__input ct-form__select" id="ik-ben" name="ik-ben" required>
+                <option value="" disabled selected>Selecteer een optie</option>
+                <option value="bedrijfseigenaar">Bedrijfseigenaar</option>
+                <option value="closer">Closer</option>
+                <option value="appointment-setter">Appointment setter</option>
+                <option value="anders">Anders</option>
+              </select>
+            </div>
+          </div>
+          <div class="ct-form__row">
+            <div class="ct-form__group">
+              <label class="ct-form__label" for="bericht">Bericht</label>
+              <textarea class="ct-form__input ct-form__textarea" id="bericht" name="bericht" rows="4" placeholder="Vertel ons kort wat je nodig hebt..." required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--red btn--lg ct-form__submit">Verstuur bericht →</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FAQ STRIP
+  ================================================ -->
+  <section class="section ct-faq">
+    <div class="container ct-faq__grid">
+      <div class="ct-faq__item">
+        <h4 class="ct-faq__q">Zijn er kosten verbonden aan het intakegesprek?</h4>
+        <p class="ct-faq__a">Nee. De intake is volledig gratis en zonder verplichtingen.</p>
+      </div>
+      <div class="ct-faq__divider"></div>
+      <div class="ct-faq__item">
+        <h4 class="ct-faq__q">Hoe snel word ik gematcht?</h4>
+        <p class="ct-faq__a">Gemiddeld binnen 48 uur na de intake.</p>
+      </div>
+      <div class="ct-faq__divider"></div>
+      <div class="ct-faq__item">
+        <h4 class="ct-faq__q">Wat als het niet werkt?</h4>
+        <p class="ct-faq__a">No cure no pay. Geen resultaat, geen kosten.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CLOSING CTA
+  ================================================ -->
+  <section class="ct-closing">
+    <div class="ct-closing__inner">
+      <h2 class="ct-closing__title">ClosersMatch.<br /><span class="ct-closing__title-red">The Revenue Ecosystem.</span></h2>
+      <p class="ct-closing__body">Bouw het commercieel systeem dat jouw bedrijf verdient.</p>
+      <a href="#" class="btn btn--red btn--lg ct-closing__btn" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Plan je gratis intake →</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ====================================================
+     HERO
+  ==================================================== */
+  .ct-hero {
+    background: #fff;
+    padding: 162px 0 80px;
+    text-align: center;
+  }
+
+  .ct-hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .ct-hero__inner .label--red {
+    background: rgba(221,52,46,0.1);
+    color: var(--color-red);
+    border: 1px solid rgba(221,52,46,0.25);
+  }
+
+  .ct-hero__title {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 900;
+    color: var(--color-black);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    margin: 20px 0 20px;
+    font-family: var(--font-display);
+  }
+
+  .ct-hero__title-red { color: var(--color-red); }
+
+  .ct-hero__body {
+    font-size: 1.05rem;
+    color: #4B5563;
+    line-height: 1.75;
+    max-width: 600px;
+    margin-bottom: 28px;
+  }
+
+  .ct-hero__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .trust-pill {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--color-black);
+    background: var(--color-gray-light);
+    border-radius: 999px;
+    padding: 5px 14px;
+    letter-spacing: 0.01em;
+  }
+
+  @media (max-width: 560px) {
+    .ct-hero { padding: 120px 0 60px; }
+  }
+
+  /* ====================================================
+     MAIN TWO-COLUMN
+  ==================================================== */
+  .ct-main { background: #F9FAFB; }
+
+  .ct-main__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  @media (max-width: 960px) {
+    .ct-main__grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  /* ====================================================
+     LEFT COLUMN — HubSpot embed
+  ==================================================== */
+  .ct-col--embed .label {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .ct-embed__title {
+    margin: 16px 0 12px;
+    font-family: var(--font-display);
+    color: var(--color-black);
+  }
+
+  .ct-embed__body {
+    font-size: 0.97rem;
+    color: var(--color-gray-mid);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .ct-embed__wrapper {
+    background: #fff;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    min-height: 600px;
+  }
+
+  .ct-embed__wrapper .meetings-iframe-container {
+    width: 100%;
+    min-height: 600px;
+  }
+
+  /* ====================================================
+     RIGHT COLUMN — Contact info card + form
+  ==================================================== */
+  .ct-col--form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* Dark info card */
+  .ct-info-card {
+    background: var(--color-black);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    color: #fff;
+  }
+
+  .ct-info-card__person {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .ct-info-card__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(221,52,46,0.25);
+    color: var(--color-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    font-weight: 800;
+    font-family: var(--font-display);
+    flex-shrink: 0;
+  }
+
+  .ct-info-card__name {
+    display: block;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+  }
+
+  .ct-info-card__role {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+    margin-top: 2px;
+  }
+
+  .ct-info-card__divider {
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin-bottom: 20px;
+  }
+
+  .ct-info-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ct-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ct-info-item__icon {
+    font-size: 1rem;
+    width: 20px;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .ct-info-item__link {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .ct-info-item__link:hover { color: var(--color-red); }
+
+  .ct-info-item__text {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+  }
+
+  /* Form */
+  .ct-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+  }
+
+  .ct-form__row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ct-form__row--2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 480px) {
+    .ct-form__row--2col { grid-template-columns: 1fr; }
+  }
+
+  .ct-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ct-form__label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--color-black);
+    letter-spacing: 0.01em;
+  }
+
+  .ct-form__optional {
+    font-weight: 400;
+    color: var(--color-gray-mid);
+    font-size: 0.78rem;
+  }
+
+  .ct-form__input {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 0.93rem;
+    font-family: var(--font-sans);
+    color: var(--color-black);
+    background: #fff;
+    border: 1.5px solid var(--color-gray-border);
+    border-radius: var(--radius);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+  }
+
+  .ct-form__input::placeholder { color: #aaa; }
+
+  .ct-form__input:focus {
+    border-color: var(--color-red);
+    box-shadow: 0 0 0 3px rgba(221,52,46,0.12);
+  }
+
+  .ct-form__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  .ct-form__textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.6;
+  }
+
+  .ct-form__submit {
+    align-self: flex-start;
+    margin-top: 4px;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(221,52,46,0.25);
+  }
+
+  /* ====================================================
+     FAQ STRIP
+  ==================================================== */
+  .ct-faq { background: #F3F4F6; }
+
+  .ct-faq__grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 0;
+    align-items: start;
+  }
+
+  @media (max-width: 768px) {
+    .ct-faq__grid {
+      grid-template-columns: 1fr;
+    }
+    .ct-faq__divider {
+      width: 100%;
+      height: 1px;
+      background: var(--color-gray-border);
+      margin: 0;
+    }
+  }
+
+  .ct-faq__divider {
+    width: 1px;
+    background: var(--color-gray-border);
+    align-self: stretch;
+    margin: 0 32px;
+  }
+
+  .ct-faq__item {
+    padding: 4px 0;
+  }
+
+  .ct-faq__q {
+    font-size: 0.97rem;
+    font-weight: 800;
+    color: var(--color-black);
+    font-family: var(--font-display);
+    margin-bottom: 10px;
+    line-height: 1.35;
+  }
+
+  .ct-faq__a {
+    font-size: 0.9rem;
+    color: var(--color-gray-mid);
+    line-height: 1.65;
+  }
+
+  /* ====================================================
+     CLOSING CTA
+  ==================================================== */
+  .ct-closing {
+    background: var(--color-black);
+    padding: 100px 24px 90px;
+    text-align: center;
+  }
+
+  .ct-closing__inner {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .ct-closing__title {
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    font-family: var(--font-display);
+    margin: 0;
+  }
+
+  .ct-closing__title-red { color: var(--color-red); }
+
+  .ct-closing__body {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.75;
+    max-width: 480px;
+    margin: 0;
+  }
+
+  .ct-closing__btn {
+    border-radius: 999px;
+    box-shadow: 0 6px 28px rgba(221,52,46,0.35);
+    margin-top: 8px;
+  }
+
+  @media (max-width: 560px) {
+    .ct-closing__btn { width: 100%; justify-content: center; }
+  }
+</style>

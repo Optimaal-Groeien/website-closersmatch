@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "defaultDescription": "ClosersMatch — The platform for high-ticket sales. We connect companies with certified closers and appointment setters."
+  },
+  "header": {
+    "followUs": "Follow us:",
+    "navLabel": "Main navigation",
+    "menuOpen": "Open menu",
+    "login": "Log in",
+    "planMeeting": "Schedule a Call →",
+    "forBusinesses": "For Businesses",
+    "forSalesTalent": "For Sales Talent",
+    "partnership": "Partnership",
+    "about": "About ClosersMatch",
+    "workflow": "Workflow",
+    "recruitment": "Recruitment",
+    "noCureNoPay": "No Cure No Pay",
+    "placeAssignment": "Place Assignment",
+    "forClosers": "For Closers",
+    "forAppointmentsetters": "For Appointment Setters",
+    "salesRecruitment": "Sales Recruitment",
+    "casesReviews": "Cases & Reviews",
+    "contact": "Contact"
+  },
+  "footer": {
+    "tagline": "The platform for high-ticket sales, for companies and closers.",
+    "forBusinesses": "For Businesses",
+    "howItWorks": "How It Works",
+    "noCureNoPay": "No Cure No Pay",
+    "casesResults": "Cases & Results",
+    "startIntake": "Start Intake",
+    "forClosers": "For Closers",
+    "becomeCloser": "Become a Closer",
+    "becomeSetter": "Become an Appointment Setter",
+    "about": "About ClosersMatch",
+    "contactHeading": "Contact",
+    "getInTouch": "Get in Touch",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "langSwitcher": {
+    "label": "Language",
+    "nl": "NL",
+    "en": "EN"
+  }
+}

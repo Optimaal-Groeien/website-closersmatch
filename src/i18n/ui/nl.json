@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "defaultDescription": "ClosersMatch — Dé plek voor high ticket sales. Wij koppelen bedrijven met gecertificeerde closers en appointment setters."
+  },
+  "header": {
+    "followUs": "Volg ons:",
+    "navLabel": "Hoofdnavigatie",
+    "menuOpen": "Menu openen",
+    "login": "Inloggen",
+    "planMeeting": "Gesprek Plannen →",
+    "forBusinesses": "Voor Bedrijven",
+    "forSalesTalent": "Voor sales talent",
+    "partnership": "Partnership",
+    "about": "Over ClosersMatch",
+    "workflow": "Werkwijze",
+    "recruitment": "Recruitment",
+    "noCureNoPay": "No Cure No Pay",
+    "placeAssignment": "Opdracht plaatsen",
+    "forClosers": "Voor Closers",
+    "forAppointmentsetters": "Voor Appointmentsetters",
+    "salesRecruitment": "Sales Recruitment",
+    "casesReviews": "Cases & Reviews",
+    "contact": "Contact"
+  },
+  "footer": {
+    "tagline": "Dé plek voor high ticket sales, voor bedrijven en closers.",
+    "forBusinesses": "Voor Bedrijven",
+    "howItWorks": "Hoe het werkt",
+    "noCureNoPay": "No Cure No Pay",
+    "casesResults": "Cases & Resultaten",
+    "startIntake": "Intake starten",
+    "forClosers": "Voor Closers",
+    "becomeCloser": "Closer worden",
+    "becomeSetter": "Appointment Setter worden",
+    "about": "Over ClosersMatch",
+    "contactHeading": "Contact",
+    "getInTouch": "Contact opnemen",
+    "rights": "Alle rechten voorbehouden.",
+    "privacy": "Privacybeleid",
+    "terms": "Algemene Voorwaarden"
+  },
+  "langSwitcher": {
+    "label": "Taal",
+    "nl": "NL",
+    "en": "EN"
+  }
+}

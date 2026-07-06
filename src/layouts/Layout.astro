@@ -1,17 +1,33 @@
 ---
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import type { Locale } from '../i18n/config';
+import { getTranslations, getLocalizedPath, getRouteKeyFromPathname, getAlternatePath } from '../i18n/utils';
+
 export interface Props {
   title: string;
   description?: string;
+  locale?: Locale;
 }
-const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. Wij koppelen bedrijven met gecertificeerde closers en appointment setters.' } = Astro.props;
+const { title, description, locale = 'nl' } = Astro.props;
+const t = getTranslations(locale);
+const desc = description ?? t.meta.defaultDescription;
+const homePath = getLocalizedPath('home', locale);
+const currentPath = Astro.url.pathname;
+const routeKey = getRouteKeyFromPathname(currentPath);
+const nlHref = routeKey ? getLocalizedPath(routeKey, 'nl') : '/nl';
+const enHref = routeKey ? getLocalizedPath(routeKey, 'en') : '/en';
+const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalgroeien-84d.workers.dev';
 ---
 
 <!DOCTYPE html>
-<html lang="nl">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
+    <meta name="description" content={desc} />
+    <link rel="alternate" hreflang="nl" href={`${siteOrigin}${nlHref}`} />
+    <link rel="alternate" hreflang="en" href={`${siteOrigin}${enHref}`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteOrigin}/nl`} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,7 +40,7 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
       <div class="header-inner">
 
         <!-- LINKS: rood blok — loopt over volledige hoogte van de header -->
-        <a href="/" class="header-logo" aria-label="ClosersMatch homepage">
+        <a href={homePath} class="header-logo" aria-label="ClosersMatch homepage">
           <img src="/images/logo-white.png" alt="ClosersMatch" class="header-logo__img" />
         </a>
 
@@ -35,7 +51,7 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
           <div class="header-topbar">
             <div class="header-topbar__inner">
               <div class="header-topbar__socials">
-                <span class="header-topbar__follow">Volg ons:</span>
+                <span class="header-topbar__follow">{t.header.followUs}</span>
                 <a href="https://facebook.com/closersmatch" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 </a>
@@ -63,39 +79,40 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
           <!-- Onderste hoge balk: navigatie -->
           <div class="header-navbar">
             <div class="header-navbar__inner">
-              <nav class="nav-links" aria-label="Hoofdnavigatie">
+              <nav class="nav-links" aria-label={t.header.navLabel}>
                 <div class="nav-item">
-                  <span class="nav-link nav-item__label">Voor Bedrijven <span class="nav-chevron">▾</span></span>
+                  <span class="nav-link nav-item__label">{t.header.forBusinesses} <span class="nav-chevron">▾</span></span>
                   <div class="nav-dropdown">
-                    <a href="/werkwijze" class="nav-dropdown__link">Werkwijze</a>
-                    <a href="/recruitment" class="nav-dropdown__link">Recruitment</a>
-                    <a href="/no-cure-no-pay" class="nav-dropdown__link">No Cure No Pay</a>
-                    <a href="/opdracht-plaatsen" class="nav-dropdown__link">Opdracht plaatsen</a>
+                    <a href={getLocalizedPath('werkwijze', locale)} class="nav-dropdown__link">{t.header.workflow}</a>
+                    <a href={getLocalizedPath('recruitment', locale)} class="nav-dropdown__link">{t.header.recruitment}</a>
+                    <a href={getLocalizedPath('noCureNoPay', locale)} class="nav-dropdown__link">{t.header.noCureNoPay}</a>
+                    <a href={getLocalizedPath('opdrachtPlaatsen', locale)} class="nav-dropdown__link">{t.header.placeAssignment}</a>
                   </div>
                 </div>
                 <div class="nav-item">
-                  <a href="/voor-sales-talent" class="nav-link nav-item__label">Voor sales talent <span class="nav-chevron">▾</span></a>
+                  <a href={getLocalizedPath('voorSalesTalent', locale)} class="nav-link nav-item__label">{t.header.forSalesTalent} <span class="nav-chevron">▾</span></a>
                   <div class="nav-dropdown">
-                    <a href="/voor-closers" class="nav-dropdown__link">Voor Closers</a>
-                    <a href="/voor-appointmentsetters" class="nav-dropdown__link">Voor Appointmentsetters</a>
-                    <a href="/recruitment" class="nav-dropdown__link">Sales Recruitment</a>
+                    <a href={getLocalizedPath('voorClosers', locale)} class="nav-dropdown__link">{t.header.forClosers}</a>
+                    <a href={getLocalizedPath('voorAppointmentsetters', locale)} class="nav-dropdown__link">{t.header.forAppointmentsetters}</a>
+                    <a href={getLocalizedPath('recruitment', locale)} class="nav-dropdown__link">{t.header.salesRecruitment}</a>
                   </div>
                 </div>
-                <a href="/partnership" class="nav-link">Partnership</a>
+                <a href={getLocalizedPath('partnership', locale)} class="nav-link">{t.header.partnership}</a>
                 <div class="nav-item">
-                  <a href="/over-ons" class="nav-link nav-item__label">Over ClosersMatch <span class="nav-chevron">▾</span></a>
+                  <a href={getLocalizedPath('overOns', locale)} class="nav-link nav-item__label">{t.header.about} <span class="nav-chevron">▾</span></a>
                   <div class="nav-dropdown">
-                    <a href="/over-ons" class="nav-dropdown__link">Over ClosersMatch</a>
-                    <a href="/cases" class="nav-dropdown__link">Cases & Reviews</a>
-                    <a href="/contact" class="nav-dropdown__link">Contact</a>
+                    <a href={getLocalizedPath('overOns', locale)} class="nav-dropdown__link">{t.header.about}</a>
+                    <a href={getLocalizedPath('cases', locale)} class="nav-dropdown__link">{t.header.casesReviews}</a>
+                    <a href={getLocalizedPath('contact', locale)} class="nav-dropdown__link">{t.header.contact}</a>
                   </div>
                 </div>
               </nav>
               <div class="nav-actions">
-                <a href="https://portal.closersmatch.com/home-visitor" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Inloggen</a>
-                <a href="/contact" class="btn btn--red">Gesprek Plannen →</a>
+                <LanguageSwitcher locale={locale} currentPath={currentPath} />
+                <a href="https://portal.closersmatch.com/home-visitor" class="btn btn--outline" target="_blank" rel="noopener noreferrer">{t.header.login}</a>
+                <a href={getLocalizedPath('contact', locale)} class="btn btn--red">{t.header.planMeeting}</a>
               </div>
-              <button class="nav-toggle" aria-label="Menu openen" id="nav-toggle">
+              <button class="nav-toggle" aria-label={t.header.menuOpen} id="nav-toggle">
                 <span></span><span></span><span></span>
               </button>
             </div>
@@ -107,33 +124,34 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
       <!-- Mobiel menu -->
       <div class="nav-mobile" id="nav-mobile">
         <div class="nav-mobile-group">
-          <button class="nav-mobile-toggle" aria-expanded="false">Voor Bedrijven <span class="nav-chevron">▾</span></button>
+          <button class="nav-mobile-toggle" aria-expanded="false">{t.header.forBusinesses} <span class="nav-chevron">▾</span></button>
           <div class="nav-mobile-sub">
-            <a href="/werkwijze" class="nav-mobile-link nav-mobile-link--sub">Werkwijze</a>
-            <a href="/recruitment" class="nav-mobile-link nav-mobile-link--sub">Recruitment</a>
-            <a href="/no-cure-no-pay" class="nav-mobile-link nav-mobile-link--sub">No Cure No Pay</a>
-            <a href="/opdracht-plaatsen" class="nav-mobile-link nav-mobile-link--sub">Opdracht plaatsen</a>
+            <a href={getLocalizedPath('werkwijze', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.workflow}</a>
+            <a href={getLocalizedPath('recruitment', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.recruitment}</a>
+            <a href={getLocalizedPath('noCureNoPay', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.noCureNoPay}</a>
+            <a href={getLocalizedPath('opdrachtPlaatsen', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.placeAssignment}</a>
           </div>
         </div>
         <div class="nav-mobile-group">
-          <button class="nav-mobile-toggle" aria-expanded="false">Voor sales talent <span class="nav-chevron">▾</span></button>
+          <button class="nav-mobile-toggle" aria-expanded="false">{t.header.forSalesTalent} <span class="nav-chevron">▾</span></button>
           <div class="nav-mobile-sub">
-            <a href="/voor-closers" class="nav-mobile-link nav-mobile-link--sub">Voor Closers</a>
-            <a href="/voor-appointmentsetters" class="nav-mobile-link nav-mobile-link--sub">Voor Appointmentsetters</a>
-            <a href="/recruitment" class="nav-mobile-link nav-mobile-link--sub">Sales Recruitment</a>
+            <a href={getLocalizedPath('voorClosers', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.forClosers}</a>
+            <a href={getLocalizedPath('voorAppointmentsetters', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.forAppointmentsetters}</a>
+            <a href={getLocalizedPath('recruitment', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.salesRecruitment}</a>
           </div>
         </div>
-        <a href="/partnership" class="nav-mobile-link">Partnership</a>
+        <a href={getLocalizedPath('partnership', locale)} class="nav-mobile-link">{t.header.partnership}</a>
         <div class="nav-mobile-group">
-          <button class="nav-mobile-toggle" aria-expanded="false">Over ClosersMatch <span class="nav-chevron">▾</span></button>
+          <button class="nav-mobile-toggle" aria-expanded="false">{t.header.about} <span class="nav-chevron">▾</span></button>
           <div class="nav-mobile-sub">
-            <a href="/over-ons" class="nav-mobile-link nav-mobile-link--sub">Over ClosersMatch</a>
-            <a href="/cases" class="nav-mobile-link nav-mobile-link--sub">Cases & Reviews</a>
-            <a href="/contact" class="nav-mobile-link nav-mobile-link--sub">Contact</a>
+            <a href={getLocalizedPath('overOns', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.about}</a>
+            <a href={getLocalizedPath('cases', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.casesReviews}</a>
+            <a href={getLocalizedPath('contact', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.contact}</a>
           </div>
         </div>
-                <a href="https://portal.closersmatch.com/home-visitor" class="btn btn--outline" style="margin-top: 8px;" target="_blank" rel="noopener noreferrer">Inloggen</a>
-        <a href="/contact" class="btn btn--red" style="margin-top: 8px;">Gesprek Plannen →</a>
+        <LanguageSwitcher locale={locale} currentPath={currentPath} />
+        <a href="https://portal.closersmatch.com/home-visitor" class="btn btn--outline" style="margin-top: 8px;" target="_blank" rel="noopener noreferrer">{t.header.login}</a>
+        <a href={getLocalizedPath('contact', locale)} class="btn btn--red" style="margin-top: 8px;">{t.header.planMeeting}</a>
       </div>
     </header>
 
@@ -144,30 +162,30 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <a href="/" class="logo">
+          <a href={homePath} class="logo">
             <img src="/images/logo-white.png" alt="ClosersMatch" class="logo__img logo__img--footer" />
           </a>
-          <p class="footer-tagline">Dé plek voor high ticket sales — voor bedrijven en closers.</p>
+          <p class="footer-tagline">{t.footer.tagline}</p>
         </div>
 
         <div class="footer-links-group">
-          <h4 class="footer-heading">Voor Bedrijven</h4>
-          <a href="/voor-bedrijven">Hoe het werkt</a>
-          <a href="/no-cure-no-pay">No Cure No Pay</a>
-          <a href="/cases">Cases & Resultaten</a>
-          <a href="/contact">Intake starten</a>
+          <h4 class="footer-heading">{t.footer.forBusinesses}</h4>
+          <a href={getLocalizedPath('voorBedrijven', locale)}>{t.footer.howItWorks}</a>
+          <a href={getLocalizedPath('noCureNoPay', locale)}>{t.footer.noCureNoPay}</a>
+          <a href={getLocalizedPath('cases', locale)}>{t.footer.casesResults}</a>
+          <a href={getLocalizedPath('contact', locale)}>{t.footer.startIntake}</a>
         </div>
 
         <div class="footer-links-group">
-          <h4 class="footer-heading">Voor Closers</h4>
-          <a href="/voor-closers">Closer worden</a>
-          <a href="/appointment-setter-worden">Appointment Setter worden</a>
-          <a href="/over-ons">Over ClosersMatch</a>
+          <h4 class="footer-heading">{t.footer.forClosers}</h4>
+          <a href={getLocalizedPath('voorClosers', locale)}>{t.footer.becomeCloser}</a>
+          <a href={getLocalizedPath('voorAppointmentsetters', locale)}>{t.footer.becomeSetter}</a>
+          <a href={getLocalizedPath('overOns', locale)}>{t.footer.about}</a>
         </div>
 
         <div class="footer-links-group">
-          <h4 class="footer-heading">Contact</h4>
-          <a href="/contact">Contact opnemen</a>
+          <h4 class="footer-heading">{t.footer.contactHeading}</h4>
+          <a href={getLocalizedPath('contact', locale)}>{t.footer.getInTouch}</a>
           <a href="https://linkedin.com/company/closersmatch" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://instagram.com/closersmatch" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
@@ -175,10 +193,10 @@ const { title, description = 'ClosersMatch — Dé plek voor high ticket sales. 
 
       <div class="footer-bottom">
         <div class="container footer-bottom-inner">
-          <p>&copy; {new Date().getFullYear()} ClosersMatch. Alle rechten voorbehouden.</p>
+          <p>&copy; {new Date().getFullYear()} ClosersMatch. {t.footer.rights}</p>
           <div class="footer-legal">
-            <a href="/privacybeleid">Privacybeleid</a>
-            <a href="/algemene-voorwaarden">Algemene Voorwaarden</a>
+            <a href={getLocalizedPath('contact', locale)}>{t.footer.privacy}</a>
+            <a href={getLocalizedPath('contact', locale)}>{t.footer.terms}</a>
           </div>
         </div>
       </div>
