@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout locale="en" title="Contact — ClosersMatch" description="Plan je gratis intake bij ClosersMatch. Vul het formulier in of plan direct een afspraak met Brian, onze Sales Manager. Reactie binnen 48 uur.">
+<Layout locale="en" title="Contact — ClosersMatch" description="Book your free intake with ClosersMatch. Fill in the form or schedule directly with Brian, our Sales Manager. Response within 48 hours.">
 
   <!-- ================================================
        HERO
@@ -10,14 +10,14 @@ import Layout from '../../layouts/Layout.astro';
   <section class="ct-hero">
     <div class="container ct-hero__inner">
       <span class="label label--red">Contact</span>
-      <h1 class="ct-hero__title">Plan je gratis intake.<br /><span class="ct-hero__title-red">Zonder verplichtingen.</span></h1>
+      <h1 class="ct-hero__title">Book your free intake.<br /><span class="ct-hero__title-red">No obligations.</span></h1>
       <p class="ct-hero__body">
-        Vul het formulier in of plan direct een afspraak in de agenda van Brian, onze Sales Manager. Je krijgt binnen 48 uur een reactie — en een helder beeld van wat ClosersMatch voor jouw bedrijf kan betekenen.
+        Fill in the form or schedule directly with Brian, our Sales Manager. You will hear back within 48 hours, with a clear picture of what ClosersMatch can do for your business.
       </p>
       <div class="ct-hero__pills">
-        <span class="trust-pill">Ô£ô Gratis intake</span>
-        <span class="trust-pill">Ô£ô Geen verplichtingen</span>
-        <span class="trust-pill">Ô£ô Reactie binnen 48 uur</span>
+        <span class="trust-pill">✓ Free intake</span>
+        <span class="trust-pill">✓ No obligations</span>
+        <span class="trust-pill">✓ Response within 48 hours</span>
       </div>
     </div>
   </section>
@@ -30,9 +30,9 @@ import Layout from '../../layouts/Layout.astro';
 
       <!-- LEFT: HubSpot embed -->
       <div class="ct-col ct-col--embed">
-        <span class="label">Direct een afspraak inplannen</span>
-        <h3 class="h3 ct-embed__title">Kies een moment dat jou uitkomt.</h3>
-        <p class="ct-embed__body">Plan direct in de agenda van Brian. Het gesprek duurt 30ÔÇô45 minuten en is volledig gratis.</p>
+        <span class="label">Schedule an appointment directly</span>
+        <h3 class="h3 ct-embed__title">Pick a time that works for you.</h3>
+        <p class="ct-embed__body">Book directly in Brian's calendar. The call takes 30 to 45 minutes and is completely free.</p>
         <div class="ct-embed__wrapper">
           <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/bbandel?embed=true"></div>
           <script is:inline src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
@@ -54,15 +54,15 @@ import Layout from '../../layouts/Layout.astro';
           <div class="ct-info-card__divider"></div>
           <ul class="ct-info-list">
             <li class="ct-info-item">
-              <span class="ct-info-item__icon">­ƒô×</span>
+              <span class="ct-info-item__icon">📞</span>
               <a href="tel:+31634835912" class="ct-info-item__link">+31 6 3483 5912</a>
             </li>
             <li class="ct-info-item">
-              <span class="ct-info-item__icon">Ô£ë´©Å</span>
+              <span class="ct-info-item__icon">✉</span>
               <a href="mailto:info@closersmatch.nl" class="ct-info-item__link">info@closersmatch.nl</a>
             </li>
             <li class="ct-info-item">
-              <span class="ct-info-item__icon">­ƒôì</span>
+              <span class="ct-info-item__icon">📍</span>
               <span class="ct-info-item__text">Boeierstraat 9, 8102 HS Raalte</span>
             </li>
           </ul>
@@ -72,49 +72,49 @@ import Layout from '../../layouts/Layout.astro';
         <form class="ct-form" name="contact" method="POST" action="#" novalidate>
           <div class="ct-form__row ct-form__row--2col">
             <div class="ct-form__group">
-              <label class="ct-form__label" for="voornaam">Voornaam</label>
-              <input class="ct-form__input" type="text" id="voornaam" name="voornaam" placeholder="Jan" required />
+              <label class="ct-form__label" for="voornaam">First name</label>
+              <input class="ct-form__input" type="text" id="voornaam" name="voornaam" placeholder="John" required />
             </div>
             <div class="ct-form__group">
-              <label class="ct-form__label" for="achternaam">Achternaam</label>
-              <input class="ct-form__input" type="text" id="achternaam" name="achternaam" placeholder="Jansen" required />
+              <label class="ct-form__label" for="achternaam">Last name</label>
+              <input class="ct-form__input" type="text" id="achternaam" name="achternaam" placeholder="Smith" required />
             </div>
           </div>
           <div class="ct-form__row ct-form__row--2col">
             <div class="ct-form__group">
-              <label class="ct-form__label" for="email">E-mailadres</label>
-              <input class="ct-form__input" type="email" id="email" name="email" placeholder="jan@bedrijf.nl" required />
+              <label class="ct-form__label" for="email">Email address</label>
+              <input class="ct-form__input" type="email" id="email" name="email" placeholder="john@company.com" required />
             </div>
             <div class="ct-form__group">
-              <label class="ct-form__label" for="telefoon">Telefoonnummer</label>
+              <label class="ct-form__label" for="telefoon">Phone number</label>
               <input class="ct-form__input" type="tel" id="telefoon" name="telefoon" placeholder="+31 6 ..." />
             </div>
           </div>
           <div class="ct-form__row">
             <div class="ct-form__group">
-              <label class="ct-form__label" for="bedrijf">Bedrijf <span class="ct-form__optional">(optioneel)</span></label>
-              <input class="ct-form__input" type="text" id="bedrijf" name="bedrijf" placeholder="Jouw bedrijfsnaam" />
+              <label class="ct-form__label" for="bedrijf">Company <span class="ct-form__optional">(optional)</span></label>
+              <input class="ct-form__input" type="text" id="bedrijf" name="bedrijf" placeholder="Your company name" />
             </div>
           </div>
           <div class="ct-form__row">
             <div class="ct-form__group">
-              <label class="ct-form__label" for="ik-ben">Ik ben</label>
+              <label class="ct-form__label" for="ik-ben">I am a</label>
               <select class="ct-form__input ct-form__select" id="ik-ben" name="ik-ben" required>
-                <option value="" disabled selected>Selecteer een optie</option>
-                <option value="bedrijfseigenaar">Bedrijfseigenaar</option>
+                <option value="" disabled selected>Select an option</option>
+                <option value="bedrijfseigenaar">Business owner</option>
                 <option value="closer">Closer</option>
                 <option value="appointment-setter">Appointment setter</option>
-                <option value="anders">Anders</option>
+                <option value="anders">Other</option>
               </select>
             </div>
           </div>
           <div class="ct-form__row">
             <div class="ct-form__group">
-              <label class="ct-form__label" for="bericht">Bericht</label>
-              <textarea class="ct-form__input ct-form__textarea" id="bericht" name="bericht" rows="4" placeholder="Vertel ons kort wat je nodig hebt..." required></textarea>
+              <label class="ct-form__label" for="bericht">Message</label>
+              <textarea class="ct-form__input ct-form__textarea" id="bericht" name="bericht" rows="4" placeholder="Tell us briefly what you need..." required></textarea>
             </div>
           </div>
-          <button type="submit" class="btn btn--red btn--lg ct-form__submit">Verstuur bericht →</button>
+          <button type="submit" class="btn btn--red btn--lg ct-form__submit">Send message →</button>
         </form>
 
       </div>
@@ -127,18 +127,18 @@ import Layout from '../../layouts/Layout.astro';
   <section class="section ct-faq">
     <div class="container ct-faq__grid">
       <div class="ct-faq__item">
-        <h4 class="ct-faq__q">Zijn er kosten verbonden aan het intakegesprek?</h4>
-        <p class="ct-faq__a">Nee. De intake is volledig gratis en zonder verplichtingen.</p>
+        <h4 class="ct-faq__q">Is there a cost for the intake call?</h4>
+        <p class="ct-faq__a">No. The intake is completely free and without obligations.</p>
       </div>
       <div class="ct-faq__divider"></div>
       <div class="ct-faq__item">
-        <h4 class="ct-faq__q">Hoe snel word ik gematcht?</h4>
-        <p class="ct-faq__a">Gemiddeld binnen 48 uur na de intake.</p>
+        <h4 class="ct-faq__q">How quickly will I be matched?</h4>
+        <p class="ct-faq__a">On average within 48 hours after the intake.</p>
       </div>
       <div class="ct-faq__divider"></div>
       <div class="ct-faq__item">
-        <h4 class="ct-faq__q">Wat als het niet werkt?</h4>
-        <p class="ct-faq__a">No cure no pay. Geen resultaat, geen kosten.</p>
+        <h4 class="ct-faq__q">What if it does not work out?</h4>
+        <p class="ct-faq__a">No cure no pay. No result, no cost.</p>
       </div>
     </div>
   </section>
@@ -149,8 +149,8 @@ import Layout from '../../layouts/Layout.astro';
   <section class="ct-closing">
     <div class="ct-closing__inner">
       <h2 class="ct-closing__title">ClosersMatch.<br /><span class="ct-closing__title-red">The Revenue Ecosystem.</span></h2>
-      <p class="ct-closing__body">Bouw het commercieel systeem dat jouw bedrijf verdient.</p>
-      <a href="#" class="btn btn--red btn--lg ct-closing__btn" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Plan je gratis intake →</a>
+      <p class="ct-closing__body">Build the commercial system your business deserves.</p>
+      <a href="#" class="btn btn--red btn--lg ct-closing__btn" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Book your free intake →</a>
     </div>
   </section>
 

@@ -2,22 +2,22 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout locale="en" title="Opdracht plaatsen — ClosersMatch" description="Plaats je opdracht bij ClosersMatch en ontvang binnen 48 uur een match met een gecertificeerde closer of appointment setter. Gratis, vrijblijvend en op no cure no pay basis.">
+<Layout locale="en" title="Place an Assignment — ClosersMatch" description="Submit your assignment to ClosersMatch and get matched with a certified closer or appointment setter within 48 hours. Free, no obligation, and on a no cure no pay basis.">
 
   <!-- ================================================
        HERO
   ================================================ -->
   <section class="op-hero">
     <div class="container op-hero__inner">
-      <span class="label label--red">Opdracht plaatsen</span>
-      <h1 class="op-hero__title">Plaats je opdracht.<br /><span class="op-hero__title-red">Wij vinden de match.</span></h1>
+      <span class="label label--red">Place an assignment</span>
+      <h1 class="op-hero__title">Submit your assignment.<br /><span class="op-hero__title-red">We find the match.</span></h1>
       <p class="op-hero__body">
-        Vertel ons wat je zoekt — een closer, een appointment setter of een compleet salestraject. Wij screenen, matchen en leveren binnen 48 uur een gecertificeerde professional die past bij jouw markt en doelgroep.
+        Tell us what you need, a closer, an appointment setter, or a complete sales journey. We screen, match, and deliver a certified professional who fits your market and target audience within 48 hours.
       </p>
       <div class="op-hero__pills">
-        <span class="trust-pill">Ô£ô Gratis &amp; vrijblijvend</span>
-        <span class="trust-pill">Ô£ô Match binnen 48 uur</span>
-        <span class="trust-pill">Ô£ô No cure no pay</span>
+        <span class="trust-pill">✓ Free &amp; no obligation</span>
+        <span class="trust-pill">✓ Match within 48 hours</span>
+        <span class="trust-pill">✓ No cure no pay</span>
       </div>
     </div>
   </section>
@@ -29,18 +29,18 @@ import Layout from '../../layouts/Layout.astro';
     <div class="container op-steps__grid">
       <div class="op-step">
         <div class="op-step__num">01</div>
-        <h3 class="op-step__title">Opdracht plaatsen</h3>
-        <p class="op-step__text">Vul het formulier hieronder in met je opdracht, doelgroep en doelstellingen.</p>
+        <h3 class="op-step__title">Submit your assignment</h3>
+        <p class="op-step__text">Fill in the form below with your assignment, target audience, and goals.</p>
       </div>
       <div class="op-step">
         <div class="op-step__num">02</div>
-        <h3 class="op-step__title">Wij screenen &amp; matchen</h3>
-        <p class="op-step__text">Binnen 48 uur koppelen we je aan gecertificeerde closers of setters die aansluiten bij jouw opdracht.</p>
+        <h3 class="op-step__title">We screen &amp; match</h3>
+        <p class="op-step__text">Within 48 hours, we connect you with certified closers or setters who fit your assignment.</p>
       </div>
       <div class="op-step">
         <div class="op-step__num">03</div>
-        <h3 class="op-step__title">Direct starten</h3>
-        <p class="op-step__text">Gratis onboarding, geen wervingskosten. Je betaalt pas als er resultaat wordt geleverd.</p>
+        <h3 class="op-step__title">Start immediately</h3>
+        <p class="op-step__text">Free onboarding, no recruitment fees. You only pay when results are delivered.</p>
       </div>
     </div>
   </section>
@@ -53,118 +53,118 @@ import Layout from '../../layouts/Layout.astro';
 
       <!-- LEFT: Opdracht form -->
       <div class="op-col op-col--form">
-        <span class="label">Jouw opdracht</span>
-        <h2 class="h2 op-form__title">Vertel ons wat je nodig hebt.</h2>
-        <p class="op-form__intro">Hoe specifieker, hoe beter de match. Alle velden met een * zijn verplicht.</p>
+        <span class="label">Your assignment</span>
+        <h2 class="h2 op-form__title">Tell us what you need.</h2>
+        <p class="op-form__intro">The more specific you are, the better the match. All fields marked with * are required.</p>
 
         <form class="op-form" name="opdracht" method="POST" action="#" novalidate>
           <div class="op-form__row op-form__row--2col">
             <div class="op-form__group">
-              <label class="op-form__label" for="op-naam">Naam *</label>
-              <input class="op-form__input" type="text" id="op-naam" name="naam" placeholder="Jan Jansen" required />
+              <label class="op-form__label" for="op-naam">Name *</label>
+              <input class="op-form__input" type="text" id="op-naam" name="naam" placeholder="John Smith" required />
             </div>
             <div class="op-form__group">
-              <label class="op-form__label" for="op-bedrijf">Bedrijfsnaam *</label>
-              <input class="op-form__input" type="text" id="op-bedrijf" name="bedrijf" placeholder="Jouw bedrijf" required />
+              <label class="op-form__label" for="op-bedrijf">Company name *</label>
+              <input class="op-form__input" type="text" id="op-bedrijf" name="bedrijf" placeholder="Your company" required />
             </div>
           </div>
 
           <div class="op-form__row op-form__row--2col">
             <div class="op-form__group">
-              <label class="op-form__label" for="op-email">E-mailadres *</label>
-              <input class="op-form__input" type="email" id="op-email" name="email" placeholder="jan@bedrijf.nl" required />
+              <label class="op-form__label" for="op-email">Email address *</label>
+              <input class="op-form__input" type="email" id="op-email" name="email" placeholder="john@company.com" required />
             </div>
             <div class="op-form__group">
-              <label class="op-form__label" for="op-telefoon">Telefoonnummer *</label>
+              <label class="op-form__label" for="op-telefoon">Phone number *</label>
               <input class="op-form__input" type="tel" id="op-telefoon" name="telefoon" placeholder="+31 6 ..." required />
             </div>
           </div>
 
           <div class="op-form__row">
             <div class="op-form__group">
-              <label class="op-form__label" for="op-type">Waar zoek je naar? *</label>
+              <label class="op-form__label" for="op-type">What are you looking for? *</label>
               <select class="op-form__input op-form__select" id="op-type" name="type" required>
-                <option value="" disabled selected>Selecteer een optie</option>
-                <option value="closer">Een closer</option>
-                <option value="setter">Een appointment setter</option>
-                <option value="combinatie">Combinatie closer + setter</option>
-                <option value="volledig-uitbesteed">Volledig uitbesteed salestraject</option>
-                <option value="weet-nog-niet">Weet ik nog niet — advies gewenst</option>
+                <option value="" disabled selected>Select an option</option>
+                <option value="closer">A closer</option>
+                <option value="setter">An appointment setter</option>
+                <option value="combinatie">Closer + setter combination</option>
+                <option value="volledig-uitbesteed">Fully outsourced sales journey</option>
+                <option value="weet-nog-niet">Not sure yet, I want advice</option>
               </select>
             </div>
           </div>
 
           <div class="op-form__row op-form__row--2col">
             <div class="op-form__group">
-              <label class="op-form__label" for="op-branche">Branche</label>
-              <input class="op-form__input" type="text" id="op-branche" name="branche" placeholder="Bijv. SaaS, coaching, energie" />
+              <label class="op-form__label" for="op-branche">Industry</label>
+              <input class="op-form__input" type="text" id="op-branche" name="branche" placeholder="e.g. SaaS, coaching, energy" />
             </div>
             <div class="op-form__group">
-              <label class="op-form__label" for="op-dealgrootte">Gemiddelde dealgrootte</label>
-              <input class="op-form__input" type="text" id="op-dealgrootte" name="dealgrootte" placeholder="Bijv. €2.500 - €10.000" />
+              <label class="op-form__label" for="op-dealgrootte">Average deal size</label>
+              <input class="op-form__input" type="text" id="op-dealgrootte" name="dealgrootte" placeholder="e.g. €2,500 - €10,000" />
             </div>
           </div>
 
           <div class="op-form__row">
             <div class="op-form__group">
-              <label class="op-form__label" for="op-startdatum">Gewenste startdatum</label>
+              <label class="op-form__label" for="op-startdatum">Preferred start date</label>
               <select class="op-form__input op-form__select" id="op-startdatum" name="startdatum">
-                <option value="" disabled selected>Selecteer een optie</option>
-                <option value="zo-snel-mogelijk">Zo snel mogelijk</option>
-                <option value="binnen-2-weken">Binnen 2 weken</option>
-                <option value="binnen-een-maand">Binnen een maand</option>
-                <option value="ori├½nterend">Ik ori├½nteer me nog</option>
+                <option value="" disabled selected>Select an option</option>
+                <option value="zo-snel-mogelijk">As soon as possible</option>
+                <option value="binnen-2-weken">Within 2 weeks</option>
+                <option value="binnen-een-maand">Within a month</option>
+                <option value="orienterend">Still exploring options</option>
               </select>
             </div>
           </div>
 
           <div class="op-form__row">
             <div class="op-form__group">
-              <label class="op-form__label" for="op-toelichting">Toelichting op je opdracht *</label>
-              <textarea class="op-form__input op-form__textarea" id="op-toelichting" name="toelichting" rows="5" placeholder="Vertel kort over je product/dienst, doelgroep en wat je zoekt in een closer of setter..." required></textarea>
+              <label class="op-form__label" for="op-toelichting">Assignment details *</label>
+              <textarea class="op-form__input op-form__textarea" id="op-toelichting" name="toelichting" rows="5" placeholder="Briefly describe your product/service, target audience, and what you are looking for in a closer or setter..." required></textarea>
             </div>
           </div>
 
-          <button type="submit" class="btn btn--red btn--lg op-form__submit">Plaats je opdracht →</button>
-          <p class="op-form__note">Geen kosten vooraf. Je hoort binnen 48 uur van ons.</p>
+          <button type="submit" class="btn btn--red btn--lg op-form__submit">Submit your assignment →</button>
+          <p class="op-form__note">No upfront costs. You will hear from us within 48 hours.</p>
         </form>
       </div>
 
       <!-- RIGHT: Wat je krijgt -->
       <div class="op-col op-col--info">
         <div class="op-info-card">
-          <span class="op-info-card__label">Wat je krijgt</span>
+          <span class="op-info-card__label">What you get</span>
           <ul class="op-info-list">
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Match binnen 48 uur na plaatsing
+              Match within 48 hours of submission
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Gecertificeerde, gescreende professionals
+              Certified, vetted professionals
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Gratis onboarding inbegrepen
+              Free onboarding included
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              No cure no pay — betalen bij resultaat
+              No cure no pay, pay for results
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Volledig inzicht via CRM &amp; rapportages
+              Full visibility via CRM &amp; reporting
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Geen verplichtingen, geen langdurig contract
+              No obligations, no long-term contract
             </li>
           </ul>
         </div>
 
         <div class="op-alt-card">
-          <p class="op-alt-card__text">Liever eerst even sparren voordat je een opdracht plaatst?</p>
-          <a href="/en/contact" class="btn btn--outline-dark-mode op-alt-card__btn">Plan een gratis intake →</a>
+          <p class="op-alt-card__text">Prefer to talk it through before submitting an assignment?</p>
+          <a href="/en/contact" class="btn btn--outline-dark-mode op-alt-card__btn">Book a free intake →</a>
         </div>
       </div>
 
@@ -177,25 +177,25 @@ import Layout from '../../layouts/Layout.astro';
   <section class="section op-faq">
     <div class="container">
       <div class="op-faq__header">
-        <span class="label">Veelgestelde vragen</span>
-        <h2 class="h2 op-faq__title">Alles wat je wilt weten voordat je plaatst.</h2>
+        <span class="label">FAQ</span>
+        <h2 class="h2 op-faq__title">Everything you need to know before you submit.</h2>
       </div>
       <div class="op-faq__grid">
         <div class="op-faq__item">
-          <h4 class="op-faq__q">Kost het iets om een opdracht te plaatsen?</h4>
-          <p class="op-faq__a">Nee. Plaatsen, screenen en matchen is volledig gratis. Je betaalt pas zodra er een afspraak of deal wordt gerealiseerd.</p>
+          <h4 class="op-faq__q">Does it cost anything to submit an assignment?</h4>
+          <p class="op-faq__a">No. Submitting, screening, and matching is completely free. You only pay once an appointment or deal is delivered.</p>
         </div>
         <div class="op-faq__item">
-          <h4 class="op-faq__q">Hoe snel krijg ik een match?</h4>
-          <p class="op-faq__a">Gemiddeld binnen 48 uur na het plaatsen van je opdracht.</p>
+          <h4 class="op-faq__q">How quickly will I get a match?</h4>
+          <p class="op-faq__a">On average within 48 hours of submitting your assignment.</p>
         </div>
         <div class="op-faq__item">
-          <h4 class="op-faq__q">Kan ik meerdere opdrachten plaatsen?</h4>
-          <p class="op-faq__a">Zeker. Of je nu op zoek bent naar één closer of een volledig salesteam — we schalen mee met jouw behoefte.</p>
+          <h4 class="op-faq__q">Can I submit multiple assignments?</h4>
+          <p class="op-faq__a">Absolutely. Whether you need one closer or a full sales team, we scale with your needs.</p>
         </div>
         <div class="op-faq__item">
-          <h4 class="op-faq__q">Wat als de match niet aansluit?</h4>
-          <p class="op-faq__a">Dan zoeken we opnieuw. Geen extra kosten, geen gedoe — we zorgen dat de match klopt.</p>
+          <h4 class="op-faq__q">What if the match is not right?</h4>
+          <p class="op-faq__a">We find a new match. No extra costs, no hassle, we make sure the fit is right.</p>
         </div>
       </div>
     </div>
@@ -206,9 +206,9 @@ import Layout from '../../layouts/Layout.astro';
   ================================================ -->
   <section class="op-closing">
     <div class="op-closing__inner">
-      <h2 class="op-closing__title">Klaar om je opdracht te plaatsen?</h2>
-      <p class="op-closing__body">Geen wervingskosten. Geen vast salaris. Alleen resultaat.</p>
-      <a href="#" class="btn btn--red btn--lg op-closing__btn" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Plaats je opdracht →</a>
+      <h2 class="op-closing__title">Ready to submit your assignment?</h2>
+      <p class="op-closing__body">No recruitment fees. No fixed salary. Only results.</p>
+      <a href="#" class="btn btn--red btn--lg op-closing__btn" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Submit your assignment →</a>
     </div>
   </section>
 
