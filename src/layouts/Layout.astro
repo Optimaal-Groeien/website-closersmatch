@@ -103,6 +103,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
                   <div class="nav-dropdown">
                     <a href={getLocalizedPath('overOns', locale)} class="nav-dropdown__link">{t.header.about}</a>
                     <a href={getLocalizedPath('cases', locale)} class="nav-dropdown__link">{t.header.casesReviews}</a>
+                    <a href={getLocalizedPath('blog', locale)} class="nav-dropdown__link">{t.header.blog}</a>
                     <a href={getLocalizedPath('contact', locale)} class="nav-dropdown__link">{t.header.contact}</a>
                   </div>
                 </div>
@@ -146,6 +147,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
           <div class="nav-mobile-sub">
             <a href={getLocalizedPath('overOns', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.about}</a>
             <a href={getLocalizedPath('cases', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.casesReviews}</a>
+            <a href={getLocalizedPath('blog', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.blog}</a>
             <a href={getLocalizedPath('contact', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.contact}</a>
           </div>
         </div>
@@ -181,6 +183,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
           <a href={getLocalizedPath('voorClosers', locale)}>{t.footer.becomeCloser}</a>
           <a href={getLocalizedPath('voorAppointmentsetters', locale)}>{t.footer.becomeSetter}</a>
           <a href={getLocalizedPath('overOns', locale)}>{t.footer.about}</a>
+          <a href={getLocalizedPath('blog', locale)}>{t.footer.blog}</a>
         </div>
 
         <div class="footer-links-group">

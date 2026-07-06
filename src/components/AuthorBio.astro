@@ -1,0 +1,106 @@
+---
+interface Props {
+  locale: 'nl' | 'en';
+  compact?: boolean;
+}
+
+const { locale, compact = false } = Astro.props;
+
+const copy = {
+  nl: {
+    name: 'Stefan Kelderman',
+    role: 'Sales Trainer & Oprichter ClosersMatch',
+    bio: 'Stefan Kelderman is ervaren salesprofessional en verzorgt de CM Certified trainingen voor closers en appointment setters binnen ClosersMatch. Met jarenlange praktijkervaring in high ticket sales leert hij professionals hoe ze structureel meer deals sluiten.',
+    writtenBy: 'Geschreven door',
+  },
+  en: {
+    name: 'Stefan Kelderman',
+    role: 'Sales Trainer & Founder ClosersMatch',
+    bio: 'Stefan Kelderman is an experienced sales professional who delivers the CM Certified training for closers and appointment setters at ClosersMatch. With years of hands-on experience in high-ticket sales, he teaches professionals how to close more deals, consistently.',
+    writtenBy: 'Written by',
+  },
+};
+
+const t = copy[locale];
+---
+
+<div class:list={['author-bio', { 'author-bio--compact': compact }]}>
+  <img
+    src="/images/team/stefan-kelderman.png"
+    alt={t.name}
+    class="author-bio__img"
+    loading="lazy"
+    width="64"
+    height="64"
+  />
+  <div class="author-bio__content">
+    {!compact && <span class="author-bio__label">{t.writtenBy}</span>}
+    <strong class="author-bio__name">{t.name}</strong>
+    <span class="author-bio__role">{t.role}</span>
+    {!compact && <p class="author-bio__text">{t.bio}</p>}
+  </div>
+</div>
+
+<style>
+  .author-bio {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .author-bio__img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(221, 52, 46, 0.12);
+  }
+
+  .author-bio__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .author-bio__label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-mid);
+  }
+
+  .author-bio__name {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--color-text);
+  }
+
+  .author-bio__role {
+    font-size: 0.85rem;
+    color: var(--color-red);
+    font-weight: 600;
+  }
+
+  .author-bio__text {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 560px;
+  }
+
+  .author-bio--compact .author-bio__img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .author-bio--compact .author-bio__name {
+    font-size: 0.92rem;
+  }
+
+  .author-bio--compact .author-bio__role {
+    font-size: 0.78rem;
+  }
+</style>

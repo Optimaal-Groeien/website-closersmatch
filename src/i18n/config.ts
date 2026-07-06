@@ -17,6 +17,7 @@ export const routes = {
   noCureNoPay: { nl: 'no-cure-no-pay', en: 'no-cure-no-pay' },
   opdrachtPlaatsen: { nl: 'opdracht-plaatsen', en: 'place-assignment' },
   partnership: { nl: 'partnership', en: 'partnership' },
+  blog: { nl: 'blog', en: 'blog' },
 } as const;
 
 export type RouteKey = keyof typeof routes;

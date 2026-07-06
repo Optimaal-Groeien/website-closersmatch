@@ -1,0 +1,214 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+
+const allPosts = await getCollection('blog', ({ data }) => data.locale === 'nl' && !data.draft);
+const posts = allPosts.sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+
+const dateFormatter = new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
+const categories = [...new Set(posts.map((p) => p.data.category))];
+---
+
+<Layout locale="nl" title="Blog — ClosersMatch" description="Praktische inzichten over high ticket sales, appointment setting en closing. Geschreven door Stefan Kelderman, sales trainer bij ClosersMatch.">
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="blog-hero">
+    <div class="container blog-hero__inner">
+      <span class="label label--red">Kennisbank</span>
+      <h1 class="blog-hero__title">
+        Inzichten over sales,<br />
+        <span class="blog-hero__title-red">closing en appointment setting.</span>
+      </h1>
+      <p class="blog-hero__subtitle">
+        Praktische gidsen, uitleg en ervaringen uit de praktijk van high ticket sales. Geschreven door Stefan Kelderman, sales trainer en oprichter van ClosersMatch.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       POSTS GRID
+  ================================================ -->
+  <section class="section blog-list">
+    <div class="container">
+      {categories.map((category) => {
+        const categoryPosts = posts.filter((p) => p.data.category === category);
+        return (
+          <div class="blog-category-group">
+            <h2 class="blog-category-group__title">{category}</h2>
+            <div class="blog-grid">
+              {categoryPosts.map((post) => (
+                <a href={`/nl/blog/${post.id}`} class="blog-card">
+                  <div class="blog-card__image-wrap">
+                    <img src={post.data.image} alt={post.data.imageAlt} class="blog-card__image" loading="lazy" />
+                  </div>
+                  <div class="blog-card__content">
+                    <span class="blog-card__category">{post.data.category}</span>
+                    <h3 class="blog-card__title">{post.data.title}</h3>
+                    <p class="blog-card__desc">{post.data.description}</p>
+                    <div class="blog-card__meta">
+                      <span>{dateFormatter.format(post.data.publishedAt)}</span>
+                      {post.data.readingTime && <span>· {post.data.readingTime} leestijd</span>}
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+
+      {posts.length === 0 && (
+        <div class="blog-empty">
+          <p>Binnenkort verschijnen hier de eerste artikelen.</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- ================================================
+       CLOSING CTA
+  ================================================ -->
+  <section class="section section--dark blog-closing">
+    <div class="container container--narrow blog-closing__inner">
+      <h2 class="h2 blog-closing__title">Liever direct in gesprek?</h2>
+      <p class="blog-closing__text">Plan een vrijblijvende intake en ontdek wat ClosersMatch voor jou kan betekenen.</p>
+      <a href="/nl/contact" class="btn btn--red btn--lg">Plan je gratis intake →</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blog-hero {
+    padding: 160px 0 72px;
+    background: var(--color-gray-light);
+  }
+
+  .blog-hero__inner {
+    max-width: 720px;
+  }
+
+  .blog-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4.6vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin: 16px 0 20px;
+  }
+
+  .blog-hero__title-red { color: var(--color-red); }
+
+  .blog-hero__subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  .blog-category-group {
+    margin-bottom: 56px;
+  }
+
+  .blog-category-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .blog-category-group__title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--color-gray-border);
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-gray-border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .blog-card__image-wrap {
+    height: 180px;
+    overflow: hidden;
+  }
+
+  .blog-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .blog-card__content {
+    padding: 22px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .blog-card__category {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-red);
+    margin-bottom: 10px;
+  }
+
+  .blog-card__title {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    color: var(--color-black);
+  }
+
+  .blog-card__desc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #555;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+
+  .blog-card__meta {
+    display: flex;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: var(--color-gray-mid);
+  }
+
+  .blog-empty {
+    text-align: center;
+    padding: 64px 0;
+    color: var(--color-gray-mid);
+  }
+
+  .blog-closing__inner { text-align: center; }
+  .blog-closing__title { color: #fff; margin-bottom: 12px; }
+  .blog-closing__text { color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+
+  @media (max-width: 900px) {
+    .blog-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .blog-grid { grid-template-columns: 1fr; }
+    .blog-hero { padding-top: 140px; }
+  }
+</style>

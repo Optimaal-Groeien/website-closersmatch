@@ -1,0 +1,472 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import AuthorBio from '../../../components/AuthorBio.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => data.locale === 'nl' && !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { data } = post;
+const { Content } = await render(post);
+
+const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalgroeien-84d.workers.dev';
+const canonicalUrl = `${siteOrigin}/nl/blog/${post.id}`;
+const imageUrl = `${siteOrigin}${data.image}`;
+
+const dateFormatter = new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' });
+const publishedDisplay = dateFormatter.format(data.publishedAt);
+const updatedDisplay = data.updatedAt ? dateFormatter.format(data.updatedAt) : null;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: data.title,
+  description: data.description,
+  image: imageUrl,
+  datePublished: data.publishedAt.toISOString(),
+  dateModified: (data.updatedAt ?? data.publishedAt).toISOString(),
+  author: {
+    '@type': 'Person',
+    name: data.author,
+    jobTitle: 'Sales Trainer & Oprichter ClosersMatch',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'ClosersMatch',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteOrigin}/images/logo-dark.png`,
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalUrl,
+  },
+};
+
+const faqSchema =
+  data.faq.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: data.faq.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      }
+    : null;
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/nl` },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteOrigin}/nl/blog` },
+    { '@type': 'ListItem', position: 3, name: data.title, item: canonicalUrl },
+  ],
+};
+---
+
+<Layout locale="nl" title={`${data.title} — ClosersMatch`} description={data.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <article class="post">
+    <!-- ================================================
+         HERO
+    ================================================ -->
+    <header class="post-hero">
+      <div class="container post-hero__inner">
+        <nav class="post-breadcrumb" aria-label="Breadcrumb">
+          <a href="/nl">Home</a>
+          <span>/</span>
+          <a href="/nl/blog">Blog</a>
+          <span>/</span>
+          <span aria-current="page">{data.category}</span>
+        </nav>
+        <span class="label label--red">{data.category}</span>
+        <h1 class="post-hero__title">{data.title}</h1>
+        <p class="post-hero__subtitle">{data.description}</p>
+        <div class="post-hero__meta">
+          <AuthorBio locale="nl" compact />
+          <div class="post-hero__meta-divider"></div>
+          <div class="post-hero__meta-details">
+            <span>Gepubliceerd op {publishedDisplay}</span>
+            {updatedDisplay && updatedDisplay !== publishedDisplay && <span>· Bijgewerkt op {updatedDisplay}</span>}
+            {data.readingTime && <span>· {data.readingTime} leestijd</span>}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="post-hero__image-wrap">
+      <img src={data.image} alt={data.imageAlt} class="post-hero__image" loading="eager" />
+    </div>
+
+    <!-- ================================================
+         CONTENT
+    ================================================ -->
+    <div class="container post-layout">
+      <div class="post-content">
+        <Content />
+      </div>
+
+      <aside class="post-sidebar">
+        <div class="post-sidebar__card">
+          <span class="post-sidebar__label">Klaar voor de volgende stap?</span>
+          <h3 class="post-sidebar__title">Plan je gratis intake</h3>
+          <p class="post-sidebar__text">Ontdek binnen 48 uur of ClosersMatch bij je past. Zonder verplichtingen.</p>
+          <a href="/nl/contact" class="btn btn--red post-sidebar__btn">Plan je gratis intake →</a>
+        </div>
+
+        {data.relatedLinks.length > 0 && (
+          <div class="post-sidebar__links">
+            <span class="post-sidebar__label">Gerelateerde pagina's</span>
+            <ul>
+              {data.relatedLinks.map((link) => (
+                <li><a href={link.href}>{link.label} →</a></li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </aside>
+    </div>
+
+    <!-- ================================================
+         FAQ
+    ================================================ -->
+    {data.faq.length > 0 && (
+      <section class="section section--gray post-faq">
+        <div class="container container--narrow">
+          <span class="label label--red">Veelgestelde vragen</span>
+          <h2 class="h2 post-faq__title">Vragen over {data.keyword}</h2>
+          <div class="post-faq__list">
+            {data.faq.map((item) => (
+              <details class="post-faq__item">
+                <summary class="post-faq__question">{item.question}</summary>
+                <p class="post-faq__answer">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- ================================================
+         AUTHOR FULL BIO
+    ================================================ -->
+    <section class="section post-author-section">
+      <div class="container container--narrow">
+        <AuthorBio locale="nl" />
+      </div>
+    </section>
+
+    <!-- ================================================
+         CLOSING CTA
+    ================================================ -->
+    <section class="section section--dark post-closing">
+      <div class="container container--narrow post-closing__inner">
+        <h2 class="h2 post-closing__title">Klaar om de volgende stap te zetten?</h2>
+        <p class="post-closing__text">Plan een vrijblijvend gesprek en ontdek wat ClosersMatch voor jou kan betekenen.</p>
+        <a href="/nl/contact" class="btn btn--red btn--lg">Plan je gratis intake →</a>
+      </div>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .post-hero {
+    padding: 140px 0 40px;
+    background: var(--color-gray-light);
+  }
+
+  .post-hero__inner {
+    max-width: 800px;
+  }
+
+  .post-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-gray-mid);
+    margin-bottom: 20px;
+  }
+
+  .post-breadcrumb a {
+    color: var(--color-gray-mid);
+    transition: color 0.2s;
+  }
+
+  .post-breadcrumb a:hover { color: var(--color-red); }
+
+  .post-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.2vw, 3rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin: 16px 0 20px;
+  }
+
+  .post-hero__subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 32px;
+  }
+
+  .post-hero__meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-gray-border);
+  }
+
+  .post-hero__meta-divider {
+    width: 1px;
+    height: 32px;
+    background: var(--color-gray-border);
+  }
+
+  .post-hero__meta-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 0.85rem;
+    color: var(--color-gray-mid);
+  }
+
+  .post-hero__image-wrap {
+    max-width: 1000px;
+    margin: -20px auto 0;
+    padding: 0 24px;
+  }
+
+  .post-hero__image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .post-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 720px) 300px;
+    gap: 56px;
+    padding-top: 64px;
+    padding-bottom: 32px;
+    max-width: 1080px;
+  }
+
+  .post-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #2a2a2a;
+  }
+
+  .post-content :global(h2) {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+    font-weight: 900;
+    margin: 48px 0 18px;
+    color: var(--color-black);
+  }
+
+  .post-content :global(h3) {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 32px 0 12px;
+  }
+
+  .post-content :global(p) {
+    margin-bottom: 20px;
+  }
+
+  .post-content :global(strong) {
+    color: var(--color-black);
+    font-weight: 700;
+  }
+
+  .post-content :global(ul),
+  .post-content :global(ol) {
+    margin: 0 0 24px 22px;
+  }
+
+  .post-content :global(li) {
+    margin-bottom: 8px;
+  }
+
+  .post-content :global(a) {
+    color: var(--color-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .post-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0 32px;
+    font-size: 0.95rem;
+  }
+
+  .post-content :global(th),
+  .post-content :global(td) {
+    padding: 12px 14px;
+    border: 1px solid var(--color-gray-border);
+    text-align: left;
+  }
+
+  .post-content :global(th) {
+    background: var(--color-gray-light);
+    font-family: var(--font-display);
+    font-weight: 800;
+  }
+
+  .post-content :global(blockquote) {
+    border-left: 3px solid var(--color-red);
+    padding: 4px 0 4px 20px;
+    margin: 24px 0;
+    color: #555;
+    font-style: italic;
+  }
+
+  .post-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .post-sidebar__card {
+    background: var(--color-gray-light);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    position: sticky;
+    top: 110px;
+  }
+
+  .post-sidebar__label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-mid);
+    margin-bottom: 8px;
+  }
+
+  .post-sidebar__title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .post-sidebar__text {
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  .post-sidebar__btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 12px 18px;
+  }
+
+  .post-sidebar__links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .post-sidebar__links a {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-text);
+    transition: color 0.2s;
+  }
+
+  .post-sidebar__links a:hover { color: var(--color-red); }
+
+  .post-faq__title {
+    margin: 8px 0 32px;
+  }
+
+  .post-faq__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .post-faq__item {
+    background: #fff;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    padding: 18px 22px;
+  }
+
+  .post-faq__question {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.98rem;
+    list-style: none;
+  }
+
+  .post-faq__question::-webkit-details-marker { display: none; }
+
+  .post-faq__question::after {
+    content: '+';
+    float: right;
+    color: var(--color-red);
+    font-size: 1.2rem;
+  }
+
+  details[open] .post-faq__question::after {
+    content: '−';
+  }
+
+  .post-faq__answer {
+    margin-top: 12px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #555;
+  }
+
+  .post-closing__inner {
+    text-align: center;
+  }
+
+  .post-closing__title { color: #fff; margin-bottom: 12px; }
+  .post-closing__text { color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+
+  @media (max-width: 900px) {
+    .post-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .post-sidebar__card {
+      position: static;
+    }
+
+    .post-hero { padding-top: 120px; }
+    .post-hero__image { height: 260px; }
+  }
+</style>
