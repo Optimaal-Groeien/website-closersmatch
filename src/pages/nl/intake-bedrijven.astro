@@ -1,0 +1,667 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout locale="nl" title="Intake voor Bedrijven — ClosersMatch" description="Vul de officiële intake in en word gematcht met closers en appointment setters die passen bij jouw bedrijf. Geen uurtarief, geen risico, alleen resultaat.">
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="ib-hero">
+    <div class="container ib-hero__inner">
+      <span class="label label--red">Intake opdrachtgever</span>
+      <h1 class="ib-hero__title">Welkom als opdrachtgever.<br />Hier word je gematcht met closers die passen bij jouw bedrijf.</h1>
+      <p class="ib-hero__body">
+        Wij koppelen bewezen high-ticket closers aan bedrijven met één duidelijke missie: meer omzet door warme leads op te volgen en te sluiten. Geen uurtarief, geen risico, geen loze beloftes. Je betaalt alleen een vooraf afgesproken percentage per gesloten deal.
+      </p>
+      <p class="ib-hero__note">Vul de intake zo volledig mogelijk in. Dat werkt in jouw voordeel — hoe vollediger, hoe beter de match.</p>
+      <blockquote class="ib-hero__quote">"Duurt 3 minuten. Bespaart ons beiden 3 maanden trial-and-error."</blockquote>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FORM
+  ================================================ -->
+  <section class="section ib-main">
+    <div class="container container--narrow">
+
+      <form class="ib-form" id="intake-form" name="intake-bedrijven" method="POST" action="#">
+
+        <!-- CONTACTGEGEVENS -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">01 — Contactgegevens</span>
+
+          <div class="ib-form__row ib-form__row--2col">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-voornaam">Voornaam *</label>
+              <input class="ib-form__input" type="text" id="ib-voornaam" name="voornaam" placeholder="Jan" required />
+            </div>
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-achternaam">Achternaam *</label>
+              <input class="ib-form__input" type="text" id="ib-achternaam" name="achternaam" placeholder="Jansen" required />
+            </div>
+          </div>
+
+          <div class="ib-form__row ib-form__row--2col">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-email">E-mailadres *</label>
+              <input class="ib-form__input" type="email" id="ib-email" name="email" placeholder="jan@bedrijf.nl" required />
+            </div>
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-telefoon">Telefoonnummer</label>
+              <input class="ib-form__input" type="tel" id="ib-telefoon" name="telefoon" placeholder="+31 6 ..." />
+            </div>
+          </div>
+
+          <div class="ib-form__row ib-form__row--2col">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-bedrijf">Bedrijf *</label>
+              <input class="ib-form__input" type="text" id="ib-bedrijf" name="bedrijf" placeholder="Jouw bedrijfsnaam" required />
+            </div>
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-website">Website</label>
+              <input class="ib-form__input" type="url" id="ib-website" name="website" placeholder="https://" />
+            </div>
+          </div>
+        </div>
+
+        <p class="ib-form__version">Vul de intake zo volledig mogelijk in (versie: 19-01-2026)</p>
+
+        <!-- SAMENWERKING & SALESPROFIEL -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">02 — Samenwerking &amp; salesprofiel</span>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label">Hoe wil je samenwerken? *</label>
+              <span class="ib-form__hint">Met closers, appointment setters, of beide?</span>
+              <div class="ib-radio-group">
+                <label class="ib-radio">
+                  <input type="radio" name="samenwerking" value="closers" required />
+                  <span>Closers</span>
+                </label>
+                <label class="ib-radio">
+                  <input type="radio" name="samenwerking" value="setters" required />
+                  <span>Appointment setters</span>
+                </label>
+                <label class="ib-radio">
+                  <input type="radio" name="samenwerking" value="beide" required />
+                  <span>Beide</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-aov">Gemiddelde orderwaarde (LTV) *</label>
+              <span class="ib-form__hint">Wat is de totale contractwaarde per klant?</span>
+              <input class="ib-form__input" type="text" id="ib-aov" name="aov" placeholder="Bijv. €4.500" required />
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-icp">Doelgroep (ICP) *</label>
+              <span class="ib-form__hint">Wie is jouw ideale klant? Beschrijf branche en functie.</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-icp" name="icp" rows="3" placeholder="Bijv. eigenaren van MKB-bedrijven in de bouwsector, 10-50 medewerkers" required></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row ib-form__row--2col">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-leadvolume">Wekelijks leadvolume *</label>
+              <span class="ib-form__hint">Hoeveel nieuwe "warme" leads genereer je per week?</span>
+              <input class="ib-form__input" type="text" id="ib-leadvolume" name="leadvolume" placeholder="Bijv. 15-20" required />
+            </div>
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-leadbron">Leadbron *</label>
+              <span class="ib-form__hint">Waar komen je leads vandaan?</span>
+              <input class="ib-form__input" type="text" id="ib-leadbron" name="leadbron" placeholder="Bijv. Meta Ads, LinkedIn, webinars, SEO" required />
+            </div>
+          </div>
+
+          <div class="ib-form__row ib-form__row--2col">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-crm">CRM-systeem</label>
+              <span class="ib-form__hint">Welk CRM gebruik je om leads en sales bij te houden?</span>
+              <input class="ib-form__input" type="text" id="ib-crm" name="crm" placeholder="Bijv. HubSpot, Pipedrive, Salesforce" />
+            </div>
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-assets">Sales-assets</label>
+              <span class="ib-form__hint">Heb je een bewezen salesscript, pitch deck of cases beschikbaar?</span>
+              <input class="ib-form__input" type="text" id="ib-assets" name="assets" placeholder="Bijv. ja, salesscript + pitch deck" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SALES INZICHT -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">03 — Sales-inzicht</span>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-pijnpunt">Het #1 pijnpunt *</label>
+              <span class="ib-form__hint">Welk probleem lost jouw product of dienst op voor klanten?</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-pijnpunt" name="pijnpunt" rows="3" required></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-winfactor">De winnende factor *</label>
+              <span class="ib-form__hint">Waarom kiezen prospects uiteindelijk voor jou, en niet voor de concurrent?</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-winfactor" name="winfactor" rows="3" required></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-bezwaar">Het grootste bezwaar *</label>
+              <span class="ib-form__hint">Wat is het bezwaar dat je het vaakst hoort tijdens salesgesprekken?</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-bezwaar" name="bezwaar" rows="3" required></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-closing">Huidige closing *</label>
+              <span class="ib-form__hint">Wie doet nu de sales, en wat is het huidige closingpercentage?</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-closing" name="closing" rows="3" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- BEVESTIGINGEN -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">04 — Bevestigingen</span>
+
+          <div class="ib-confirm">
+            <p class="ib-confirm__label">Vergoedingsafspraak</p>
+            <p class="ib-confirm__text">Ik ga akkoord met een standaard commissie van 16% per gesloten deal (afwijkingen zijn bespreekbaar tijdens de kick-off).</p>
+            <label class="ib-confirm__input-label" for="ib-confirm-fee">Bevestig met "JA" dat je dit gelezen hebt en akkoord gaat *</label>
+            <input class="ib-form__input ib-confirm__input" type="text" id="ib-confirm-fee" name="bevestiging_fee" placeholder="Typ JA" required pattern="^[jJ][aA]$" title='Typ "JA" om te bevestigen' />
+          </div>
+
+          <div class="ib-confirm">
+            <p class="ib-confirm__label">Warme leadflow</p>
+            <p class="ib-confirm__text">Ik bevestig dat ik "warme" inbound leads aanlever. ClosersMatch doet niet aan cold calling op verouderde lijsten.</p>
+            <label class="ib-confirm__input-label" for="ib-confirm-leads">Bevestig met "JA" dat je dit gelezen hebt en akkoord gaat *</label>
+            <input class="ib-form__input ib-confirm__input" type="text" id="ib-confirm-leads" name="bevestiging_leads" placeholder="Typ JA" required pattern="^[jJ][aA]$" title='Typ "JA" om te bevestigen' />
+          </div>
+
+          <div class="ib-confirm">
+            <p class="ib-confirm__label">Minimale dealwaarde</p>
+            <p class="ib-confirm__text">Ik bevestig dat mijn aanbod een minimale waarde heeft van €1.500, om de winstgevendheid voor onze topclosers te waarborgen.</p>
+            <label class="ib-confirm__input-label" for="ib-confirm-ticket">Bevestig met "JA" dat je dit gelezen hebt en akkoord gaat *</label>
+            <input class="ib-form__input ib-confirm__input" type="text" id="ib-confirm-ticket" name="bevestiging_ticket" placeholder="Typ JA" required pattern="^[jJ][aA]$" title='Typ "JA" om te bevestigen' />
+          </div>
+        </div>
+
+        <!-- OVERIG -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">05 — Overig</span>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-directmatch">Starten we zonder funnel (Direct Match)? <span class="ib-form__optional">(optioneel)</span></label>
+              <span class="ib-form__hint">Beschrijf dan de exacte afspraak of de huidige status van je leadflow.</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-directmatch" name="direct_match" rows="3"></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-overig">Overige informatie? <span class="ib-form__optional">(optioneel)</span></label>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-overig" name="overig" rows="3"></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-admin">Administratieve gegevens <span class="ib-form__optional">(optioneel)</span></label>
+              <span class="ib-form__hint">Factuuradres, e-mailadres facturatie en bedrijfsinformatie?</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-admin" name="administratie" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- JURIDISCH AKKOORD -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">06 — Akkoordverklaring</span>
+
+          <label class="ib-legal-checkbox">
+            <input type="checkbox" name="akkoord_resultaat" id="ib-akkoord-1" required />
+            <span class="ib-legal-checkbox__box" aria-hidden="true"></span>
+            <span class="ib-legal-checkbox__text">
+              Door dit formulier te versturen bevestig je dat onze samenwerking gericht is op het behalen van echte deal flow en resultaat, samen. Als de huidige leadflow de prestaties beperkt, stemmen we af over mogelijke vervolgstappen — zoals het activeren van extra Commercial Intelligence System (CIS)-modules (campagnes, funnel-uitbreiding, outreach, automatisering) — om de resultaten te versterken en de deal flow te vergroten. Activatie gebeurt altijd in onderling overleg.
+              <br />🔗 <a href="/nl/algemene-voorwaarden" target="_blank" rel="noopener noreferrer">Algemene Voorwaarden</a>
+            </span>
+          </label>
+
+          <label class="ib-legal-checkbox">
+            <input type="checkbox" name="akkoord_voorwaarden" id="ib-akkoord-2" required />
+            <span class="ib-legal-checkbox__box" aria-hidden="true"></span>
+            <span class="ib-legal-checkbox__text">
+              Door dit formulier te versturen ga je expliciet akkoord met alle voorwaarden en overeenkomsten van ClosersMatch. Dit omvat afspraken over leadgeneratie en salesfunnels, de exclusiviteits- en non-circumventbepaling met boeteclausule, en de officiële Huisregels. Deze documenten hebben dezelfde juridische geldigheid als een ondertekend contract.
+              <br />🔗 <a href="/nl/algemene-voorwaarden" target="_blank" rel="noopener noreferrer">Algemene Voorwaarden</a> · 🔗 <a href="/nl/huisregels" target="_blank" rel="noopener noreferrer">Huisregels</a>
+            </span>
+          </label>
+
+          <p class="ib-legal-note">Beide vakjes zijn verplicht. Zonder akkoord kan de intake niet worden verzonden.</p>
+        </div>
+
+        <button type="submit" class="btn btn--red btn--lg ib-form__submit">Verstuur je intake →</button>
+
+        <div class="ib-form__error" id="intake-error" role="alert" hidden>Vul alle verplichte velden in en vink beide akkoordvakjes aan voordat je verzendt.</div>
+
+      </form>
+
+      <div class="ib-success" id="intake-success" hidden>
+        <span class="ib-success__icon">✓</span>
+        <h2 class="h2 ib-success__title">Bedankt! Je intake is ontvangen.</h2>
+        <p class="ib-success__text">We nemen binnen 48 uur contact met je op om de match te bespreken.</p>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const form = document.getElementById('intake-form') as HTMLFormElement | null;
+  const success = document.getElementById('intake-success');
+  const errorBox = document.getElementById('intake-error');
+
+  if (form && success && errorBox) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        errorBox.hidden = false;
+        return;
+      }
+
+      errorBox.hidden = true;
+      form.hidden = true;
+      success.hidden = false;
+      success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+</script>
+
+<style>
+  /* ====================================================
+     HERO
+  ==================================================== */
+  .ib-hero {
+    background: #fff;
+    padding: 150px 0 56px;
+    text-align: center;
+  }
+
+  .ib-hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .ib-hero__inner .label--red {
+    background: rgba(221,52,46,0.1);
+    color: var(--color-red);
+    border: 1px solid rgba(221,52,46,0.25);
+  }
+
+  .ib-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+    font-weight: 900;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    color: var(--color-black);
+    margin: 20px 0 20px;
+  }
+
+  .ib-hero__body {
+    font-size: 1rem;
+    color: #4B5563;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+
+  .ib-hero__note {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--color-gray-mid);
+    margin-bottom: 20px;
+  }
+
+  .ib-hero__quote {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-black);
+    border-left: 3px solid var(--color-red);
+    padding-left: 16px;
+    margin: 0;
+    text-align: left;
+  }
+
+  @media (max-width: 560px) {
+    .ib-hero { padding: 120px 0 40px; }
+  }
+
+  /* ====================================================
+     FORM CONTAINER
+  ==================================================== */
+  .ib-main { background: #F9FAFB; }
+
+  .ib-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    padding: 40px 36px;
+    box-shadow: var(--shadow);
+  }
+
+  @media (max-width: 560px) {
+    .ib-form { padding: 28px 20px; }
+  }
+
+  .ib-form__section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--color-gray-border);
+  }
+
+  .ib-form__section:first-child { padding-top: 4px; }
+
+  .ib-form__section-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-red);
+  }
+
+  .ib-form__version {
+    font-size: 0.82rem;
+    color: var(--color-gray-mid);
+    text-align: center;
+    margin: 4px 0 0;
+    font-style: italic;
+  }
+
+  .ib-form__row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ib-form__row--2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 560px) {
+    .ib-form__row--2col { grid-template-columns: 1fr; }
+  }
+
+  .ib-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ib-form__label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-black);
+  }
+
+  .ib-form__optional {
+    font-weight: 400;
+    color: var(--color-gray-mid);
+    font-size: 0.78rem;
+  }
+
+  .ib-form__hint {
+    font-size: 0.8rem;
+    color: var(--color-gray-mid);
+    margin-bottom: 2px;
+  }
+
+  .ib-form__input {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 0.93rem;
+    font-family: var(--font-sans);
+    color: var(--color-black);
+    background: #fff;
+    border: 1.5px solid var(--color-gray-border);
+    border-radius: var(--radius);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+  }
+
+  .ib-form__input::placeholder { color: #aaa; }
+
+  .ib-form__input:focus {
+    border-color: var(--color-red);
+    box-shadow: 0 0 0 3px rgba(221,52,46,0.12);
+  }
+
+  .ib-form__input:invalid:not(:placeholder-shown) {
+    border-color: #E8A33D;
+  }
+
+  .ib-form__textarea {
+    resize: vertical;
+    min-height: 84px;
+    line-height: 1.6;
+  }
+
+  /* Radio group */
+  .ib-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .ib-radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-text);
+    background: var(--color-gray-light);
+    border: 1.5px solid transparent;
+    border-radius: 999px;
+    padding: 9px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .ib-radio input {
+    accent-color: var(--color-red);
+    width: 16px;
+    height: 16px;
+    margin: 0;
+  }
+
+  .ib-radio:has(input:checked) {
+    background: rgba(221,52,46,0.08);
+    border-color: var(--color-red);
+    color: var(--color-red);
+  }
+
+  /* Confirmation blocks */
+  .ib-confirm {
+    background: var(--color-gray-light);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ib-confirm__label {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--color-black);
+    margin: 0;
+  }
+
+  .ib-confirm__text {
+    font-size: 0.88rem;
+    color: #4B5563;
+    line-height: 1.6;
+    margin: 0 0 8px;
+  }
+
+  .ib-confirm__input-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-gray-mid);
+  }
+
+  .ib-confirm__input {
+    max-width: 160px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  /* Legal checkboxes */
+  .ib-legal-checkbox {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 12px;
+    align-items: start;
+    cursor: pointer;
+    background: rgba(221,52,46,0.04);
+    border: 1.5px solid rgba(221,52,46,0.18);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+  }
+
+  .ib-legal-checkbox input {
+    grid-row: 1 / 3;
+    position: absolute;
+    opacity: 0;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .ib-legal-checkbox__box {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--color-red);
+    border-radius: 5px;
+    background: #fff;
+    position: relative;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+
+  .ib-legal-checkbox input:checked ~ .ib-legal-checkbox__box {
+    background: var(--color-red);
+  }
+
+  .ib-legal-checkbox input:checked ~ .ib-legal-checkbox__box::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 11px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(40deg);
+  }
+
+  .ib-legal-checkbox input:focus-visible ~ .ib-legal-checkbox__box {
+    outline: 2px solid var(--color-red);
+    outline-offset: 2px;
+  }
+
+  .ib-legal-checkbox__text {
+    font-size: 0.86rem;
+    line-height: 1.65;
+    color: var(--color-text);
+  }
+
+  .ib-legal-checkbox__text a {
+    color: var(--color-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .ib-legal-note {
+    font-size: 0.8rem;
+    color: var(--color-gray-mid);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .ib-form__submit {
+    align-self: center;
+    margin-top: 24px;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(221,52,46,0.25);
+  }
+
+  .ib-form__error {
+    text-align: center;
+    color: var(--color-red);
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+
+  /* Success state */
+  .ib-success {
+    text-align: center;
+    background: #fff;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    padding: 64px 32px;
+    box-shadow: var(--shadow);
+  }
+
+  .ib-success__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(22,163,74,0.1);
+    color: #16A34A;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+
+  .ib-success__title { margin-bottom: 10px; }
+
+  .ib-success__text {
+    color: var(--color-gray-mid);
+    font-size: 0.98rem;
+  }
+</style>

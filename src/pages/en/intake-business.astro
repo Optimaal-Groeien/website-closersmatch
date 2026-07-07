@@ -1,0 +1,667 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout locale="en" title="Business Intake — ClosersMatch" description="Complete the official intake form and get matched with closers and appointment setters that fit your business. No hourly rates, no risk, only results.">
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="ib-hero">
+    <div class="container ib-hero__inner">
+      <span class="label label--red">Client intake</span>
+      <h1 class="ib-hero__title">Welcome as a client.<br />Where you're matched with closers that fit your business.</h1>
+      <p class="ib-hero__body">
+        We connect proven high-ticket closers with businesses on one clear mission: generating more revenue by following up and closing warm leads. No hourly rates, no risk, no empty promises. You only pay a pre-agreed percentage per successful deal.
+      </p>
+      <p class="ib-hero__note">Please fill out the intake form as thoroughly as possible — the more complete, the better the match.</p>
+      <blockquote class="ib-hero__quote">"Takes 3 minutes. Saves us both 3 months of trial and error."</blockquote>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FORM
+  ================================================ -->
+  <section class="section ib-main">
+    <div class="container container--narrow">
+
+      <form class="ib-form" id="intake-form" name="intake-business" method="POST" action="#">
+
+        <!-- CONTACT DETAILS -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">01 — Contact details</span>
+
+          <div class="ib-form__row ib-form__row--2col">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-first">First name *</label>
+              <input class="ib-form__input" type="text" id="ib-first" name="first_name" placeholder="John" required />
+            </div>
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-last">Last name *</label>
+              <input class="ib-form__input" type="text" id="ib-last" name="last_name" placeholder="Smith" required />
+            </div>
+          </div>
+
+          <div class="ib-form__row ib-form__row--2col">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-email">Email *</label>
+              <input class="ib-form__input" type="email" id="ib-email" name="email" placeholder="john@company.com" required />
+            </div>
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-phone">Telephone number</label>
+              <input class="ib-form__input" type="tel" id="ib-phone" name="phone" placeholder="+1 ..." />
+            </div>
+          </div>
+
+          <div class="ib-form__row ib-form__row--2col">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-company">Company *</label>
+              <input class="ib-form__input" type="text" id="ib-company" name="company" placeholder="Your company name" required />
+            </div>
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-website">Website</label>
+              <input class="ib-form__input" type="url" id="ib-website" name="website" placeholder="https://" />
+            </div>
+          </div>
+        </div>
+
+        <p class="ib-form__version">Please complete the intake form as completely as possible (version: 19-01-2026)</p>
+
+        <!-- COLLABORATION & SALES PROFILE -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">02 — Collaboration &amp; sales profile</span>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label">How would you like to collaborate? *</label>
+              <span class="ib-form__hint">With closers, appointment setters, or both?</span>
+              <div class="ib-radio-group">
+                <label class="ib-radio">
+                  <input type="radio" name="collaboration" value="closers" required />
+                  <span>Closers</span>
+                </label>
+                <label class="ib-radio">
+                  <input type="radio" name="collaboration" value="setters" required />
+                  <span>Appointment setters</span>
+                </label>
+                <label class="ib-radio">
+                  <input type="radio" name="collaboration" value="both" required />
+                  <span>Both</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-aov">Average Order Value (LTV) *</label>
+              <span class="ib-form__hint">What is the total contract value per customer?</span>
+              <input class="ib-form__input" type="text" id="ib-aov" name="aov" placeholder="e.g. €4,500" required />
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-icp">Target Audience (ICP) *</label>
+              <span class="ib-form__hint">Who is your ideal client? Please describe their industry and role.</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-icp" name="icp" rows="3" placeholder="e.g. SME business owners in construction, 10-50 employees" required></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row ib-form__row--2col">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-leadvolume">Weekly Lead Volume *</label>
+              <span class="ib-form__hint">How many new "warm" leads do you generate per week?</span>
+              <input class="ib-form__input" type="text" id="ib-leadvolume" name="lead_volume" placeholder="e.g. 15-20" required />
+            </div>
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-leadsource">Lead Source *</label>
+              <span class="ib-form__hint">Where do your leads come from?</span>
+              <input class="ib-form__input" type="text" id="ib-leadsource" name="lead_source" placeholder="e.g. Meta Ads, LinkedIn, Webinars, SEO" required />
+            </div>
+          </div>
+
+          <div class="ib-form__row ib-form__row--2col">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-crm">CRM System</label>
+              <span class="ib-form__hint">Which CRM do you use to track leads and sales?</span>
+              <input class="ib-form__input" type="text" id="ib-crm" name="crm" placeholder="e.g. HubSpot, Pipedrive, Salesforce" />
+            </div>
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-assets">Sales Assets</label>
+              <span class="ib-form__hint">Do you have a proven sales script, pitch deck, or case studies available?</span>
+              <input class="ib-form__input" type="text" id="ib-assets" name="sales_assets" placeholder="e.g. yes, sales script + pitch deck" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SALES INSIGHT -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">03 — Sales insight</span>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-pain">The #1 Pain Point *</label>
+              <span class="ib-form__hint">What is the main problem your product solves for your clients?</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-pain" name="pain_point" rows="3" required></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-winning">The Winning Factor *</label>
+              <span class="ib-form__hint">Why do prospects ultimately choose you over your competitors?</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-winning" name="winning_factor" rows="3" required></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-hurdle">The Hardest Hurdle *</label>
+              <span class="ib-form__hint">What is the most common objection you hear during sales calls?</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-hurdle" name="hardest_hurdle" rows="3" required></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-closing">Current Closing *</label>
+              <span class="ib-form__hint">Who is currently handling your sales, and what is the current closing rate?</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-closing" name="current_closing" rows="3" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONFIRMATIONS -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">04 — Confirmations</span>
+
+          <div class="ib-confirm">
+            <p class="ib-confirm__label">Performance Fee</p>
+            <p class="ib-confirm__text">I agree to a standard commission-based fee of 16% per closed deal (variations can be discussed during the kick-off).</p>
+            <label class="ib-confirm__input-label" for="ib-confirm-fee">Confirm with "YES" that you have read and agreed to these terms *</label>
+            <input class="ib-form__input ib-confirm__input" type="text" id="ib-confirm-fee" name="confirm_fee" placeholder="Type YES" required pattern="^[yY][eE][sS]$" title='Type "YES" to confirm' />
+          </div>
+
+          <div class="ib-confirm">
+            <p class="ib-confirm__label">Warm Lead Flow</p>
+            <p class="ib-confirm__text">I confirm that I will provide "warm" inbound leads. ClosersMatch does not perform cold calling on outdated lists.</p>
+            <label class="ib-confirm__input-label" for="ib-confirm-leads">Confirm with "YES" that you have read and agreed to these terms *</label>
+            <input class="ib-form__input ib-confirm__input" type="text" id="ib-confirm-leads" name="confirm_leads" placeholder="Type YES" required pattern="^[yY][eE][sS]$" title='Type "YES" to confirm' />
+          </div>
+
+          <div class="ib-confirm">
+            <p class="ib-confirm__label">Minimum Ticket Value</p>
+            <p class="ib-confirm__text">I confirm that my offer has a minimum value of €1,500 to ensure profitability for elite closers.</p>
+            <label class="ib-confirm__input-label" for="ib-confirm-ticket">Confirm with "YES" that you have read and agreed to these terms *</label>
+            <input class="ib-form__input ib-confirm__input" type="text" id="ib-confirm-ticket" name="confirm_ticket" placeholder="Type YES" required pattern="^[yY][eE][sS]$" title='Type "YES" to confirm' />
+          </div>
+        </div>
+
+        <!-- OTHER -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">05 — Other</span>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-directmatch">Starting without a funnel (Direct Match)? <span class="ib-form__optional">(optional)</span></label>
+              <span class="ib-form__hint">Please specify the exact agreement or current leadflow status below.</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-directmatch" name="direct_match" rows="3"></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-other">Other information? <span class="ib-form__optional">(optional)</span></label>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-other" name="other_info" rows="3"></textarea>
+            </div>
+          </div>
+
+          <div class="ib-form__row">
+            <div class="ib-form__group">
+              <label class="ib-form__label" for="ib-admin">Administrative details <span class="ib-form__optional">(optional)</span></label>
+              <span class="ib-form__hint">Billing address, billing email address, and company information?</span>
+              <textarea class="ib-form__input ib-form__textarea" id="ib-admin" name="admin_details" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- LEGAL AGREEMENT -->
+        <div class="ib-form__section">
+          <span class="ib-form__section-label">06 — Agreement</span>
+
+          <label class="ib-legal-checkbox">
+            <input type="checkbox" name="agree_results" id="ib-agree-1" required />
+            <span class="ib-legal-checkbox__box" aria-hidden="true"></span>
+            <span class="ib-legal-checkbox__text">
+              By submitting this form, you acknowledge that our collaboration is focused on achieving real deal flow and results together. If the current lead flow limits performance, we will align on potential next steps, such as activating additional Commercial Intelligence System (CIS) modules (campaigns, funnel expansion, outreach, automation), to strengthen results and increase deal flow. Any activation will always be based on mutual agreement.
+              <br />🔗 <a href="/en/general-terms-and-conditions" target="_blank" rel="noopener noreferrer">General Terms and Conditions</a>
+            </span>
+          </label>
+
+          <label class="ib-legal-checkbox">
+            <input type="checkbox" name="agree_terms" id="ib-agree-2" required />
+            <span class="ib-legal-checkbox__box" aria-hidden="true"></span>
+            <span class="ib-legal-checkbox__text">
+              By submitting this form, you expressly agree to all terms and agreements of ClosersMatch. This includes agreements on lead generation and sales funnels, the exclusivity and non-circumvention provisions with penalty clause, and the official House Rules. These documents carry the same legal validity as a signed contract.
+              <br />🔗 <a href="/en/general-terms-and-conditions" target="_blank" rel="noopener noreferrer">General Terms and Conditions</a> · 🔗 <a href="/en/house-rules" target="_blank" rel="noopener noreferrer">House Rules</a>
+            </span>
+          </label>
+
+          <p class="ib-legal-note">Both checkboxes are mandatory. The intake cannot be submitted without your agreement.</p>
+        </div>
+
+        <button type="submit" class="btn btn--red btn--lg ib-form__submit">Submit your intake →</button>
+
+        <div class="ib-form__error" id="intake-error" role="alert" hidden>Please fill in all required fields and check both agreement boxes before submitting.</div>
+
+      </form>
+
+      <div class="ib-success" id="intake-success" hidden>
+        <span class="ib-success__icon">✓</span>
+        <h2 class="h2 ib-success__title">Thank you! Your submission has been received.</h2>
+        <p class="ib-success__text">We'll get in touch within 48 hours to discuss the match.</p>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const form = document.getElementById('intake-form') as HTMLFormElement | null;
+  const success = document.getElementById('intake-success');
+  const errorBox = document.getElementById('intake-error');
+
+  if (form && success && errorBox) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        errorBox.hidden = false;
+        return;
+      }
+
+      errorBox.hidden = true;
+      form.hidden = true;
+      success.hidden = false;
+      success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+</script>
+
+<style>
+  /* ====================================================
+     HERO
+  ==================================================== */
+  .ib-hero {
+    background: #fff;
+    padding: 150px 0 56px;
+    text-align: center;
+  }
+
+  .ib-hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .ib-hero__inner .label--red {
+    background: rgba(221,52,46,0.1);
+    color: var(--color-red);
+    border: 1px solid rgba(221,52,46,0.25);
+  }
+
+  .ib-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+    font-weight: 900;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    color: var(--color-black);
+    margin: 20px 0 20px;
+  }
+
+  .ib-hero__body {
+    font-size: 1rem;
+    color: #4B5563;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+
+  .ib-hero__note {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--color-gray-mid);
+    margin-bottom: 20px;
+  }
+
+  .ib-hero__quote {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-black);
+    border-left: 3px solid var(--color-red);
+    padding-left: 16px;
+    margin: 0;
+    text-align: left;
+  }
+
+  @media (max-width: 560px) {
+    .ib-hero { padding: 120px 0 40px; }
+  }
+
+  /* ====================================================
+     FORM CONTAINER
+  ==================================================== */
+  .ib-main { background: #F9FAFB; }
+
+  .ib-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    padding: 40px 36px;
+    box-shadow: var(--shadow);
+  }
+
+  @media (max-width: 560px) {
+    .ib-form { padding: 28px 20px; }
+  }
+
+  .ib-form__section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--color-gray-border);
+  }
+
+  .ib-form__section:first-child { padding-top: 4px; }
+
+  .ib-form__section-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-red);
+  }
+
+  .ib-form__version {
+    font-size: 0.82rem;
+    color: var(--color-gray-mid);
+    text-align: center;
+    margin: 4px 0 0;
+    font-style: italic;
+  }
+
+  .ib-form__row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ib-form__row--2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 560px) {
+    .ib-form__row--2col { grid-template-columns: 1fr; }
+  }
+
+  .ib-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ib-form__label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-black);
+  }
+
+  .ib-form__optional {
+    font-weight: 400;
+    color: var(--color-gray-mid);
+    font-size: 0.78rem;
+  }
+
+  .ib-form__hint {
+    font-size: 0.8rem;
+    color: var(--color-gray-mid);
+    margin-bottom: 2px;
+  }
+
+  .ib-form__input {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 0.93rem;
+    font-family: var(--font-sans);
+    color: var(--color-black);
+    background: #fff;
+    border: 1.5px solid var(--color-gray-border);
+    border-radius: var(--radius);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+  }
+
+  .ib-form__input::placeholder { color: #aaa; }
+
+  .ib-form__input:focus {
+    border-color: var(--color-red);
+    box-shadow: 0 0 0 3px rgba(221,52,46,0.12);
+  }
+
+  .ib-form__input:invalid:not(:placeholder-shown) {
+    border-color: #E8A33D;
+  }
+
+  .ib-form__textarea {
+    resize: vertical;
+    min-height: 84px;
+    line-height: 1.6;
+  }
+
+  /* Radio group */
+  .ib-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .ib-radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-text);
+    background: var(--color-gray-light);
+    border: 1.5px solid transparent;
+    border-radius: 999px;
+    padding: 9px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .ib-radio input {
+    accent-color: var(--color-red);
+    width: 16px;
+    height: 16px;
+    margin: 0;
+  }
+
+  .ib-radio:has(input:checked) {
+    background: rgba(221,52,46,0.08);
+    border-color: var(--color-red);
+    color: var(--color-red);
+  }
+
+  /* Confirmation blocks */
+  .ib-confirm {
+    background: var(--color-gray-light);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ib-confirm__label {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--color-black);
+    margin: 0;
+  }
+
+  .ib-confirm__text {
+    font-size: 0.88rem;
+    color: #4B5563;
+    line-height: 1.6;
+    margin: 0 0 8px;
+  }
+
+  .ib-confirm__input-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-gray-mid);
+  }
+
+  .ib-confirm__input {
+    max-width: 160px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  /* Legal checkboxes */
+  .ib-legal-checkbox {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 12px;
+    align-items: start;
+    cursor: pointer;
+    background: rgba(221,52,46,0.04);
+    border: 1.5px solid rgba(221,52,46,0.18);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+  }
+
+  .ib-legal-checkbox input {
+    grid-row: 1 / 3;
+    position: absolute;
+    opacity: 0;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .ib-legal-checkbox__box {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--color-red);
+    border-radius: 5px;
+    background: #fff;
+    position: relative;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+
+  .ib-legal-checkbox input:checked ~ .ib-legal-checkbox__box {
+    background: var(--color-red);
+  }
+
+  .ib-legal-checkbox input:checked ~ .ib-legal-checkbox__box::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 11px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(40deg);
+  }
+
+  .ib-legal-checkbox input:focus-visible ~ .ib-legal-checkbox__box {
+    outline: 2px solid var(--color-red);
+    outline-offset: 2px;
+  }
+
+  .ib-legal-checkbox__text {
+    font-size: 0.86rem;
+    line-height: 1.65;
+    color: var(--color-text);
+  }
+
+  .ib-legal-checkbox__text a {
+    color: var(--color-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .ib-legal-note {
+    font-size: 0.8rem;
+    color: var(--color-gray-mid);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .ib-form__submit {
+    align-self: center;
+    margin-top: 24px;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(221,52,46,0.25);
+  }
+
+  .ib-form__error {
+    text-align: center;
+    color: var(--color-red);
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+
+  /* Success state */
+  .ib-success {
+    text-align: center;
+    background: #fff;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    padding: 64px 32px;
+    box-shadow: var(--shadow);
+  }
+
+  .ib-success__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(22,163,74,0.1);
+    color: #16A34A;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+
+  .ib-success__title { margin-bottom: 10px; }
+
+  .ib-success__text {
+    color: var(--color-gray-mid);
+    font-size: 0.98rem;
+  }
+</style>
