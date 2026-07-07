@@ -1,0 +1,300 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articles = [
+  { id: 'sectie-1', title: 'Scope en algemeen' },
+  { id: 'sectie-2', title: 'Registratie en logging' },
+  { id: 'sectie-3', title: 'Opnames en bewijsvoering (closers)' },
+  { id: 'sectie-4', title: 'Contact en kanalen' },
+  { id: 'sectie-5', title: 'Professioneel handelen' },
+  { id: 'sectie-6', title: 'Gedrag, integriteit en samenwerking' },
+  { id: 'sectie-7', title: 'Sancties bij overtreding' },
+  { id: 'sectie-8', title: 'Prestaties en doorgroei (closers)' },
+  { id: 'sectie-9', title: 'Bereikbaarheid en reactietijden' },
+  { id: 'sectie-10', title: 'Voorwaarden vóór kick-off' },
+  { id: 'sectie-11', title: 'Non-circumvent en vertrouwelijkheid' },
+  { id: 'sectie-12', title: 'Slotbepaling' },
+];
+---
+
+<Layout locale="nl" title="Huisregels — ClosersMatch" description="De huisregels van ClosersMatch voor opdrachtgevers en closers/appointment setters: registratie, gedrag, prestaties, bereikbaarheid en sancties bij overtreding.">
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <nav class="legal-breadcrumb" aria-label="Breadcrumb">
+        <a href="/nl">Home</a>
+        <span>/</span>
+        <span aria-current="page">Huisregels</span>
+      </nav>
+      <span class="label label--red">Juridisch</span>
+      <h1 class="legal-hero__title">Huisregels</h1>
+      <p class="legal-hero__meta">Versie: 28 juni 2025</p>
+      <p class="legal-hero__intro">Deze huisregels gelden voor opdrachtgevers en closers die via ClosersMatch (CM) samenwerken. Ze vormen een integrale aanvulling op de <a href="/nl/algemene-voorwaarden">Algemene Voorwaarden</a> van ClosersMatch. Bij strijdigheid tussen deze huisregels en de Algemene Voorwaarden gaan de Algemene Voorwaarden voor.</p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTENT
+  ================================================ -->
+  <div class="container legal-layout">
+    <aside class="legal-toc">
+      <div class="legal-toc__card">
+        <span class="legal-toc__label">Inhoudsopgave</span>
+        <ul class="legal-toc__list">
+          {articles.map((article) => (
+            <li><a href={`#${article.id}`}>{article.title}</a></li>
+          ))}
+        </ul>
+      </div>
+    </aside>
+
+    <div class="legal-content">
+
+      <h2 id="sectie-1">1. Scope en algemeen</h2>
+      <p><strong>1.1</strong> Deze huisregels gelden voor opdrachtgevers en closers die via ClosersMatch (CM) samenwerken.</p>
+      <p><strong>1.2</strong> Naleving van processen, systemen en instructies van CM is verplicht. Overtreding kan leiden tot inhouding van betalingen, boetes en (directe) beëindiging conform de Algemene Voorwaarden.</p>
+
+      <h2 id="sectie-2">2. Registratie en logging</h2>
+      <p><strong>2.1</strong> Alle leads, gesprekken, afspraken, offertes en deals worden volledig en correct vastgelegd in het CM-portaal.</p>
+      <p><strong>2.2</strong> Afspraken, offertes of contracten worden niet buiten het portaal om verwerkt.</p>
+      <p><strong>2.3</strong> Offertes worden vanuit het CM-portaal verstuurd en door de klant digitaal ondertekend in het portaal (indien van toepassing op het project).</p>
+
+      <h2 id="sectie-3">3. Opnames en bewijsvoering (closers)</h2>
+      <p><strong>3.1</strong> Van ieder verkoopgesprek (telefonisch of online) wordt een opname gemaakt en veilig opgeslagen in het portaal.</p>
+      <p><strong>3.2</strong> Als opnemen niet mogelijk is, dient de closer direct een beknopt schriftelijk verslag met kernpunten in het portaal te plaatsen.</p>
+      <p><strong>3.3</strong> Opnames en verslagen zijn verplichte bewijsstukken en horen bij de dealregistratie.</p>
+
+      <h2 id="sectie-4">4. Contact en kanalen</h2>
+      <p><strong>4.1</strong> Communicatie verloopt via de door CM aangewezen systemen en richtlijnen.</p>
+      <p><strong>4.2</strong> Afspraken of betalingen buiten CM en buiten het portaal zijn verboden.</p>
+      <p><strong>4.3</strong> Verzoeken van een partij om buiten CM om te gaan worden binnen 24 uur schriftelijk gemeld aan CM.</p>
+
+      <h2 id="sectie-5">5. Professioneel handelen</h2>
+      <p><strong>5.1</strong> Communicatie is professioneel en respectvol; geen schelden, persoonlijke aanvallen of roddel.</p>
+      <p><strong>5.2</strong> Er wordt gewerkt volgens CM-scripts, processen en instructies.</p>
+      <p><strong>5.3</strong> Niet-naleven van instructies kan als schending van deze huisregels worden aangemerkt.</p>
+
+      <h2 id="sectie-6">6. Gedrag, integriteit en samenwerking</h2>
+      <p><strong>6.1</strong> Alle communicatie binnen ClosersMatch verloopt op een professionele en respectvolle manier. Sarcasme, persoonlijke aanvallen of grof taalgebruik zijn niet toegestaan.</p>
+      <p><strong>6.2</strong> Negativiteit zonder constructieve intentie wordt niet geaccepteerd. Problemen of frustraties mogen worden gedeeld, maar altijd met het doel tot verbetering te komen.</p>
+      <p><strong>6.3</strong> Het bewust beïnvloeden van anderen in negatieve zin, roddelen of het creëren van kampen of onrust is verboden.</p>
+      <p><strong>6.4</strong> Feedback en kritiek zijn welkom wanneer ze respectvol, concreet en gericht op verbetering zijn.</p>
+      <p><strong>6.5</strong> Informatie over leads, klanten, scripts, tarieven en interne processen blijft strikt vertrouwelijk. Het delen of gebruiken daarvan buiten ClosersMatch is een overtreding.</p>
+      <p><strong>6.6</strong> Loyaliteit en betrouwbaarheid zijn kernwaarden. Afspraken worden nagekomen; als iets niet haalbaar is, wordt dit tijdig gemeld.</p>
+      <p><strong>6.7</strong> ClosersMatch verwacht een teammentaliteit: succes van anderen wordt gewaardeerd en ondersteund. Samenwerking staat boven concurrentie.</p>
+      <p><strong>6.8</strong> Overtredingen van dit artikel kunnen leiden tot een waarschuwing, tijdelijke verwijdering uit campagnes of directe beëindiging van de samenwerking, afhankelijk van de ernst.</p>
+
+      <h2 id="sectie-7">7. Sancties bij overtreding</h2>
+      <p><strong>7.1</strong> Verzwijgen of afhandelen van leads, afspraken of betalingen buiten CM: boete €7.500 per overtreding plus 20% van de buiten CM om gerealiseerde omzet of dealwaarde.</p>
+      <p><strong>7.2</strong> Bij overtreding kunnen aanspraken op nog niet uitbetaalde bedragen vervallen.</p>
+      <p><strong>7.3</strong> CM kan accounts blokkeren en de samenwerking direct beëindigen bij ernstige schendingen (onder andere non-circumvent, fraude, reputatieschade), conform artikel 12 en 14 van de Algemene Voorwaarden.</p>
+      <p><strong>7.4</strong> Bij lichtere schendingen kan CM kiezen voor een waarschuwing of gesprek; dit laat het recht op directe maatregelen bij zware schendingen onverlet.</p>
+
+      <h2 id="sectie-8">8. Prestaties en doorgroei (closers)</h2>
+      <p><strong>8.1</strong> Resultaatnorm: gemiddeld minimaal één deal per maand bij tien gekwalificeerde leads per maand (conform artikel 13 van de Algemene Voorwaarden).</p>
+      <p><strong>8.2</strong> Blijft resultaat achter zonder gegronde reden, dan kan CM je uit de campagne halen, vervangen of extra training inzetten.</p>
+      <p><strong>8.3</strong> Consistente prestaties leiden tot doorgroei naar campagnes met hogere orderwaardes.</p>
+      <p><strong>8.4</strong> Periodieke beoordeling op resultaten, communicatie, houding en vaardigheden bepaalt je categorie (Instap, Gemiddeld, High-end).</p>
+
+      <h2 id="sectie-9">9. Bereikbaarheid en reactietijden</h2>
+      <p><strong>9.1</strong> Closers: dagelijks bereikbaar; reageren binnen twee werkdagen op CM of opdrachtgever; toegewezen leads tijdig en volledig opvolgen (conform artikel 17.1 van de Algemene Voorwaarden).</p>
+      <p><strong>9.2</strong> Opdrachtgevers: streven naar vlotte communicatie; idealiter binnen 24 uur reageren, maar uiterlijk binnen vijf werkdagen (conform artikel 16 van de Algemene Voorwaarden).</p>
+      <p><strong>9.3</strong> Onbereikbaarheid opdrachtgever van vijf werkdagen of geen input/leads: CM mag pauzeren, capaciteit vrijgeven en facturatie voortzetten of maatregelen toepassen conform artikel 15–16 van de Algemene Voorwaarden.</p>
+      <p><strong>9.4</strong> Onbereikbaarheid closer van vijf werkdagen of geen opvolging: CM mag commissie inhouden, boete of schadevergoeding toepassen en beëindigen conform artikel 17 van de Algemene Voorwaarden.</p>
+
+      <h2 id="sectie-10">10. Voorwaarden vóór kick-off</h2>
+      <p><strong>10.1</strong> Voor iedereen: accounts aanmaken en inrichten (portaal, CRM, e-mail) en benodigde documenten (overeenkomst, NDA) ondertekend.</p>
+      <p><strong>10.2</strong> Opdrachtgevers: toegang tot systemen of leadbestanden en basisinformatie (product, doelgroep) aanleveren.</p>
+      <p><strong>10.3</strong> Closers: tool-toegang testen en voorbeeldlogging of werkwijze bevestigen.</p>
+      <p><strong>10.4</strong> Er is geen verplichte startbijdrage voor closers, tenzij schriftelijk overeengekomen in de specifieke opdracht.</p>
+      <p><strong>10.5</strong> Zonder afronding van 10.1–10.4 vindt geen kick-off plaats (conform artikel 15 van de Algemene Voorwaarden).</p>
+
+      <h2 id="sectie-11">11. Non-circumvent en vertrouwelijkheid</h2>
+      <p><strong>11.1</strong> Alle klant- en leadgegevens, scripts, tarieven, strategieën en interne processen blijven binnen CM.</p>
+      <p><strong>11.2</strong> Non-circumvent is van kracht tijdens de samenwerking en twaalf maanden daarna. Boete en aanvullende schadevergoeding conform artikel 6 en 14 van de Algemene Voorwaarden.</p>
+
+      <h2 id="sectie-12">12. Slotbepaling</h2>
+      <p><strong>12.1</strong> Bij strijdigheid tussen deze huisregels en de Algemene Voorwaarden gaan de Algemene Voorwaarden voor.</p>
+      <p><strong>12.2</strong> CM kan deze huisregels actualiseren; de meest recente versie is van toepassing.</p>
+
+      <div class="legal-footer-note">
+        <p>Vragen over deze huisregels? Neem contact met ons op via <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a> of via de <a href="/nl/contact">contactpagina</a>. Zie ook onze <a href="/nl/algemene-voorwaarden">Algemene Voorwaarden</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .legal-hero {
+    padding: 150px 0 48px;
+    background: var(--color-gray-light);
+  }
+
+  .legal-hero__inner {
+    max-width: 800px;
+  }
+
+  .legal-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-gray-mid);
+    margin-bottom: 20px;
+  }
+
+  .legal-breadcrumb a {
+    color: var(--color-gray-mid);
+    transition: color 0.2s;
+  }
+
+  .legal-breadcrumb a:hover { color: var(--color-red); }
+
+  .legal-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.2vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin: 16px 0 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .legal-hero__meta {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-gray-mid);
+    margin-bottom: 16px;
+  }
+
+  .legal-hero__intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    max-width: 640px;
+  }
+
+  .legal-hero__intro a {
+    color: var(--color-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 720px);
+    gap: 56px;
+    padding-top: 56px;
+    padding-bottom: 100px;
+    max-width: 1080px;
+  }
+
+  .legal-toc__card {
+    position: sticky;
+    top: 110px;
+    background: var(--color-gray-light);
+    border-radius: var(--radius-lg);
+    padding: 24px 22px;
+  }
+
+  .legal-toc__label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-mid);
+    margin-bottom: 14px;
+  }
+
+  .legal-toc__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .legal-toc__list a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    transition: color 0.2s;
+  }
+
+  .legal-toc__list a:hover { color: var(--color-red); }
+
+  .legal-content {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #2a2a2a;
+  }
+
+  .legal-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    font-weight: 900;
+    margin: 44px 0 16px;
+    color: var(--color-black);
+    letter-spacing: -0.01em;
+    scroll-margin-top: 100px;
+  }
+
+  .legal-content h2:first-of-type { margin-top: 8px; }
+
+  .legal-content p {
+    margin-bottom: 16px;
+  }
+
+  .legal-content strong {
+    color: var(--color-black);
+    font-weight: 700;
+  }
+
+  .legal-content ul {
+    margin: 0 0 16px 22px;
+  }
+
+  .legal-content li {
+    margin-bottom: 8px;
+  }
+
+  .legal-content a {
+    color: var(--color-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal-footer-note {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-gray-border);
+    font-size: 0.92rem;
+    color: var(--color-gray-mid);
+  }
+
+  @media (max-width: 900px) {
+    .legal-layout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .legal-toc__card {
+      position: static;
+    }
+
+    .legal-toc__list {
+      max-height: none;
+    }
+
+    .legal-hero { padding-top: 120px; }
+  }
+</style>

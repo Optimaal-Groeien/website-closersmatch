@@ -1,0 +1,300 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articles = [
+  { id: 'section-1', title: 'Scope and general' },
+  { id: 'section-2', title: 'Registration and logging' },
+  { id: 'section-3', title: 'Recordings and evidence (closers)' },
+  { id: 'section-4', title: 'Contact and channels' },
+  { id: 'section-5', title: 'Professional conduct' },
+  { id: 'section-6', title: 'Behaviour, integrity and cooperation' },
+  { id: 'section-7', title: 'Sanctions for violations' },
+  { id: 'section-8', title: 'Performance and growth (closers)' },
+  { id: 'section-9', title: 'Availability and response times' },
+  { id: 'section-10', title: 'Conditions before kick-off' },
+  { id: 'section-11', title: 'Non-circumvention and confidentiality' },
+  { id: 'section-12', title: 'Final provision' },
+];
+---
+
+<Layout locale="en" title="House Rules — ClosersMatch" description="The house rules of ClosersMatch for clients and closers/appointment setters: registration, conduct, performance, availability and sanctions for violations.">
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <nav class="legal-breadcrumb" aria-label="Breadcrumb">
+        <a href="/en">Home</a>
+        <span>/</span>
+        <span aria-current="page">House Rules</span>
+      </nav>
+      <span class="label label--red">Legal</span>
+      <h1 class="legal-hero__title">House Rules</h1>
+      <p class="legal-hero__meta">Version: 28 June 2025</p>
+      <p class="legal-hero__intro">These house rules apply to clients and closers who cooperate through ClosersMatch (CM). They form an integral supplement to the <a href="/en/general-terms-and-conditions">General Terms and Conditions</a> of ClosersMatch. In the event of a conflict between these house rules and the General Terms and Conditions, the General Terms and Conditions shall prevail.</p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTENT
+  ================================================ -->
+  <div class="container legal-layout">
+    <aside class="legal-toc">
+      <div class="legal-toc__card">
+        <span class="legal-toc__label">Table of contents</span>
+        <ul class="legal-toc__list">
+          {articles.map((article) => (
+            <li><a href={`#${article.id}`}>{article.title}</a></li>
+          ))}
+        </ul>
+      </div>
+    </aside>
+
+    <div class="legal-content">
+
+      <h2 id="section-1">1. Scope and general</h2>
+      <p><strong>1.1</strong> These house rules apply to clients and closers who cooperate through ClosersMatch (CM).</p>
+      <p><strong>1.2</strong> Compliance with CM's processes, systems and instructions is mandatory. Violation may result in withholding of payments, penalties and (immediate) termination in accordance with the General Terms and Conditions.</p>
+
+      <h2 id="section-2">2. Registration and logging</h2>
+      <p><strong>2.1</strong> All leads, conversations, appointments, quotes and deals are recorded fully and correctly in the CM portal.</p>
+      <p><strong>2.2</strong> Appointments, quotes or contracts are not processed outside the portal.</p>
+      <p><strong>2.3</strong> Quotes are sent from the CM portal and digitally signed by the customer within the portal (where applicable to the project).</p>
+
+      <h2 id="section-3">3. Recordings and evidence (closers)</h2>
+      <p><strong>3.1</strong> A recording is made of every sales conversation (by phone or online) and securely stored in the portal.</p>
+      <p><strong>3.2</strong> If recording is not possible, the closer must immediately upload a concise written report with key points to the portal.</p>
+      <p><strong>3.3</strong> Recordings and reports are mandatory evidence and form part of the deal registration.</p>
+
+      <h2 id="section-4">4. Contact and channels</h2>
+      <p><strong>4.1</strong> Communication takes place via the systems and guidelines designated by CM.</p>
+      <p><strong>4.2</strong> Arrangements or payments outside CM and outside the portal are prohibited.</p>
+      <p><strong>4.3</strong> Requests from either party to bypass CM must be reported to CM in writing within 24 hours.</p>
+
+      <h2 id="section-5">5. Professional conduct</h2>
+      <p><strong>5.1</strong> Communication is professional and respectful; no swearing, personal attacks or gossip.</p>
+      <p><strong>5.2</strong> Work is carried out in accordance with CM scripts, processes and instructions.</p>
+      <p><strong>5.3</strong> Failure to comply with instructions may be regarded as a violation of these house rules.</p>
+
+      <h2 id="section-6">6. Behaviour, integrity and cooperation</h2>
+      <p><strong>6.1</strong> All communication within ClosersMatch takes place in a professional and respectful manner. Sarcasm, personal attacks or foul language are not permitted.</p>
+      <p><strong>6.2</strong> Negativity without constructive intent is not accepted. Problems or frustrations may be shared, but always with the aim of achieving improvement.</p>
+      <p><strong>6.3</strong> Deliberately influencing others in a negative way, gossiping or creating factions or unrest is prohibited.</p>
+      <p><strong>6.4</strong> Feedback and criticism are welcome when they are respectful, concrete and aimed at improvement.</p>
+      <p><strong>6.5</strong> Information about leads, customers, scripts, rates and internal processes remains strictly confidential. Sharing or using it outside ClosersMatch constitutes a violation.</p>
+      <p><strong>6.6</strong> Loyalty and reliability are core values. Commitments are honoured; if something is not feasible, this is communicated in a timely manner.</p>
+      <p><strong>6.7</strong> ClosersMatch expects a team mindset: the success of others is valued and supported. Cooperation takes precedence over competition.</p>
+      <p><strong>6.8</strong> Violations of this article may result in a warning, temporary removal from campaigns, or immediate termination of the cooperation, depending on the severity.</p>
+
+      <h2 id="section-7">7. Sanctions for violations</h2>
+      <p><strong>7.1</strong> Concealing or handling leads, appointments or payments outside CM: a penalty of €7,500 per violation plus 20% of the revenue or deal value generated outside CM.</p>
+      <p><strong>7.2</strong> In the event of a violation, claims to amounts not yet paid out may lapse.</p>
+      <p><strong>7.3</strong> CM may block accounts and terminate the cooperation with immediate effect in the event of serious violations (including non-circumvention, fraud, reputational damage), in accordance with Articles 12 and 14 of the General Terms and Conditions.</p>
+      <p><strong>7.4</strong> In the event of minor violations, CM may opt for a warning or discussion; this does not affect the right to take immediate action in the event of serious violations.</p>
+
+      <h2 id="section-8">8. Performance and growth (closers)</h2>
+      <p><strong>8.1</strong> Performance standard: on average at least one deal per month based on ten qualified leads per month (in accordance with Article 13 of the General Terms and Conditions).</p>
+      <p><strong>8.2</strong> If performance lags behind without valid reason, CM may remove you from the campaign, replace you, or provide additional training.</p>
+      <p><strong>8.3</strong> Consistent performance leads to progression to campaigns with higher order values.</p>
+      <p><strong>8.4</strong> Periodic assessment of results, communication, attitude and skills determines your category (Entry, Mid-Level, High-End).</p>
+
+      <h2 id="section-9">9. Availability and response times</h2>
+      <p><strong>9.1</strong> Closers: available daily; respond within two working days to CM or the client; follow up on assigned leads in a timely and complete manner (in accordance with Article 17.1 of the General Terms and Conditions).</p>
+      <p><strong>9.2</strong> Clients: aim for prompt communication; ideally respond within 24 hours, but no later than within five working days (in accordance with Article 16 of the General Terms and Conditions).</p>
+      <p><strong>9.3</strong> If the client is unreachable for five working days or fails to provide input/leads: CM may pause the cooperation, release capacity and continue invoicing, or take measures in accordance with Articles 15–16 of the General Terms and Conditions.</p>
+      <p><strong>9.4</strong> If the closer is unreachable for five working days or fails to follow up: CM may withhold commission, apply a penalty or damages, and terminate the cooperation in accordance with Article 17 of the General Terms and Conditions.</p>
+
+      <h2 id="section-10">10. Conditions before kick-off</h2>
+      <p><strong>10.1</strong> For everyone: create and set up accounts (portal, CRM, email) and sign the required documents (agreement, NDA).</p>
+      <p><strong>10.2</strong> Clients: provide access to systems or lead files and basic information (product, target audience).</p>
+      <p><strong>10.3</strong> Closers: test tool access and confirm sample logging or working method.</p>
+      <p><strong>10.4</strong> There is no mandatory start-up contribution for closers, unless agreed in writing for the specific assignment.</p>
+      <p><strong>10.5</strong> No kick-off takes place without completion of 10.1–10.4 (in accordance with Article 15 of the General Terms and Conditions).</p>
+
+      <h2 id="section-11">11. Non-circumvention and confidentiality</h2>
+      <p><strong>11.1</strong> All customer and lead data, scripts, rates, strategies and internal processes remain within CM.</p>
+      <p><strong>11.2</strong> Non-circumvention applies during the cooperation and for twelve months thereafter. Penalties and additional damages apply in accordance with Articles 6 and 14 of the General Terms and Conditions.</p>
+
+      <h2 id="section-12">12. Final provision</h2>
+      <p><strong>12.1</strong> In the event of a conflict between these house rules and the General Terms and Conditions, the General Terms and Conditions shall prevail.</p>
+      <p><strong>12.2</strong> CM may update these house rules; the most recent version applies.</p>
+
+      <div class="legal-footer-note">
+        <p>Questions about these house rules? Contact us at <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a> or via our <a href="/en/contact">contact page</a>. See also our <a href="/en/general-terms-and-conditions">General Terms and Conditions</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .legal-hero {
+    padding: 150px 0 48px;
+    background: var(--color-gray-light);
+  }
+
+  .legal-hero__inner {
+    max-width: 800px;
+  }
+
+  .legal-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-gray-mid);
+    margin-bottom: 20px;
+  }
+
+  .legal-breadcrumb a {
+    color: var(--color-gray-mid);
+    transition: color 0.2s;
+  }
+
+  .legal-breadcrumb a:hover { color: var(--color-red); }
+
+  .legal-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.2vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin: 16px 0 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .legal-hero__meta {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-gray-mid);
+    margin-bottom: 16px;
+  }
+
+  .legal-hero__intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    max-width: 640px;
+  }
+
+  .legal-hero__intro a {
+    color: var(--color-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 720px);
+    gap: 56px;
+    padding-top: 56px;
+    padding-bottom: 100px;
+    max-width: 1080px;
+  }
+
+  .legal-toc__card {
+    position: sticky;
+    top: 110px;
+    background: var(--color-gray-light);
+    border-radius: var(--radius-lg);
+    padding: 24px 22px;
+  }
+
+  .legal-toc__label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-mid);
+    margin-bottom: 14px;
+  }
+
+  .legal-toc__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .legal-toc__list a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    transition: color 0.2s;
+  }
+
+  .legal-toc__list a:hover { color: var(--color-red); }
+
+  .legal-content {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #2a2a2a;
+  }
+
+  .legal-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    font-weight: 900;
+    margin: 44px 0 16px;
+    color: var(--color-black);
+    letter-spacing: -0.01em;
+    scroll-margin-top: 100px;
+  }
+
+  .legal-content h2:first-of-type { margin-top: 8px; }
+
+  .legal-content p {
+    margin-bottom: 16px;
+  }
+
+  .legal-content strong {
+    color: var(--color-black);
+    font-weight: 700;
+  }
+
+  .legal-content ul {
+    margin: 0 0 16px 22px;
+  }
+
+  .legal-content li {
+    margin-bottom: 8px;
+  }
+
+  .legal-content a {
+    color: var(--color-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal-footer-note {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-gray-border);
+    font-size: 0.92rem;
+    color: var(--color-gray-mid);
+  }
+
+  @media (max-width: 900px) {
+    .legal-layout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .legal-toc__card {
+      position: static;
+    }
+
+    .legal-toc__list {
+      max-height: none;
+    }
+
+    .legal-hero { padding-top: 120px; }
+  }
+</style>

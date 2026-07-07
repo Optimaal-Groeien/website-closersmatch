@@ -20,6 +20,7 @@ export const routes = {
   blog: { nl: 'blog', en: 'blog' },
   academy: { nl: 'academy', en: 'academy' },
   algemeneVoorwaarden: { nl: 'algemene-voorwaarden', en: 'general-terms-and-conditions' },
+  huisregels: { nl: 'huisregels', en: 'house-rules' },
 } as const;
 
 export type RouteKey = keyof typeof routes;
