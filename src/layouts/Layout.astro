@@ -311,7 +311,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
     justify-content: space-between;
     height: 60px;
     padding: 0 16px 0 20px;
-    background: #fff;
+    background: var(--color-red);
   }
 
   .header-mobile-logo {
@@ -324,13 +324,10 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-red);
-    border-radius: 10px;
-    padding: 8px 12px;
   }
 
   .header-mobile-logo__img {
-    height: 22px;
+    height: 28px;
     width: auto;
     display: block;
     mix-blend-mode: screen;
