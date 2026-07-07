@@ -50,13 +50,13 @@
   "cookies": {
     "footerSettings": "Cookie-instellingen",
     "bannerTitle": "Onze cookies",
-    "bannerBody": "Onze website gebruikt cookies en vergelijkbare technieken om jouw ervaring te verbeteren, het gebruik van de site te analyseren en relevante marketing te tonen.",
+    "bannerBody": "We gebruiken cookies om ClosersMatch soepel te laten werken, te ontdekken wat écht helpt voor bezoekers zoals jij, en om relevante informatie te laten zien in plaats van willekeurige advertenties. Kies wat voor jou werkt — je kunt je keuze altijd weer aanpassen.",
     "privacyLinkLabel": "Bekijk ons Privacybeleid",
     "manage": "Cookies beheren",
-    "rejectAll": "Alles afwijzen",
-    "allowAll": "Alles toestaan",
+    "rejectAll": "Alleen noodzakelijke cookies",
+    "allowAll": "Ja, alles toestaan",
     "modalTitle": "Cookie-instellingen",
-    "modalBody": "Kies welke soorten cookies je wilt toestaan. Noodzakelijke cookies staan altijd aan, omdat de website hier niet zonder kan functioneren.",
+    "modalBody": "Kies welke soorten cookies je wilt toestaan. Hoe meer je toestaat, hoe beter we de site en onze informatie op jou kunnen afstemmen. Noodzakelijke cookies staan altijd aan, omdat de website hier niet zonder kan functioneren.",
     "confirmChoices": "Mijn keuzes bevestigen",
     "categories": {
       "essential": {

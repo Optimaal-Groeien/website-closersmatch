@@ -50,13 +50,13 @@
   "cookies": {
     "footerSettings": "Cookie settings",
     "bannerTitle": "Our cookies",
-    "bannerBody": "Our website uses cookies and similar technologies to improve your experience, analyze site usage, and show you relevant marketing.",
+    "bannerBody": "We use cookies to keep ClosersMatch running smoothly, understand what actually helps visitors like you, and show you relevant information instead of random ads. Choose what works for you — you can always change your mind later.",
     "privacyLinkLabel": "View our Privacy Policy",
     "manage": "Manage cookies",
-    "rejectAll": "Reject all",
-    "allowAll": "Allow all",
+    "rejectAll": "Necessary cookies only",
+    "allowAll": "Yes, allow all",
     "modalTitle": "Cookie settings",
-    "modalBody": "Choose which types of cookies you want to allow. Essential cookies are always on, as the website cannot function properly without them.",
+    "modalBody": "Choose which types of cookies you want to allow. The more you allow, the better we can tailor the site and our communication to you. Essential cookies are always on, as the website cannot function properly without them.",
     "confirmChoices": "Confirm my choices",
     "categories": {
       "essential": {
