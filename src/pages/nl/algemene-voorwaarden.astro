@@ -1,0 +1,496 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articles = [
+  { id: 'artikel-1', title: 'Artikel 1 – Definities' },
+  { id: 'artikel-2', title: 'Artikel 2 – Toepasselijkheid' },
+  { id: 'artikel-3', title: 'Artikel 3 – Diensten en doel' },
+  { id: 'artikel-4', title: 'Artikel 4 – Vergoedingen en betaling' },
+  { id: 'artikel-5', title: 'Artikel 5 – Pilot, leads & sales funnel' },
+  { id: 'artikel-6', title: 'Artikel 6 – Non-circumvent en eigendom klantrelaties' },
+  { id: 'artikel-7', title: 'Artikel 7 – Kwaliteit en gedrag' },
+  { id: 'artikel-8', title: 'Artikel 8 – Vertrouwelijkheid en intellectueel eigendom' },
+  { id: 'artikel-9', title: 'Artikel 9 – Aansprakelijkheid' },
+  { id: 'artikel-10', title: 'Artikel 10 – Beëindiging' },
+  { id: 'artikel-11', title: 'Artikel 11 – Buy-out / Overname van een closer' },
+  { id: 'artikel-12', title: 'Artikel 12 – Huisregels voor opdrachtgevers en closers' },
+  { id: 'artikel-13', title: 'Artikel 13 – Prestatieverwachting voor closers' },
+  { id: 'artikel-14', title: 'Artikel 14 – Gedrag, integriteit & bescherming van het platform' },
+  { id: 'artikel-15', title: 'Artikel 15 – Kick-off, start & annulering' },
+  { id: 'artikel-16', title: 'Artikel 16 – Leadaanlevering, communicatie & beëindiging' },
+  { id: 'artikel-17', title: 'Artikel 17 – Uitvoering, bereikbaarheid en continuïteit van de closer' },
+  { id: 'artikel-18', title: 'Artikel 18 – Betwiste of geannuleerde deals' },
+  { id: 'artikel-19', title: 'Artikel 19 – Facturatie, betaling en platformfee' },
+  { id: 'artikel-20', title: 'Artikel 20 – Toepasselijk recht en geschillen' },
+];
+---
+
+<Layout locale="nl" title="Algemene Voorwaarden — ClosersMatch" description="Lees de algemene voorwaarden van ClosersMatch, onderdeel van Optimaal Groeien. Voorwaarden voor opdrachtgevers en closers/appointment setters die gebruikmaken van het platform.">
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <nav class="legal-breadcrumb" aria-label="Breadcrumb">
+        <a href="/nl">Home</a>
+        <span>/</span>
+        <span aria-current="page">Algemene Voorwaarden</span>
+      </nav>
+      <span class="label label--red">Juridisch</span>
+      <h1 class="legal-hero__title">Algemene Voorwaarden</h1>
+      <p class="legal-hero__meta">Versie: 28 juni 2025</p>
+      <p class="legal-hero__intro">ClosersMatch is onderdeel van Optimaal Groeien, gevestigd aan Boeierstraat 9, 8102 HS Raalte, ingeschreven bij de Kamer van Koophandel onder nummer 84358734.</p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTENT
+  ================================================ -->
+  <div class="container legal-layout">
+    <aside class="legal-toc">
+      <div class="legal-toc__card">
+        <span class="legal-toc__label">Inhoudsopgave</span>
+        <ul class="legal-toc__list">
+          {articles.map((article) => (
+            <li><a href={`#${article.id}`}>{article.title.replace(/^Artikel \d+ – /, '')}</a></li>
+          ))}
+        </ul>
+      </div>
+    </aside>
+
+    <div class="legal-content">
+
+      <h2 id="artikel-1">Artikel 1 – Definities</h2>
+      <p>In deze voorwaarden wordt verstaan onder:</p>
+      <p><strong>1.1</strong> CM: ClosersMatch, onderdeel van Optimaal Groeien, dat uitsluitend optreedt als platform en intermediair. CM faciliteert matches tussen opdrachtgevers en closers en kan aanvullende diensten bieden zoals screening, training, leadgeneratie, administratie en bemiddeling. CM is geen werkgever, geen garantsteller en geen uitvoerende partij in de samenwerking tussen opdrachtgever en closer.</p>
+      <p><strong>1.2</strong> Opdrachtgever: iedere natuurlijke persoon of rechtspersoon die via CM gebruikmaakt van closers en/of aanvullende diensten zoals leadgeneratie.</p>
+      <p><strong>1.3</strong> Closer: een zelfstandig ondernemer die via CM wordt ingezet voor het uitvoeren van commerciële werkzaamheden, waaronder opvolging van leads, salesgesprekken en closing.</p>
+      <p><strong>1.4</strong> Leads: door of via CM aangeleverde of door opdrachtgever zelf verstrekte potentiële klanten.</p>
+      <p><strong>1.5</strong> Overeenkomst: de samenwerking tussen CM en opdrachtgever, zoals bevestigd via intakeformulier en/of ondertekening van een offerte.</p>
+      <p><strong>1.6</strong> No cure, no pay: de resultaatsafspraak waarbij opdrachtgever uitsluitend een fee betaalt aan CM bij succesvol gesloten en betaalde klanten.</p>
+
+      <h2 id="artikel-2">Artikel 2 – Toepasselijkheid</h2>
+      <p><strong>2.1</strong> Deze voorwaarden zijn van toepassing op alle offertes, overeenkomsten en diensten van CM.</p>
+      <p><strong>2.2</strong> Afwijkingen zijn alleen geldig indien schriftelijk overeengekomen.</p>
+      <p><strong>2.3</strong> Eventuele algemene voorwaarden van opdrachtgever worden uitdrukkelijk van de hand gewezen.</p>
+
+      <h2 id="artikel-3">Artikel 3 – Diensten en doel</h2>
+      <p><strong>3.1</strong> CM bemiddelt tussen opdrachtgevers en closers, en faciliteert de samenwerking van A tot Z.</p>
+      <p><strong>3.2</strong> Diensten kunnen bestaan uit:</p>
+      <ul>
+        <li>Matching met closers;</li>
+        <li>Training, begeleiding en toezicht op closers;</li>
+        <li>Leadgeneratie en funnelbouw;</li>
+        <li>Administratie, facturatie en juridische bescherming;</li>
+        <li>Overige sales- en marketingondersteuning.</li>
+      </ul>
+      <p><strong>3.3</strong> CM treedt uitsluitend op als bemiddelaar en is geen partij bij de overeenkomst tussen opdrachtgever en closer, tenzij uitdrukkelijk anders bepaald.</p>
+
+      <h2 id="artikel-4">Artikel 4 – Vergoedingen en betaling</h2>
+      <p><strong>4.1</strong> CM hanteert een no cure, no pay-model: opdrachtgever betaalt uitsluitend bij een succesvolle closing.</p>
+      <p><strong>4.2</strong> Een succesvolle closing betekent: een klant die door toedoen van de closer een bindende overeenkomst met de opdrachtgever aangaat en waarvan de eerste betaling door de opdrachtgever is ontvangen.</p>
+      <p><strong>4.3</strong> De vergoeding bedraagt een vooraf overeengekomen percentage van de orderwaarde (gemiddeld 10–30%). Dit percentage is all-in en omvat alle kosten van CM en de closer.</p>
+      <p><strong>4.4</strong> CM houdt een platform- en servicefee in van 3–8% van de orderwaarde.</p>
+      <p><strong>4.5</strong> Facturatie geschiedt vooraf per maand (bij aanvullende diensten) of per gesloten deal. Betaling dient te geschieden binnen 14 dagen na factuurdatum.</p>
+      <p><strong>4.6</strong> Bij uitblijvende betaling is opdrachtgever zonder ingebrekestelling in verzuim en is CM gerechtigd incassokosten in rekening te brengen.</p>
+      <p><strong>4.7</strong> CM is in geen enkel geval verantwoordelijk voor het betalingsgedrag van eindklanten van de opdrachtgever. CM treedt niet op als garantsteller, schuldenaar of incassobureau. Indien een eindklant van de opdrachtgever niet betaalt, ligt het risico en de verantwoordelijkheid volledig bij de opdrachtgever. CM faciliteert uitsluitend het platform en de administratieve afhandeling van vergoedingen tussen opdrachtgever en closer.</p>
+      <p><strong>4.8</strong> De betalingsverplichting van opdrachtgever aan CM is onvoorwaardelijk en staat volledig los van de betaling door diens eigen klant. Een deal wordt als verzilverd beschouwd zodra de eindklant van opdrachtgever de overeenkomst is aangegaan en de eerste betaling door opdrachtgever is ontvangen. Opschorting of verrekening door opdrachtgever is uitgesloten. Indien opdrachtgever niet binnen de gestelde termijn betaalt, is een opslag van twintig procent (20%) van het factuurbedrag verschuldigd. Deze opslag staat los van de vergoeding aan de closer en dient uitsluitend ter waarborging van een snelle betalingsstroom. De closer ontvangt zijn vergoeding steeds tijdig conform afspraak. Bij wanbetaling door de eindklant van opdrachtgever dient opdrachtgever zelf passende maatregelen (zoals incasso) te nemen; dit ontslaat opdrachtgever niet van zijn verplichtingen jegens CM. Voor een nadere uitwerking van het facturatie- en betaalproces wordt verwezen naar artikel 19 van deze voorwaarden.</p>
+
+      <h2 id="artikel-5">Artikel 5 – Pilot, leads & sales funnel</h2>
+      <p><strong>5.1 Start van de samenwerking</strong><br />De samenwerking kan starten met door de opdrachtgever aangeleverde leads of direct met de salesfunnel.</p>
+      <p><strong>5.2 Pilot met eigen leads (no cure, no pay)</strong><br />Indien de opdrachtgever eigen leads aanlevert, start de samenwerking met een pilot van tien (10) gekwalificeerde leads. Deze pilot dient uitsluitend om de kwaliteit, intentie en conversiepotentie van de leads te toetsen. Tijdens de pilot geldt "no cure, no pay": er worden enkel kosten in rekening gebracht bij een gesloten deal.</p>
+      <p><strong>5.3 Beoordeling van leadkwaliteit</strong><br />ClosersMatch bepaalt zelfstandig of de aangeleverde leads van voldoende kwaliteit en volume zijn om rendabele verkoopkansen te realiseren. Leads worden onder meer als onvoldoende beschouwd indien ze:</p>
+      <ul>
+        <li>buiten de doelgroep vallen,</li>
+        <li>onjuiste of onvolledige gegevens bevatten,</li>
+        <li>structureel onbereikbaar zijn, of</li>
+        <li>geen koopintentie tonen.</li>
+      </ul>
+      <p><strong>5.4 Overgang naar sales funnel</strong><br />Indien de kwaliteit of het volume van de leads — naar oordeel van ClosersMatch — onvoldoende is, stemt de opdrachtgever onvoorwaardelijk in met activering van de salesfunnel via Optimaal Groeien. Deze overgang geldt als onderdeel van de samenwerking en niet als beëindiging of wijziging van de overeenkomst.</p>
+      <p><strong>5.5 Uitvoering sales funnel</strong><br />De sales funnel wordt opgezet, beheerd en uitgevoerd door Optimaal Groeien (inclusief funnelontwikkeling, content, advertenties en leadgeneratie) en staat los van het closing-proces via ClosersMatch.</p>
+      <p><strong>5.6 Kosten en looptijd salesfunnel</strong><br />De investering voor de salesfunnel bedraagt €2.450 per maand, exclusief advertentiebudget. Na een opstartmaand (tegen dezelfde investering als de maandelijkse kosten) wordt de funnel minimaal drie (3) maanden uitgevoerd. Facturatie vindt maandelijks vooraf plaats via Optimaal Groeien, met een betalingstermijn van 14 dagen. Na de initiële periode is de samenwerking per kwartaal opzegbaar.</p>
+      <p><strong>5.7 Exclusiviteit leadgeneratie</strong><br />Leadgeneratie en de daarmee samenhangende vergoedingen verlopen uitsluitend via Optimaal Groeien of rechtstreeks via de opdrachtgever. Closers en derden zijn onder geen beding bevoegd om zelfstandig leads te genereren, aan te kopen of commerciële rechten hierop te claimen.</p>
+
+      <h2 id="artikel-6">Artikel 6 – Non-circumvent en eigendom klantrelaties</h2>
+      <p><strong>6.1</strong> Alle leads, klanten, contacten en opdrachten die via CM of OG (Optimaal Groeien) worden aangeleverd, verwerkt of tot stand komen, blijven eigendom van CM/OG.</p>
+      <p><strong>6.2</strong> Het is opdrachtgever verboden om closers, appointment setters of andere medewerkers van CM/OG rechtstreeks opdrachten te geven, afspraken te maken, aanvullende werkzaamheden te laten uitvoeren of betalingen te verrichten buiten CM/OG om, tenzij hiervoor schriftelijke toestemming is verleend door CM/OG.</p>
+      <p><strong>6.3</strong> Hieronder vallen nadrukkelijk ook aanvullende commerciële werkzaamheden zoals leadgeneratie, koude acquisitie, marketingactiviteiten of salescampagnes. Deze mogen uitsluitend via CM/OG worden uitgevoerd.</p>
+      <p><strong>6.4</strong> Dit verbod geldt zowel tijdens de samenwerking als tot 12 maanden na beëindiging van de samenwerking, ongeacht de reden van beëindiging.</p>
+      <p><strong>6.5</strong> Bij overtreding is opdrachtgever aan CM/OG een direct opeisbare boete verschuldigd van €7.500 per overtreding, vermeerderd met 20% van de buiten CM/OG om gerealiseerde omzet, onverminderd het recht van CM/OG op aanvullende schadevergoeding.</p>
+
+      <h2 id="artikel-7">Artikel 7 – Kwaliteit en gedrag</h2>
+      <p><strong>7.1</strong> ClosersMatch selecteert, traint en begeleidt closers volgens een vaste methodiek.</p>
+      <p><strong>7.2</strong> Opdrachtgever mag geen aanspraken maken buiten de reikwijdte van de overeenkomst (zoals loondienstclaims of werkgeversaansprakelijkheid).</p>
+      <p><strong>7.3</strong> Bij klachten of onvoldoende kwaliteit zoekt CM kosteloos naar vervanging.</p>
+
+      <h2 id="artikel-8">Artikel 8 – Vertrouwelijkheid en intellectueel eigendom</h2>
+      <p><strong>8.1</strong> Alle informatie over klanten, leads, strategieën, scripts en methodieken van CM is strikt vertrouwelijk.</p>
+      <p><strong>8.2</strong> Opdrachtgever mag deze informatie niet delen met derden of gebruiken buiten de samenwerking met CM.</p>
+      <p><strong>8.3</strong> Alle intellectuele eigendomsrechten op door CM ontwikkelde materialen, funnels, scripts en trainingen berusten bij CM.</p>
+
+      <h2 id="artikel-9">Artikel 9 – Aansprakelijkheid</h2>
+      <p><strong>9.1</strong> CM treedt uitsluitend op als platform en intermediair. CM faciliteert de match tussen opdrachtgever en closer, maar is geen bank, garantsteller of uitvoerende partij.</p>
+      <p><strong>9.2</strong> CM is niet aansprakelijk voor enige schade, direct of indirect, voortvloeiend uit of verband houdend met de samenwerking tussen opdrachtgever en closer. Hieronder vallen onder meer, maar niet uitsluitend: gevolgschade, gederfde winst, gemiste kansen, reputatieschade, negatieve reviews, wanbetaling of ontevreden klanten.</p>
+      <p><strong>9.3</strong> Alle verplichtingen, prestaties en resultaten zijn volledig voor rekening en risico van opdrachtgever en closer. Eventuele geschillen dienen partijen onderling op te lossen. CM kan desgevraagd bemiddelen, maar zonder enige verplichting of aansprakelijkheid voor de uitkomst.</p>
+      <p><strong>9.4</strong> Aansprakelijkheid van CM kan uitsluitend ontstaan in het geval van opzet of grove nalatigheid door CM zelf. In dat geval is de aansprakelijkheid beperkt tot de directe schade die het rechtstreekse en onmiddellijke gevolg is van dat handelen.</p>
+      <p><strong>9.5</strong> Opdrachtgever en closer vrijwaren CM volledig tegen alle aanspraken van derden die voortvloeien uit of verband houden met de samenwerking.</p>
+
+      <h2 id="artikel-10">Artikel 10 – Beëindiging</h2>
+      <p><strong>10.1</strong> De overeenkomst wordt aangegaan voor onbepaalde tijd, tenzij anders overeengekomen.</p>
+      <p><strong>10.2</strong> Beide partijen kunnen schriftelijk opzeggen met een opzegtermijn van 30 dagen.</p>
+      <p><strong>10.3</strong> CM kan de samenwerking per direct beëindigen bij:</p>
+      <ul>
+        <li>Schending van deze voorwaarden of non-circumvent;</li>
+        <li>Vertrouwensbreuk of reputatieschade;</li>
+        <li>Wanbetaling door opdrachtgever;</li>
+        <li>Misbruik van klantrelaties.</li>
+      </ul>
+
+      <h2 id="artikel-11">Artikel 11 – Buy-out / Overname van een closer</h2>
+      <p><strong>11.1</strong> Indien opdrachtgever besluit een closer die via CM/OG is geïntroduceerd buiten CM/OG om rechtstreeks in dienst te nemen, freelance in te huren of op andere wijze een samenwerking aan te gaan, is opdrachtgever een eenmalige overnamefee van €10.000 verschuldigd.</p>
+      <p><strong>11.2</strong> Deze verplichting geldt ongeacht de termijn na introductie.</p>
+      <p><strong>11.3</strong> Afwijkingen zijn uitsluitend geldig indien vooraf schriftelijk overeengekomen met CM/OG en de overeengekomen fee volledig is voldaan.</p>
+      <p><strong>11.4</strong> Indien opdrachtgever en/of closer een overname of samenwerking buiten CM/OG om tot stand brengt zonder toestemming, is een direct opeisbare boete verschuldigd van €7.500 per overtreding, vermeerderd met 20% van de buiten CM/OG om gerealiseerde omzet, onverminderd het recht van CM/OG op aanvullende schadevergoeding.</p>
+
+      <h2 id="artikel-12">Artikel 12 – Huisregels voor opdrachtgevers en closers</h2>
+      <p><strong>12.1 Algemeen</strong><br />Zowel opdrachtgever als closer zijn verplicht zich te houden aan de huisregels van CM. Transparantie, snelheid en volledige registratie in het CM-portaal zijn essentieel voor een juiste samenwerking. Het verzwijgen, achterhouden of buiten CM om verwerken van leads, afspraken of deals wordt beschouwd als een ernstige schending van de overeenkomst.</p>
+      <p><strong>12.2 Verplichtingen opdrachtgever</strong><br />Opdrachtgever is verplicht alle leads volledig en correct in het CM-portaal te registreren en volledige openheid te bieden over de status van leads, afspraken en gesloten deals. Facturen van CM dienen binnen veertien (14) dagen na factuurdatum te zijn voldaan. Bij overschrijding van deze termijn wordt het factuurbedrag automatisch verhoogd met twintig procent (20%) van het factuurbedrag, onverminderd het recht van CM op aanvullende schadevergoeding. Opdrachtgever mag geen afspraken maken met closers buiten CM om. Indien opdrachtgever hiertoe wordt benaderd, is hij verplicht dit direct schriftelijk aan CM te melden.</p>
+      <p><strong>12.3 Verplichtingen closer</strong><br />De closer is verplicht alle gesprekken, afspraken en deals volledig en correct in het CM-portaal te loggen. Van ieder verkoopgesprek wordt een opname of schriftelijk verslag in het portaal geplaatst. De closer mag geen afspraken of betalingen buiten CM om maken of verzwijgen. Indien opdrachtgever de closer hiertoe benadert, is de closer verplicht dit direct schriftelijk aan CM te melden.</p>
+      <p><strong>12.4 Sancties bij overtreding</strong><br />Bij overtreding van deze huisregels is de betreffende partij een direct opeisbare boete verschuldigd van zevenduizend vijfhonderd euro (€7.500) per overtreding, vermeerderd met twintig procent (20%) van de buiten CM om gerealiseerde omzet of waarde van de verzuimde deal, onverminderd het recht van CM op aanvullende schadevergoeding. Daarnaast vervallen aanspraken van de closer op nog niet uitbetaalde bedragen. CM kan de samenwerking per direct beëindigen en accounts blokkeren.</p>
+
+      <h2 id="artikel-13">Artikel 13 – Prestatieverwachting voor closers</h2>
+      <p><strong>13.1</strong> Iedere closer die deelneemt aan een pilot of lopende opdracht wordt geacht minimaal één (1) deal per maand te realiseren, op basis van een minimum van tien (10) gekwalificeerde leads per maand.</p>
+      <p><strong>13.2</strong> Deze norm geldt als redelijke prestatie-indicator om zowel de effectiviteit van de closer als de kwaliteit van de aangeleverde leads te beoordelen.</p>
+      <p><strong>13.3</strong> Indien deze doelstelling zonder gegronde reden niet wordt behaald, behoudt ClosersMatch zich het recht voor om:</p>
+      <ul>
+        <li>a) de betreffende opdracht toe te wijzen aan een andere closer;</li>
+        <li>b) de samenwerking met de closer aan te passen of te beëindigen; of</li>
+        <li>c) aanvullende ondersteuning of een sales funnel te activeren om de conversie te verbeteren.</li>
+      </ul>
+      <p><strong>13.4</strong> De closer erkent dat consistente opvolging, rapportage en naleving van de ClosersMatch-systemen en -richtlijnen essentieel zijn om aan deze prestatie-eis te voldoen.</p>
+
+      <h2 id="artikel-14">Artikel 14 – Gedrag, integriteit &amp; bescherming van het platform</h2>
+      <p><strong>14.1 Gebruik van platform en vertrouwelijkheid</strong><br />Closers en opdrachtgevers krijgen via ClosersMatch toegang tot vertrouwelijke informatie zoals klantgegevens, prijzen, scripts, leads, funnels en bedrijfsstrategieën. Deze informatie mag uitsluitend worden gebruikt binnen de samenwerking via CM en mag niet worden gekopieerd, openbaar gemaakt of commercieel benut voor eigen doeleinden.</p>
+      <p><strong>14.2 Verbod op omzeilen van ClosersMatch (non-bypass)</strong><br />Het is closers ten strengste verboden om:</p>
+      <ul>
+        <li>a) Buiten CM om afspraken, betalingen of opdrachten met opdrachtgevers te maken.</li>
+        <li>b) Opdrachtgevers te benaderen of te faciliteren om samen te werken zonder CM.</li>
+        <li>c) Leads, klanten of deals buiten het CM-portaal om af te handelen of te verzwijgen.</li>
+      </ul>
+      <p>Indien een opdrachtgever dit toch verzoekt, moet de closer dit binnen 24 uur schriftelijk melden aan CM.</p>
+      <p><strong>14.3 Misbruik van klantrelaties</strong><br />Closers mogen geen opdrachtgevers benaderen voor:</p>
+      <ul>
+        <li>Freelance- of loondienstsamenwerkingen buiten CM;</li>
+        <li>Verkoop van eigen diensten zoals coaching, marketing of consultancy;</li>
+        <li>Cross-sell of upsell van eigen producten/diensten aan leads of klanten van opdrachtgever;</li>
+        <li>Verzoek om direct persoonlijke betalingen (bijv. via Tikkie, PayPal of privéfacturen).</li>
+      </ul>
+      <p><strong>14.4 Verbod op backdoor deals en verborgen afspraken</strong><br />Elke vorm van samenwerking, betaling, adviesgesprek, verlenging of "we regelen dit onderling"-constructie tussen opdrachtgever en closer buiten CM wordt beschouwd als een schending van het platform. Dit geldt ook voor mondelinge afspraken, barterdeals of betaalafspraken in natura.</p>
+      <p><strong>14.5 Concurrentie en kopiëren van het model</strong><br />Zonder schriftelijke toestemming van CM is het closers verboden om:</p>
+      <ul>
+        <li>Een eigen platform, matchingdienst of vergelijkbaar businessmodel te starten;</li>
+        <li>Andere closers of opdrachtgevers van CM te benaderen om "mee te nemen" of los te trekken;</li>
+        <li>Scripts, salesmethodieken, funnels, trainingen of templates van CM of OG te kopiëren of verkopen;</li>
+        <li>Tegelijkertijd voor directe concurrenten van de opdrachtgever te closen met gebruik van bij CM verkregen informatie.</li>
+      </ul>
+      <p><strong>14.6 Transparantie- en registratieplicht</strong><br />Alle gesprekken, afspraken, offertes en deals die voortkomen uit CM-leads moeten volledig, juist en tijdig geregistreerd worden in het CM-portaal. Het bewust achterhouden, aanpassen of verwijderen van data wordt gezien als fraude.</p>
+      <p><strong>14.7 Sancties en gevolgen bij overtreding</strong><br />Bij overtreding van dit artikel is de closer of opdrachtgever een direct opeisbare boete verschuldigd van:</p>
+      <ul>
+        <li>€7.500 per overtreding, vermeerderd met</li>
+        <li>20% van de buiten CM om gerealiseerde omzet of dealwaarde,</li>
+        <li>Onmiddellijke beëindiging van samenwerking en blokkering van accounts,</li>
+        <li>Verlies van aanspraak op openstaande commissies of bonussen,</li>
+        <li>Onverminderd het recht van CM/OG op aanvullende schadevergoeding.</li>
+      </ul>
+      <p><strong>14.8 Integriteit en controle</strong><br />CM behoudt zich het recht voor om steekproefsgewijs gesprekken, rapportages en portaalgegevens te controleren ter waarborging van integriteit. Bij vermoedens van fraude, belangenverstrengeling of platformmisbruik kan CM onmiddellijke toegang blokkeren en een onderzoek starten.</p>
+
+      <h2 id="artikel-15">Artikel 15 – Kick-off, start &amp; annulering</h2>
+      <p><strong>15.1 Voorwaarden vóór de kick-off</strong><br />De kick-off wordt pas ingepland zodra de opdrachtgever:</p>
+      <ul>
+        <li>a) alle noodzakelijke informatie, product- en doelgroepgegevens aanlevert;</li>
+        <li>b) toegang verschaft tot relevante systemen, CRM, e-mailadressen of leadbestanden;</li>
+        <li>c) de benodigde accounts aanmaakt voor ClosersMatch en/of de toegewezen closer(s);</li>
+        <li>d) de overeenkomst en eventuele NDA heeft ondertekend.</li>
+      </ul>
+      <p><strong>15.2 Startmoment na kick-off</strong><br />Na de kick-off dient de samenwerking binnen maximaal vijf (5) werkdagen operationeel te starten. Dit houdt in: het opvolgen van leads, voeren van gesprekken of anderszins uitvoeren van commerciële activiteiten.</p>
+      <p><strong>15.3 Vertraging door opdrachtgever</strong><br />Indien de opdrachtgever na de kick-off niet start of geen toegang/leads verstrekt binnen vijf werkdagen, geldt:</p>
+      <ul>
+        <li>a) ClosersMatch is gerechtigd de samenwerking te pauzeren of verplaatsen;</li>
+        <li>b) De reservering van closercapaciteit vervalt, zonder beschikbaarheidsgarantie;</li>
+        <li>c) De facturatie kan starten vanaf de vijfde werkdag na de kick-off.</li>
+      </ul>
+      <p><strong>15.4 Annulering na kick-off</strong><br />Indien de opdrachtgever na de kick-off besluit af te zien van de samenwerking, gelden de volgende kosten:</p>
+      <ul>
+        <li>Annulering vóór kick-off: kosteloos.</li>
+        <li>Annulering ná kick-off maar vóór eerste leadopvolging: €1.000 (of de gedefinieerde onboardingfee) voor gemaakte uren, training en gereserveerde capaciteit.</li>
+        <li>Annulering na start van werkzaamheden: de reguliere opzegtermijn van één (1) maand is van toepassing (met gemiddeld 10 leads per week).</li>
+      </ul>
+      <p><strong>15.5 Opzegtermijn</strong><br />Voor alle samenwerkingen geldt een wederzijdse opzegtermijn van één (1) maand, ongeacht resultaat of dealstatus (met gemiddeld 10 leads per week).</p>
+      <p><strong>15.6 Interne medewerkers van opdrachtgever</strong><br />Indien de opdrachtgever wenst dat een closer eerst kennismaakt met interne medewerkers of extra goedkeuring vereist is, mag dit de start niet vertragen. Indien een interne medewerker alsnog besluit de samenwerking stop te zetten, zijn de bepalingen uit artikel 15.4 direct van toepassing.</p>
+      <p><strong>15.7 Geen vrijblijvendheid</strong><br />De kick-off is kosteloos, maar niet vrijblijvend. ClosersMatch investeert tijd, training, onboarding en reservering van closers. Daarom wordt verwacht dat de opdrachtgever gereed is om binnen vijf werkdagen te starten.</p>
+
+      <h2 id="artikel-16">Artikel 16 – Leadaanlevering, communicatie &amp; beëindiging</h2>
+      <p>De opdrachtgever verplicht zich om gedurende de looptijd van de samenwerking:</p>
+      <ul>
+        <li>a) wekelijks gemiddeld tien (10) kwalitatieve leads aan te leveren, tenzij schriftelijk anders overeengekomen;</li>
+        <li>b) bereikbaar te zijn voor evaluaties, updates en opvolging;</li>
+        <li>c) binnen maximaal vijf (5) werkdagen te reageren op communicatie vanuit ClosersMatch of de toegewezen closer.</li>
+      </ul>
+      <p><strong>16.1 Niet-nakoming of gebrek aan bereikbaarheid</strong><br />Indien de opdrachtgever gedurende meer dan vijf (5) werkdagen geen leads aanlevert of niet bereikbaar is zonder voorafgaande melding, geldt dit als het eenzijdig stilleggen van de samenwerking. ClosersMatch is in dat geval gerechtigd om:</p>
+      <ul>
+        <li>de samenwerking tijdelijk op te schorten of te beëindigen met onmiddellijke ingang;</li>
+        <li>de gereserveerde closercapaciteit te laten vervallen;</li>
+        <li>een vaste boete van €1.000 in rekening te brengen wegens contractbreuk;</li>
+        <li>en daarnaast een vergoeding voor gederfde omzet te factureren, berekend als volgt: gemiste leads × gemiddelde conversieratio × gemiddelde orderwaarde × overeengekomen commissiepercentage.</li>
+      </ul>
+      <p>Voorbeeld: bij een gemiddelde conversie van 10%, een orderwaarde van €3.000 en een commissie van 15%, bedraagt de vergoeding per gemiste 10 leads: (10 leads × 10% × €3.000) × 15% = €450 per week. Indien exacte cijfers ontbreken, mag ClosersMatch deze berekenen op basis van gemiddelden uit eerdere weken of vergelijkbare projecten. De boete en omzetvergoeding gelden onverminderd het recht van ClosersMatch op aanvullende schadevergoeding conform artikel 6:94 BW. Deze bepaling is niet van toepassing in geval van aantoonbare overmacht (bijvoorbeeld ziekte of ernstige technische storing), mits dit binnen achtenveertig (48) uur schriftelijk aan ClosersMatch is gemeld.</p>
+      <p><strong>16.2 Opzegging</strong><br />Bij beëindiging van de samenwerking geldt een opzegtermijn van één (1) maand, tenzij schriftelijk anders overeengekomen. Tijdens deze opzegtermijn blijft de opdrachtgever verplicht om:</p>
+      <ul>
+        <li>de afgesproken hoeveelheid leads aan te leveren;</li>
+        <li>bereikbaar te blijven voor evaluaties en overdracht;</li>
+        <li>en lopende gesprekken of leads correct af te handelen.</li>
+      </ul>
+      <p>Indien de opdrachtgever dit nalaat, behoudt ClosersMatch zich het recht voor om zowel de vaste boete van €1.000 als de gederfde omzetvergoeding zoals beschreven in lid 16.1 toe te passen over de resterende weken van de opzegtermijn.</p>
+      <p><strong>16.3 Herhaaldelijke overtreding</strong><br />Bij herhaaldelijke overtreding of structureel gebrek aan samenwerking behoudt ClosersMatch zich het recht voor de samenwerking per direct te beëindigen en aanvullende schadevergoeding te vorderen voor verloren capaciteit, gemiste omzet en operationele kosten.</p>
+      <p class="legal-note"><strong>Toelichting (niet-juridisch bindend):</strong> Dit artikel beschermt de continuïteit en capaciteit van ClosersMatch. Wanneer opdrachtgevers plots stoppen met communicatie of leads, veroorzaakt dat directe schade aan de planning, bezetting en omzet van closers. De vaste boete dekt deze schade gedeeltelijk, de omzetvergoeding herstelt het financiële verlies op basis van reële cijfers.</p>
+
+      <h2 id="artikel-17">Artikel 17 – Uitvoering, bereikbaarheid en continuïteit van de closer</h2>
+      <p><strong>17.1 Verplichtingen van de closer</strong><br />De closer verplicht zich gedurende de samenwerking:</p>
+      <ul>
+        <li>a) alle toegewezen leads tijdig en professioneel op te volgen;</li>
+        <li>b) dagelijks bereikbaar te zijn via de overeengekomen communicatiemiddelen, waaronder het CM-portaal, telefoon of e-mail;</li>
+        <li>c) binnen maximaal twee (2) werkdagen te reageren op berichten of verzoeken van ClosersMatch of de opdrachtgever;</li>
+        <li>d) alle activiteiten, gesprekken en resultaten volledig en correct te registreren in het ClosersMatch-portaal.</li>
+      </ul>
+      <p><strong>17.2 Niet-nakoming of gebrek aan bereikbaarheid</strong><br />Indien de closer gedurende meer dan vijf (5) werkdagen geen opvolging uitvoert, niet reageert op communicatie of zonder voorafgaande melding afwezig is, geldt dit als het eenzijdig stilleggen van de werkzaamheden. ClosersMatch is in dat geval gerechtigd om:</p>
+      <ul>
+        <li>de samenwerking tijdelijk op te schorten of te beëindigen met onmiddellijke ingang;</li>
+        <li>lopende commissies en betalingen in te houden;</li>
+        <li>een vaste boete van €1.000 in rekening te brengen wegens contractbreuk;</li>
+        <li>en daarnaast schadevergoeding te vorderen voor gemiste omzet, verloren leads of reputatieschade, berekend op basis van: gemiste opvolgingen × gemiddelde conversieratio × gemiddelde orderwaarde × overeengekomen commissiepercentage.</li>
+      </ul>
+      <p>Deze bepaling is niet van toepassing in geval van aantoonbare overmacht (bijvoorbeeld ziekte of ernstige technische storing), mits dit binnen achtenveertig (48) uur schriftelijk aan ClosersMatch is gemeld.</p>
+      <p><strong>17.3 Herhaaldelijke overtreding</strong><br />Bij herhaaldelijke overtreding of structureel gebrek aan communicatie, opvolging of registratie behoudt ClosersMatch zich het recht voor:</p>
+      <ul>
+        <li>de closer per direct uit lopende projecten te verwijderen;</li>
+        <li>alle toegang tot het platform te blokkeren;</li>
+        <li>aanspraken op openstaande commissies te laten vervallen;</li>
+        <li>en aanvullende schadevergoeding te vorderen voor door ClosersMatch of de opdrachtgever geleden schade.</li>
+      </ul>
+      <p class="legal-note"><strong>17.4 Doel van dit artikel:</strong> Dit artikel waarborgt de continuïteit, betrouwbaarheid en professionaliteit binnen ClosersMatch. Wanneer closers zonder overleg stoppen met opvolging of communicatie, veroorzaakt dit directe schade aan klantrelaties, planning, reputatie en omzet. De boete en eventuele schadevergoeding dienen ter compensatie en ter voorkoming van herhaling.</p>
+      <p><strong>17.5 Betaling en toegang</strong><br />Toegang tot het ClosersMatch-platform is uitsluitend toegestaan met een actief en betaald account. Bij niet-betaling, stornering of het stopzetten van de automatische incasso vervalt per direct het recht op toegang, leads, commissies en gebruik van het platform. Wanneer een closer ondanks niet-betaling toch actief blijft, opdrachten uitvoert of contact onderhoudt met opdrachtgevers via het platform, blijft de betalingsverplichting volledig gelden en wordt dit beschouwd als onrechtmatig gebruik. In dat geval is de closer aan ClosersMatch een direct opeisbare boete verschuldigd van €1.000, vermeerderd met €250 per maand zolang de betalingsachterstand voortduurt of totdat de samenwerking schriftelijk is opgezegd. ClosersMatch behoudt zich het recht voor openstaande bedragen en boetes uit te besteden aan derden, waarbij alle bijkomende incasso- en juridische kosten volledig voor rekening van de closer komen.</p>
+
+      <h2 id="artikel-18">Artikel 18 – Betwiste of geannuleerde deals</h2>
+      <p><strong>18.1</strong> Een deal wordt beschouwd als gesloten zodra de eindklant van de opdrachtgever een overeenkomst heeft ondertekend en de eerste betaling heeft verricht.</p>
+      <p><strong>18.2</strong> Indien een deal ná het moment als bedoeld in 18.1 wordt geannuleerd, ontbonden of teruggedraaid, blijft de overeengekomen vergoeding aan ClosersMatch volledig verschuldigd, tenzij de closer aantoonbaar in strijd heeft gehandeld met de overeenkomst of bewust misleidende informatie heeft verstrekt.</p>
+      <p><strong>18.3</strong> ClosersMatch is niet verantwoordelijk of aansprakelijk voor terugbetalingen, wanbetalingen, annuleringen of ontbindingen door eindklanten van de opdrachtgever. Deze risico's liggen volledig bij de opdrachtgever.</p>
+      <p><strong>18.4</strong> Indien er onduidelijkheid of een geschil ontstaat over de totstandkoming of het vervallen van een deal, fungeert ClosersMatch als neutrale bemiddelaar. De beoordeling van ClosersMatch is bindend, tenzij een van de betrokken partijen binnen tien (10) werkdagen na kennisgeving schriftelijk bezwaar indient.</p>
+      <p><strong>18.5</strong> Indien een deal door nalatigheid van de closer vervalt, zoals onvoldoende opvolging, onjuiste informatie of het niet naleven van overeengekomen processen, kan ClosersMatch openstaande commissies inhouden of verrekenen met de door opdrachtgever geleden schade.</p>
+      <p><strong>18.6</strong> Indien een deal door toedoen van de opdrachtgever vervalt, zoals onjuiste informatieverstrekking, prijswijziging of niet-nakoming van verplichtingen richting de klant, blijft de vergoeding aan ClosersMatch en de closer volledig verschuldigd.</p>
+      <p><strong>18.7</strong> ClosersMatch behoudt zich het recht voor om, bij herhaaldelijke betwiste of onduidelijke deals, aanvullende voorwaarden te stellen of de samenwerking te beëindigen.</p>
+
+      <h2 id="artikel-19">Artikel 19 – Facturatie, betaling en platformfee</h2>
+      <p><strong>19.1</strong> ClosersMatch treedt uitsluitend op als intermediair tussen opdrachtgever en closer. ClosersMatch is geen werkgever, hoofdaannemer of opdrachtnemer en voert geen loon- of btw-administratie namens closers.</p>
+      <p><strong>19.2</strong> De closer levert zijn commerciële diensten rechtstreeks aan de opdrachtgever. De closer blijft te allen tijde zelfstandig ondernemer en volledig verantwoordelijk voor correcte facturatie, btw-afdracht, belastingverplichtingen en Kamer van Koophandel-inschrijving.</p>
+      <p><strong>19.3</strong> Betalingen van opdrachtgevers verlopen uitsluitend via ClosersMatch, dat fungeert als administratief verwerker en betalingsplatform. ClosersMatch ontvangt, beheert en verdeelt deze betalingen uitsluitend ten behoeve van de afrekening tussen opdrachtgever en closer. De ontvangen gelden blijven juridisch eigendom van de opdrachtgever tot het moment van uitbetaling aan de closer.</p>
+      <p><strong>19.4</strong> De closer dient na bevestiging van een succesvolle deal een factuur op te stellen, gericht aan de opdrachtgever, voorzien van:</p>
+      <ul>
+        <li>a) de volledige bedrijfsgegevens en het btw-nummer van de closer;</li>
+        <li>b) de naam van de opdrachtgever met vermelding "via ClosersMatch";</li>
+        <li>c) de overeengekomen commissie (bijvoorbeeld 10–20% van de orderwaarde) en dealreferentie;</li>
+        <li>d) het rekeningnummer van de closer voor uitbetaling.</li>
+      </ul>
+      <p>De closer uploadt deze factuur via het ClosersMatch-portaal of stuurt deze per e-mail aan finance@closersmatch.com.</p>
+      <p><strong>19.5</strong> Indien ClosersMatch de totale vergoeding namens de closer factureert aan de opdrachtgever (één gecombineerde factuur), geldt dit uitsluitend als administratieve verwerking. ClosersMatch houdt in dat geval de overeengekomen platform- en servicefee in (zoals overeengekomen, bijvoorbeeld 3–8%) en keert het restant uit aan de closer. Dit creëert geen arbeidsrelatie of hoofdaannemerschap.</p>
+      <p><strong>19.6</strong> Betaling aan de closer vindt plaats binnen zeven (7) tot veertien (14) dagen nadat ClosersMatch de betaling van de opdrachtgever volledig heeft ontvangen en de factuur van de closer correct is aangeleverd.</p>
+      <p><strong>19.7</strong> ClosersMatch is niet aansprakelijk voor vertragingen of wanbetaling door de opdrachtgever. Het ondernemersrisico ligt volledig bij de closer. ClosersMatch zal zich inspannen om betaling te bevorderen, maar is niet gehouden tot uitbetaling zolang de opdrachtgever niet heeft betaald.</p>
+      <p><strong>19.8</strong> De opdrachtgever mag closers niet rechtstreeks betalen buiten ClosersMatch om. Iedere rechtstreekse betaling wordt beschouwd als schending van de non-circumventbepaling (artikel 6) en leidt tot een direct opeisbare boete van €7.500 per incident, vermeerderd met 20% van het buiten ClosersMatch om betaalde bedrag.</p>
+      <p><strong>19.9</strong> ClosersMatch is gerechtigd om ontvangen bedragen tijdelijk vast te houden bij onduidelijkheid over de geldigheid van een deal, de status van betaling of het bestaan van een geschil tussen opdrachtgever en closer. Uitbetaling vindt pas plaats nadat de situatie is opgehelderd of beide partijen schriftelijk akkoord zijn.</p>
+      <p><strong>19.10</strong> Alle vergoedingen worden uitbetaald in euro's, tenzij schriftelijk anders overeengekomen. Eventuele bankkosten of valutakosten bij internationale betalingen zijn voor rekening van de ontvanger. Bij buitenlandse transacties is de closer zelf verantwoordelijk voor correcte btw-toepassing of verleggingsregeling.</p>
+      <p><strong>19.11</strong> Bij te late betaling door de opdrachtgever wordt het openstaande bedrag automatisch verhoogd met twintig procent (20%) van het factuurbedrag, vermeerderd met de wettelijke handelsrente conform artikel 6:119a BW.</p>
+      <p><strong>19.12</strong> ClosersMatch is niet aansprakelijk voor foutieve betalingen op basis van door de closer verkeerd aangeleverde gegevens. Bij vermoedens van fraude, belangenverstrengeling of misleiding mag ClosersMatch betalingen opschorten zonder aansprakelijkheid.</p>
+
+      <h2 id="artikel-20">Artikel 20 – Toepasselijk recht en geschillen</h2>
+      <p><strong>20.1</strong> Op deze overeenkomst en voorwaarden is uitsluitend Nederlands recht van toepassing.</p>
+      <p><strong>20.2</strong> Geschillen worden, bij het uitblijven van een onderlinge oplossing, voorgelegd aan de bevoegde rechter in Overijssel, tenzij dwingend anders bepaald.</p>
+
+      <div class="legal-footer-note">
+        <p>Vragen over deze algemene voorwaarden? Neem contact met ons op via <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a> of via de <a href="/nl/contact">contactpagina</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .legal-hero {
+    padding: 150px 0 48px;
+    background: var(--color-gray-light);
+  }
+
+  .legal-hero__inner {
+    max-width: 800px;
+  }
+
+  .legal-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-gray-mid);
+    margin-bottom: 20px;
+  }
+
+  .legal-breadcrumb a {
+    color: var(--color-gray-mid);
+    transition: color 0.2s;
+  }
+
+  .legal-breadcrumb a:hover { color: var(--color-red); }
+
+  .legal-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.2vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin: 16px 0 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .legal-hero__meta {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-gray-mid);
+    margin-bottom: 16px;
+  }
+
+  .legal-hero__intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    max-width: 640px;
+  }
+
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 720px);
+    gap: 56px;
+    padding-top: 56px;
+    padding-bottom: 100px;
+    max-width: 1080px;
+  }
+
+  .legal-toc__card {
+    position: sticky;
+    top: 110px;
+    background: var(--color-gray-light);
+    border-radius: var(--radius-lg);
+    padding: 24px 22px;
+  }
+
+  .legal-toc__label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-mid);
+    margin-bottom: 14px;
+  }
+
+  .legal-toc__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .legal-toc__list a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    transition: color 0.2s;
+  }
+
+  .legal-toc__list a:hover { color: var(--color-red); }
+
+  .legal-content {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #2a2a2a;
+  }
+
+  .legal-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    font-weight: 900;
+    margin: 44px 0 16px;
+    color: var(--color-black);
+    letter-spacing: -0.01em;
+    scroll-margin-top: 100px;
+  }
+
+  .legal-content h2:first-of-type { margin-top: 8px; }
+
+  .legal-content p {
+    margin-bottom: 16px;
+  }
+
+  .legal-content strong {
+    color: var(--color-black);
+    font-weight: 700;
+  }
+
+  .legal-content ul {
+    margin: 0 0 16px 22px;
+  }
+
+  .legal-content li {
+    margin-bottom: 8px;
+  }
+
+  .legal-content a {
+    color: var(--color-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal-note {
+    background: var(--color-gray-light);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    font-size: 0.92rem;
+    color: #555;
+  }
+
+  .legal-footer-note {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-gray-border);
+    font-size: 0.92rem;
+    color: var(--color-gray-mid);
+  }
+
+  @media (max-width: 900px) {
+    .legal-layout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .legal-toc__card {
+      position: static;
+    }
+
+    .legal-toc__list {
+      max-height: none;
+    }
+
+    .legal-hero { padding-top: 120px; }
+  }
+</style>

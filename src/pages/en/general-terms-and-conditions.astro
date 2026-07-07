@@ -1,0 +1,496 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articles = [
+  { id: 'article-1', title: 'Article 1 – Definitions' },
+  { id: 'article-2', title: 'Article 2 – Applicability' },
+  { id: 'article-3', title: 'Article 3 – Services and purpose' },
+  { id: 'article-4', title: 'Article 4 – Fees and payment' },
+  { id: 'article-5', title: 'Article 5 – Pilot, leads & sales funnel' },
+  { id: 'article-6', title: 'Article 6 – Non-circumvention and ownership of client relations' },
+  { id: 'article-7', title: 'Article 7 – Quality and conduct' },
+  { id: 'article-8', title: 'Article 8 – Confidentiality and intellectual property' },
+  { id: 'article-9', title: 'Article 9 – Liability' },
+  { id: 'article-10', title: 'Article 10 – Termination' },
+  { id: 'article-11', title: 'Article 11 – Buy-out / Conversion of a closer' },
+  { id: 'article-12', title: 'Article 12 – House rules for clients and closers' },
+  { id: 'article-13', title: 'Article 13 – Performance expectation for closers' },
+  { id: 'article-14', title: 'Article 14 – Conduct, integrity & platform protection' },
+  { id: 'article-15', title: 'Article 15 – Kick-off, start & cancellation' },
+  { id: 'article-16', title: 'Article 16 – Lead delivery, communication & termination' },
+  { id: 'article-17', title: 'Article 17 – Performance, communication and continuity of the closer' },
+  { id: 'article-18', title: 'Article 18 – Disputed or cancelled deals' },
+  { id: 'article-19', title: 'Article 19 – Invoicing, payment and platform fee' },
+  { id: 'article-20', title: 'Article 20 – Governing law and jurisdiction' },
+];
+---
+
+<Layout locale="en" title="General Terms and Conditions — ClosersMatch" description="Read the general terms and conditions of ClosersMatch, part of Optimaal Groeien. Terms for clients and closers/appointment setters using the platform.">
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <nav class="legal-breadcrumb" aria-label="Breadcrumb">
+        <a href="/en">Home</a>
+        <span>/</span>
+        <span aria-current="page">General Terms and Conditions</span>
+      </nav>
+      <span class="label label--red">Legal</span>
+      <h1 class="legal-hero__title">General Terms and Conditions</h1>
+      <p class="legal-hero__meta">Version: 28 June 2025</p>
+      <p class="legal-hero__intro">ClosersMatch is part of Optimaal Groeien, located at Boeierstraat 9, 8102 HS Raalte, the Netherlands, registered with the Dutch Chamber of Commerce under number 84358734.</p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTENT
+  ================================================ -->
+  <div class="container legal-layout">
+    <aside class="legal-toc">
+      <div class="legal-toc__card">
+        <span class="legal-toc__label">Table of contents</span>
+        <ul class="legal-toc__list">
+          {articles.map((article) => (
+            <li><a href={`#${article.id}`}>{article.title.replace(/^Article \d+ – /, '')}</a></li>
+          ))}
+        </ul>
+      </div>
+    </aside>
+
+    <div class="legal-content">
+
+      <h2 id="article-1">Article 1 – Definitions</h2>
+      <p>In these terms the following definitions apply:</p>
+      <p><strong>1.1</strong> CM: ClosersMatch, part of Optimaal Groeien, acting solely as a platform and intermediary. CM facilitates matches between clients and closers and may provide additional services such as screening, training, lead generation, administration and mediation. CM is not an employer, not a guarantor and not an executing party in the cooperation between client and closer.</p>
+      <p><strong>1.2</strong> Client: any natural person or legal entity that uses closers and/or additional services such as lead generation through CM.</p>
+      <p><strong>1.3</strong> Closer: a self-employed entrepreneur engaged through CM to perform commercial activities, including lead follow-up, sales calls and closing.</p>
+      <p><strong>1.4</strong> Leads: potential customers supplied by or through CM, or provided by the client itself.</p>
+      <p><strong>1.5</strong> Agreement: the cooperation between CM and the client, as confirmed via an intake form and/or a signed proposal.</p>
+      <p><strong>1.6</strong> No cure, no pay: the result-based arrangement whereby the client only pays a fee to CM for successfully closed and paid customers.</p>
+
+      <h2 id="article-2">Article 2 – Applicability</h2>
+      <p><strong>2.1</strong> These terms apply to all offers, agreements and services of CM.</p>
+      <p><strong>2.2</strong> Deviations are only valid if agreed upon in writing.</p>
+      <p><strong>2.3</strong> Any general terms of the client are expressly rejected.</p>
+
+      <h2 id="article-3">Article 3 – Services and purpose</h2>
+      <p><strong>3.1</strong> CM mediates between clients and closers and facilitates the cooperation from A to Z.</p>
+      <p><strong>3.2</strong> Services may include:</p>
+      <ul>
+        <li>Matching with closers;</li>
+        <li>Training, guidance and supervision of closers;</li>
+        <li>Lead generation and funnel building;</li>
+        <li>Administration, invoicing and legal protection;</li>
+        <li>Other sales and marketing support.</li>
+      </ul>
+      <p><strong>3.3</strong> CM acts solely as an intermediary and is not a party to the agreement between client and closer, unless expressly agreed otherwise.</p>
+
+      <h2 id="article-4">Article 4 – Fees and payment</h2>
+      <p><strong>4.1</strong> CM applies a no cure, no pay model: the client only pays in the event of a successful closing.</p>
+      <p><strong>4.2</strong> A successful closing means: a customer who, through the efforts of the closer, enters into a binding agreement with the client and whose first payment has been received by the client.</p>
+      <p><strong>4.3</strong> The fee amounts to a pre-agreed percentage of the order value (on average 10–30%). This percentage is all-inclusive and covers all costs of CM and the closer.</p>
+      <p><strong>4.4</strong> CM retains a platform and service fee of 3–8% of the order value.</p>
+      <p><strong>4.5</strong> Invoicing takes place in advance per month (for additional services) or per closed deal. Payment must be made within 14 days of the invoice date.</p>
+      <p><strong>4.6</strong> If payment is not made in time, the client is in default without prior notice of default, and CM is entitled to charge collection costs.</p>
+      <p><strong>4.7</strong> CM is in no event responsible for the payment behaviour of the client's end customers. CM does not act as a guarantor, debtor or collection agency. If an end customer of the client fails to pay, the risk and responsibility lie entirely with the client. CM only facilitates the platform and the administrative processing of fees between client and closer.</p>
+      <p><strong>4.8</strong> The client's payment obligation to CM is unconditional and entirely independent of payment by its own customer. A deal is deemed realized as soon as the client's end customer has entered into the agreement and the first payment has been received by the client. Suspension or set-off by the client is excluded. If the client does not pay within the agreed term, a surcharge of twenty percent (20%) of the invoice amount is due. This surcharge is separate from the fee owed to the closer and serves solely to safeguard a swift payment flow. The closer always receives their compensation on time as agreed. In the event of non-payment by the client's end customer, the client must take appropriate measures itself (such as debt collection); this does not release the client from its obligations towards CM. For further details on the invoicing and payment process, please refer to Article 19 of these terms.</p>
+
+      <h2 id="article-5">Article 5 – Pilot, leads &amp; sales funnel</h2>
+      <p><strong>5.1 Start of the cooperation</strong><br />The cooperation may start with leads provided by the client or directly with the sales funnel.</p>
+      <p><strong>5.2 Pilot with the client's own leads (no cure, no pay)</strong><br />If the client provides its own leads, the cooperation starts with a pilot of ten (10) qualified leads. This pilot solely serves to assess the quality, intent and conversion potential of the leads. During the pilot, "no cure, no pay" applies: costs are only charged upon a closed deal.</p>
+      <p><strong>5.3 Assessment of lead quality</strong><br />ClosersMatch independently determines whether the leads provided are of sufficient quality and volume to generate profitable sales opportunities. Leads may, among other things, be considered insufficient if they:</p>
+      <ul>
+        <li>fall outside the target audience,</li>
+        <li>contain incorrect or incomplete data,</li>
+        <li>are structurally unreachable, or</li>
+        <li>show no buying intent.</li>
+      </ul>
+      <p><strong>5.4 Transition to the sales funnel</strong><br />If the quality or volume of the leads, in ClosersMatch's judgement, is insufficient, the client unconditionally agrees to the activation of the sales funnel via Optimaal Groeien. This transition is considered part of the cooperation and not a termination or amendment of the agreement.</p>
+      <p><strong>5.5 Execution of the sales funnel</strong><br />The sales funnel is set up, managed and executed by Optimaal Groeien (including funnel development, content, advertising and lead generation) and operates separately from the closing process performed via ClosersMatch.</p>
+      <p><strong>5.6 Costs and duration of the sales funnel</strong><br />The investment for the sales funnel amounts to €2,450 per month, excluding advertising budget. After a set-up month (at the same investment as the monthly costs), the funnel is executed for a minimum of three (3) months. Invoicing takes place monthly in advance via Optimaal Groeien, with a payment term of 14 days. After the initial period, the cooperation can be terminated per calendar quarter.</p>
+      <p><strong>5.7 Exclusivity of lead generation</strong><br />Lead generation and the fees related thereto are handled exclusively via Optimaal Groeien or directly via the client. Closers and third parties are under no circumstances authorized to independently generate or purchase leads, or to claim commercial rights thereto.</p>
+
+      <h2 id="article-6">Article 6 – Non-circumvention and ownership of client relations</h2>
+      <p><strong>6.1</strong> All leads, customers, contacts and assignments supplied, processed or established through CM or OG (Optimaal Groeien) remain the property of CM/OG.</p>
+      <p><strong>6.2</strong> The client is prohibited from directly engaging, contracting, instructing or making payments to closers, appointment setters or other representatives of CM/OG outside of CM/OG, unless prior written consent has been granted by CM/OG.</p>
+      <p><strong>6.3</strong> This explicitly includes additional commercial activities such as lead generation, cold acquisition, marketing activities or sales campaigns. These may only be carried out through CM/OG.</p>
+      <p><strong>6.4</strong> This prohibition applies both during the cooperation and for a period of 12 months following termination of the cooperation, regardless of the reason for termination.</p>
+      <p><strong>6.5</strong> In the event of a breach, the client owes CM/OG an immediately payable penalty of €7,500 per violation, plus 20% of the revenue generated outside CM/OG, without prejudice to CM/OG's right to claim additional damages.</p>
+
+      <h2 id="article-7">Article 7 – Quality and conduct</h2>
+      <p><strong>7.1</strong> ClosersMatch selects, trains and supervises closers based on a fixed methodology.</p>
+      <p><strong>7.2</strong> The client may not make any claims beyond the scope of the agreement (such as employment claims or employer liability).</p>
+      <p><strong>7.3</strong> In case of complaints or insufficient quality, CM will seek a replacement at no additional cost.</p>
+
+      <h2 id="article-8">Article 8 – Confidentiality and intellectual property</h2>
+      <p><strong>8.1</strong> All information about clients, leads, strategies, scripts and methodologies of CM is strictly confidential.</p>
+      <p><strong>8.2</strong> The client may not share this information with third parties or use it outside the cooperation with CM.</p>
+      <p><strong>8.3</strong> All intellectual property rights to materials, funnels, scripts and trainings developed by CM remain with CM.</p>
+
+      <h2 id="article-9">Article 9 – Liability</h2>
+      <p><strong>9.1</strong> CM acts solely as a platform and intermediary. CM facilitates the match between client and closer, but is not a bank, guarantor or executing party.</p>
+      <p><strong>9.2</strong> CM is not liable for any damages, direct or indirect, arising from or related to the cooperation between client and closer. This includes, but is not limited to: consequential damages, lost profits, missed opportunities, reputational damage, negative reviews, non-payment or dissatisfied customers.</p>
+      <p><strong>9.3</strong> All obligations, performance and results are entirely at the expense and risk of the client and the closer. Any disputes must be resolved between the parties themselves. CM may mediate upon request, but without any obligation or liability for the outcome.</p>
+      <p><strong>9.4</strong> Liability of CM can only arise in the event of intent or gross negligence by CM itself. In that case, liability is limited to the direct damage that is the immediate and direct result of such conduct.</p>
+      <p><strong>9.5</strong> The client and closer fully indemnify CM against any claims from third parties arising from or related to the cooperation.</p>
+
+      <h2 id="article-10">Article 10 – Termination</h2>
+      <p><strong>10.1</strong> The agreement is entered into for an indefinite period, unless agreed otherwise.</p>
+      <p><strong>10.2</strong> Both parties may terminate the agreement in writing with a notice period of 30 days.</p>
+      <p><strong>10.3</strong> CM may terminate the cooperation with immediate effect in the event of:</p>
+      <ul>
+        <li>Breach of these terms or the non-circumvention clause;</li>
+        <li>Breach of trust or reputational damage;</li>
+        <li>Non-payment by the client;</li>
+        <li>Misuse of client relationships.</li>
+      </ul>
+
+      <h2 id="article-11">Article 11 – Buy-out / Conversion of a closer</h2>
+      <p><strong>11.1</strong> If the client decides to directly employ, engage on a freelance basis, or otherwise cooperate with a closer introduced via CM/OG outside CM/OG, the client owes a one-time conversion fee of €10,000.</p>
+      <p><strong>11.2</strong> This obligation applies regardless of the time elapsed since the introduction.</p>
+      <p><strong>11.3</strong> Deviations from this provision are only valid if agreed in writing in advance with CM/OG and after the agreed fee has been paid in full.</p>
+      <p><strong>11.4</strong> If the client and/or closer establishes a conversion or cooperation outside CM/OG without consent, an immediately payable penalty of €7,500 per violation is due, increased by 20% of the revenue generated outside CM/OG, without prejudice to CM/OG's right to claim additional damages.</p>
+
+      <h2 id="article-12">Article 12 – House rules for clients and closers</h2>
+      <p><strong>12.1 General</strong><br />Both the client and the closer are obliged to comply with CM's house rules. Transparency, speed and complete registration in the CM portal are essential for proper cooperation. Concealing, withholding or processing leads, appointments or deals outside of CM shall be regarded as a material breach of the agreement.</p>
+      <p><strong>12.2 Obligations of the client</strong><br />The client is obliged to register all leads fully and correctly in the CM portal and to provide full transparency regarding the status of leads, appointments and closed deals. Invoices issued by CM must be paid within fourteen (14) days of the invoice date. If this term is exceeded, the invoice amount will automatically be increased by twenty percent (20%) of the invoice amount, without prejudice to CM's right to claim additional damages. The client may not make arrangements with closers outside CM. If the client is approached for such arrangements, it is obliged to report this to CM in writing immediately.</p>
+      <p><strong>12.3 Obligations of the closer</strong><br />The closer is obliged to log all calls, appointments and deals fully and correctly in the CM portal. A recording or written report is uploaded to the portal for every sales call. The closer may not make or conceal any arrangements or payments outside CM. If the client approaches the closer for such arrangements, the closer is obliged to report this to CM in writing immediately.</p>
+      <p><strong>12.4 Sanctions for breach</strong><br />In the event of a breach of these house rules, the party in breach owes an immediately payable penalty of seven thousand five hundred euros (€7,500) per violation, plus twenty percent (20%) of the revenue generated outside CM or the value of the concealed deal, without prejudice to CM's right to claim additional damages. In addition, the closer forfeits any claims to outstanding payments. CM may terminate the cooperation with immediate effect and block accounts.</p>
+
+      <h2 id="article-13">Article 13 – Performance expectation for closers</h2>
+      <p><strong>13.1</strong> Every closer participating in a pilot or ongoing assignment is expected to close at least one (1) deal per month, based on a minimum of ten (10) qualified leads per month.</p>
+      <p><strong>13.2</strong> This benchmark serves as a reasonable performance indicator to assess both the effectiveness of the closer and the quality of the leads provided.</p>
+      <p><strong>13.3</strong> If this target is not achieved without valid reason, ClosersMatch reserves the right to:</p>
+      <ul>
+        <li>a) reassign the assignment to another closer;</li>
+        <li>b) adjust or terminate the cooperation with the closer; or</li>
+        <li>c) activate additional support or a sales funnel to improve conversion.</li>
+      </ul>
+      <p><strong>13.4</strong> The closer acknowledges that consistent follow-up, reporting and compliance with the ClosersMatch systems and guidelines are essential to meet this performance requirement.</p>
+
+      <h2 id="article-14">Article 14 – Conduct, integrity &amp; platform protection</h2>
+      <p><strong>14.1 Use of the platform and confidentiality</strong><br />Closers and clients gain access via ClosersMatch to confidential information such as customer data, prices, scripts, leads, funnels and business strategies. This information may only be used within the cooperation via CM and may not be copied, disclosed or commercially used for personal purposes.</p>
+      <p><strong>14.2 Prohibition of bypassing ClosersMatch (non-bypass)</strong><br />Closers are strictly prohibited from:</p>
+      <ul>
+        <li>a) Making arrangements, payments or assignments with clients outside CM.</li>
+        <li>b) Approaching or enabling clients to cooperate without CM.</li>
+        <li>c) Handling or concealing leads, customers or deals outside the CM portal.</li>
+      </ul>
+      <p>If a client nevertheless requests this, the closer must report this to CM in writing within 24 hours.</p>
+      <p><strong>14.3 Misuse of client relationships</strong><br />Closers may not approach clients for:</p>
+      <ul>
+        <li>Freelance or employment cooperation outside CM;</li>
+        <li>Sale of their own services such as coaching, marketing or consultancy;</li>
+        <li>Cross-selling or upselling their own products/services to the client's leads or customers;</li>
+        <li>Requests for direct personal payments (e.g. via Tikkie, PayPal or private invoices).</li>
+      </ul>
+      <p><strong>14.4 Prohibition of backdoor deals and hidden agreements</strong><br />Any form of cooperation, payment, advisory conversation, extension or "we'll arrange this between ourselves" arrangement between client and closer outside CM is considered a breach of the platform. This also applies to verbal agreements, barter deals or in-kind payment arrangements.</p>
+      <p><strong>14.5 Competition and copying the model</strong><br />Without written permission from CM, the closer is prohibited from:</p>
+      <ul>
+        <li>Starting an own platform, matching service or similar business model;</li>
+        <li>Approaching other closers or clients of CM to "take along" or poach;</li>
+        <li>Copying or selling CM/OG scripts, sales methodologies, funnels, trainings or templates;</li>
+        <li>Simultaneously closing for direct competitors of the client using information obtained through CM.</li>
+      </ul>
+      <p><strong>14.6 Transparency and registration obligation</strong><br />All conversations, appointments, quotes and deals arising from CM leads must be registered fully, correctly and in a timely manner in the CM portal. Deliberately withholding, altering or deleting data is regarded as fraud.</p>
+      <p><strong>14.7 Sanctions and consequences of breach</strong><br />In the event of a breach of this article, the closer or client owes an immediately payable penalty of:</p>
+      <ul>
+        <li>€7,500 per violation, plus</li>
+        <li>20% of the revenue or deal value generated outside CM,</li>
+        <li>Immediate termination of the cooperation and blocking of accounts,</li>
+        <li>Loss of claim to outstanding commissions or bonuses,</li>
+        <li>Without prejudice to CM/OG's right to claim additional damages.</li>
+      </ul>
+      <p><strong>14.8 Integrity and monitoring</strong><br />CM reserves the right to randomly review calls, reports and portal data to safeguard integrity. In case of suspected fraud, conflict of interest or platform misuse, CM may immediately block access and initiate an investigation.</p>
+
+      <h2 id="article-15">Article 15 – Kick-off, start &amp; cancellation</h2>
+      <p><strong>15.1 Conditions prior to the kick-off</strong><br />The kick-off will only be scheduled once the client has:</p>
+      <ul>
+        <li>a) provided all necessary information, product and target audience data;</li>
+        <li>b) granted access to relevant systems, CRM, email addresses or lead files;</li>
+        <li>c) created the required accounts for ClosersMatch and/or the assigned closer(s);</li>
+        <li>d) signed the agreement and any applicable NDA.</li>
+      </ul>
+      <p><strong>15.2 Start after kick-off</strong><br />Following the kick-off, the cooperation must become operational within a maximum of five (5) working days. This includes following up on leads, holding conversations or otherwise performing commercial activities.</p>
+      <p><strong>15.3 Delay caused by the client</strong><br />If the client does not start after the kick-off or fails to provide access/leads within five working days, the following applies:</p>
+      <ul>
+        <li>a) ClosersMatch is entitled to pause or reschedule the cooperation;</li>
+        <li>b) The reserved closer capacity expires, without any guarantee of availability;</li>
+        <li>c) Invoicing may commence from the fifth working day after the kick-off.</li>
+      </ul>
+      <p><strong>15.4 Cancellation after kick-off</strong><br />If the client decides to cancel the cooperation after the kick-off, the following costs apply:</p>
+      <ul>
+        <li>Cancellation before kick-off: free of charge.</li>
+        <li>Cancellation after kick-off but before the first lead follow-up: €1,000 (or the defined onboarding fee) for hours spent, training and reserved capacity.</li>
+        <li>Cancellation after the start of activities: the regular notice period of one (1) month applies (based on an average of 10 leads per week).</li>
+      </ul>
+      <p><strong>15.5 Notice period</strong><br />A mutual notice period of one (1) month applies to all cooperations, regardless of results or deal status (based on an average of 10 leads per week).</p>
+      <p><strong>15.6 Internal staff of the client</strong><br />If the client wishes a closer to first meet internal staff members or requires additional approval, this may not delay the start. If an internal staff member nevertheless decides to terminate the cooperation, the provisions of Article 15.4 apply immediately.</p>
+      <p><strong>15.7 Not non-committal</strong><br />The kick-off is free of charge, but not non-committal. ClosersMatch invests time, training, onboarding and reservation of closers. Therefore, the client is expected to be ready to start within five working days.</p>
+
+      <h2 id="article-16">Article 16 – Lead delivery, communication &amp; termination</h2>
+      <p>The client commits, throughout the duration of the cooperation, to:</p>
+      <ul>
+        <li>a) provide an average of ten (10) qualitative leads per week, unless otherwise agreed in writing;</li>
+        <li>b) remain available for evaluations, updates and follow-up;</li>
+        <li>c) respond within a maximum of five (5) working days to communication from ClosersMatch or the assigned closer.</li>
+      </ul>
+      <p><strong>16.1 Non-performance or lack of availability</strong><br />If the client fails to provide leads or is unreachable for more than five (5) working days without prior notice, this is regarded as a unilateral suspension of the cooperation. In that case, ClosersMatch is entitled to:</p>
+      <ul>
+        <li>temporarily suspend or terminate the cooperation with immediate effect;</li>
+        <li>cancel the reserved closer capacity;</li>
+        <li>charge a fixed penalty of €1,000 for breach of contract;</li>
+        <li>and additionally invoice compensation for lost revenue, calculated as follows: missed leads × average conversion rate × average order value × agreed commission percentage.</li>
+      </ul>
+      <p>Example: with an average conversion rate of 10%, an order value of €3,000 and a commission of 15%, the compensation per 10 missed leads amounts to: (10 leads × 10% × €3,000) × 15% = €450 per week. If exact figures are not available, ClosersMatch may calculate these based on averages from previous weeks or comparable projects. The penalty and revenue compensation apply without prejudice to ClosersMatch's right to claim additional damages under Article 6:94 of the Dutch Civil Code. This provision does not apply in the case of demonstrable force majeure (such as illness or serious technical failure), provided this is reported to ClosersMatch in writing within forty-eight (48) hours.</p>
+      <p><strong>16.2 Termination</strong><br />A notice period of one (1) month applies to termination of the cooperation, unless otherwise agreed in writing. During this notice period, the client remains obliged to:</p>
+      <ul>
+        <li>continue providing the agreed number of leads;</li>
+        <li>remain available for evaluations and handover;</li>
+        <li>and properly handle any ongoing conversations or leads.</li>
+      </ul>
+      <p>If the client fails to do so, ClosersMatch reserves the right to apply both the fixed penalty of €1,000 and the lost revenue compensation described in clause 16.1 for the remaining weeks of the notice period.</p>
+      <p><strong>16.3 Repeated violations</strong><br />In the event of repeated violations or a structural lack of cooperation, ClosersMatch reserves the right to terminate the cooperation with immediate effect and claim additional compensation for lost capacity, revenue and operational costs.</p>
+      <p class="legal-note"><strong>Explanation (not legally binding):</strong> This article protects the continuity and capacity of ClosersMatch. When clients suddenly stop providing leads or communication, this causes direct damage to the planning, capacity and revenue of closers. The fixed penalty partially covers this damage; the revenue compensation restores the financial loss based on real figures.</p>
+
+      <h2 id="article-17">Article 17 – Performance, communication and continuity of the closer</h2>
+      <p><strong>17.1 Obligations of the closer</strong><br />During the cooperation, the closer commits to:</p>
+      <ul>
+        <li>a) follow up on all assigned leads in a timely and professional manner;</li>
+        <li>b) be available daily via the agreed communication channels, including the CM portal, phone or email;</li>
+        <li>c) respond within a maximum of two (2) working days to messages or requests from ClosersMatch or the client;</li>
+        <li>d) fully and correctly register all activities, conversations and results in the ClosersMatch portal.</li>
+      </ul>
+      <p><strong>17.2 Non-performance or lack of availability</strong><br />If the closer fails to follow up for more than five (5) working days, does not respond to communication, or is absent without prior notice, this is regarded as a unilateral suspension of work. In that case, ClosersMatch is entitled to:</p>
+      <ul>
+        <li>temporarily suspend or terminate the cooperation with immediate effect;</li>
+        <li>withhold ongoing commissions and payments;</li>
+        <li>charge a fixed penalty of €1,000 for breach of contract;</li>
+        <li>and additionally claim compensation for lost revenue, missed leads or reputational damage, calculated on the basis of: missed follow-ups × average conversion rate × average order value × agreed commission percentage.</li>
+      </ul>
+      <p>This provision does not apply in the case of demonstrable force majeure (such as illness or serious technical failure), provided this is reported to ClosersMatch in writing within forty-eight (48) hours.</p>
+      <p><strong>17.3 Repeated violations</strong><br />In the event of repeated violations or a structural lack of communication, follow-up or registration, ClosersMatch reserves the right to:</p>
+      <ul>
+        <li>immediately remove the closer from ongoing projects;</li>
+        <li>block all access to the platform;</li>
+        <li>forfeit claims to outstanding commissions;</li>
+        <li>and claim additional compensation for damages suffered by ClosersMatch or the client.</li>
+      </ul>
+      <p class="legal-note"><strong>17.4 Purpose of this article:</strong> This article safeguards the continuity, reliability and professionalism within ClosersMatch. When closers stop follow-up or communication without prior notice, this causes direct damage to client relations, planning, reputation and revenue. The penalty and any compensation serve to offset this and prevent recurrence.</p>
+      <p><strong>17.5 Payment and access</strong><br />Access to the ClosersMatch platform is only permitted with an active and paid account. In the event of non-payment, chargeback or cancellation of the automatic direct debit, the right to access, leads, commissions and use of the platform lapses immediately. If a closer nevertheless remains active, performs assignments or maintains contact with clients through the platform despite non-payment, the payment obligation remains fully in effect and this is considered unlawful use. In that case, the closer owes ClosersMatch an immediately payable penalty of €1,000, increased by €250 per month for as long as the payment arrears continue or until the cooperation has been terminated in writing. ClosersMatch reserves the right to outsource outstanding amounts and penalties to third parties, with all associated collection and legal costs to be borne entirely by the closer.</p>
+
+      <h2 id="article-18">Article 18 – Disputed or cancelled deals</h2>
+      <p><strong>18.1</strong> A deal is considered closed as soon as the client's end customer has signed an agreement and made the first payment.</p>
+      <p><strong>18.2</strong> If a deal is cancelled, dissolved or reversed after the moment referred to in 18.1, the agreed compensation to ClosersMatch remains fully due, unless the closer has demonstrably acted in breach of the agreement or provided deliberately misleading information.</p>
+      <p><strong>18.3</strong> ClosersMatch is not responsible or liable for refunds, non-payment, cancellations or dissolutions by the client's end customers. These risks lie entirely with the client.</p>
+      <p><strong>18.4</strong> If uncertainty or a dispute arises regarding the formation or lapse of a deal, ClosersMatch acts as a neutral mediator. ClosersMatch's assessment is binding, unless one of the parties involved submits a written objection within ten (10) working days of notification.</p>
+      <p><strong>18.5</strong> If a deal lapses due to negligence on the part of the closer, such as insufficient follow-up, incorrect information or non-compliance with agreed processes, ClosersMatch may withhold outstanding commissions or offset them against the damage suffered by the client.</p>
+      <p><strong>18.6</strong> If a deal lapses due to actions of the client, such as incorrect information, price changes or non-compliance with obligations towards the customer, the compensation to ClosersMatch and the closer remains fully due.</p>
+      <p><strong>18.7</strong> ClosersMatch reserves the right, in the event of repeated disputed or unclear deals, to impose additional conditions or terminate the cooperation.</p>
+
+      <h2 id="article-19">Article 19 – Invoicing, payment and platform fee</h2>
+      <p><strong>19.1</strong> ClosersMatch acts solely as an intermediary between client and closer. ClosersMatch is not an employer, main contractor or principal, and does not handle payroll or VAT administration on behalf of closers.</p>
+      <p><strong>19.2</strong> The closer provides its commercial services directly to the client. The closer remains at all times a self-employed entrepreneur and remains fully responsible for correct invoicing, VAT remittance, tax obligations and Chamber of Commerce registration.</p>
+      <p><strong>19.3</strong> Payments from clients are processed exclusively through ClosersMatch, which acts as an administrative processor and payment platform. ClosersMatch receives, manages and distributes these payments solely for the purpose of settlement between client and closer. The funds received remain the legal property of the client until the moment of payout to the closer.</p>
+      <p><strong>19.4</strong> After confirmation of a successful deal, the closer must issue an invoice addressed to the client, containing:</p>
+      <ul>
+        <li>a) the closer's full company details and VAT number;</li>
+        <li>b) the client's name with the notation "via ClosersMatch";</li>
+        <li>c) the agreed commission (for example 10–20% of the order value) and deal reference;</li>
+        <li>d) the closer's bank account number for payout.</li>
+      </ul>
+      <p>The closer uploads this invoice via the ClosersMatch portal or sends it by email to finance@closersmatch.com.</p>
+      <p><strong>19.5</strong> If ClosersMatch invoices the total fee to the client on behalf of the closer (one combined invoice), this is solely considered administrative processing. In that case, ClosersMatch retains the agreed platform and service fee (as agreed, for example 3–8%) and pays out the remainder to the closer. This does not create an employment relationship or main contractorship.</p>
+      <p><strong>19.6</strong> Payment to the closer is made within seven (7) to fourteen (14) days after ClosersMatch has fully received payment from the client and the closer's invoice has been correctly submitted.</p>
+      <p><strong>19.7</strong> ClosersMatch is not liable for delays or non-payment by the client. The entrepreneurial risk lies entirely with the closer. ClosersMatch will make efforts to promote payment, but is not obliged to pay out as long as the client has not paid.</p>
+      <p><strong>19.8</strong> The client may not pay closers directly outside of ClosersMatch. Any direct payment is considered a breach of the non-circumvention provision (Article 6) and results in an immediately payable penalty of €7,500 per incident, increased by 20% of the amount paid outside ClosersMatch.</p>
+      <p><strong>19.9</strong> ClosersMatch is entitled to temporarily withhold received amounts in case of uncertainty about the validity of a deal, the payment status, or the existence of a dispute between client and closer. Payout will only take place once the situation has been clarified or both parties have agreed in writing.</p>
+      <p><strong>19.10</strong> All fees are paid out in euros, unless otherwise agreed in writing. Any bank costs or currency costs for international payments are borne by the recipient. For international transactions, the closer is solely responsible for correct VAT application or the reverse-charge mechanism.</p>
+      <p><strong>19.11</strong> In the event of late payment by the client, the outstanding amount will automatically be increased by twenty percent (20%) of the invoice amount, plus the statutory commercial interest rate pursuant to Article 6:119a of the Dutch Civil Code.</p>
+      <p><strong>19.12</strong> ClosersMatch is not liable for incorrect payments based on data incorrectly provided by the closer. In case of suspected fraud, conflict of interest or deception, ClosersMatch may suspend payments without liability.</p>
+
+      <h2 id="article-20">Article 20 – Governing law and jurisdiction</h2>
+      <p><strong>20.1</strong> This agreement and these terms are governed exclusively by Dutch law.</p>
+      <p><strong>20.2</strong> In the absence of a mutual solution, disputes shall be submitted to the competent court in Overijssel, the Netherlands, unless mandatory law dictates otherwise.</p>
+
+      <div class="legal-footer-note">
+        <p>Questions about these terms and conditions? Contact us at <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a> or via our <a href="/en/contact">contact page</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .legal-hero {
+    padding: 150px 0 48px;
+    background: var(--color-gray-light);
+  }
+
+  .legal-hero__inner {
+    max-width: 800px;
+  }
+
+  .legal-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-gray-mid);
+    margin-bottom: 20px;
+  }
+
+  .legal-breadcrumb a {
+    color: var(--color-gray-mid);
+    transition: color 0.2s;
+  }
+
+  .legal-breadcrumb a:hover { color: var(--color-red); }
+
+  .legal-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.2vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin: 16px 0 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .legal-hero__meta {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-gray-mid);
+    margin-bottom: 16px;
+  }
+
+  .legal-hero__intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    max-width: 640px;
+  }
+
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 720px);
+    gap: 56px;
+    padding-top: 56px;
+    padding-bottom: 100px;
+    max-width: 1080px;
+  }
+
+  .legal-toc__card {
+    position: sticky;
+    top: 110px;
+    background: var(--color-gray-light);
+    border-radius: var(--radius-lg);
+    padding: 24px 22px;
+  }
+
+  .legal-toc__label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-mid);
+    margin-bottom: 14px;
+  }
+
+  .legal-toc__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .legal-toc__list a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    transition: color 0.2s;
+  }
+
+  .legal-toc__list a:hover { color: var(--color-red); }
+
+  .legal-content {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #2a2a2a;
+  }
+
+  .legal-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    font-weight: 900;
+    margin: 44px 0 16px;
+    color: var(--color-black);
+    letter-spacing: -0.01em;
+    scroll-margin-top: 100px;
+  }
+
+  .legal-content h2:first-of-type { margin-top: 8px; }
+
+  .legal-content p {
+    margin-bottom: 16px;
+  }
+
+  .legal-content strong {
+    color: var(--color-black);
+    font-weight: 700;
+  }
+
+  .legal-content ul {
+    margin: 0 0 16px 22px;
+  }
+
+  .legal-content li {
+    margin-bottom: 8px;
+  }
+
+  .legal-content a {
+    color: var(--color-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal-note {
+    background: var(--color-gray-light);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    font-size: 0.92rem;
+    color: #555;
+  }
+
+  .legal-footer-note {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-gray-border);
+    font-size: 0.92rem;
+    color: var(--color-gray-mid);
+  }
+
+  @media (max-width: 900px) {
+    .legal-layout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .legal-toc__card {
+      position: static;
+    }
+
+    .legal-toc__list {
+      max-height: none;
+    }
+
+    .legal-hero { padding-top: 120px; }
+  }
+</style>
