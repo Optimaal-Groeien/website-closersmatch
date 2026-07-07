@@ -693,7 +693,7 @@ import Layout from '../../layouts/Layout.astro';
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    white-space: nowrap;
+    flex-wrap: wrap;
   }
 
   .btn--outline-dark-mode:hover {
@@ -761,7 +761,7 @@ import Layout from '../../layouts/Layout.astro';
     .hero__title { font-size: 2rem; }
     .hero__actions { flex-direction: column; align-items: stretch; }
     .hero__actions .btn,
-    .hero__actions .btn--outline-dark-mode { width: 100%; justify-content: center; }
+    .hero__actions .btn--outline-dark-mode { width: 100%; justify-content: center; white-space: normal; text-align: center; }
     .hero__diagram-wrap { width: 80%; }
   }
 
