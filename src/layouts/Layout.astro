@@ -97,7 +97,6 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
                     <a href={getLocalizedPath('recruitment', locale)} class="nav-dropdown__link">{t.header.salesRecruitment}</a>
                   </div>
                 </div>
-                <a href={getLocalizedPath('partnership', locale)} class="nav-link">{t.header.partnership}</a>
                 <div class="nav-item">
                   <a href={getLocalizedPath('overOns', locale)} class="nav-link nav-item__label">{t.header.about} <span class="nav-chevron">▾</span></a>
                   <div class="nav-dropdown">
@@ -140,7 +139,6 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
             <a href={getLocalizedPath('recruitment', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.salesRecruitment}</a>
           </div>
         </div>
-        <a href={getLocalizedPath('partnership', locale)} class="nav-mobile-link">{t.header.partnership}</a>
         <div class="nav-mobile-group">
           <button class="nav-mobile-toggle" aria-expanded="false">{t.header.about} <span class="nav-chevron">▾</span></button>
           <div class="nav-mobile-sub">
@@ -187,6 +185,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
         <div class="footer-links-group">
           <h4 class="footer-heading">{t.footer.contactHeading}</h4>
           <a href={getLocalizedPath('contact', locale)}>{t.footer.getInTouch}</a>
+          <a href={getLocalizedPath('partnership', locale)}>{t.header.partnership}</a>
           <a href="https://linkedin.com/company/closersmatch" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://instagram.com/closersmatch" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
