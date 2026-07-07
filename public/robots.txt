@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://closersmatch.com/sitemap-index.xml

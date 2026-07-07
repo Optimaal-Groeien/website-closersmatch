@@ -29,11 +29,25 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={desc} />
+    <link rel="canonical" href={`${siteOrigin}${currentPath}`} />
     <link rel="alternate" hreflang="nl" href={`${siteOrigin}${nlHref}`} />
     <link rel="alternate" hreflang="en" href={`${siteOrigin}${enHref}`} />
     <link rel="alternate" hreflang="x-default" href={`${siteOrigin}/nl`} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ClosersMatch" />
+    <meta property="og:title" content={`${title} | ClosersMatch`} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={`${siteOrigin}${currentPath}`} />
+    <meta property="og:image" content={`${siteOrigin}/images/logo-original.png`} />
+    <meta property="og:locale" content={locale === 'nl' ? 'nl_NL' : 'en_US'} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | ClosersMatch`} />
+    <meta name="twitter:description" content={desc} />
+    <meta name="twitter:image" content={`${siteOrigin}/images/logo-original.png`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />

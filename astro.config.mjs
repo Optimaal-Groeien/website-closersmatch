@@ -1,8 +1,11 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://closersmatch.com',
   i18n: {
     defaultLocale: 'nl',
     locales: ['nl', 'en'],
@@ -10,6 +13,7 @@ export default defineConfig({
       prefixDefaultLocale: true,
     },
   },
+
   redirects: {
     '/voor-bedrijven': '/nl/voor-bedrijven',
     '/voor-closers': '/nl/voor-closers',
@@ -24,4 +28,6 @@ export default defineConfig({
     '/opdracht-plaatsen': '/nl/opdracht-plaatsen',
     '/partnership': '/nl/partnership',
   },
+
+  integrations: [sitemap()],
 });
