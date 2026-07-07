@@ -1,0 +1,35 @@
+# ============================================================
+# 301 redirects: old closersmatch.com structure -> new site
+# Added at launch prep, 2026-07-07
+# Only confident, unambiguous mappings are included here.
+# See conversation with agent for pages still needing a decision.
+# ============================================================
+
+# --- Core marketing pages ---
+/about-closersmatch /nl/over-ons 301
+/blog /nl/blog 301
+/for-businesses /nl/voor-bedrijven 301
+/for-closers /nl/voor-closers 301
+/for-appointment-setters /nl/voor-appointmentsetters 301
+/contact /nl/contact 301
+/workflow /nl/werkwijze 301
+/partnership /nl/partnership 301
+/recruitment /nl/recruitment 301
+/no-cure-no-pay /nl/no-cure-no-pay 301
+/no-cure-no-pay-klanten-werven /nl/no-cure-no-pay 301
+/cases /nl/cases 301
+/intake-business /nl/intake-bedrijven 301
+/become-a-closer-or-setter /nl/voor-sales-talent 301
+
+# --- Legal pages (old site had several duplicate aliases) ---
+/legal/terms /nl/algemene-voorwaarden 301
+/general-terms-and-conditions /en/general-terms-and-conditions 301
+/algemene-voorwaarden /nl/algemene-voorwaarden 301
+/legal/privacy-policy /nl/privacybeleid 301
+/privacy-policy /en/privacy-policy 301
+/huisregels /nl/huisregels 301
+/house-rules /en/house-rules 301
+
+# --- Old blog posts: redirect to blog index for now ---
+# (individual posts can get dedicated redirects once/if migrated)
+/post/* /nl/blog 301
