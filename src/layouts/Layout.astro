@@ -81,7 +81,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
             <div class="header-navbar__inner">
               <nav class="nav-links" aria-label={t.header.navLabel}>
                 <div class="nav-item">
-                  <span class="nav-link nav-item__label">{t.header.forBusinesses} <span class="nav-chevron">▾</span></span>
+                  <a href={getLocalizedPath('voorBedrijven', locale)} class="nav-link nav-item__label">{t.header.forBusinesses} <span class="nav-chevron">▾</span></a>
                   <div class="nav-dropdown">
                     <a href={getLocalizedPath('werkwijze', locale)} class="nav-dropdown__link">{t.header.workflow}</a>
                     <a href={getLocalizedPath('recruitment', locale)} class="nav-dropdown__link">{t.header.recruitment}</a>
