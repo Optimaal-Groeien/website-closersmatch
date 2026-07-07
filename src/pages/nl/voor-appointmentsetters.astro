@@ -307,6 +307,37 @@ import Layout from '../../layouts/Layout.astro';
   </section>
 
   <!-- ================================================
+       AI PERFORMANCE PLATFORM
+  ================================================ -->
+  <section class="section vas-ai">
+    <div class="container">
+      <div class="vas-ai__inner">
+        <div class="vas-ai__content">
+          <span class="label label--red">AI Performance Platform</span>
+          <h2 class="h2 vas-ai__title">Live feedback op elk gesprek.<br />Ook je eigen.</h2>
+          <p class="vas-ai__body">Naast de CM Setter training krijg je toegang tot het AI Performance Platform. Oefen met AI op basis van verschillende branches en bezwaren, met live feedback tijdens het gesprek. Bel je daarna een echte lead? Bij calls werkt het systeem exact hetzelfde: live feedback tijdens het gesprek en een analyse achteraf.</p>
+          <ul class="vas-ai__list">
+            <li>✓ Inzicht in opening, vraagtechniek, luistervaardigheid &amp; bezwaren</li>
+            <li>✓ Persoonlijk scorebord met afspraakkwaliteit en conversie</li>
+            <li>✓ Directe AI-feedback, bovenop coaching van Stefan Kelderman</li>
+            <li>✓ Verified profiel, zichtbaar voor bedrijven binnen het netwerk</li>
+          </ul>
+          <a href="/nl/academy" class="btn btn--red vas-ai__cta">Ontdek de Academy &amp; AI-platform →</a>
+        </div>
+        <div class="vas-ai__visual">
+          <div class="vas-ai__card">
+            <div class="vas-ai__card-row"><span>Live feedback tijdens gesprek</span><strong>✓</strong></div>
+            <div class="vas-ai__card-row"><span>Analyse achteraf</span><strong>✓</strong></div>
+            <div class="vas-ai__card-row"><span>Persoonlijk scorebord</span><strong>✓</strong></div>
+            <div class="vas-ai__card-row"><span>1-op-1 coaching Stefan Kelderman</span><strong>✓</strong></div>
+            <div class="vas-ai__card-row"><span>Verified profiel</span><strong>✓</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
        AFSLUITENDE CTA
   ================================================ -->
   <section class="vas-closing">
@@ -754,6 +785,81 @@ import Layout from '../../layouts/Layout.astro';
      ECOSYSTEM
   ==================================================== */
   .vas-eco { background: #fff; }
+
+  /* ====================================================
+     AI PERFORMANCE PLATFORM
+  ==================================================== */
+  .vas-ai { background: #F9FAFB; }
+
+  .vas-ai__inner {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .vas-ai__title {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .vas-ai__body {
+    font-size: 1rem;
+    color: var(--color-gray-mid);
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+
+  .vas-ai__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .vas-ai__list li {
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .vas-ai__card {
+    background: var(--color-black);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .vas-ai__card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .vas-ai__card-row:last-of-type { border-bottom: none; }
+
+  .vas-ai__card-row span {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+  }
+
+  .vas-ai__card-row strong {
+    color: var(--color-red);
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 960px) {
+    .vas-ai__inner { grid-template-columns: 1fr; gap: 40px; }
+  }
 
   .vas-eco__header {
     text-align: center;

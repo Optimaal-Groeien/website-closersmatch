@@ -107,6 +107,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
                   <div class="nav-dropdown">
                     <a href={getLocalizedPath('voorClosers', locale)} class="nav-dropdown__link">{t.header.forClosers}</a>
                     <a href={getLocalizedPath('voorAppointmentsetters', locale)} class="nav-dropdown__link">{t.header.forAppointmentsetters}</a>
+                    <a href={getLocalizedPath('academy', locale)} class="nav-dropdown__link">{t.header.academy}</a>
                     <a href={getLocalizedPath('recruitment', locale)} class="nav-dropdown__link">{t.header.salesRecruitment}</a>
                   </div>
                 </div>
@@ -146,6 +147,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
           <div class="nav-mobile-sub">
             <a href={getLocalizedPath('voorClosers', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.forClosers}</a>
             <a href={getLocalizedPath('voorAppointmentsetters', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.forAppointmentsetters}</a>
+            <a href={getLocalizedPath('academy', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.academy}</a>
             <a href={getLocalizedPath('recruitment', locale)} class="nav-mobile-link nav-mobile-link--sub">{t.header.salesRecruitment}</a>
           </div>
         </div>
@@ -188,6 +190,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
           <h4 class="footer-heading">{t.footer.forClosers}</h4>
           <a href={getLocalizedPath('voorClosers', locale)}>{t.footer.becomeCloser}</a>
           <a href={getLocalizedPath('voorAppointmentsetters', locale)}>{t.footer.becomeSetter}</a>
+          <a href={getLocalizedPath('academy', locale)}>{t.footer.academy}</a>
           <a href={getLocalizedPath('overOns', locale)}>{t.footer.about}</a>
           <a href={getLocalizedPath('blog', locale)}>{t.footer.blog}</a>
         </div>

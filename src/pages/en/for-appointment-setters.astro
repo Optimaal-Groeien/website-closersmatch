@@ -307,7 +307,38 @@ import Layout from '../../layouts/Layout.astro';
   </section>
 
   <!-- ================================================
-       AFSLUITENDE CTA
+       AI PERFORMANCE PLATFORM
+  ================================================ -->
+  <section class="section vas-ai">
+    <div class="container">
+      <div class="vas-ai__inner">
+        <div class="vas-ai__content">
+          <span class="label label--red">AI Performance Platform</span>
+          <h2 class="h2 vas-ai__title">Live feedback on every call.<br />Including your own.</h2>
+          <p class="vas-ai__body">On top of the CM Setter training, you get access to the AI Performance Platform. Practice with AI based on different industries and objections, with live feedback during the call. When you then call a real lead, the system works exactly the same: live feedback during the conversation and an analysis afterwards.</p>
+          <ul class="vas-ai__list">
+            <li>✓ Insight into opening, questioning technique, listening skills &amp; objections</li>
+            <li>✓ Personal scoreboard with appointment quality and conversion</li>
+            <li>✓ Direct AI feedback, on top of coaching from Stefan Kelderman</li>
+            <li>✓ Verified profile, visible to companies within the network</li>
+          </ul>
+          <a href="/en/academy" class="btn btn--red vas-ai__cta">Discover the Academy &amp; AI platform →</a>
+        </div>
+        <div class="vas-ai__visual">
+          <div class="vas-ai__card">
+            <div class="vas-ai__card-row"><span>Live feedback during calls</span><strong>✓</strong></div>
+            <div class="vas-ai__card-row"><span>Analysis afterwards</span><strong>✓</strong></div>
+            <div class="vas-ai__card-row"><span>Personal scoreboard</span><strong>✓</strong></div>
+            <div class="vas-ai__card-row"><span>1-on-1 coaching with Stefan Kelderman</span><strong>✓</strong></div>
+            <div class="vas-ai__card-row"><span>Verified profile</span><strong>✓</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CLOSING CTA
   ================================================ -->
   <section class="vas-closing">
     <div class="vas-closing__inner">
@@ -754,6 +785,81 @@ import Layout from '../../layouts/Layout.astro';
      ECOSYSTEM
   ==================================================== */
   .vas-eco { background: #fff; }
+
+  /* ====================================================
+     AI PERFORMANCE PLATFORM
+  ==================================================== */
+  .vas-ai { background: #F9FAFB; }
+
+  .vas-ai__inner {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .vas-ai__title {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .vas-ai__body {
+    font-size: 1rem;
+    color: var(--color-gray-mid);
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+
+  .vas-ai__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .vas-ai__list li {
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .vas-ai__card {
+    background: var(--color-black);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .vas-ai__card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .vas-ai__card-row:last-of-type { border-bottom: none; }
+
+  .vas-ai__card-row span {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+  }
+
+  .vas-ai__card-row strong {
+    color: var(--color-red);
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 960px) {
+    .vas-ai__inner { grid-template-columns: 1fr; gap: 40px; }
+  }
 
   .vas-eco__header {
     text-align: center;

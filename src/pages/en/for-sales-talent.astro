@@ -323,6 +323,37 @@ import Layout from '../../layouts/Layout.astro';
   </section>
 
   <!-- ================================================
+       AI PERFORMANCE PLATFORM
+  ================================================ -->
+  <section class="section vst-ai">
+    <div class="container">
+      <div class="vst-ai__inner">
+        <div class="vst-ai__content">
+          <span class="label label--red">AI Performance Platform</span>
+          <h2 class="h2 vst-ai__title">Train with AI.<br />Close with proof.</h2>
+          <p class="vst-ai__body">On top of the CM Certified training, you get access to the AI Performance Platform. Practice with AI based on different industries and objections, with live feedback during the call. When you then take a real call with a lead, by phone or online meeting, the system works exactly the same way: live feedback during the conversation and an in-depth analysis afterwards.</p>
+          <ul class="vst-ai__list">
+            <li>✓ Live AI feedback during practice and real calls</li>
+            <li>✓ Personal scoreboard: score, conversion, BANT qualification</li>
+            <li>✓ 3 live 1-on-1 coaching sessions with Stefan Kelderman</li>
+            <li>✓ Verified profile based on objective performance</li>
+          </ul>
+          <a href="/en/academy" class="btn btn--red vst-ai__cta">Discover the Academy &amp; AI platform →</a>
+        </div>
+        <div class="vst-ai__visual">
+          <div class="vst-ai__card">
+            <div class="vst-ai__card-row"><span>Live feedback during calls</span><strong>✓</strong></div>
+            <div class="vst-ai__card-row"><span>Analysis afterwards</span><strong>✓</strong></div>
+            <div class="vst-ai__card-row"><span>Personal scoreboard</span><strong>✓</strong></div>
+            <div class="vst-ai__card-row"><span>1-on-1 coaching with Stefan Kelderman</span><strong>✓</strong></div>
+            <div class="vst-ai__card-row"><span>Verified profile</span><strong>✓</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
        SOCIAL PROOF
   ================================================ -->
   <section class="section vst-social">
@@ -886,6 +917,81 @@ import Layout from '../../layouts/Layout.astro';
   /* ====================================================
      SOCIAL PROOF
   ==================================================== */
+  /* ====================================================
+     AI PERFORMANCE PLATFORM
+  ==================================================== */
+  .vst-ai { background: #fff; }
+
+  .vst-ai__inner {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .vst-ai__title {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .vst-ai__body {
+    font-size: 1rem;
+    color: var(--color-gray-mid);
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+
+  .vst-ai__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .vst-ai__list li {
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .vst-ai__card {
+    background: var(--color-black);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .vst-ai__card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .vst-ai__card-row:last-of-type { border-bottom: none; }
+
+  .vst-ai__card-row span {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+  }
+
+  .vst-ai__card-row strong {
+    color: var(--color-red);
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 960px) {
+    .vst-ai__inner { grid-template-columns: 1fr; gap: 40px; }
+  }
+
   .vst-social { background: #F9FAFB; }
 
   .vst-social__header {

@@ -18,6 +18,7 @@ export const routes = {
   opdrachtPlaatsen: { nl: 'opdracht-plaatsen', en: 'place-assignment' },
   partnership: { nl: 'partnership', en: 'partnership' },
   blog: { nl: 'blog', en: 'blog' },
+  academy: { nl: 'academy', en: 'academy' },
 } as const;
 
 export type RouteKey = keyof typeof routes;

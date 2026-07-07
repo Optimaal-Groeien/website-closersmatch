@@ -330,6 +330,37 @@ import Layout from '../../layouts/Layout.astro';
   </section>
 
   <!-- ================================================
+       AI PERFORMANCE PLATFORM
+  ================================================ -->
+  <section class="section vc-ai">
+    <div class="container">
+      <div class="vc-ai__inner">
+        <div class="vc-ai__content">
+          <span class="label label--red">AI Performance Platform</span>
+          <h2 class="h2 vc-ai__title">Zie precies waarom<br />een deal wel of niet sluit.</h2>
+          <p class="vc-ai__body">Naast de CM Certified training krijg je toegang tot het AI Performance Platform: jouw persoonlijke coach op basis van je eigen gesprekken. Oefen eerst met AI in verschillende scenario's en bezwaren. Voer je daarna het echte gesprek, telefonisch of via een online meeting, dan ontvang je live feedback tijdens het gesprek en een uitgebreide analyse achteraf.</p>
+          <ul class="vc-ai__list">
+            <li>✓ Inzicht in discovery, authority checks, timing &amp; closing techniek</li>
+            <li>✓ Persoonlijk scorebord met conversieratio per gesprek</li>
+            <li>✓ 3 live 1-op-1 coachingsessies met Stefan Kelderman</li>
+            <li>✓ Verified Professional status, zichtbaar voor opdrachtgevers</li>
+          </ul>
+          <a href="/nl/academy" class="btn btn--red vc-ai__cta">Ontdek de Academy &amp; AI-platform →</a>
+        </div>
+        <div class="vc-ai__visual">
+          <div class="vc-ai__card">
+            <div class="vc-ai__card-row"><span>Live feedback tijdens gesprek</span><strong>✓</strong></div>
+            <div class="vc-ai__card-row"><span>Analyse achteraf</span><strong>✓</strong></div>
+            <div class="vc-ai__card-row"><span>Persoonlijk scorebord</span><strong>✓</strong></div>
+            <div class="vc-ai__card-row"><span>1-op-1 coaching Stefan Kelderman</span><strong>✓</strong></div>
+            <div class="vc-ai__card-row"><span>Verified profiel</span><strong>✓</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
        TESTIMONIALS / SOCIAL PROOF
   ================================================ -->
   <section class="section vc-social">
@@ -920,6 +951,81 @@ import Layout from '../../layouts/Layout.astro';
   /* ====================================================
      SOCIAL PROOF
   ==================================================== */
+  /* ====================================================
+     AI PERFORMANCE PLATFORM
+  ==================================================== */
+  .vc-ai { background: #fff; }
+
+  .vc-ai__inner {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .vc-ai__title {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .vc-ai__body {
+    font-size: 1rem;
+    color: var(--color-gray-mid);
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+
+  .vc-ai__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .vc-ai__list li {
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .vc-ai__card {
+    background: var(--color-black);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .vc-ai__card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .vc-ai__card-row:last-of-type { border-bottom: none; }
+
+  .vc-ai__card-row span {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+  }
+
+  .vc-ai__card-row strong {
+    color: var(--color-red);
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 960px) {
+    .vc-ai__inner { grid-template-columns: 1fr; gap: 40px; }
+  }
+
   .vc-social { background: #F9FAFB; }
 
   .vc-social__header {
