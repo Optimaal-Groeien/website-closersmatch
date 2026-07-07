@@ -1,7 +1,11 @@
 ---
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import type { Locale } from '../i18n/config';
 import { getTranslations, getLocalizedPath, getRouteKeyFromPathname, getAlternatePath } from '../i18n/utils';
+import { TRACKING_CONFIG, isConfigured } from '../config/tracking';
+
+const gtmEnabled = isConfigured(TRACKING_CONFIG.gtmId);
 
 export interface Props {
   title: string;
@@ -34,8 +38,51 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <title>{title} | ClosersMatch</title>
+
+    <!-- Google Consent Mode v2 — default state (denied) before any tag loads -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted',
+        wait_for_update: 500,
+      });
+    </script>
+
+    {gtmEnabled && (
+      <script define:vars={{ gtmId: TRACKING_CONFIG.gtmId }}>
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          const f = d.getElementsByTagName(s)[0];
+          const j = d.createElement(s);
+          const dl = l !== 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', gtmId);
+      </script>
+    )}
   </head>
   <body>
+    {gtmEnabled && (
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${TRACKING_CONFIG.gtmId}`}
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"
+          title="Google Tag Manager"
+        ></iframe>
+      </noscript>
+    )}
+
     <header class="site-header" id="site-header">
 
       <!-- Compact mobiel balkje: alleen zichtbaar op smalle schermen -->
@@ -211,10 +258,13 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
             <a href={getLocalizedPath('privacyPolicy', locale)}>{t.footer.privacy}</a>
             <a href={getLocalizedPath('algemeneVoorwaarden', locale)}>{t.footer.terms}</a>
             <a href={getLocalizedPath('huisregels', locale)}>{t.footer.houseRules}</a>
+            <button type="button" class="footer-cookie-settings" onclick="window.openCookieSettings && window.openCookieSettings()">{t.cookies.footerSettings}</button>
           </div>
         </div>
       </div>
     </footer>
+
+    <CookieConsent locale={locale} />
   </body>
 </html>
 
@@ -699,9 +749,22 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
     color: rgba(255,255,255,0.35);
   }
 
-  .footer-legal { display: flex; gap: 24px; }
+  .footer-legal { display: flex; gap: 24px; flex-wrap: wrap; }
   .footer-legal a { color: rgba(255,255,255,0.35); transition: color 0.2s; }
   .footer-legal a:hover { color: rgba(255,255,255,0.7); }
+
+  .footer-cookie-settings {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.35);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .footer-cookie-settings:hover { color: rgba(255,255,255,0.7); }
 
   @media (max-width: 900px) {
     .footer-inner {

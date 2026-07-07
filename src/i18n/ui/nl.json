@@ -46,5 +46,36 @@
   },
   "langSwitcher": {
     "label": "Taal kiezen"
+  },
+  "cookies": {
+    "footerSettings": "Cookie-instellingen",
+    "bannerTitle": "Onze cookies",
+    "bannerBody": "Onze website gebruikt cookies en vergelijkbare technieken om jouw ervaring te verbeteren, het gebruik van de site te analyseren en relevante marketing te tonen.",
+    "privacyLinkLabel": "Bekijk ons Privacybeleid",
+    "manage": "Cookies beheren",
+    "rejectAll": "Alles afwijzen",
+    "allowAll": "Alles toestaan",
+    "modalTitle": "Cookie-instellingen",
+    "modalBody": "Kies welke soorten cookies je wilt toestaan. Noodzakelijke cookies staan altijd aan, omdat de website hier niet zonder kan functioneren.",
+    "confirmChoices": "Mijn keuzes bevestigen",
+    "categories": {
+      "essential": {
+        "label": "Noodzakelijk",
+        "description": "Deze cookies zijn essentieel voor het functioneren van de website, zoals het onthouden van je taalvoorkeur en cookie-instellingen. Deze kunnen niet worden uitgeschakeld."
+      },
+      "functional": {
+        "label": "Voorkeuren",
+        "description": "Deze cookies onthouden jouw voorkeuren en instellingen, zodat je bezoek persoonlijker en gebruiksvriendelijker wordt."
+      },
+      "analytics": {
+        "label": "Statistieken",
+        "description": "Deze cookies helpen ons te begrijpen hoe bezoekers onze website gebruiken, onder andere via Google Analytics en Microsoft Clarity, zodat we de site kunnen verbeteren."
+      },
+      "marketing": {
+        "label": "Marketing",
+        "description": "Deze cookies worden gebruikt om relevante advertenties te tonen en de effectiviteit van onze campagnes te meten, onder andere via Google Ads, Meta (Facebook/Instagram) en Leadinfo."
+      }
+    },
+    "alwaysOn": "Altijd actief"
   }
 }
