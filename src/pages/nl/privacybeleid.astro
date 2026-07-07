@@ -1,0 +1,314 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articles = [
+  { id: 'artikel-1', title: 'Artikel 1 – Wie zijn wij' },
+  { id: 'artikel-2', title: 'Artikel 2 – Welke persoonsgegevens verzamelen wij' },
+  { id: 'artikel-3', title: 'Artikel 3 – Waarom verwerken wij deze gegevens' },
+  { id: 'artikel-4', title: 'Artikel 4 – Rechtsgrondslag voor de verwerking' },
+  { id: 'artikel-5', title: 'Artikel 5 – Bewaartermijnen' },
+  { id: 'artikel-6', title: 'Artikel 6 – Met wie delen wij je gegevens' },
+  { id: 'artikel-7', title: 'Artikel 7 – Doorgifte buiten de EER' },
+  { id: 'artikel-8', title: 'Artikel 8 – Cookies en vergelijkbare technieken' },
+  { id: 'artikel-9', title: 'Artikel 9 – Beveiliging van je gegevens' },
+  { id: 'artikel-10', title: 'Artikel 10 – Jouw rechten' },
+  { id: 'artikel-11', title: 'Artikel 11 – Wijzigingen in dit privacybeleid' },
+  { id: 'artikel-12', title: 'Artikel 12 – Contact & klachten' },
+];
+---
+
+<Layout locale="nl" title="Privacybeleid — ClosersMatch" description="Lees hoe ClosersMatch, onderdeel van Optimaal Groeien, omgaat met jouw persoonsgegevens als bezoeker, opdrachtgever, closer of appointment setter.">
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <nav class="legal-breadcrumb" aria-label="Breadcrumb">
+        <a href="/nl">Home</a>
+        <span>/</span>
+        <span aria-current="page">Privacybeleid</span>
+      </nav>
+      <span class="label label--red">Juridisch</span>
+      <h1 class="legal-hero__title">Privacybeleid</h1>
+      <p class="legal-hero__meta">Versie: 7 juli 2026</p>
+      <p class="legal-hero__intro">ClosersMatch is onderdeel van Optimaal Groeien, gevestigd aan Boeierstraat 9, 8102 HS Raalte, ingeschreven bij de Kamer van Koophandel onder nummer 84358734. Wij respecteren jouw privacy en gaan zorgvuldig om met persoonsgegevens, conform de Algemene Verordening Gegevensbescherming (AVG/GDPR).</p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTENT
+  ================================================ -->
+  <div class="container legal-layout">
+    <aside class="legal-toc">
+      <div class="legal-toc__card">
+        <span class="legal-toc__label">Inhoudsopgave</span>
+        <ul class="legal-toc__list">
+          {articles.map((article) => (
+            <li><a href={`#${article.id}`}>{article.title.replace(/^Artikel \d+ – /, '')}</a></li>
+          ))}
+        </ul>
+      </div>
+    </aside>
+
+    <div class="legal-content">
+
+      <h2 id="artikel-1">Artikel 1 – Wie zijn wij</h2>
+      <p><strong>1.1</strong> ClosersMatch ("CM", "wij", "ons") is onderdeel van Optimaal Groeien B.V., gevestigd aan Boeierstraat 9, 8102 HS Raalte, ingeschreven bij de Kamer van Koophandel onder nummer 84358734. Wij zijn de verwerkingsverantwoordelijke voor de persoonsgegevens die via onze website, formulieren en platform worden verzameld.</p>
+      <p><strong>1.2</strong> Voor vragen over dit privacybeleid of de verwerking van jouw gegevens kun je contact met ons opnemen via <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a>.</p>
+
+      <h2 id="artikel-2">Artikel 2 – Welke persoonsgegevens verzamelen wij</h2>
+      <p><strong>2.1 Bezoekers van de website</strong><br />Wanneer je onze website bezoekt, verwerken wij mogelijk technische gegevens zoals IP-adres, browsertype, apparaatgegevens en bezochte pagina's. Dit gebeurt uitsluitend om de website goed te laten functioneren en te beveiligen.</p>
+      <p><strong>2.2 Opdrachtgevers (bedrijven)</strong><br />Als je een intake- of contactformulier invult, verwerken wij: voornaam, achternaam, e-mailadres, telefoonnummer, bedrijfsnaam, website en de door jou verstrekte bedrijfs- en salesinformatie (zoals doelgroep, leadvolume, orderwaarde en CRM-systeem). Deze gegevens zijn nodig om je aanvraag te beoordelen en een passende match te maken.</p>
+      <p><strong>2.3 Closers en appointment setters</strong><br />Als je je aanmeldt als closer of appointment setter, verwerken wij: naam, e-mailadres, telefoonnummer, cv/werkervaring, branche-ervaring, KVK-gegevens (indien zelfstandig ondernemer) en resultaten uit trainingen, oefengesprekken en live gesprekken binnen ons platform (waaronder call-opnames en AI-gegenereerde feedback ten behoeve van coaching).</p>
+      <p><strong>2.4 Sollicitanten en netwerkcontacten</strong><br />Bij inschrijving voor onze Academy, nieuwsbrief of andere communicatie verwerken wij contactgegevens en jouw voorkeuren.</p>
+      <p><strong>2.5</strong> Wij verzamelen geen bijzondere categorieën van persoonsgegevens (zoals gezondheid, ras of politieke voorkeur), tenzij je deze zelf en uit eigen beweging met ons deelt.</p>
+
+      <h2 id="artikel-3">Artikel 3 – Waarom verwerken wij deze gegevens</h2>
+      <p>Wij gebruiken jouw persoonsgegevens voor de volgende doeleinden:</p>
+      <ul>
+        <li>Het beoordelen van intake- en contactaanvragen en het maken van een passende match tussen opdrachtgevers en closers/setters;</li>
+        <li>Het uitvoeren van de overeenkomst tussen CM en opdrachtgever, closer of appointment setter;</li>
+        <li>Het inplannen en faciliteren van kennismakingsgesprekken (onder andere via onze HubSpot-agenda);</li>
+        <li>Het bieden van training, coaching en AI-gestuurde feedback aan closers en appointment setters ter verbetering van hun salesvaardigheden;</li>
+        <li>Facturatie, administratie en het voldoen aan wettelijke (fiscale) verplichtingen;</li>
+        <li>Het versturen van relevante informatie, updates of marketingcommunicatie, uitsluitend met jouw toestemming of op basis van een bestaande relatie;</li>
+        <li>Het beveiligen en verbeteren van onze website en dienstverlening;</li>
+        <li>Het voldoen aan wettelijke verplichtingen, waaronder verzoeken van toezichthouders of justitie.</li>
+      </ul>
+
+      <h2 id="artikel-4">Artikel 4 – Rechtsgrondslag voor de verwerking</h2>
+      <p>Wij verwerken persoonsgegevens uitsluitend op basis van een van de volgende wettelijke grondslagen:</p>
+      <p><strong>4.1</strong> Uitvoering van een overeenkomst: wanneer verwerking noodzakelijk is om de samenwerking met jou als opdrachtgever, closer of appointment setter aan te gaan of uit te voeren.</p>
+      <p><strong>4.2</strong> Toestemming: bijvoorbeeld bij inschrijving voor onze nieuwsbrief of het gebruik van niet-noodzakelijke cookies. Toestemming kan op elk moment worden ingetrokken.</p>
+      <p><strong>4.3</strong> Gerechtvaardigd belang: zoals het beveiligen van onze systemen, het analyseren en verbeteren van onze dienstverlening en directe marketing aan bestaande relaties, waarbij wij altijd een belangenafweging maken.</p>
+      <p><strong>4.4</strong> Wettelijke verplichting: zoals het bewaren van administratieve en fiscale gegevens conform de Nederlandse belastingwetgeving.</p>
+
+      <h2 id="artikel-5">Artikel 5 – Bewaartermijnen</h2>
+      <p><strong>5.1</strong> Wij bewaren persoonsgegevens niet langer dan noodzakelijk voor de doeleinden waarvoor ze zijn verzameld.</p>
+      <p><strong>5.2</strong> Contact- en intakegegevens van aanvragen die niet tot een samenwerking leiden, bewaren wij maximaal 24 maanden, zodat we je op een later moment opnieuw kunnen benaderen indien relevant.</p>
+      <p><strong>5.3</strong> Gegevens van actieve opdrachtgevers, closers en appointment setters bewaren wij gedurende de looptijd van de samenwerking en daarna nog maximaal 7 jaar, conform de wettelijke fiscale bewaarplicht voor administratieve gegevens.</p>
+      <p><strong>5.4</strong> Call-opnames en trainingsdata die worden gebruikt voor coaching en AI-feedback worden bewaard zolang dit functioneel noodzakelijk is voor de ontwikkeling van de closer of appointment setter, en worden daarna verwijderd of geanonimiseerd.</p>
+      <p><strong>5.5</strong> Gegevens verzameld met toestemming (zoals nieuwsbriefinschrijvingen) bewaren wij totdat je je toestemming intrekt of je afmeldt.</p>
+
+      <h2 id="artikel-6">Artikel 6 – Met wie delen wij je gegevens</h2>
+      <p><strong>6.1</strong> Wij delen jouw gegevens uitsluitend met derden wanneer dit noodzakelijk is voor onze dienstverlening, of wanneer wij hiertoe wettelijk verplicht zijn.</p>
+      <p><strong>6.2</strong> Wij maken gebruik van de volgende categorieën verwerkers en dienstverleners:</p>
+      <ul>
+        <li>Hostingpartij en contentplatform (zoals Cloudflare) voor het beveiligd en betrouwbaar hosten van onze website;</li>
+        <li>HubSpot, voor het inplannen van gesprekken via onze meeting-agenda en (indien van toepassing) CRM-doeleinden;</li>
+        <li>E-mail- en communicatiediensten voor het versturen van correspondentie;</li>
+        <li>Boekhoud- en facturatiesoftware voor administratieve verwerking;</li>
+        <li>Eventuele IT- en supportpartners die ons platform onderhouden.</li>
+      </ul>
+      <p><strong>6.3</strong> Met alle verwerkers die in opdracht van ons persoonsgegevens verwerken, sluiten wij een verwerkersovereenkomst conform de AVG.</p>
+      <p><strong>6.4</strong> Bij een match tussen opdrachtgever en closer/appointment setter delen wij uitsluitend de gegevens die noodzakelijk zijn om de samenwerking mogelijk te maken (zoals contactgegevens en relevante bedrijfsinformatie).</p>
+      <p><strong>6.5</strong> Wij verkopen jouw persoonsgegevens nooit aan derden.</p>
+
+      <h2 id="artikel-7">Artikel 7 – Doorgifte buiten de EER</h2>
+      <p><strong>7.1</strong> Een deel van onze dienstverleners (waaronder bepaalde hosting- en softwarepartijen) kan gegevens verwerken op servers buiten de Europese Economische Ruimte (EER), bijvoorbeeld in de Verenigde Staten.</p>
+      <p><strong>7.2</strong> In dat geval zorgen wij ervoor dat een passend beschermingsniveau is gewaarborgd, onder andere door gebruik te maken van de Standard Contractual Clauses (SCC's) van de Europese Commissie of vergelijkbare wettelijk erkende waarborgen.</p>
+
+      <h2 id="artikel-8">Artikel 8 – Cookies en vergelijkbare technieken</h2>
+      <p><strong>8.1</strong> Onze website maakt gebruik van functionele cookies die noodzakelijk zijn voor de technische werking van de website (zoals het onthouden van je taalvoorkeur).</p>
+      <p><strong>8.2</strong> Ingesloten diensten van derden, zoals de HubSpot-agenda voor het inplannen van gesprekken, kunnen eigen cookies plaatsen zodra je met deze onderdelen interacteert. Wij raden je aan het privacybeleid van deze derde partijen te raadplegen voor meer informatie.</p>
+      <p><strong>8.3</strong> Op dit moment gebruiken wij geen tracking- of advertentiecookies voor het volgen van bezoekersgedrag. Indien wij in de toekomst analytische of marketingcookies inzetten, passen wij dit privacybeleid aan en vragen wij, waar wettelijk vereist, vooraf jouw toestemming via een cookiemelding.</p>
+
+      <h2 id="artikel-9">Artikel 9 – Beveiliging van je gegevens</h2>
+      <p><strong>9.1</strong> Wij nemen passende technische en organisatorische maatregelen om jouw persoonsgegevens te beschermen tegen verlies, misbruik, onbevoegde toegang, wijziging of vernietiging.</p>
+      <p><strong>9.2</strong> Hiertoe behoren onder andere versleutelde verbindingen (SSL/TLS), toegangsbeperkingen tot systemen en periodieke evaluatie van onze beveiligingsmaatregelen.</p>
+      <p><strong>9.3</strong> Indien er ondanks deze maatregelen sprake is van een datalek dat een risico vormt voor jouw rechten en vrijheden, melden wij dit conform de AVG binnen de wettelijke termijn aan de Autoriteit Persoonsgegevens en, indien vereist, aan jou.</p>
+
+      <h2 id="artikel-10">Artikel 10 – Jouw rechten</h2>
+      <p><strong>10.1</strong> Onder de AVG heb je de volgende rechten met betrekking tot jouw persoonsgegevens:</p>
+      <ul>
+        <li><strong>Recht op inzage</strong> — je kunt opvragen welke gegevens wij van je verwerken;</li>
+        <li><strong>Recht op rectificatie</strong> — je kunt onjuiste of onvolledige gegevens laten corrigeren;</li>
+        <li><strong>Recht op verwijdering</strong> — je kunt ons verzoeken jouw gegevens te wissen, tenzij wij een wettelijke bewaarplicht hebben;</li>
+        <li><strong>Recht op beperking van de verwerking</strong> — je kunt ons verzoeken de verwerking van jouw gegevens (tijdelijk) te beperken;</li>
+        <li><strong>Recht op bezwaar</strong> — je kunt bezwaar maken tegen verwerking op basis van gerechtvaardigd belang of tegen direct marketing;</li>
+        <li><strong>Recht op dataportabiliteit</strong> — je kunt verzoeken om jouw gegevens in een gestructureerd, gangbaar formaat te ontvangen;</li>
+        <li><strong>Recht om toestemming in te trekken</strong> — indien verwerking is gebaseerd op toestemming, kun je deze op elk moment intrekken.</li>
+      </ul>
+      <p><strong>10.2</strong> Je kunt een verzoek tot uitoefening van deze rechten indienen via <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a>. Wij reageren binnen 4 weken op je verzoek.</p>
+      <p><strong>10.3</strong> Om misbruik te voorkomen kunnen wij je vragen om je te identificeren voordat wij een verzoek in behandeling nemen.</p>
+
+      <h2 id="artikel-11">Artikel 11 – Wijzigingen in dit privacybeleid</h2>
+      <p><strong>11.1</strong> Wij kunnen dit privacybeleid van tijd tot tijd aanpassen, bijvoorbeeld naar aanleiding van wetswijzigingen of veranderingen in onze dienstverlening.</p>
+      <p><strong>11.2</strong> De meest actuele versie is altijd te raadplegen op deze pagina, met vermelding van de datum van de laatste wijziging.</p>
+
+      <h2 id="artikel-12">Artikel 12 – Contact &amp; klachten</h2>
+      <p><strong>12.1</strong> Heb je vragen, opmerkingen of klachten over de manier waarop wij met jouw persoonsgegevens omgaan? Neem dan contact met ons op via <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a> of via de <a href="/nl/contact">contactpagina</a>.</p>
+      <p><strong>12.2</strong> Kom je er met ons niet uit? Dan heb je het recht om een klacht in te dienen bij de Autoriteit Persoonsgegevens via <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer">autoriteitpersoonsgegevens.nl</a>.</p>
+
+      <div class="legal-footer-note">
+        <p>Vragen over dit privacybeleid? Neem contact met ons op via <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a> of via de <a href="/nl/contact">contactpagina</a>. Lees ook onze <a href="/nl/algemene-voorwaarden">Algemene Voorwaarden</a> en <a href="/nl/huisregels">Huisregels</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .legal-hero {
+    padding: 150px 0 48px;
+    background: var(--color-gray-light);
+  }
+
+  .legal-hero__inner {
+    max-width: 800px;
+  }
+
+  .legal-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-gray-mid);
+    margin-bottom: 20px;
+  }
+
+  .legal-breadcrumb a {
+    color: var(--color-gray-mid);
+    transition: color 0.2s;
+  }
+
+  .legal-breadcrumb a:hover { color: var(--color-red); }
+
+  .legal-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.2vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin: 16px 0 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .legal-hero__meta {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-gray-mid);
+    margin-bottom: 16px;
+  }
+
+  .legal-hero__intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    max-width: 640px;
+  }
+
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 720px);
+    gap: 56px;
+    padding-top: 56px;
+    padding-bottom: 100px;
+    max-width: 1080px;
+  }
+
+  .legal-toc__card {
+    position: sticky;
+    top: 110px;
+    background: var(--color-gray-light);
+    border-radius: var(--radius-lg);
+    padding: 24px 22px;
+  }
+
+  .legal-toc__label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-mid);
+    margin-bottom: 14px;
+  }
+
+  .legal-toc__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .legal-toc__list a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    transition: color 0.2s;
+  }
+
+  .legal-toc__list a:hover { color: var(--color-red); }
+
+  .legal-content {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #2a2a2a;
+  }
+
+  .legal-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    font-weight: 900;
+    margin: 44px 0 16px;
+    color: var(--color-black);
+    letter-spacing: -0.01em;
+    scroll-margin-top: 100px;
+  }
+
+  .legal-content h2:first-of-type { margin-top: 8px; }
+
+  .legal-content p {
+    margin-bottom: 16px;
+  }
+
+  .legal-content strong {
+    color: var(--color-black);
+    font-weight: 700;
+  }
+
+  .legal-content ul {
+    margin: 0 0 16px 22px;
+  }
+
+  .legal-content li {
+    margin-bottom: 8px;
+  }
+
+  .legal-content a {
+    color: var(--color-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal-footer-note {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-gray-border);
+    font-size: 0.92rem;
+    color: var(--color-gray-mid);
+  }
+
+  @media (max-width: 900px) {
+    .legal-layout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .legal-toc__card {
+      position: static;
+    }
+
+    .legal-toc__list {
+      max-height: none;
+    }
+
+    .legal-hero { padding-top: 120px; }
+  }
+</style>

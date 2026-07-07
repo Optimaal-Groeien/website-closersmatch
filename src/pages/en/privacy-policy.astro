@@ -1,0 +1,314 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articles = [
+  { id: 'article-1', title: 'Article 1 – Who we are' },
+  { id: 'article-2', title: 'Article 2 – What personal data we collect' },
+  { id: 'article-3', title: 'Article 3 – Why we process this data' },
+  { id: 'article-4', title: 'Article 4 – Legal basis for processing' },
+  { id: 'article-5', title: 'Article 5 – Retention periods' },
+  { id: 'article-6', title: 'Article 6 – Who we share your data with' },
+  { id: 'article-7', title: 'Article 7 – Transfers outside the EEA' },
+  { id: 'article-8', title: 'Article 8 – Cookies and similar technologies' },
+  { id: 'article-9', title: 'Article 9 – Security of your data' },
+  { id: 'article-10', title: 'Article 10 – Your rights' },
+  { id: 'article-11', title: 'Article 11 – Changes to this privacy policy' },
+  { id: 'article-12', title: 'Article 12 – Contact & complaints' },
+];
+---
+
+<Layout locale="en" title="Privacy Policy — ClosersMatch" description="Read how ClosersMatch, part of Optimaal Groeien, handles your personal data as a visitor, client, closer, or appointment setter.">
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="legal-hero">
+    <div class="container legal-hero__inner">
+      <nav class="legal-breadcrumb" aria-label="Breadcrumb">
+        <a href="/en">Home</a>
+        <span>/</span>
+        <span aria-current="page">Privacy Policy</span>
+      </nav>
+      <span class="label label--red">Legal</span>
+      <h1 class="legal-hero__title">Privacy Policy</h1>
+      <p class="legal-hero__meta">Version: 7 July 2026</p>
+      <p class="legal-hero__intro">ClosersMatch is part of Optimaal Groeien B.V., located at Boeierstraat 9, 8102 HS Raalte, the Netherlands, registered with the Dutch Chamber of Commerce (KVK) under number 84358734. We respect your privacy and handle personal data carefully, in line with the General Data Protection Regulation (GDPR).</p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTENT
+  ================================================ -->
+  <div class="container legal-layout">
+    <aside class="legal-toc">
+      <div class="legal-toc__card">
+        <span class="legal-toc__label">Table of contents</span>
+        <ul class="legal-toc__list">
+          {articles.map((article) => (
+            <li><a href={`#${article.id}`}>{article.title.replace(/^Article \d+ – /, '')}</a></li>
+          ))}
+        </ul>
+      </div>
+    </aside>
+
+    <div class="legal-content">
+
+      <h2 id="article-1">Article 1 – Who we are</h2>
+      <p><strong>1.1</strong> ClosersMatch ("CM", "we", "us") is part of Optimaal Groeien B.V., located at Boeierstraat 9, 8102 HS Raalte, the Netherlands, registered with the Dutch Chamber of Commerce (KVK) under number 84358734. We are the data controller for the personal data collected through our website, forms, and platform.</p>
+      <p><strong>1.2</strong> If you have questions about this privacy policy or the processing of your data, you can contact us at <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a>.</p>
+
+      <h2 id="article-2">Article 2 – What personal data we collect</h2>
+      <p><strong>2.1 Website visitors</strong><br />When you visit our website, we may process technical data such as your IP address, browser type, device information, and pages visited. This is done solely to ensure the website functions properly and remains secure.</p>
+      <p><strong>2.2 Clients (businesses)</strong><br />When you complete an intake or contact form, we process: first name, last name, email address, phone number, company name, website, and the business and sales information you provide (such as target audience, lead volume, order value, and CRM system). This data is needed to assess your request and create a suitable match.</p>
+      <p><strong>2.3 Closers and appointment setters</strong><br />If you apply as a closer or appointment setter, we process: name, email address, phone number, CV/work experience, industry experience, KVK details (if self-employed), and results from training sessions, practice calls, and live calls within our platform (including call recordings and AI-generated feedback for coaching purposes).</p>
+      <p><strong>2.4 Applicants and network contacts</strong><br />When signing up for our Academy, newsletter, or other communications, we process contact details and your preferences.</p>
+      <p><strong>2.5</strong> We do not collect special categories of personal data (such as health, race, or political views), unless you voluntarily share this with us.</p>
+
+      <h2 id="article-3">Article 3 – Why we process this data</h2>
+      <p>We use your personal data for the following purposes:</p>
+      <ul>
+        <li>Assessing intake and contact requests and creating a suitable match between clients and closers/setters;</li>
+        <li>Performing the agreement between CM and the client, closer, or appointment setter;</li>
+        <li>Scheduling and facilitating introductory calls (including via our HubSpot calendar);</li>
+        <li>Providing training, coaching, and AI-driven feedback to closers and appointment setters to improve their sales skills;</li>
+        <li>Invoicing, administration, and compliance with legal (tax) obligations;</li>
+        <li>Sending relevant information, updates, or marketing communications, solely with your consent or based on an existing relationship;</li>
+        <li>Securing and improving our website and services;</li>
+        <li>Complying with legal obligations, including requests from regulators or law enforcement.</li>
+      </ul>
+
+      <h2 id="article-4">Article 4 – Legal basis for processing</h2>
+      <p>We process personal data solely on one of the following legal grounds:</p>
+      <p><strong>4.1</strong> Performance of a contract: when processing is necessary to enter into or perform our collaboration with you as a client, closer, or appointment setter.</p>
+      <p><strong>4.2</strong> Consent: for example, when signing up for our newsletter or using non-essential cookies. Consent can be withdrawn at any time.</p>
+      <p><strong>4.3</strong> Legitimate interest: such as securing our systems, analyzing and improving our services, and direct marketing to existing relationships, always subject to a balancing of interests.</p>
+      <p><strong>4.4</strong> Legal obligation: such as retaining administrative and tax records in accordance with Dutch tax law.</p>
+
+      <h2 id="article-5">Article 5 – Retention periods</h2>
+      <p><strong>5.1</strong> We do not retain personal data longer than necessary for the purposes for which it was collected.</p>
+      <p><strong>5.2</strong> Contact and intake data from requests that do not lead to a collaboration are retained for a maximum of 24 months, so we can reach out again later if relevant.</p>
+      <p><strong>5.3</strong> Data of active clients, closers, and appointment setters is retained for the duration of the collaboration and for a maximum of 7 years thereafter, in accordance with the statutory tax retention obligation for administrative records.</p>
+      <p><strong>5.4</strong> Call recordings and training data used for coaching and AI feedback are retained for as long as functionally necessary for the development of the closer or appointment setter, and are deleted or anonymized afterward.</p>
+      <p><strong>5.5</strong> Data collected with consent (such as newsletter sign-ups) is retained until you withdraw your consent or unsubscribe.</p>
+
+      <h2 id="article-6">Article 6 – Who we share your data with</h2>
+      <p><strong>6.1</strong> We only share your data with third parties when necessary for our services, or when legally required to do so.</p>
+      <p><strong>6.2</strong> We use the following categories of processors and service providers:</p>
+      <ul>
+        <li>Hosting and content platform (such as Cloudflare) for securely and reliably hosting our website;</li>
+        <li>HubSpot, for scheduling calls via our meeting calendar and (where applicable) CRM purposes;</li>
+        <li>Email and communication services for sending correspondence;</li>
+        <li>Accounting and invoicing software for administrative processing;</li>
+        <li>Any IT and support partners who maintain our platform.</li>
+      </ul>
+      <p><strong>6.3</strong> We enter into a data processing agreement in accordance with the GDPR with all processors who process personal data on our behalf.</p>
+      <p><strong>6.4</strong> When a match is made between a client and a closer/appointment setter, we only share the data necessary to enable the collaboration (such as contact details and relevant business information).</p>
+      <p><strong>6.5</strong> We never sell your personal data to third parties.</p>
+
+      <h2 id="article-7">Article 7 – Transfers outside the EEA</h2>
+      <p><strong>7.1</strong> Some of our service providers (including certain hosting and software providers) may process data on servers outside the European Economic Area (EEA), for example in the United States.</p>
+      <p><strong>7.2</strong> In such cases, we ensure an appropriate level of protection is guaranteed, among other things by using the European Commission's Standard Contractual Clauses (SCCs) or comparable legally recognized safeguards.</p>
+
+      <h2 id="article-8">Article 8 – Cookies and similar technologies</h2>
+      <p><strong>8.1</strong> Our website uses functional cookies that are necessary for the technical operation of the website (such as remembering your language preference).</p>
+      <p><strong>8.2</strong> Embedded third-party services, such as the HubSpot calendar for scheduling calls, may place their own cookies once you interact with these components. We recommend reviewing the privacy policy of these third parties for more information.</p>
+      <p><strong>8.3</strong> We currently do not use tracking or advertising cookies to monitor visitor behavior. If we introduce analytical or marketing cookies in the future, we will update this privacy policy and, where legally required, request your prior consent via a cookie notice.</p>
+
+      <h2 id="article-9">Article 9 – Security of your data</h2>
+      <p><strong>9.1</strong> We take appropriate technical and organizational measures to protect your personal data against loss, misuse, unauthorized access, alteration, or destruction.</p>
+      <p><strong>9.2</strong> These include, among other things, encrypted connections (SSL/TLS), access restrictions to systems, and periodic evaluation of our security measures.</p>
+      <p><strong>9.3</strong> Should a data breach occur despite these measures that poses a risk to your rights and freedoms, we will report this in accordance with the GDPR within the statutory timeframe to the Dutch Data Protection Authority and, if required, to you.</p>
+
+      <h2 id="article-10">Article 10 – Your rights</h2>
+      <p><strong>10.1</strong> Under the GDPR, you have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Right of access</strong> — you can request which data we process about you;</li>
+        <li><strong>Right to rectification</strong> — you can have inaccurate or incomplete data corrected;</li>
+        <li><strong>Right to erasure</strong> — you can request that we delete your data, unless we have a legal retention obligation;</li>
+        <li><strong>Right to restriction of processing</strong> — you can request that we (temporarily) limit the processing of your data;</li>
+        <li><strong>Right to object</strong> — you can object to processing based on legitimate interest or to direct marketing;</li>
+        <li><strong>Right to data portability</strong> — you can request to receive your data in a structured, commonly used format;</li>
+        <li><strong>Right to withdraw consent</strong> — if processing is based on consent, you can withdraw it at any time.</li>
+      </ul>
+      <p><strong>10.2</strong> You can submit a request to exercise these rights via <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a>. We will respond to your request within 4 weeks.</p>
+      <p><strong>10.3</strong> To prevent misuse, we may ask you to verify your identity before processing a request.</p>
+
+      <h2 id="article-11">Article 11 – Changes to this privacy policy</h2>
+      <p><strong>11.1</strong> We may update this privacy policy from time to time, for example due to changes in the law or in our services.</p>
+      <p><strong>11.2</strong> The most current version is always available on this page, along with the date of the last update.</p>
+
+      <h2 id="article-12">Article 12 – Contact &amp; complaints</h2>
+      <p><strong>12.1</strong> Do you have questions, comments, or complaints about how we handle your personal data? Please contact us at <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a> or via our <a href="/en/contact">contact page</a>.</p>
+      <p><strong>12.2</strong> If we cannot resolve the matter together, you have the right to file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens) via <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer">autoriteitpersoonsgegevens.nl</a>.</p>
+
+      <div class="legal-footer-note">
+        <p>Questions about this privacy policy? Contact us at <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a> or via our <a href="/en/contact">contact page</a>. Also read our <a href="/en/general-terms-and-conditions">General Terms and Conditions</a> and <a href="/en/house-rules">House Rules</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .legal-hero {
+    padding: 150px 0 48px;
+    background: var(--color-gray-light);
+  }
+
+  .legal-hero__inner {
+    max-width: 800px;
+  }
+
+  .legal-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-gray-mid);
+    margin-bottom: 20px;
+  }
+
+  .legal-breadcrumb a {
+    color: var(--color-gray-mid);
+    transition: color 0.2s;
+  }
+
+  .legal-breadcrumb a:hover { color: var(--color-red); }
+
+  .legal-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.2vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin: 16px 0 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .legal-hero__meta {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-gray-mid);
+    margin-bottom: 16px;
+  }
+
+  .legal-hero__intro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    max-width: 640px;
+  }
+
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 720px);
+    gap: 56px;
+    padding-top: 56px;
+    padding-bottom: 100px;
+    max-width: 1080px;
+  }
+
+  .legal-toc__card {
+    position: sticky;
+    top: 110px;
+    background: var(--color-gray-light);
+    border-radius: var(--radius-lg);
+    padding: 24px 22px;
+  }
+
+  .legal-toc__label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-mid);
+    margin-bottom: 14px;
+  }
+
+  .legal-toc__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .legal-toc__list a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+    transition: color 0.2s;
+  }
+
+  .legal-toc__list a:hover { color: var(--color-red); }
+
+  .legal-content {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #2a2a2a;
+  }
+
+  .legal-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    font-weight: 900;
+    margin: 44px 0 16px;
+    color: var(--color-black);
+    letter-spacing: -0.01em;
+    scroll-margin-top: 100px;
+  }
+
+  .legal-content h2:first-of-type { margin-top: 8px; }
+
+  .legal-content p {
+    margin-bottom: 16px;
+  }
+
+  .legal-content strong {
+    color: var(--color-black);
+    font-weight: 700;
+  }
+
+  .legal-content ul {
+    margin: 0 0 16px 22px;
+  }
+
+  .legal-content li {
+    margin-bottom: 8px;
+  }
+
+  .legal-content a {
+    color: var(--color-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .legal-footer-note {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-gray-border);
+    font-size: 0.92rem;
+    color: var(--color-gray-mid);
+  }
+
+  @media (max-width: 900px) {
+    .legal-layout {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .legal-toc__card {
+      position: static;
+    }
+
+    .legal-toc__list {
+      max-height: none;
+    }
+
+    .legal-hero { padding-top: 120px; }
+  }
+</style>

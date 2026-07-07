@@ -22,6 +22,7 @@ export const routes = {
   algemeneVoorwaarden: { nl: 'algemene-voorwaarden', en: 'general-terms-and-conditions' },
   huisregels: { nl: 'huisregels', en: 'house-rules' },
   intakeBusiness: { nl: 'intake-bedrijven', en: 'intake-business' },
+  privacyPolicy: { nl: 'privacybeleid', en: 'privacy-policy' },
 } as const;
 
 export type RouteKey = keyof typeof routes;
