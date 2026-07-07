@@ -14,8 +14,8 @@
  * - leadinfoId:   Leadinfo → Settings → Tracking code → your company ID
  */
 export const TRACKING_CONFIG = {
-  gtmId: 'GTM-XXXXXXX',
-  ga4Id: 'G-XXXXXXXXXX',
+  gtmId: 'GTM-5B9SJ3SR',
+  ga4Id: 'G-KEKKLM5PWV',
   googleAdsId: 'AW-XXXXXXXXX',
   clarityId: 'XXXXXXXXXX',
   metaPixelId: 'XXXXXXXXXXXXXXX',

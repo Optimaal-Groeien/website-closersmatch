@@ -168,18 +168,8 @@ const enabled = {
       if (analyticsLoaded) return;
       analyticsLoaded = true;
 
-      if (ENABLED.ga4) {
-        window.dataLayer = window.dataLayer || [];
-        window.gtag =
-          window.gtag ||
-          function () {
-            window.dataLayer.push(arguments);
-          };
-        injectScript('https://www.googletagmanager.com/gtag/js?id=' + TRACKING.ga4Id, function () {
-          window.gtag('js', new Date());
-          window.gtag('config', TRACKING.ga4Id);
-        });
-      }
+      // GA4 is managed as a tag inside Google Tag Manager (not loaded directly here),
+      // so it isn't duplicated. It fires based on GTM's own trigger/consent setup.
 
       if (ENABLED.clarity) {
         (function (c, l, a, r, i, t, y) {
@@ -201,18 +191,8 @@ const enabled = {
       if (marketingLoaded) return;
       marketingLoaded = true;
 
-      if (ENABLED.googleAds) {
-        window.dataLayer = window.dataLayer || [];
-        window.gtag =
-          window.gtag ||
-          function () {
-            window.dataLayer.push(arguments);
-          };
-        injectScript('https://www.googletagmanager.com/gtag/js?id=' + TRACKING.googleAdsId, function () {
-          window.gtag('js', new Date());
-          window.gtag('config', TRACKING.googleAdsId);
-        });
-      }
+      // Google Ads is managed as a tag inside Google Tag Manager (not loaded directly here),
+      // so it isn't duplicated. It fires based on GTM's own trigger/consent setup.
 
       if (ENABLED.metaPixel) {
         (function (f, b, e, v, n, t, s) {
