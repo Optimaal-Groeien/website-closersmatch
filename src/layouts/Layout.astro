@@ -227,16 +227,18 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
     </header>
 
     <!-- ================================================
-         MEETING MODAL — HubSpot calendar popup (Stefan Kelderman)
-         Triggered by any [data-meeting-modal] element or any
-         a.btn linking to the contact page (see script below).
+         MEETING MODAL — direct HubSpot calendar popup, no choice
+         screen. Defaults to Stefan (business), but can be pointed
+         at Brian (talent) via [data-meeting-modal-person="talent"].
+         Triggered by [data-meeting-modal], [data-meeting-modal-person]
+         or any a.btn linking to the contact page (see script below).
     ================================================ -->
     <div id="meeting-modal" class="meeting-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label={t.header.planMeeting}>
       <div class="meeting-modal__backdrop" data-meeting-close></div>
       <div class="meeting-modal__panel">
         <button type="button" class="meeting-modal__close" data-meeting-close aria-label={t.meetingChoice.close}>&times;</button>
-        <div class="meeting-modal__body">
-          <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/stefan-kelderman?embed=true"></div>
+        <div class="meeting-modal__body" id="meeting-direct-calendar">
+          <div class="meetings-iframe-container"></div>
         </div>
       </div>
     </div>
@@ -370,6 +372,8 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
   //    closer/setter -> Brian), used by [data-meeting-modal-choice].
   // ————————————————————————————————————————————————
   const meetingModal = document.getElementById('meeting-modal');
+  const directCalendarView = document.getElementById('meeting-direct-calendar');
+  const directCalendarContainer = directCalendarView?.querySelector('.meetings-iframe-container');
   const choiceModal = document.getElementById('meeting-modal-choice');
   const choiceView = document.getElementById('meeting-choice-view');
   const choiceCalendarView = document.getElementById('meeting-choice-calendar');
@@ -388,7 +392,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
       onReady();
       return;
     }
-    hubspotReadyCallbacks.push(onReady);
+    if (onReady) hubspotReadyCallbacks.push(onReady);
     if (hubspotScriptState === 'loading') return;
     hubspotScriptState = 'loading';
     const script = document.createElement('script');
@@ -399,6 +403,16 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
       hubspotReadyCallbacks = [];
     };
     document.body.appendChild(script);
+  }
+
+  // Preload the HubSpot embed script as soon as the browser is idle, so the
+  // calendar can render instantly the first time someone opens a modal,
+  // instead of waiting for the script to download on click.
+  const preload = () => ensureHubspotMeetingsScript();
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(preload, { timeout: 4000 });
+  } else {
+    setTimeout(preload, 2000);
   }
 
   function isContactCtaLink(el) {
@@ -421,9 +435,25 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
     document.body.classList.remove('meeting-modal-open');
   }
 
-  function openMeetingModal() {
+  // Loads a given person's calendar into a container, guarding against
+  // duplicate iframes when the same container is reused for a different
+  // person (or re-opened after already being initialized once).
+  function loadPersonInto(container, selector, personKey) {
+    const url = MEETING_PERSONS[personKey] || MEETING_PERSONS.business;
+    if (!container) return;
+    if (container.getAttribute('data-src') === url && container.querySelector('iframe')) return;
+    container.innerHTML = '';
+    container.setAttribute('data-src', url);
+    ensureHubspotMeetingsScript(() => {
+      if (!container.querySelector('iframe') && window.hbspt?.meetings?.create) {
+        window.hbspt.meetings.create(selector);
+      }
+    });
+  }
+
+  function openMeetingModal(personKey) {
     openModal(meetingModal);
-    ensureHubspotMeetingsScript(() => {});
+    loadPersonInto(directCalendarContainer, '#meeting-direct-calendar .meetings-iframe-container', personKey || 'business');
   }
 
   function resetChoiceModal() {
@@ -441,16 +471,10 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
   }
 
   function selectMeetingPerson(personKey) {
-    const url = MEETING_PERSONS[personKey];
-    if (!url || !choiceCalendarContainer || !choiceView || !choiceCalendarView) return;
+    if (!choiceCalendarContainer || !choiceView || !choiceCalendarView) return;
     choiceView.hidden = true;
     choiceCalendarView.hidden = false;
-    choiceCalendarContainer.setAttribute('data-src', url);
-    ensureHubspotMeetingsScript(() => {
-      if (!choiceCalendarContainer.querySelector('iframe') && window.hbspt?.meetings?.create) {
-        window.hbspt.meetings.create('#meeting-choice-calendar .meetings-iframe-container');
-      }
-    });
+    loadPersonInto(choiceCalendarContainer, '#meeting-choice-calendar .meetings-iframe-container', personKey);
   }
 
   document.addEventListener('click', (e) => {
@@ -480,11 +504,18 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
       return;
     }
 
+    const directPersonTrigger = target.closest('[data-meeting-modal-person]');
+    if (directPersonTrigger) {
+      e.preventDefault();
+      openMeetingModal(directPersonTrigger.getAttribute('data-meeting-modal-person'));
+      return;
+    }
+
     const explicitTrigger = target.closest('[data-meeting-modal]');
     const link = target.closest('a');
     if (explicitTrigger || (link && isContactCtaLink(link))) {
       e.preventDefault();
-      openMeetingModal();
+      openMeetingModal('business');
     }
   });
 
