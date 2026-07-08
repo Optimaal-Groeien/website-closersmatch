@@ -184,7 +184,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
               <div class="nav-actions">
                 <LanguageSwitcher locale={locale} currentPath={currentPath} />
                 <a href="https://portal.closersmatch.com/home-visitor" class="btn btn--outline" target="_blank" rel="noopener noreferrer">{t.header.login}</a>
-                <a href={getLocalizedPath('contact', locale)} class="btn btn--red">{t.header.planMeeting}</a>
+                <button type="button" class="btn btn--red" data-meeting-modal>{t.header.planMeeting}</button>
               </div>
             </div>
           </div>
@@ -222,9 +222,24 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
         </div>
         <LanguageSwitcher locale={locale} currentPath={currentPath} />
         <a href="https://portal.closersmatch.com/home-visitor" class="btn btn--outline" style="margin-top: 8px;" target="_blank" rel="noopener noreferrer">{t.header.login}</a>
-        <a href={getLocalizedPath('contact', locale)} class="btn btn--red" style="margin-top: 8px;">{t.header.planMeeting}</a>
+        <button type="button" class="btn btn--red" style="margin-top: 8px;" data-meeting-modal>{t.header.planMeeting}</button>
       </div>
     </header>
+
+    <!-- ================================================
+         MEETING MODAL — HubSpot calendar popup (Stefan Kelderman)
+         Triggered by any [data-meeting-modal] element or any
+         a.btn linking to the contact page (see script below).
+    ================================================ -->
+    <div id="meeting-modal" class="meeting-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label={t.header.planMeeting}>
+      <div class="meeting-modal__backdrop" data-meeting-close></div>
+      <div class="meeting-modal__panel">
+        <button type="button" class="meeting-modal__close" data-meeting-close aria-label="Close">&times;</button>
+        <div class="meeting-modal__body">
+          <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/stefan-kelderman?embed=true"></div>
+        </div>
+      </div>
+    </div>
 
     <main>
       <slot />
@@ -309,6 +324,63 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
       document.querySelectorAll('.nav-mobile-group.open').forEach((g) => g.classList.remove('open'));
       if (!isOpen) group?.classList.add('open');
     });
+  });
+
+  // ————————————————————————————————————————————————
+  // Meeting modal — pops up Stefan's HubSpot calendar instead
+  // of navigating away. Any [data-meeting-modal] element, or
+  // any button-styled link ("a.btn") pointing at the contact
+  // page, opens it.
+  // ————————————————————————————————————————————————
+  const meetingModal = document.getElementById('meeting-modal');
+  let meetingScriptLoaded = false;
+
+  function isContactCtaLink(el) {
+    if (!(el instanceof HTMLAnchorElement) || !el.classList.contains('btn')) return false;
+    const href = (el.getAttribute('href') || '').replace(/\/$/, '');
+    return href === '/contact' || href === '/nl/contact';
+  }
+
+  function openMeetingModal() {
+    if (!meetingModal) return;
+    meetingModal.classList.add('is-open');
+    meetingModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('meeting-modal-open');
+    if (!meetingScriptLoaded) {
+      meetingScriptLoaded = true;
+      const script = document.createElement('script');
+      script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
+      document.body.appendChild(script);
+    }
+  }
+
+  function closeMeetingModal() {
+    meetingModal?.classList.remove('is-open');
+    meetingModal?.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('meeting-modal-open');
+  }
+
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!(target instanceof Element)) return;
+
+    if (target.closest('[data-meeting-close]')) {
+      closeMeetingModal();
+      return;
+    }
+
+    const explicitTrigger = target.closest('[data-meeting-modal]');
+    const link = target.closest('a');
+    if (explicitTrigger || (link && isContactCtaLink(link))) {
+      e.preventDefault();
+      openMeetingModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && meetingModal?.classList.contains('is-open')) {
+      closeMeetingModal();
+    }
   });
 </script>
 
@@ -703,6 +775,94 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
   @media (max-width: 900px) {
     .header-inner { display: none; }
     .header-mobile-bar { display: flex; }
+  }
+
+  /* ——— Meeting modal ——— */
+  .meeting-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+  }
+
+  .meeting-modal.is-open { display: block; }
+
+  :global(body.meeting-modal-open) { overflow: hidden; }
+
+  .meeting-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 17, 17, 0.65);
+    backdrop-filter: blur(2px);
+    animation: meeting-modal-fade-in 0.2s ease-out;
+  }
+
+  .meeting-modal__panel {
+    position: relative;
+    max-width: 880px;
+    width: calc(100% - 32px);
+    max-height: calc(100vh - 64px);
+    margin: 32px auto;
+    background: #fff;
+    border-radius: var(--radius-lg, 16px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
+    animation: meeting-modal-slide-in 0.25s ease-out;
+  }
+
+  @keyframes meeting-modal-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes meeting-modal-slide-in {
+    from { opacity: 0; transform: translateY(16px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .meeting-modal__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.06);
+    color: var(--color-black);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+
+  .meeting-modal__close:hover { background: rgba(0, 0, 0, 0.12); }
+
+  .meeting-modal__body {
+    overflow-y: auto;
+    min-height: 640px;
+  }
+
+  .meeting-modal__body .meetings-iframe-container {
+    width: 100%;
+    min-height: 640px;
+  }
+
+  @media (max-width: 640px) {
+    .meeting-modal__panel {
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+      max-height: 100vh;
+      height: 100vh;
+      border-radius: 0;
+    }
   }
 
   /* ——— Footer ——— */

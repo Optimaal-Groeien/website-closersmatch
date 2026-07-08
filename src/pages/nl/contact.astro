@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout locale="nl" title="Contact — ClosersMatch" description="Plan je gratis intake bij ClosersMatch. Vul het formulier in of plan direct een afspraak met Brian, onze Sales Manager. Reactie binnen 48 uur.">
+<Layout locale="nl" title="Contact — ClosersMatch" description="Plan je gratis intake bij ClosersMatch. Vul het formulier in of plan direct een afspraak met Stefan Kelderman, onze oprichter. Reactie binnen 48 uur.">
 
   <!-- ================================================
        HERO
@@ -12,7 +12,7 @@ import Layout from '../../layouts/Layout.astro';
       <span class="label label--red">Contact</span>
       <h1 class="ct-hero__title">Plan je gratis intake.<br /><span class="ct-hero__title-red">Zonder verplichtingen.</span></h1>
       <p class="ct-hero__body">
-        Vul het formulier in of plan direct een afspraak in de agenda van Brian, onze Sales Manager. Je krijgt binnen 48 uur een reactie — en een helder beeld van wat ClosersMatch voor jouw bedrijf kan betekenen.
+        Vul het formulier in of plan direct een afspraak in de agenda van Stefan Kelderman, onze oprichter en sales trainer. Je krijgt binnen 48 uur een reactie — en een helder beeld van wat ClosersMatch voor jouw bedrijf kan betekenen.
       </p>
       <div class="ct-hero__pills">
         <span class="trust-pill">✓ Gratis intake</span>
@@ -32,9 +32,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="ct-col ct-col--embed">
         <span class="label">Direct een afspraak inplannen</span>
         <h3 class="h3 ct-embed__title">Kies een moment dat jou uitkomt.</h3>
-        <p class="ct-embed__body">Plan direct in de agenda van Brian. Het gesprek duurt 30–45 minuten en is volledig gratis.</p>
+        <p class="ct-embed__body">Plan direct in de agenda van Stefan. Het gesprek duurt 30–45 minuten en is volledig gratis.</p>
         <div class="ct-embed__wrapper">
-          <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/bbandel?embed=true"></div>
+          <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/stefan-kelderman?embed=true"></div>
           <script is:inline src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
         </div>
       </div>
@@ -45,10 +45,10 @@ import Layout from '../../layouts/Layout.astro';
         <!-- Contact info dark card -->
         <div class="ct-info-card">
           <div class="ct-info-card__person">
-            <div class="ct-info-card__avatar">B</div>
+            <img src="/images/team/stefan-kelderman.png" alt="Stefan Kelderman" class="ct-info-card__avatar" />
             <div>
-              <strong class="ct-info-card__name">Brian</strong>
-              <span class="ct-info-card__role">Sales Manager</span>
+              <strong class="ct-info-card__name">Stefan Kelderman</strong>
+              <span class="ct-info-card__role">Oprichter &amp; Sales Trainer</span>
             </div>
           </div>
           <div class="ct-info-card__divider"></div>
@@ -298,15 +298,9 @@ import Layout from '../../layouts/Layout.astro';
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: rgba(221,52,46,0.25);
-    color: var(--color-red);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.05rem;
-    font-weight: 800;
-    font-family: var(--font-display);
+    object-fit: cover;
     flex-shrink: 0;
+    box-shadow: 0 0 0 2px rgba(221,52,46,0.35);
   }
 
   .ct-info-card__name {
