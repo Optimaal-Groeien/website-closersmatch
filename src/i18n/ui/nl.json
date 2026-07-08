@@ -58,7 +58,12 @@
     },
     "talent": {
       "label": "Ik ben een closer of setter",
-      "description": "Plan een kennismaking met Brian over aansluiten bij ons netwerk."
+      "description": "Doorloop eerst onze kwalificatietool en plan daarna een kennismaking met Brian."
+    },
+    "qualify": {
+      "title": "Eerst even kwalificeren",
+      "body": "Om de kwaliteit van ons netwerk hoog te houden, doorloop je eerst onze kwalificatietool voordat je een gesprek inplant met Brian. Dit laat zien wat je in huis hebt en duurt maar een paar minuten.",
+      "cta": "Start de kwalificatie →"
     }
   },
   "cookies": {

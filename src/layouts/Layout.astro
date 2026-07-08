@@ -230,8 +230,10 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
 
     <!-- ================================================
          MEETING MODAL — direct HubSpot calendar popup, no choice
-         screen. Defaults to Stefan (business), but can be pointed
-         at Brian (talent) via [data-meeting-modal-person="talent"].
+         screen. Defaults to Stefan (business). When pointed at Brian
+         (talent) via [data-meeting-modal-person="talent"], shows the
+         qualification-tool notice instead of a calendar — closers/
+         setters must qualify before they can book a call.
          Triggered by [data-meeting-modal], [data-meeting-modal-person]
          or any a.btn linking to the contact page (see script below).
     ================================================ -->
@@ -242,13 +244,22 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
         <div class="meeting-modal__body" id="meeting-direct-calendar">
           <div class="meetings-iframe-container"></div>
         </div>
+        <div class="meeting-modal__body meeting-modal__body--qualify" id="meeting-direct-qualify" hidden>
+          <div class="meeting-qualify">
+            <span class="meeting-qualify__icon">🎯</span>
+            <h3 class="meeting-qualify__title">{t.meetingChoice.qualify.title}</h3>
+            <p class="meeting-qualify__body">{t.meetingChoice.qualify.body}</p>
+            <a href="https://qualify.closersmatch.com/qualify/closer-aanmelding" class="btn btn--red meeting-qualify__cta" target="_blank" rel="noopener noreferrer">{t.meetingChoice.qualify.cta}</a>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- ================================================
-         MEETING MODAL — audience picker (Stefan for businesses,
-         Brian for closers/setters). Used for CTAs where it isn't
-         obvious yet who the visitor is, e.g. the header button.
+         MEETING MODAL — audience picker (Stefan's calendar for
+         businesses, qualification-tool notice for closers/setters).
+         Used for CTAs where it isn't obvious yet who the visitor is,
+         e.g. the header button.
          Triggered by any [data-meeting-modal-choice] element.
     ================================================ -->
     <div id="meeting-modal-choice" class="meeting-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label={t.header.planMeeting}>
@@ -276,6 +287,16 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
         <div class="meeting-modal__body meeting-modal__body--choice" id="meeting-choice-calendar" hidden>
           <button type="button" class="meeting-choice__back" data-meeting-back>{t.meetingChoice.back}</button>
           <div class="meetings-iframe-container"></div>
+        </div>
+
+        <div class="meeting-modal__body meeting-modal__body--choice meeting-modal__body--qualify" id="meeting-choice-qualify" hidden>
+          <button type="button" class="meeting-choice__back" data-meeting-back>{t.meetingChoice.back}</button>
+          <div class="meeting-qualify">
+            <span class="meeting-qualify__icon">🎯</span>
+            <h3 class="meeting-qualify__title">{t.meetingChoice.qualify.title}</h3>
+            <p class="meeting-qualify__body">{t.meetingChoice.qualify.body}</p>
+            <a href="https://qualify.closersmatch.com/qualify/closer-aanmelding" class="btn btn--red meeting-qualify__cta" target="_blank" rel="noopener noreferrer">{t.meetingChoice.qualify.cta}</a>
+          </div>
         </div>
       </div>
     </div>
@@ -370,16 +391,26 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
   // navigating away.
   //  - #meeting-modal: direct-to-Stefan, used by [data-meeting-modal]
   //    and any button-styled link ("a.btn") pointing at the contact page.
-  //  - #meeting-modal-choice: audience picker (business -> Stefan,
-  //    closer/setter -> Brian), used by [data-meeting-modal-choice].
+  //  - #meeting-modal-choice: audience picker (business -> Stefan's
+  //    calendar, closer/setter -> qualification-tool notice), used by
+  //    [data-meeting-modal-choice].
+  //  - Closers/setters (personKey "talent") never see a calendar here —
+  //    they're shown a notice pointing to the qualification tool instead,
+  //    since they need to qualify before booking a call with Brian.
   // ————————————————————————————————————————————————
   const meetingModal = document.getElementById('meeting-modal');
   const directCalendarView = document.getElementById('meeting-direct-calendar');
   const directCalendarContainer = directCalendarView?.querySelector('.meetings-iframe-container');
+  const directQualifyView = document.getElementById('meeting-direct-qualify');
   const choiceModal = document.getElementById('meeting-modal-choice');
   const choiceView = document.getElementById('meeting-choice-view');
   const choiceCalendarView = document.getElementById('meeting-choice-calendar');
   const choiceCalendarContainer = choiceCalendarView?.querySelector('.meetings-iframe-container');
+  const choiceQualifyView = document.getElementById('meeting-choice-qualify');
+
+  // Personas that should be routed to the qualification tool instead of a
+  // meeting calendar. Closers/setters must qualify before booking a call.
+  const QUALIFY_FIRST_PERSONS = ['talent'];
 
   const MEETING_PERSONS = {
     business: 'https://meetings-eu1.hubspot.com/stefan-kelderman?embed=true',
@@ -455,12 +486,20 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
 
   function openMeetingModal(personKey) {
     openModal(meetingModal);
+    if (QUALIFY_FIRST_PERSONS.includes(personKey)) {
+      if (directCalendarView) directCalendarView.hidden = true;
+      if (directQualifyView) directQualifyView.hidden = false;
+      return;
+    }
+    if (directQualifyView) directQualifyView.hidden = true;
+    if (directCalendarView) directCalendarView.hidden = false;
     loadPersonInto(directCalendarContainer, '#meeting-direct-calendar .meetings-iframe-container', personKey || 'business');
   }
 
   function resetChoiceModal() {
     if (choiceView) choiceView.hidden = false;
     if (choiceCalendarView) choiceCalendarView.hidden = true;
+    if (choiceQualifyView) choiceQualifyView.hidden = true;
     if (choiceCalendarContainer) {
       choiceCalendarContainer.innerHTML = '';
       choiceCalendarContainer.removeAttribute('data-src');
@@ -473,8 +512,15 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
   }
 
   function selectMeetingPerson(personKey) {
-    if (!choiceCalendarContainer || !choiceView || !choiceCalendarView) return;
+    if (!choiceView) return;
     choiceView.hidden = true;
+    if (QUALIFY_FIRST_PERSONS.includes(personKey)) {
+      if (choiceCalendarView) choiceCalendarView.hidden = true;
+      if (choiceQualifyView) choiceQualifyView.hidden = false;
+      return;
+    }
+    if (choiceQualifyView) choiceQualifyView.hidden = true;
+    if (!choiceCalendarContainer || !choiceCalendarView) return;
     choiceCalendarView.hidden = false;
     loadPersonInto(choiceCalendarContainer, '#meeting-choice-calendar .meetings-iframe-container', personKey);
   }
@@ -1099,6 +1145,50 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
   }
 
   .meeting-choice__back:hover { background: rgba(0, 0, 0, 0.12); }
+
+  /* ——— Meeting modal: qualification tool notice ——— */
+  .meeting-modal__body--qualify {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .meeting-qualify {
+    padding: 48px 40px;
+    max-width: 460px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .meeting-qualify__icon {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+
+  .meeting-qualify__title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-black);
+    margin: 0 0 12px;
+  }
+
+  .meeting-qualify__body {
+    font-size: 0.95rem;
+    color: var(--color-gray-mid, #6b7280);
+    line-height: 1.7;
+    margin: 0 0 28px;
+  }
+
+  .meeting-qualify__cta {
+    display: inline-flex;
+  }
+
+  @media (max-width: 560px) {
+    .meeting-qualify { padding: 40px 24px; }
+  }
 
   /* ——— Footer ——— */
   .site-footer {

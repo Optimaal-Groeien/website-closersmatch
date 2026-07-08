@@ -58,7 +58,12 @@
     },
     "talent": {
       "label": "I'm a closer or setter",
-      "description": "Book a call with Brian about joining our network."
+      "description": "Complete our qualification tool first, then book a call with Brian."
+    },
+    "qualify": {
+      "title": "Get Qualified First",
+      "body": "To keep the quality of our network high, you'll complete our quick qualification tool before booking a call with Brian. It only takes a few minutes and shows us what you've got.",
+      "cta": "Start the qualification →"
     }
   },
   "cookies": {
