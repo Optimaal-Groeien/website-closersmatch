@@ -11,8 +11,9 @@ export interface Props {
   title: string;
   description?: string;
   locale?: Locale;
+  noindex?: boolean;
 }
-const { title, description, locale = 'en' } = Astro.props;
+const { title, description, locale = 'en', noindex = false } = Astro.props;
 const t = getTranslations(locale);
 const desc = description ?? t.meta.defaultDescription;
 const homePath = getLocalizedPath('home', locale);
@@ -29,6 +30,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={desc} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={`${siteOrigin}${currentPath}`} />
     <link rel="alternate" hreflang="nl" href={`${siteOrigin}${nlHref}`} />
     <link rel="alternate" hreflang="en" href={`${siteOrigin}${enHref}`} />

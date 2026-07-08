@@ -1,0 +1,327 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout locale="en" title="Meeting Scheduled — ClosersMatch" description="Your meeting with Stefan is scheduled. Here's what happens next: the conversation, the intake form, and getting started with your closer." noindex={true}>
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="ty-hero">
+    <div class="container container--narrow ty-hero__inner">
+      <div class="ty-hero__icon" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <span class="label label--red">Meeting scheduled</span>
+      <h1 class="ty-hero__title">Your meeting with Stefan<br />is booked.</h1>
+      <p class="ty-hero__body">
+        You'll receive a confirmation by email with a link to add the meeting to your calendar. Here's exactly what happens between now and your first closer getting to work.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================================================
+       NEXT STEPS TIMELINE
+  ================================================ -->
+  <section class="section ty-steps">
+    <div class="container container--narrow">
+      <div class="ty-steps__header">
+        <span class="label">What happens next</span>
+        <h2 class="h2 ty-steps__title">From this meeting<br />to your first closed deal.</h2>
+      </div>
+
+      <div class="ty-steps__timeline">
+
+        <div class="ty-step ty-step--done">
+          <div class="ty-step__left">
+            <div class="ty-step__circle ty-step__circle--done" aria-label="Completed">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="ty-step__line"></div>
+          </div>
+          <div class="ty-step__body">
+            <span class="ty-step__tag">Done</span>
+            <h3 class="ty-step__title">Meeting scheduled</h3>
+            <p class="ty-step__text">You picked a time that works for you. Check your inbox for the confirmation and calendar invite.</p>
+          </div>
+        </div>
+
+        <div class="ty-step">
+          <div class="ty-step__left">
+            <div class="ty-step__circle">02</div>
+            <div class="ty-step__line"></div>
+          </div>
+          <div class="ty-step__body">
+            <h3 class="ty-step__title">The conversation with Stefan</h3>
+            <p class="ty-step__text">During the call we discuss your needs, your product, and the challenges you're facing. We talk through what you're looking for in a closer or appointment setter, and explore how ClosersMatch can create the right match for your business.</p>
+          </div>
+        </div>
+
+        <div class="ty-step">
+          <div class="ty-step__left">
+            <div class="ty-step__circle">03</div>
+            <div class="ty-step__line"></div>
+          </div>
+          <div class="ty-step__body">
+            <h3 class="ty-step__title">The intake form</h3>
+            <p class="ty-step__text">Right after the call, you'll receive our intake form. It takes a few minutes to complete and gives us everything we need to find the closer who fits your industry, sales style, and deal size.</p>
+            <a href="/intake-business" class="ty-step__link">Go to the intake form →</a>
+          </div>
+        </div>
+
+        <div class="ty-step ty-step--last">
+          <div class="ty-step__left">
+            <div class="ty-step__circle ty-step__circle--last">04</div>
+          </div>
+          <div class="ty-step__body">
+            <h3 class="ty-step__title">Getting started with your closer</h3>
+            <p class="ty-step__text">Once the intake is complete, we match you with a CM Certified closer within 48 hours. Onboarding on your product and market is free and included. From there, your closer gets to work, on no cure no pay.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CLOSING
+  ================================================ -->
+  <section class="ty-closing">
+    <div class="ty-closing__inner">
+      <h2 class="ty-closing__title">Questions in the meantime?</h2>
+      <p class="ty-closing__body">
+        Reach out any time, we're happy to help.<br />
+        <a href="tel:+31634835912">+31 6 3483 5912</a> &nbsp;·&nbsp; <a href="mailto:info@closersmatch.nl">info@closersmatch.nl</a>
+      </p>
+      <a href="/" class="ty-closing__back">← Back to the homepage</a>
+      <p class="ty-closing__brand">ClosersMatch. <span>The Revenue Ecosystem.</span></p>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ====================================================
+     HERO
+  ==================================================== */
+  .ty-hero {
+    padding: 140px 0 60px;
+    text-align: center;
+  }
+
+  .ty-hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ty-hero__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--color-red);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .ty-hero__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    letter-spacing: -0.02em;
+    color: var(--color-black);
+    margin: 16px 0 20px;
+    line-height: 1.15;
+  }
+
+  .ty-hero__body {
+    font-size: 1.05rem;
+    color: var(--color-gray-mid);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  @media (max-width: 640px) {
+    .ty-hero { padding: 110px 0 48px; }
+  }
+
+  /* ====================================================
+     STEPS TIMELINE
+  ==================================================== */
+  .ty-steps { background: #F9FAFB; }
+
+  .ty-steps__header {
+    margin-bottom: 56px;
+    text-align: center;
+  }
+
+  .ty-steps__title {
+    margin-top: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .ty-steps__timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ty-step {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+
+  .ty-step__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 56px;
+    flex-shrink: 0;
+  }
+
+  .ty-step__circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-red);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+    position: relative;
+  }
+
+  .ty-step__circle--done {
+    background: var(--color-black);
+  }
+
+  .ty-step__circle--last {
+    background: var(--color-black);
+  }
+
+  .ty-step__line {
+    width: 2px;
+    flex: 1;
+    background: var(--color-gray-border);
+    margin: 4px 0;
+    min-height: 24px;
+  }
+
+  .ty-step__body {
+    padding: 0 0 40px 24px;
+    padding-top: 8px;
+  }
+
+  .ty-step--last .ty-step__body {
+    padding-bottom: 0;
+  }
+
+  .ty-step__tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-red);
+    margin-bottom: 6px;
+  }
+
+  .ty-step__title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-black);
+    margin-bottom: 8px;
+    font-family: var(--font-display);
+  }
+
+  .ty-step__text {
+    font-size: 0.95rem;
+    color: var(--color-gray-mid);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+
+  .ty-step__link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--color-red);
+    text-decoration: none;
+  }
+
+  .ty-step__link:hover {
+    text-decoration: underline;
+  }
+
+  /* ====================================================
+     CLOSING
+  ==================================================== */
+  .ty-closing {
+    background: var(--color-black);
+    padding: 100px 24px;
+    text-align: center;
+  }
+
+  .ty-closing__inner {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .ty-closing__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.75rem;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+
+  .ty-closing__body {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+
+  .ty-closing__body a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .ty-closing__body a:hover {
+    text-decoration: underline;
+  }
+
+  .ty-closing__back {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 2px;
+  }
+
+  .ty-closing__back:hover {
+    border-color: #fff;
+  }
+
+  .ty-closing__brand {
+    margin-top: 48px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+  }
+
+  .ty-closing__brand span {
+    color: rgba(255, 255, 255, 0.7);
+  }
+</style>
