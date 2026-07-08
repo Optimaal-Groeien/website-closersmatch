@@ -127,7 +127,7 @@ const breadcrumbSchema = {
           <span class="post-sidebar__label">Ready for the next step?</span>
           <h3 class="post-sidebar__title">Schedule your free intake</h3>
           <p class="post-sidebar__text">Find out within 48 hours whether ClosersMatch is the right fit for you. No obligations.</p>
-          <a href="/contact" class="btn btn--red post-sidebar__btn">Schedule your free intake →</a>
+          <button type="button" class="btn btn--red post-sidebar__btn" data-meeting-modal-choice>Schedule your free intake →</button>
         </div>
 
         {data.relatedLinks.length > 0 && (
@@ -179,7 +179,7 @@ const breadcrumbSchema = {
       <div class="container container--narrow post-closing__inner">
         <h2 class="h2 post-closing__title">Ready to take the next step?</h2>
         <p class="post-closing__text">Schedule a free, no-obligation call and discover what ClosersMatch can do for you.</p>
-        <a href="/contact" class="btn btn--red btn--lg">Schedule your free intake →</a>
+        <button type="button" class="btn btn--red btn--lg" data-meeting-modal-choice>Schedule your free intake →</button>
       </div>
     </section>
   </article>

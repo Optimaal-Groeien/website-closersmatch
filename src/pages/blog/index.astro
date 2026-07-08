@@ -74,7 +74,7 @@ const categories = [...new Set(posts.map((p) => p.data.category))];
     <div class="container container--narrow blog-closing__inner">
       <h2 class="h2 blog-closing__title">Prefer to talk directly?</h2>
       <p class="blog-closing__text">Schedule a free intake and discover what ClosersMatch can do for you.</p>
-      <a href="/contact" class="btn btn--red btn--lg">Schedule your free intake →</a>
+      <button type="button" class="btn btn--red btn--lg" data-meeting-modal-choice>Schedule your free intake →</button>
     </div>
   </section>
 </Layout>
