@@ -25,7 +25,14 @@ import Layout from '../layouts/Layout.astro';
   <section class="section ib-main">
     <div class="container container--narrow">
 
-      <form class="ib-form" id="intake-form" name="intake-business" method="POST" action="#">
+      <form class="ib-form" id="intake-form" name="intake-business" method="POST" action="https://formsubmit.co/info@closersmatch.com">
+
+        <!-- FormSubmit configuration: emails the submission to info@closersmatch.com -->
+        <input type="hidden" name="_subject" value="New intake submission — ClosersMatch" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://closersmatch.com/welcome-onboarding" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
         <!-- CONTACT DETAILS -->
         <div class="ib-form__section">
@@ -272,6 +279,7 @@ import Layout from '../layouts/Layout.astro';
   const form = document.getElementById('intake-form') as HTMLFormElement | null;
   const success = document.getElementById('intake-success');
   const errorBox = document.getElementById('intake-error');
+  const submitBtn = form?.querySelector('.ib-form__submit') as HTMLButtonElement | null;
 
   if (form && success && errorBox) {
     form.addEventListener('submit', (e) => {
@@ -284,13 +292,31 @@ import Layout from '../layouts/Layout.astro';
       }
 
       errorBox.hidden = true;
-      form.hidden = true;
-      success.hidden = false;
-      success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+      }
 
-      setTimeout(() => {
-        window.location.href = '/welcome-onboarding';
-      }, 1800);
+      const payload = Object.fromEntries(new FormData(form).entries());
+
+      fetch('https://formsubmit.co/ajax/info@closersmatch.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error('Submit failed');
+          form.hidden = true;
+          success.hidden = false;
+          success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          setTimeout(() => {
+            window.location.href = '/welcome-onboarding';
+          }, 1800);
+        })
+        .catch(() => {
+          // Fallback: let the browser submit the form natively to FormSubmit.
+          form.submit();
+        });
     });
   }
 </script>
