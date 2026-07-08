@@ -10,6 +10,17 @@
 /become-a-closer-or-setter /for-sales-talent 301
 /no-cure-no-pay-klanten-werven /no-cure-no-pay 301
 
+# --- Old unprefixed Dutch URLs -> /nl/ equivalent ---
+# (also declared in astro.config.mjs as a static-page fallback; these edge-level
+# 301s take precedence and are stronger for SEO than a meta-refresh page)
+/voor-bedrijven /nl/voor-bedrijven 301
+/voor-closers /nl/voor-closers 301
+/voor-appointmentsetters /nl/voor-appointmentsetters 301
+/voor-sales-talent /nl/voor-sales-talent 301
+/over-ons /nl/over-ons 301
+/werkwijze /nl/werkwijze 301
+/opdracht-plaatsen /nl/opdracht-plaatsen 301
+
 # --- Legal pages (old site kept these in Dutch regardless of visitor language) ---
 /legal/terms /nl/algemene-voorwaarden 301
 /algemene-voorwaarden /nl/algemene-voorwaarden 301

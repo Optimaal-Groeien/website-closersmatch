@@ -28,5 +28,11 @@ export default defineConfig({
     '/opdracht-plaatsen': '/nl/opdracht-plaatsen',
   },
 
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Keep noindex pages (thank-you / onboarding funnels) out of the sitemap.
+      filter: (page) =>
+        !/\/(thank-you-business|welcome-onboarding|bedankt-bedrijven|welkom-onboarding)\/?$/.test(page),
+    }),
+  ],
 });

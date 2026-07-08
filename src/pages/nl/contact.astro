@@ -69,7 +69,12 @@ import Layout from '../../layouts/Layout.astro';
         </div>
 
         <!-- Contact form -->
-        <form class="ct-form" name="contact" method="POST" action="#" novalidate>
+        <form class="ct-form" id="contact-form" name="contact" method="POST" action="https://formsubmit.co/info@closersmatch.com" novalidate>
+          <input type="hidden" name="_subject" value="Nieuw contactformulier — ClosersMatch" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
           <div class="ct-form__row ct-form__row--2col">
             <div class="ct-form__group">
               <label class="ct-form__label" for="voornaam">Voornaam</label>
@@ -115,11 +120,62 @@ import Layout from '../../layouts/Layout.astro';
             </div>
           </div>
           <button type="submit" class="btn btn--red btn--lg ct-form__submit">Verstuur bericht →</button>
+
+          <div class="ct-form__error" id="contact-error" role="alert" hidden>Vul alle verplichte velden in voordat je verstuurt.</div>
         </form>
+
+        <div class="ct-success" id="contact-success" hidden>
+          <span class="ct-success__icon">✓</span>
+          <h2 class="h2 ct-success__title">Bedankt! Je bericht is verstuurd.</h2>
+          <p class="ct-success__text">We nemen zo snel mogelijk contact met je op.</p>
+        </div>
 
       </div>
     </div>
   </section>
+
+  <script>
+    const contactForm = document.getElementById('contact-form') as HTMLFormElement | null;
+    const contactSuccess = document.getElementById('contact-success');
+    const contactError = document.getElementById('contact-error');
+    const contactSubmitBtn = contactForm?.querySelector('.ct-form__submit') as HTMLButtonElement | null;
+
+    if (contactForm && contactSuccess && contactError) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          contactError.hidden = false;
+          return;
+        }
+
+        contactError.hidden = true;
+        if (contactSubmitBtn) {
+          contactSubmitBtn.disabled = true;
+          contactSubmitBtn.textContent = 'Versturen...';
+        }
+
+        const payload = Object.fromEntries(new FormData(contactForm).entries());
+
+        fetch('https://formsubmit.co/ajax/info@closersmatch.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        })
+          .then((res) => {
+            if (!res.ok) throw new Error('Submit failed');
+            contactForm.hidden = true;
+            contactSuccess.hidden = false;
+            contactSuccess.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          })
+          .catch(() => {
+            // Fallback: let the browser submit the form natively to FormSubmit.
+            contactForm.submit();
+          });
+      });
+    }
+  </script>
 
   <!-- ================================================
        FAQ STRIP
@@ -446,6 +502,44 @@ import Layout from '../../layouts/Layout.astro';
     margin-top: 4px;
     border-radius: 999px;
     box-shadow: 0 4px 16px rgba(221,52,46,0.25);
+  }
+
+  .ct-form__error {
+    text-align: center;
+    color: var(--color-red);
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+
+  .ct-success {
+    text-align: center;
+    background: #fff;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--radius-lg);
+    padding: 64px 32px;
+    box-shadow: var(--shadow);
+  }
+
+  .ct-success__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(22,163,74,0.1);
+    color: #16A34A;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .ct-success__title { margin-bottom: 10px; }
+
+  .ct-success__text {
+    color: var(--color-gray-mid);
+    font-size: 0.98rem;
   }
 
   /* ====================================================
