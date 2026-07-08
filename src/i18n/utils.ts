@@ -11,6 +11,9 @@ export function getTranslations(locale: Locale) {
 
 export function getLocalizedPath(routeKey: RouteKey, locale: Locale): string {
   const slug = routes[routeKey][locale];
+  if (locale === defaultLocale) {
+    return slug ? `/${slug}` : '/';
+  }
   return slug ? `/${locale}/${slug}` : `/${locale}`;
 }
 
@@ -22,10 +25,17 @@ export function getAlternatePath(routeKey: RouteKey, fromLocale: Locale): string
 export function getRouteKeyFromPathname(pathname: string): RouteKey {
   const normalized = pathname.replace(/\/+$/, '') || '/';
   const parts = normalized.replace(/^\//, '').split('/').filter(Boolean);
-  const locale = parts[0] as Locale;
-  const slug = parts.slice(1).join('/');
 
-  if (!locale || !locales.includes(locale)) return 'home';
+  // Every locale except the default one is served under its own /xx/ prefix.
+  let locale: Locale = defaultLocale;
+  let slugParts = parts;
+
+  if (parts[0] && parts[0] !== defaultLocale && locales.includes(parts[0] as Locale)) {
+    locale = parts[0] as Locale;
+    slugParts = parts.slice(1);
+  }
+
+  const slug = slugParts.join('/');
   if (!slug) return 'home';
 
   for (const [key, slugs] of Object.entries(routes)) {

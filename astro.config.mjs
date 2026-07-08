@@ -7,10 +7,10 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://closersmatch.com',
   i18n: {
-    defaultLocale: 'nl',
-    locales: ['nl', 'en'],
+    defaultLocale: 'en',
+    locales: ['en', 'nl'],
     routing: {
-      prefixDefaultLocale: true,
+      prefixDefaultLocale: false,
     },
   },
 

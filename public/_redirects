@@ -1,36 +1,22 @@
 # ============================================================
 # 301 redirects: old closersmatch.com structure -> new site
-# Added at launch prep, 2026-07-07
-# Only confident, unambiguous mappings are included here.
-# See conversation with agent for pages still needing a decision.
+# Updated 2026-07-08: the new site now mirrors the old URL scheme
+# (English unprefixed at root, Dutch under /nl/), so most old
+# English marketing URLs need NO redirect — they already match
+# the new page 1:1. Only genuinely moved/renamed URLs are listed.
 # ============================================================
 
-# --- Core marketing pages ---
-/about-closersmatch /nl/over-ons 301
-/blog /nl/blog 301
-/for-businesses /nl/voor-bedrijven 301
-/for-closers /nl/voor-closers 301
-/for-appointment-setters /nl/voor-appointmentsetters 301
-/contact /nl/contact 301
-/workflow /nl/werkwijze 301
-/partnership /nl/partnership 301
-/recruitment /nl/recruitment 301
-/no-cure-no-pay /nl/no-cure-no-pay 301
-/no-cure-no-pay-klanten-werven /nl/no-cure-no-pay 301
-/cases /nl/cases 301
-/intake-business /nl/intake-bedrijven 301
-/become-a-closer-or-setter /nl/voor-sales-talent 301
+# --- Old English root pages with a different new slug ---
+/become-a-closer-or-setter /for-sales-talent 301
+/no-cure-no-pay-klanten-werven /no-cure-no-pay 301
 
-# --- Legal pages (old site had several duplicate aliases) ---
+# --- Legal pages (old site kept these in Dutch regardless of visitor language) ---
 /legal/terms /nl/algemene-voorwaarden 301
-/general-terms-and-conditions /en/general-terms-and-conditions 301
 /algemene-voorwaarden /nl/algemene-voorwaarden 301
 /legal/privacy-policy /nl/privacybeleid 301
-/privacy-policy /en/privacy-policy 301
 /huisregels /nl/huisregels 301
-/house-rules /en/house-rules 301
 
-# --- Old blog posts: migrated to new blog posts ---
+# --- Old blog posts (always Dutch content): migrated to new Dutch blog posts ---
 /post/5-strategieen-om-uw-high-ticket-omzet-te-verhogen /nl/blog/high-ticket-omzet-verhogen 301
 /post/7-kpis-voor-high-ticket-sales-uitbesteden /nl/blog/sales-win-rate-verhogen 301
 /post/7-redenen-waarom-bedrijven-sales-uitbesteden-zonder-vaste-kosten /nl/blog/sales-uitbesteden-zonder-vaste-kosten 301

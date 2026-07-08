@@ -1,6 +1,6 @@
----
+﻿---
 import { getCollection } from 'astro:content';
-import Layout from '../../../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 
 const allPosts = await getCollection('blog', ({ data }) => data.locale === 'en' && !data.draft);
 const posts = allPosts.sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
@@ -39,7 +39,7 @@ const categories = [...new Set(posts.map((p) => p.data.category))];
             <h2 class="blog-category-group__title">{category}</h2>
             <div class="blog-grid">
               {categoryPosts.map((post) => (
-                <a href={`/en/blog/${post.id}`} class="blog-card">
+                <a href={`/blog/${post.id}`} class="blog-card">
                   <div class="blog-card__image-wrap">
                     <img src={post.data.image} alt={post.data.imageAlt} class="blog-card__image" loading="lazy" />
                   </div>
@@ -74,7 +74,7 @@ const categories = [...new Set(posts.map((p) => p.data.category))];
     <div class="container container--narrow blog-closing__inner">
       <h2 class="h2 blog-closing__title">Prefer to talk directly?</h2>
       <p class="blog-closing__text">Schedule a free intake and discover what ClosersMatch can do for you.</p>
-      <a href="/en/contact" class="btn btn--red btn--lg">Schedule your free intake →</a>
+      <a href="/contact" class="btn btn--red btn--lg">Schedule your free intake →</a>
     </div>
   </section>
 </Layout>

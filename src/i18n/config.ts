@@ -1,6 +1,12 @@
 export const locales = ['nl', 'en'] as const;
 export type Locale = (typeof locales)[number];
-export const defaultLocale: Locale = 'nl';
+
+/**
+ * The locale served without a URL prefix (e.g. closersmatch.com/for-businesses).
+ * Matches the original, already-ranking site structure. All other locales are
+ * served under their own prefix (e.g. /nl/voor-bedrijven).
+ */
+export const defaultLocale: Locale = 'en';
 
 /** Route keys mapped to locale-specific slugs */
 export const routes = {

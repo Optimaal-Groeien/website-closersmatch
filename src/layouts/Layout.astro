@@ -12,14 +12,14 @@ export interface Props {
   description?: string;
   locale?: Locale;
 }
-const { title, description, locale = 'nl' } = Astro.props;
+const { title, description, locale = 'en' } = Astro.props;
 const t = getTranslations(locale);
 const desc = description ?? t.meta.defaultDescription;
 const homePath = getLocalizedPath('home', locale);
 const currentPath = Astro.url.pathname;
 const routeKey = getRouteKeyFromPathname(currentPath);
 const nlHref = routeKey ? getLocalizedPath(routeKey, 'nl') : '/nl';
-const enHref = routeKey ? getLocalizedPath(routeKey, 'en') : '/en';
+const enHref = routeKey ? getLocalizedPath(routeKey, 'en') : '/';
 const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalgroeien-84d.workers.dev';
 ---
 
@@ -32,7 +32,7 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
     <link rel="canonical" href={`${siteOrigin}${currentPath}`} />
     <link rel="alternate" hreflang="nl" href={`${siteOrigin}${nlHref}`} />
     <link rel="alternate" hreflang="en" href={`${siteOrigin}${enHref}`} />
-    <link rel="alternate" hreflang="x-default" href={`${siteOrigin}/nl`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteOrigin}${enHref}`} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
 
