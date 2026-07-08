@@ -13,8 +13,8 @@ pillar: "Sales uitbesteden"
 category: "Voor bedrijven"
 publishedAt: 2026-07-07
 author: "Stefan Kelderman"
-image: "/images/ecosysteem.png"
-imageAlt: "Ecosysteem van setters, closers en sales support bij het uitbesteden van sales"
+image: "/images/team-closers-headsets.png"
+imageAlt: "Team van setters en closers dat sales volledig uitbesteed van bedrijven overneemt"
 readingTime: "11 min"
 faq:
   - question: "Wat betekent sales uitbesteden precies?"

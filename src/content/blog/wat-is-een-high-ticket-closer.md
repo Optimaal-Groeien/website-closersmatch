@@ -13,8 +13,8 @@ pillar: "Closers"
 category: "Voor sales talent"
 publishedAt: 2026-07-07
 author: "Stefan Kelderman"
-image: "/images/closer-aan-het-werk.png"
-imageAlt: "High ticket closer tijdens een verkoopgesprek met een klant aan de telefoon"
+image: "/images/team-closers-headsets.png"
+imageAlt: "Team van high ticket closers met headset, klaar voor het verkoopgesprek"
 readingTime: "12 min"
 faq:
   - question: "Wat is het verschil tussen een high ticket closer en een gewone verkoper?"

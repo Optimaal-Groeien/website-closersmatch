@@ -13,8 +13,8 @@ pillar: "Sales uitbesteden"
 category: "Voor bedrijven"
 publishedAt: 2026-07-07
 author: "Stefan Kelderman"
-image: "/images/ecosysteem-sectie.png"
-imageAlt: "Ecosysteem van bedrijven en gescreende closers die op commissiebasis samenwerken"
+image: "/images/macbook-laptop.png"
+imageAlt: "Laptop als symbool voor een flexibel, op commissiebasis samenwerkend salesteam"
 readingTime: "10 min"
 faq:
   - question: "Wat betekent sales uitbesteden zonder vaste kosten precies?"

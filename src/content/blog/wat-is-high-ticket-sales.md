@@ -13,8 +13,8 @@ pillar: "High ticket sales"
 category: "Voor bedrijven"
 publishedAt: 2026-07-07
 author: "Stefan Kelderman"
-image: "/images/ecosysteem.png"
-imageAlt: "Overzicht van het high ticket sales ecosysteem van lead tot gesloten deal"
+image: "/images/macbook-laptop.png"
+imageAlt: "Laptop als werkplek voor het voeren van high ticket verkoopgesprekken"
 readingTime: "13 min"
 faq:
   - question: "Wat is high ticket sales precies?"

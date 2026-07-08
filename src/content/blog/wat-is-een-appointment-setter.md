@@ -13,8 +13,8 @@ pillar: "Appointment setters"
 category: "Voor sales talent"
 publishedAt: 2026-07-06
 author: "Stefan Kelderman"
-image: "/images/closer-aan-het-werk.png"
-imageAlt: "Appointment setter aan het werk met een headset en laptop"
+image: "/images/closer-telefoongesprek.png"
+imageAlt: "Appointment setter aan de telefoon met laptop tijdens het inplannen van een afspraak"
 readingTime: "11 min"
 faq:
   - question: "Wat doet een appointment setter precies?"

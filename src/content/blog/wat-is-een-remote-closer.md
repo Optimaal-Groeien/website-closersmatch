@@ -13,8 +13,8 @@ pillar: "Closers"
 category: "Voor sales talent"
 publishedAt: 2026-07-07
 author: "Stefan Kelderman"
-image: "/images/closer-aan-het-werk.png"
-imageAlt: "Remote closer die via een laptop en headset een salesgesprek voert"
+image: "/images/closer-op-afstand.png"
+imageAlt: "Remote closer die vanaf een flexibele werkplek een salesgesprek voert via laptop en telefoon"
 readingTime: "11 min"
 faq:
   - question: "Wat doet een remote closer precies?"

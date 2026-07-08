@@ -13,8 +13,8 @@ pillar: "Sales uitbesteden"
 category: "Voor bedrijven"
 publishedAt: 2026-07-07
 author: "Stefan Kelderman"
-image: "/images/ecosysteem-sectie.png"
-imageAlt: "Visualisatie van de overgang van leadgeneratie naar gesloten deals"
+image: "/images/closer-telefoongesprek.png"
+imageAlt: "Closer die een gekwalificeerde lead aan de telefoon omzet in een gesloten deal"
 readingTime: "10 min"
 faq:
   - question: "Wat is precies het verschil tussen leadgeneratie en deal generation?"

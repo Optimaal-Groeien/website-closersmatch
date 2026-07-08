@@ -13,8 +13,8 @@ pillar: "High ticket sales"
 category: "Voor bedrijven"
 publishedAt: 2026-07-07
 author: "Stefan Kelderman"
-image: "/images/closer-aan-het-werk.png"
-imageAlt: "Sales closer voert een high ticket verkoopgesprek via laptop en headset"
+image: "/images/sales-boeken-mindset.png"
+imageAlt: "Boeken over sales en mindset als basis voor een sterke high ticket strategie"
 readingTime: "10 min"
 faq:
   - question: "Wat is het verschil tussen high ticket sales en reguliere sales?"
