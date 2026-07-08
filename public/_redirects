@@ -30,6 +30,23 @@
 /huisregels /nl/huisregels 301
 /house-rules /en/house-rules 301
 
-# --- Old blog posts: redirect to blog index for now ---
-# (individual posts can get dedicated redirects once/if migrated)
+# --- Old blog posts: migrated to new blog posts ---
+/post/5-strategieen-om-uw-high-ticket-omzet-te-verhogen /nl/blog/high-ticket-omzet-verhogen 301
+/post/7-kpis-voor-high-ticket-sales-uitbesteden /nl/blog/sales-win-rate-verhogen 301
+/post/7-redenen-waarom-bedrijven-sales-uitbesteden-zonder-vaste-kosten /nl/blog/sales-uitbesteden-zonder-vaste-kosten 301
+/post/b2b-leadgeneratie-vs-closen-waar /nl/blog/b2b-leadgeneratie-vs-closen 301
+/post/high-ticket-closer-alles-wat-je-moet-weten /nl/blog/wat-is-een-high-ticket-closer 301
+/post/high-ticket-closing-zo-haal-je-meer-omzet-uit-je-leads /nl/blog/high-ticket-closing-uitbesteden 301
+/post/high-ticket-closing-zo-haal-je-omzet-uit-je-leads /nl/blog/high-ticket-closing-uitbesteden 301
+/post/high-ticket-sales-de-complete-groeistrategie /nl/blog/wat-is-high-ticket-sales 301
+/post/high-ticket-sales-en-hoe-helpt-een-closer-jouw-bedrijf-groeien /nl/blog/hoe-helpt-een-closer-je-bedrijf-groeien 301
+/post/remote-closer-de-slimste-manier-om-meer-omzet-uit-je-leads-te-halen /nl/blog/wat-is-een-remote-closer 301
+/post/remote-closer-slimste-manier-om-meer-omzet-uit-leads-te-halen /nl/blog/wat-is-een-remote-closer 301
+/post/sales-uitbesteden-zonder-personeel-en-zonder-risico /nl/blog/sales-uitbesteden-zonder-personeel-risico 301
+/post/van-leadgeneratie-naar-deal-generation-zo-haal-je-echte-groei /nl/blog/van-leadgeneratie-naar-deal-generation 301
+/post/wanneer-high-ticket-sales-uitbesteden-4d72g /nl/blog/wanneer-high-ticket-sales-uitbesteden 301
+/post/wat-kost-een-closer-per-deal /nl/blog/wat-kost-een-closer-per-deal 301
+/post/wat-zijn-de-7-stappen-van-een-verkoopproces /nl/blog/7-stappen-van-een-verkoopproces 301
+
+# --- Fallback for any other old blog post not listed above ---
 /post/* /nl/blog 301
