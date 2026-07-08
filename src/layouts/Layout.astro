@@ -1154,6 +1154,12 @@ const siteOrigin = Astro.site?.origin ?? 'https://website-closersmatch.optimaalg
     justify-content: center;
   }
 
+  /* The [hidden] attribute must win over the class's `display: flex` above,
+     otherwise the qualify view stays visible underneath the choice view. */
+  .meeting-modal__body--qualify[hidden] {
+    display: none;
+  }
+
   .meeting-qualify {
     padding: 48px 40px;
     max-width: 460px;
