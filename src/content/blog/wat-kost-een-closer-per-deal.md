@@ -49,6 +49,8 @@ De meeste closers die via een platform zoals ClosersMatch werken, hanteren een *
 
 Dit model verschuift het financiële risico. Bij een vaste medewerker betaal je salaris ongeacht de resultaten. Bij een closer op commissiebasis betaal je pas zodra er ook daadwerkelijk omzet binnenkomt. Voor bedrijven die willen testen of uitbesteden werkt, of die simpelweg risico willen beperken, is dit een fundamenteel ander uitgangspunt dan traditionele personeelskosten.
 
+Dit verklaart ook waarom no cure no pay als model zo snel terrein wint bij bedrijven die voor het eerst met externe sales werken. Er is geen langdurig contract nodig om te "proberen" of het werkt: je ziet binnen enkele weken tot maanden of de samenwerking omzet oplevert, en past zo nodig bij, zonder dat er eerst een grote vaste investering is gedaan. Voor de closer zelf betekent het model dat de verdiensten meegroeien met de prestatie, wat in de praktijk vaak leidt tot een hogere motivatie dan bij een vast salaris waarbij het inkomen los staat van resultaat.
+
 ## Welk commissiepercentage is gebruikelijk?
 
 Er bestaat geen vast, universeel percentage, het hangt af van de branche, de gemiddelde dealwaarde en de complexiteit van het verkoopproces. Als richtlijn geldt: hoe hoger de dealwaarde, hoe lager het percentage doorgaans ligt, en omgekeerd. Bij deals van enkele duizenden euro's zie je regelmatig percentages tussen de 10% en 20%. Bij deals van tienduizenden euro's of meer kan dat percentage lager liggen, bijvoorbeeld tussen de 5% en 10%, omdat het absolute bedrag per deal dan alsnog substantieel is.
@@ -140,6 +142,14 @@ Begin bij de dealwaarde en werk terug vanuit wat een aantrekkelijk bedrag per de
 Houd daarnaast rekening met hoe warm de leads zijn die je aanlevert. Een closer die uitsluitend met goed gekwalificeerde, warme leads werkt, kan doorgaans tegen een lager percentage werken dan een closer die ook zelf leads moet opvolgen die nog nauwelijks interesse hebben getoond. Hoe meer voorwerk er al gedaan is voordat de closer het gesprek voert, hoe redelijker een lager percentage is.
 
 Tot slot loont het om het percentage niet in beton te gieten. Veel samenwerkingen starten met een percentage dat na de eerste maanden wordt geëvalueerd en eventueel bijgesteld, op basis van daadwerkelijke resultaten en de hoeveelheid tijd die de closer kwijt is aan elke deal. Bij ClosersMatch wordt dit gesprek onderdeel van de intake, zodat beide partijen vooraf weten waar ze aan toe zijn.
+
+## Closer versus extra marketingbudget: hoe kies je?
+
+Voor bedrijven met een beperkt budget is de vraag vaak niet "closer of geen closer", maar "closer of meer advertentiebudget". Beide kunnen tot omzetgroei leiden, maar de risico's en het rendement verschillen wezenlijk.
+
+Extra marketingbudget vergroot de instroom aan de voorkant van de trechter, maar zegt niets over wat er met die extra leads gebeurt zodra ze binnen zijn. Is de opvolging en closing al zwak, dan schaal je vooral het probleem mee: meer leads die op dezelfde manier blijven liggen of verloren gaan. Bovendien betaal je marketingbudget vooraf, ongeacht of het uiteindelijk tot omzet leidt.
+
+Een closer grijpt aan op het andere uiteinde: hij verbetert wat er met de bestaande leadstroom gebeurt, tegen kosten die pas ontstaan bij daadwerkelijk resultaat. Voor bedrijven waar de conversie duidelijk achterblijft bij wat op basis van de leadkwaliteit haalbaar zou moeten zijn, is dit doorgaans de investering met het snelste en meest voorspelbare rendement. Pas zodra de conversie al op een goed niveau zit, wordt extra marketingbudget de logischere volgende stap om verder te groeien.
 
 ## Conclusie
 

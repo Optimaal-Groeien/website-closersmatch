@@ -135,6 +135,12 @@ Naast het kennen van de zeven stappen, is het net zo waardevol om te weten waar 
 
 **Bij aftersales:** de aandacht volledig verschuiven naar de volgende nieuwe lead zodra een deal is gesloten, waardoor bestaande klanten zich onbelangrijk voelen zodra de handtekening er staat. Dit ondermijnt zowel klantbehoud als het potentieel voor referrals.
 
+## Hoe weet je of jouw verkoopproces goed is ingericht?
+
+Een snelle manier om te toetsen of je proces goed staat, is door voor elke van de zeven stappen te controleren of er een duidelijk antwoord bestaat op drie vragen: wie is er verantwoordelijk voor deze stap, hoe wordt het resultaat ervan gemeten, en wat gebeurt er als deze stap misgaat? Kun je die drie vragen voor elke stap moeiteloos beantwoorden, dan staat je proces waarschijnlijk stevig. Blijft het antwoord vaag of hangt het af van wie er die week toevallig beschikbaar is, dan ligt daar een concreet verbeterpunt.
+
+Het is ook nuttig om periodiek te meten hoeveel leads elke stap daadwerkelijk doorstaan. Als van elke 100 binnengekomen leads er 60 worden gekwalificeerd, 40 een eerste gesprek krijgen, 25 een aanbod ontvangen en uiteindelijk 8 een deal worden, zie je in één oogopslag waar de grootste uitval zit. Vaak blijkt die uitval geconcentreerd bij één of twee stappen, precies de plekken waar gerichte verbetering, of de inzet van een specialist, het meeste effect sorteert.
+
 ## Conclusie
 
 Een goed verkoopproces bestaat uit zeven op elkaar aansluitende stappen: leadgeneratie, leadkwalificatie, eerste contact, behoefteanalyse, het presenteren van een passend aanbod, closing en aftersales. Elke stap is zo sterk als de zwakste schakel ervoor, en juist kwalificatie en closing zijn de fases waar bedrijven het meeste rendement laten liggen wanneer ze niet door specialisten worden uitgevoerd.
