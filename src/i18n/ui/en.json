@@ -47,6 +47,20 @@
   "langSwitcher": {
     "label": "Choose language"
   },
+  "meetingChoice": {
+    "title": "Who would you like to schedule a call with?",
+    "subtitle": "Pick the option that fits you, and we'll show you the right calendar right away.",
+    "back": "← Back",
+    "close": "Close",
+    "business": {
+      "label": "I'm a business",
+      "description": "Book a free intake with Stefan, our founder."
+    },
+    "talent": {
+      "label": "I'm a closer or setter",
+      "description": "Book a call with Brian about joining our network."
+    }
+  },
   "cookies": {
     "footerSettings": "Cookie settings",
     "bannerTitle": "Our cookies",

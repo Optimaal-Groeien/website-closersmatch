@@ -47,6 +47,20 @@
   "langSwitcher": {
     "label": "Taal kiezen"
   },
+  "meetingChoice": {
+    "title": "Met wie wil je een gesprek plannen?",
+    "subtitle": "Kies de optie die bij je past, dan zie je direct de juiste agenda.",
+    "back": "← Terug",
+    "close": "Sluiten",
+    "business": {
+      "label": "Ik ben een bedrijf",
+      "description": "Plan een gratis intake met Stefan, onze oprichter."
+    },
+    "talent": {
+      "label": "Ik ben een closer of setter",
+      "description": "Plan een kennismaking met Brian over aansluiten bij ons netwerk."
+    }
+  },
   "cookies": {
     "footerSettings": "Cookie-instellingen",
     "bannerTitle": "Onze cookies",
