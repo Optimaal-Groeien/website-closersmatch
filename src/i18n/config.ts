@@ -30,6 +30,7 @@ export const routes = {
   intakeBusiness: { nl: 'intake-bedrijven', en: 'intake-business' },
   privacyPolicy: { nl: 'privacybeleid', en: 'privacy-policy' },
   thankYouBusiness: { nl: 'bedankt-bedrijven', en: 'thank-you-business' },
+  welcomeOnboarding: { nl: 'welkom-onboarding', en: 'welcome-onboarding' },
 } as const;
 
 export type RouteKey = keyof typeof routes;

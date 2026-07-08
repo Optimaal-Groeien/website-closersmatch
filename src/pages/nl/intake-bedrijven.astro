@@ -260,7 +260,7 @@ import Layout from '../../layouts/Layout.astro';
       <div class="ib-success" id="intake-success" hidden>
         <span class="ib-success__icon">✓</span>
         <h2 class="h2 ib-success__title">Bedankt! Je intake is ontvangen.</h2>
-        <p class="ib-success__text">We nemen binnen 48 uur contact met je op om de match te bespreken.</p>
+        <p class="ib-success__text">Je wordt zo automatisch doorgestuurd naar de onboardingpagina met de vervolgstappen.</p>
       </div>
 
     </div>
@@ -287,6 +287,10 @@ import Layout from '../../layouts/Layout.astro';
       form.hidden = true;
       success.hidden = false;
       success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      setTimeout(() => {
+        window.location.href = '/nl/welkom-onboarding';
+      }, 1800);
     });
   }
 </script>

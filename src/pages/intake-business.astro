@@ -260,7 +260,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="ib-success" id="intake-success" hidden>
         <span class="ib-success__icon">✓</span>
         <h2 class="h2 ib-success__title">Thank you! Your submission has been received.</h2>
-        <p class="ib-success__text">We'll get in touch within 48 hours to discuss the match.</p>
+        <p class="ib-success__text">You'll be redirected automatically to the onboarding page with your next steps.</p>
       </div>
 
     </div>
@@ -287,6 +287,10 @@ import Layout from '../layouts/Layout.astro';
       form.hidden = true;
       success.hidden = false;
       success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      setTimeout(() => {
+        window.location.href = '/welcome-onboarding';
+      }, 1800);
     });
   }
 </script>
