@@ -14,19 +14,18 @@ export default defineConfig({
     },
   },
 
+  // NOTE: '/cases', '/contact', '/recruitment', '/no-cure-no-pay' and '/partnership'
+  // are intentionally NOT redirected here: those slugs are spelled identically in
+  // English and Dutch, so they are real English pages (src/pages/*.astro) and must
+  // not be redirected to their /nl/ counterparts.
   redirects: {
     '/voor-bedrijven': '/nl/voor-bedrijven',
     '/voor-closers': '/nl/voor-closers',
     '/voor-appointmentsetters': '/nl/voor-appointmentsetters',
     '/voor-sales-talent': '/nl/voor-sales-talent',
     '/over-ons': '/nl/over-ons',
-    '/cases': '/nl/cases',
-    '/contact': '/nl/contact',
-    '/recruitment': '/nl/recruitment',
     '/werkwijze': '/nl/werkwijze',
-    '/no-cure-no-pay': '/nl/no-cure-no-pay',
     '/opdracht-plaatsen': '/nl/opdracht-plaatsen',
-    '/partnership': '/nl/partnership',
   },
 
   integrations: [sitemap()],
